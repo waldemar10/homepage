@@ -1,0 +1,70 @@
+{
+    "s ":[{
+        "Title":" ",
+        "Image": " ",
+        "Group": " ",
+        "Code":  " ",
+        "Requirements":  " ",
+        "GitHub":" "
+    }
+        
+    ]
+    ,
+    "Filmbibliothek":[{
+        "Title":"Filmbibliothek",
+        "Image": "Filmbibliothek/Filmbibliothek.jpg",
+        "Video": "./videos/Filmbibliothek.mp4",
+        "Group": "Teamgröße: 3",
+        "Code":  "Java mit JavaFX",
+        "Requirements":  "Such- und Sortieralgorithmen verwenden",
+        "GitHub":"https://github.com/waldemar10/DieFilmbibliothek"
+    }
+        
+    ]
+    ,
+    "Kugelbahn":[{
+        "Title":"Kugelbahn",
+        "Image": "Kugelbahn/Kugelbahn.jpg",
+        "Video": "Kugelbahn/Kugelbahn.mp4",
+        "Group": "Teamgröße: 2",
+        "Code":  "Java mit JavaFX",
+        "Requirements":  "Physikalische Bewegung anhand einer Kugelbahn darstellen",
+        "GitHub":"https://github.com/waldemar10/Kugelbahn"
+    }
+        
+    ]
+    ,
+    "SSP":[{
+        "Title":"Schere Stein Papier Ultimate",
+        "Image": "SSP/SSP.jpg",
+        "Video": "SSP/SchereSteinPapier.mp4",
+        "Group": "Teamgröße: 5",
+        "Code":  "Java mit OpenGL und OpenCV",
+        "Requirements":  "Bildbearbeitungsverfahren + Computergrafik anwenden",
+        "GitHub":"https://github.com/waldemar10/SchereSteinPapier"
+    }
+    ]
+    ,
+    "Yoga":[{
+        "Title":"Yoga Website",
+        "Image": "Yoga.jpg",
+        "Video": "/Yoga.mp4",
+        "Group": "Teamgröße: 2",
+        "Code":  "HTML, CSS und JavaScript",
+        "Requirements":  "Eine Website mit HTML, CSS und JavaScript erstellen",
+        "GitHub":"https://github.com/waldemar10/Yoga-Website"
+        
+    }
+    ],
+    "GameDev":[{
+        "Title":"CinemaCraze",
+        "Image": "GameDev.jpg",
+        "Video": "/GameDev.mp4",
+        "Group": "Teamgröße: 5",
+        "Code":  "Game-Engine Unity",
+        "Requirements":  "Ein Spiel mit Unity entwickeln",
+        "GitHub":"https://github.com/pinkpandainteractive/cinemacraze"
+        
+    }
+    ]
+}
