@@ -1,9 +1,12 @@
 .project_box{
 
     display:grid;
+    width: 80%;
     grid-template-columns: repeat(auto-fit, minmax(550px, max-content ));
-    flex-direction: row;
-    margin: 50px 150px 50px 150px;
+   
+    
+    justify-content: center;
+     align-content: center;
     /*background-image: url( 'C:/Users/walde/webpage-waldemar/src/images/Blob.svg' );
     background-size: cover;
     overflow: hidden;*/
@@ -24,7 +27,7 @@
     font-size: 60px;
     width: 100%;
     font-weight: 200;
-    margin: 0 0 10px 150px;
+    margin:0px;
 
   }
   .project_subheader{

@@ -1,5 +1,6 @@
 {
     "s ":[{
+        "Modul":" ",
         "Title":" ",
         "Image": " ",
         "Group": " ",
@@ -11,6 +12,7 @@
     ]
     ,
     "Filmbibliothek":[{
+        "Modul":"Grundlagen Informatik",
         "Title":"Filmbibliothek",
         "Image": "Filmbibliothek/Filmbibliothek.jpg",
         "Video": "./videos/Filmbibliothek.mp4",
@@ -23,6 +25,7 @@
     ]
     ,
     "Kugelbahn":[{
+        "Modul":"Visual Computing II",
         "Title":"Kugelbahn",
         "Image": "Kugelbahn/Kugelbahn.jpg",
         "Video": "Kugelbahn/Kugelbahn.mp4",
@@ -35,6 +38,7 @@
     ]
     ,
     "SSP":[{
+        "Modul":"Visual Computing I",
         "Title":"Schere Stein Papier Ultimate",
         "Image": "SSP/SSP.jpg",
         "Video": "SSP/SchereSteinPapier.mp4",
@@ -46,6 +50,7 @@
     ]
     ,
     "Yoga":[{
+        "Modul":"Web Development",
         "Title":"Yoga Website",
         "Image": "Yoga.jpg",
         "Video": "/Yoga.mp4",
@@ -57,6 +62,7 @@
     }
     ],
     "GameDev":[{
+        "Modul":"Game Development",
         "Title":"CinemaCraze",
         "Image": "GameDev.jpg",
         "Video": "/GameDev.mp4",
