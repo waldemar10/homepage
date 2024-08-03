@@ -10,3 +10,29 @@
     transform: translate(0);
   }
 }
+@keyframes AnimateStroke{
+  0%{
+    fill: transparent;
+    stroke: url(#strokeGradient);
+    stroke-width: 2;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 32%;
+    transition: all 0.5s ease-in-out;
+  }
+  50%{
+    fill: transparent;
+    stroke: url(#strokeGradient);
+    stroke-width: 2;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 32% 0;
+    transition: all 0.5s ease-in-out;
+  }
+  60%,100%{
+    fill: url(#strokeGradient);
+    stroke: transparent;
+    stroke-width: 0;
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 32% 0;
+    transition: all 0.5s ease-in-out;
+  }
+} 

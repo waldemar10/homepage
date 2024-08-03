@@ -1,0 +1,113 @@
+.showproject-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.showproject-box-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--project-showcase-bg-color);
+  border-radius: 20px;
+  padding: 20px;
+  width: 1000px;
+  justify-content: center;
+  align-content: center;
+}
+
+.showproject-icons-box {
+  display: grid;
+  grid-gap: 0rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  justify-content: start;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+}
+.showproject-icon {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+.showproject-icons-and-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+ 
+  a {
+    text-decoration: underline;
+    color: var(--font-color);
+  }
+  a:hover {
+    color: var(--font-color-hover);
+  }
+}
+.showproject-modul-headline {
+  text-align: center;
+  font-size: 60px;
+}
+.showproject-title-headline {
+  font-size: 48px;
+  font-style: italic;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+  color: var(--primary-color);
+  /* background: linear-gradient(70deg, #ff2d75 0%, #4fc3dc 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+.showproject-icons-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .showproject-box {
+    /*  max-width: 90%; */
+    margin: 20px;
+  }
+  .showproject-box-wrapper {
+    width: 80%;
+  }
+  .showproject-icons-and-text{
+    justify-content: start;
+  }
+  .showproject-icons-box{
+    padding: 20px;
+    
+  }
+}
+
+/* Smartphone */
+@media screen and (max-width: 768px) {
+  .showproject-box {
+    scroll-snap-align: none;
+    max-width: 90%;
+    margin: 20px;
+  }
+  .showproject-icons-and-text{
+    justify-content: start;
+  }
+  .showproject-box-wrapper {
+    padding: 10px;
+    width: 90%;
+  }
+  .showproject-modul-headline {
+    font-size: 40px;
+  }
+  .showproject-title-headline {
+    font-size: 32px;
+  }
+  .showproject-icons-text {
+    font-size: 20px;
+  }
+}

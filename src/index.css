@@ -1,39 +1,52 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Cinzel');
 @import url('https://fonts.googleapis.com/css?family=Exo');
 @import url("https://use.typekit.net/pgm2vji.css");
+:root{
+  --main-bg-color: #181818;
+  --primary-color: #4fc3dc;
+  --secondary-color: #ff2d75;
+  --font-color: #f0f0f0;
+  --font-color-hover: #ff2d75;
+  --project-showcase-bg-color: #282828;
+  --sidemenu-bg-color: #282828;
+  --sidemenu-button-bg-color: #383838;
+  --sidemenu-button-color: #ff2d75;
+  --border-radius-button: 10px;
+}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', 'Helvetica', sans-serif;
 }
 html{
-  background-color: #181818;
+  background-color: var(--main-bg-color);
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+/*   scroll-behavior: smooth; */
 }
 
 body {
   display: flex;
   flex-direction: column;
-  color:white;
+  align-items: center;
+  justify-content: center;
+  color:var(--font-color);
   min-height: 100vh;
-  margin: 0;
-  font-family: 'Poppins', 'Helvetica', sans-serif;
-  overflow-x: hidden;
+  min-width: 100%;
+  
   font-size: 18px;
   background-size: 100%;
-  /* background-image: url( 'C:/Users/walde/webpage-waldemar/src/images/Background_Smartphone760_2.png' ); */
 }
 canvas{
-  background-color: blue;
-  position: absolute;
-  top:0;
-  left:0;
+  width: 100%;
+  height: 100%;
+  background: #111;
 }
-img{
-  object-fit: fill;
-}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -59,16 +72,18 @@ footer{
   width:100%;
   max-height:100px;
   margin-top: 25px;
+  scroll-snap-stop: none;
+  scroll-snap-align: end;
 }
 p{
   font-size: 18px;
 }
 a{
   text-decoration: none;
-  color:rgb(178, 14, 196);
+  color:var(--secondary-color);
 }
 a:visited{
-  color:rgb(194, 129, 255);
+  color:var(--secondary-color);
 }
 li{
 margin: 5px 0px 5px 5px;
@@ -79,27 +94,32 @@ q{
 figcaption{
   text-align: center;
 }
-@media screen and (max-width: 860px) {
-  body {
-    /* background-size: auto;
-    background-image: url( 'C:/Users/walde/webpage-waldemar/src/images/Background_Smartphone760.png' ); */
-
+video{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  object-fit:fill;
 }
 
-}
-@media screen and (max-width: 768px) {
-  body {
-    /* background-size: auto;
-    background-image: url( 'C:/Users/walde/webpage-waldemar/src/images/Background_Smartphone760.png' ); */
 
-}
 
-}
-@media screen and (max-width: 460px) {
-  body {
-   /*  background-size: auto;
-    background-image: url( 'C:/Users/walde/webpage-waldemar/src/images/Background_Smartphone360.png' ); */
+  /* Tablet */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+  /*   footer{
+      scroll-snap-align: none;
+    } */
+  }
+  
+  /* Smartphone */
+  @media screen and (max-width: 768px) {
+    footer{
+      scroll-snap-align: none;
+    }
+   body {
+    font-size: 14px;
+   }
+   p{
+     font-size: 14px;
+   }
 
-}
-
-}
+  }

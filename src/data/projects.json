@@ -13,7 +13,7 @@
     ,
     "Filmbibliothek":[{
         "Modul":"Grundlagen Informatik",
-        "Title":"Filmbibliothek",
+        "Title":"Die Filmbibliothek",
         "Image": "Filmbibliothek/Filmbibliothek.jpg",
         "Video": "./videos/Filmbibliothek.mp4",
         "Group": "Teamgröße: 3",
@@ -26,7 +26,7 @@
     ,
     "Kugelbahn":[{
         "Modul":"Visual Computing II",
-        "Title":"Kugelbahn",
+        "Title":"Die Kugelbahn",
         "Image": "Kugelbahn/Kugelbahn.jpg",
         "Video": "Kugelbahn/Kugelbahn.mp4",
         "Group": "Teamgröße: 2",
@@ -44,14 +44,14 @@
         "Video": "SSP/SchereSteinPapier.mp4",
         "Group": "Teamgröße: 5",
         "Code":  "Java mit OpenGL und OpenCV",
-        "Requirements":  "Bildbearbeitungsverfahren + Computergrafik anwenden",
+        "Requirements":  "Bildverarbeitung und Computergrafik",
         "GitHub":"https://github.com/waldemar10/SchereSteinPapier"
     }
     ]
     ,
     "Yoga":[{
         "Modul":"Web Development",
-        "Title":"Yoga Website",
+        "Title":"Die Yoga-Website",
         "Image": "Yoga.jpg",
         "Video": "/Yoga.mp4",
         "Group": "Teamgröße: 2",
@@ -72,5 +72,15 @@
         "GitHub":"https://github.com/pinkpandainteractive/cinemacraze"
         
     }
-    ]
+    ],
+    "Awd":[{
+        "Modul":"Advanced Web Development",
+        "Title":"LinguPingu",
+        "Image": "AWD.jpg",
+        "Video": "/AWD.mp4",
+        "Group": "Teamgröße: 5",
+        "Code":  "React, Node.js und MongoDB",
+        "Requirements":  "Eine Website mit React und MondoDB erstellen",
+        "GitHub":"https://github.com/waldemar10/LinguPingu"
+    }]
 }
