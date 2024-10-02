@@ -15,7 +15,7 @@ function Kugelbahn() {
           der Kugeln und bauten eine Kollisionserkennung ein, damit die Kugeln
           auf Objekte physikalisch korrekt reagieren können. Zusätzlich
           bauten wir eine Feder ein, die auslöst, wenn eine Kugel den Riegel der
-          Feder löst. Die Masse der Kugel ist freieinstellbar, genauso kann man
+          Feder löst. Die Masse der Kugel ist frei einstellbar, genauso kann man
           die Winkel einiger Objekte einstellen.
         </div>
         <div className="project-subheader">Video</div>
@@ -52,12 +52,12 @@ function Kugelbahn() {
             </li>
             <li>
               Kugel (blau): Die Kugel kann auch per „Drag and Drop“ auf der
-              Simulation platziert werden. Sie kann, wie die anderen Kugeln auch
+              Simulation platziert werden. Sie kann, wie die anderen Kugeln auch,
               über das Eingabefeld (siehe 10. Tab „Blau“) platziert werden.
             </li>
             <li>
               Abschusseinrichtung + Feder: Die Spannenergie kann durch die
-              Eingabefeldern (siehe 9. Tab „Feder) eingestellt werden.
+              Eingabefelder (siehe 9. Tab „Feder) eingestellt werden.
             </li>
             <li>Knopf zum Auslösen der Feder</li>
             <li>
@@ -71,7 +71,7 @@ function Kugelbahn() {
               zuvor die Simulation zurückgesetzt hat.
             </li>
             <li>
-              Einstellungen für den Balken, die Feder und Sonstige
+              Einstellungen für den Balken, die Feder und sonstige
               Einstellungsmöglichkeiten.
             </li>
             <li>Einstellmöglichkeiten für die Kugeln</li>

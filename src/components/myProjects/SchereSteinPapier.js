@@ -13,19 +13,19 @@ function SchereSteinPapier() {
       <div className="project-content-box">
         <div className="project-box">
           <div className="project-description">
-            Schere Stein Papier Ultimate war ein Software Projekt im 3. Semester
+            Schere Stein Papier Ultimate war ein Softwareprojekt im 3. Semester
             im Modul Visual Computing. Die Aufgabe war es, eine Java-Anwendung
             zu entwickeln, die eine Bildverarbeitungsaufgabe erledigt und die
-            daraus resultierende Ergebnisse an eine selbsterstellte 3D-Umgebung
-            sendet und visuell darstellt. Wir entschieden uns das Spiel Schere
-            Stein Papier zu programmieren. Anhand Bildverarbeitungsmethoden
+            daraus resultierenden Ergebnisse an eine selbsterstellte 3D-Umgebung
+            sendet und visuell darstellt. Wir entschieden uns, das Spiel "Schere
+            Stein Papier" zu programmieren. Anhand der Bildverarbeitungsmethoden
             konnte die Software die Gesten für Schere, Stein und Papier
             erkennen.
             <br />
             Meine Aufgabe im Team war es, die Bildverarbeitungsaufgabe zu
             programmieren. Ich arbeitete mit OpenCV und nutzte die
-            Vorlesungsinhalte, um die Erkennung für die Gesten Schere, Stein und
-            Papier zu realisieren.
+            Vorlesungsinhalte, um die Erkennung für die Gesten "Schere, Stein und
+            Papier" zu realisieren.
           </div>
           <div className="project-subheader">Video</div>
           <div className="project-video">
@@ -39,14 +39,14 @@ function SchereSteinPapier() {
             Ich nutzte meine Webcam, um die Bildverarbeitung zu testen. Die
             erste Idee war es, eine Momentaufnahme von der Hand zu machen, um
             diese dann anschließend auszuwerten. Ich wandelte das Bild in ein
-            Graustufenbild um und nutzte dann einen Schwellenwert, der bestimmt
-            ab welchen Grauwert die Pixel weiß bzw. schwarz dargestellt werden
+            Graustufenbild um und nutzte dann einen Schwellenwert, der bestimmt,
+            ab welchem Grauwert die Pixel weiß bzw. schwarz dargestellt werden
             sollen. Für die Konturerkennung nutzte ich den Canny-Algorithmus.
             Nach einem ersten Test stellten wir fest, dass wir statt Fotos zu
             erstellen lieber die Bildverarbeitung direkt im Video arbeiten
             lassen wollen. Daher verwarf ich diesen Ansatz wieder.
             <br />
-            Der zweiten Ansatz:
+            Der zweite Ansatz:
             <br />
             <ol className="project-list">
               <li>Webcam wird durch openCV VideoCapture erkannt.</li>
@@ -62,7 +62,7 @@ function SchereSteinPapier() {
 
               <li>
                 Dann wird der Threshold für die Grauwerte angewendet. Dieser
-                entscheidet ab welchem Grauwert die Pixel weiß oder schwarz
+                entscheidet, ab welchem Grauwert die Pixel weiß oder schwarz
                 dargestellt werden.{" "}
               </li>
               <li>
@@ -100,7 +100,7 @@ function SchereSteinPapier() {
                 Kontur. Die Punkte, die wir von den Konvexitätsdefekten
                 erhalten, werden mit dem Mittelpunkt zusammen verbunden. Dadurch
                 können wir sehen, wie viele Finger angezeigt werden. Das hilft
-                bei der Erkennung der Geste Papier und Schere.
+                bei der Erkennung der Gesten: Papier und Schere.
               </li>
               <li>
                 Danach wird die Kreisförmigkeit der Kontur berechnet. Das hilft

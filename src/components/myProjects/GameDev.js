@@ -28,7 +28,7 @@ function GameDev() {
           Im Modul "Game Development" musste jede Gruppe ein eigenes Spiel
           erstellen. Meine Gruppe entschied sich für ein Point-And-Click Spiel.
           Wir teilten uns in ein Development (2) und ein Designer Team (3) ein.
-          Ich war teil des Development Teams.
+          Ich war Teil des Development Teams.
           <br />
           <br />
           <strong>Unsere Spielbeschreibung:</strong>
@@ -41,14 +41,14 @@ function GameDev() {
             wird. Wenn der Spieler zu viele Kunden verärgert, verliert er. Um
             sein Leben im Kino zu erleichtern, hat der Spieler die Möglichkeit,
             sich Upgrades zu kaufen. Mit den Upgrades kann der Spieler schneller
-            die Bestellungen abarbeiten und sich mehr Geld verdienen.
+            die Bestellungen abarbeiten und mehr Geld verdienen.
           </q>
           <div className="project-subheader">Steuerung</div>
           A / Linke Pfeiltaste - Sicht auf die Kunden
           <br />
           D / Rechte Pfeiltaste - Sicht auf die Maschinen
           <br />
-          ESC - Pause Menu
+          ESC - Pause Menü
           <br />
           P - Pause
           <br />
@@ -56,7 +56,7 @@ function GameDev() {
           <br />
           Maustaste Links - +1 von jeweiligem Item (nach Animation)
           <br />
-          Maustatse Rechts - -1 von jeweiligem Item (sofort)
+          Maustaste Rechts - -1 von jeweiligem Item (sofort)
           <br />
           Kunden:
           <br />
@@ -97,8 +97,8 @@ function GameDev() {
           Maschine kostenlos kaufen. Dabei muss er auf den Button “Kaufen”
           klicken. Die Kundenanfragen begrenzen sich auf die freigekauften
           Maschinen, z.B. wenn man nur die Popcornmaschine besitzt, kommen nur
-          Kunden, die Popcorn möchten. Die nächste Maschine kostet 100$, die
-          dritte und damit letzte kostet 250$. Wenn der Spieler zu wenig Geld
+          Kunden, die Popcorn möchten. Die nächste Maschine kostet 100 $, die
+          dritte und damit letzte kostet 250 $. Wenn der Spieler zu wenig Geld
           hat, um die zweite oder dritte Maschine zu kaufen, wird der “Kaufen”
           Button mit einer roten Füllfarbe hervorgehoben.
         </div>

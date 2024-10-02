@@ -54,7 +54,8 @@
 }
 .showproject-title-headline {
   font-size: 48px;
-  font-style: italic;
+  font-weight: bold;
+ /*  font-style: italic; */
   text-align: center;
   margin: 10px 0px 10px 0px;
   color: var(--primary-color);

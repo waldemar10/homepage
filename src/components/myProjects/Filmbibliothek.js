@@ -14,7 +14,7 @@ function Filmbibliothek() {
           Informatik II. Die Aufgabe war es, eine Java Applikation zu
           entwickeln, die mindestens zwei verschiedene Suchalgorithmen und zwei
           verschiedene Sortieralgorithmen beinhaltet. Auch sollte man eine
-          graphische Benutzeroberfläche erstellen. Wir entschieden uns für eine
+          grafische Benutzeroberfläche erstellen. Wir entschieden uns für eine
           Filmbibliothek, wo der Anwender Filme suchen kann. Alle Filme und deren Informationen wurden in einer .txt Datei gespeichert.
           Seine Lieblingsfilme kann der Anwender in seiner Watchlist speichern, wenn er einen Account besitzt. 
           Neue Anwender, ohne eigenen Account, können sich registrieren lassen. 

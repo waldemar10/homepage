@@ -11,24 +11,24 @@ function Awd() {
       <div className="project-box">
         <div className="project-description">
           In Advanced Web Development (AWD) war es die Aufgabe, eine progressive
-          Webanwendung zu entwickeln. Dabei war es auch wichtig
-          backend-Technologien zu verwenden. Wir entschieden uns im Team für
+          Webanwendung zu entwickeln. Dabei war es auch wichtig,
+          Backend-Technologien zu verwenden. Wir entschieden uns im Team für
           eine Sprachlernwebseite, die die Möglichkeit bietet, Vokabeln zu
           lernen und Grammatikübungen zu machen. Der Benutzer kann sich
           registrieren und anmelden. Die Webseite speichert die Daten in einer
-          MongoDB Datenbank. Auch ist sie responsiv und kann auf allen Geräten
+          MongoDB-Datenbank. Auch ist sie responsiv und kann auf allen Geräten
           genutzt werden.
           <br />
           <br />
           <div className="project-subheader">Was ist LinguPingu?</div>
           
-          LinguPingu ist eine Sprachenlernapp, die das Vokabellernen zu einem
+          LinguPingu ist eine Sprachenlern-App, die das Vokabellernen zu einem
           unterhaltsamen und effektiven Erlebnis macht. Durch die Kombination
           von Vokabeltraining, interaktiven Lektionen und der Möglichkeit,
           individuelle Vokabelkollektionen zu erstellen, hebt sich LinguPingu
           deutlich von anderen Sprachenlern-Apps ab. Inspiriert von
           erfolgreichen Anwendungen wie Duolingo und Busuu, legt LinguPingu
-          besonderen Wert auf die Integration von benutzererstellten
+          besonderen Wert auf die Integration von Benutzer erstellten
           Vokabelkollektionen. Dies ermöglicht es den Nutzern, ihr persönliches
           Lernumfeld zu gestalten und ihre individuellen Lernziele effizient zu
           verfolgen.
@@ -48,11 +48,11 @@ function Awd() {
           gewählten Sprache sicher beherrschen kann. Andererseits gibt es die
           Kategorie des täglichen Lebens, in der der Nutzer Situationen und
           Ausdrücke aus dem Alltag erlernt. Hierbei steht vor allem die
-          Anwendung grammatikalisch korrekter Sätze im täglichen Umgang im
-          Vordergrund. Beim Klick auf eine Lektion erscheint ein erklärender
+          Anwendung grammatikalisch korrekter Sätze des täglichen Umgangs im
+          Vordergrund. Bei einem Klick auf eine Lektion erscheint ein erklärender
           Text zur Grammatik. Anschließend kann der Benutzer die Übung starten,
           bei der er den dargestellten Satz in die zu lernende Sprache
-          übersetzen muss, indem er vorgegebene Wörter auswählt. Die Übung
+          übersetzen muss. Dort wählt er aus vorgegebenen Wörtern. Die Übung
           enthält auch falsche Wörter, um die Schwierigkeit zu erhöhen. Um eine
           Antwort zu ändern oder einen Tippfehler zu korrigieren, kann der
           Benutzer einfach auf das entsprechende Wort klicken und es erneut
