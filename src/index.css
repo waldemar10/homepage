@@ -1,26 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Cinzel');
+/* @import url('https://fonts.googleapis.com/css?family=Cinzel');
 @import url('https://fonts.googleapis.com/css?family=Exo');
-@import url("https://use.typekit.net/pgm2vji.css");
-:root{
-  --main-bg-color: #181818;
-  --primary-color: #4fc3dc;
-  --secondary-color: #ff2d75;
-  --font-color: #f0f0f0;
-  --font-color-hover: #ff2d75;
-  --project-showcase-bg-color: #282828;
-  --sidemenu-bg-color: #282828;
-  --sidemenu-button-bg-color: #383838;
-  --sidemenu-button-color: #ff2d75;
+@import url("https://use.typekit.net/pgm2vji.css"); */
+
+:root {
+  --main-bg-color: #121212;
+  --primary-color: #1e90ff; 
+  --secondary-color: #ff6347; 
+  --font-color: #ececec; 
+  --project-showcase-bg-color: #1c1c1c; 
+  --sidemenu-bg-color: #1a1a1a; 
+  --sidemenu-button-bg-color: #333333; 
+  --sidemenu-button-color: #1e90ff; 
   --border-radius-button: 10px;
+  --link-color:#ececec;
+  --link-color-hover:#b3b3b3;
 }
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', 'Helvetica', sans-serif;
+  font-family: 'Poppins','Roboto','Helvetica',sans-serif;
 }
+
 html{
   background-color: var(--main-bg-color);
   overflow-x: hidden;
@@ -79,11 +83,17 @@ p{
   font-size: 18px;
 }
 a{
-  text-decoration: none;
-  color:var(--secondary-color);
+  text-decoration: underline;
+  color:var(--link-color);
+}
+a:hover{
+  color:var(--link-color-hover);
 }
 a:visited{
-  color:var(--secondary-color);
+  color:var(--link-color);
+}
+a:visited:hover{
+  color:var(--link-color-hover);
 }
 li{
 margin: 5px 0px 5px 5px;
@@ -105,9 +115,7 @@ video{
 
   /* Tablet */
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-  /*   footer{
-      scroll-snap-align: none;
-    } */
+
   }
   
   /* Smartphone */

@@ -20,14 +20,14 @@ function Startscreen() {
         className="svg-headline"
         style={{ fill: "url(#strokeGradient)" }}>
         <linearGradient id="strokeGradient">
-          <stop offset="15%" stopColor="#ff2d75" stopOpacity="100%" />
+          <stop offset="15%" stopColor="var(--primary-color)" stopOpacity="100%" />
 
-          <stop offset="74%" stopColor="#4fc3dc" stopOpacity="100%" />
+          <stop offset="74%" stopColor="var(--secondary-color)" stopOpacity="100%" />
         </linearGradient>
         <linearGradient id="strokeGradient2">
-          <stop offset="15%" stopColor="#ff2d75" stopOpacity="50%" />
+          <stop offset="15%" stopColor="var(--primary-color)" stopOpacity="50%" />
 
-          <stop offset="74%" stopColor="#4fc3dc" stopOpacity="50%" />
+          <stop offset="74%" stopColor="var(--secondary-color)" stopOpacity="50%" />
         </linearGradient>
         <text
           x="50%"
@@ -48,7 +48,6 @@ function Startscreen() {
       </svg>
 
       <a
-        /* onClick={() => setScrollToSection(!scrollToSection)} */
         onClick={(e) => onSubmit(e)}
         className="icon-box">
         <FontAwesomeIcon icon={faChevronDown} className="icon" />

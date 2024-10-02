@@ -39,14 +39,6 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
- 
-  a {
-    text-decoration: underline;
-    color: var(--font-color);
-  }
-  a:hover {
-    color: var(--font-color-hover);
-  }
 }
 .showproject-modul-headline {
   text-align: center;
@@ -55,14 +47,11 @@
 .showproject-title-headline {
   font-size: 48px;
   font-weight: bold;
- /*  font-style: italic; */
   text-align: center;
   margin: 10px 0px 10px 0px;
   color: var(--primary-color);
-  /* background: linear-gradient(70deg, #ff2d75 0%, #4fc3dc 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
+
 .showproject-icons-text {
   display: flex;
   justify-content: center;
@@ -73,7 +62,6 @@
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .showproject-box {
-    /*  max-width: 90%; */
     margin: 20px;
   }
   .showproject-box-wrapper {

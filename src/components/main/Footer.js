@@ -6,9 +6,9 @@ function Footer() {
     <>
       <footer>
         <p>
-          Website build with
+          Website build with {" "}
           <a href="https://react.dev/" target="_blank" rel="noreferrer">
-            {" "}
+            
             React
           </a>
         </p>
