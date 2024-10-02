@@ -13,8 +13,6 @@ function Sidemenu({
 }) {
   const{clickedFilm,clickedKugelbahn,clickedSSP,clickedYoga,clickedGameDev,clickedAwd} =useContext(ProjectsContext);
   const [showSidemenu, setShowSidemenu] = useState(false);
-  const CLICKED_PROJECT_COLOR =
-    "linear-gradient(30deg, #4fc3dc 0%, rgba(0, 162, 255,0) 100%)";
 
   useEffect(() => {
     const storedValue = localStorage.getItem("showSidemenu");
@@ -41,34 +39,34 @@ function Sidemenu({
         <ul>
           <li
             onClick={() => handleSelectedProject("Filmbibliothek",true)}
-            style={{ background: clickedFilm ? CLICKED_PROJECT_COLOR : "" }}>
+            style={{ background: clickedFilm ? "var(--primary-color)" : "" }}>
             Grundlagen Informatik
           </li>
           <li
             onClick={() => handleSelectedProject("SSP",true)}
-            style={{ background: clickedSSP ? CLICKED_PROJECT_COLOR : "" }}>
+            style={{ background: clickedSSP ? "var(--primary-color)" : "" }}>
             Visual Computing I
           </li>
           <li
             onClick={() => handleSelectedProject("Yoga",true)}
-            style={{ background: clickedYoga ? CLICKED_PROJECT_COLOR : "" }}>
+            style={{ background: clickedYoga ? "var(--primary-color)" : "" }}>
             Web Development
           </li>
           <li
             onClick={() => handleSelectedProject("Kugelbahn",true)}
             style={{
-              background: clickedKugelbahn ? CLICKED_PROJECT_COLOR : "",
+              background: clickedKugelbahn ? "var(--primary-color)" : "",
             }}>
             Visual Computing II
           </li>
           <li
             onClick={() => handleSelectedProject("GameDev",true)}
-            style={{ background: clickedGameDev ? CLICKED_PROJECT_COLOR : "" }}>
+            style={{ background: clickedGameDev ? "var(--primary-color)" : "" }}>
             Game Development
           </li>
           <li
             onClick={() => handleSelectedProject("Awd",true)}
-            style={{ background: clickedAwd ? CLICKED_PROJECT_COLOR : "" }}>
+            style={{ background: clickedAwd ? "var(--primary-color)" : "" }}>
             Advanced Web Development
           </li>
         </ul>

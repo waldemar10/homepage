@@ -1,5 +1,8 @@
+:root {
+    --sidemenu-border-radius: 10px;
+}
+
 .sidemenu{
-    
     display: flex;
     align-items: center;
     justify-content:center;
@@ -7,7 +10,6 @@
     font-size: 20px;
     text-align: center;
     height: 100vh;
-    
     position: fixed;
     top: 0;
     left: -230px ;
@@ -32,7 +34,7 @@
     top: 0;
     right: 0; */
     width: 200px;
-    border-radius: 10px;
+    border-radius: var(--sidemenu-border-radius);
     background-color: var(--sidemenu-bg-color);
     
 }
@@ -44,26 +46,32 @@
 .sidemenu li{
     margin: 20px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: var(--sidemenu-border-radius);
     background: linear-gradient(30deg, rgba(10,10,10,0.5) 0%, rgba(10,10,10,0) 100%);
 
 }
 .sidemenu li:hover{
     filter: brightness(50%);
-    background: linear-gradient(30deg, #ff2d75 0%, rgba(0, 162, 255,0) 100%);
+    background: linear-gradient(30deg, var(--secondary-color) 0%, rgba(0, 162, 255,0) 100%);
     color: white;
     cursor: pointer;
 }
 
 .sidemenu-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
     height: 50px;
     background-color: var(--sidemenu-bg-color);
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px var(--sidemenu-border-radius) var(--sidemenu-border-radius) 0px;
     border-style: none;
+    transition: 1s;
 }
 .sidemenu-button:hover{
-    background-color: var(--sidemenu-button-bg-color);
+    width: 40px;
+    height: 60px;
+    /* background-color: var(--sidemenu-button-bg-color); */
     cursor: pointer;
 }
 
@@ -73,6 +81,12 @@
     color: var(--primary-color);
     rotate: 0deg;
     transition: rotate 0.6s;
+    transition: 1s;
+}
+.sidemenu-button-svg:hover{
+    width: 25px;
+    height:35px;
+    color: var(--secondary-color);
 }
 .sidemenu-button-container{
     rotate: 0deg;
