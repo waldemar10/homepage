@@ -73,6 +73,11 @@
     height: 60px;
     /* background-color: var(--sidemenu-button-bg-color); */
     cursor: pointer;
+    .sidemenu-button-svg{
+        width: 25px;
+        height:35px;
+        color: var(--secondary-color);
+    }
 }
 
 .sidemenu-button-svg{
@@ -83,11 +88,11 @@
     transition: rotate 0.6s;
     transition: 1s;
 }
-.sidemenu-button-svg:hover{
+/* .sidemenu-button-svg:hover{
     width: 25px;
     height:35px;
     color: var(--secondary-color);
-}
+} */
 .sidemenu-button-container{
     rotate: 0deg;
 }
