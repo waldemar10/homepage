@@ -1,108 +1,101 @@
 :root {
-    --sidemenu-border-radius: 10px;
+  --sidemenu-border-radius: 10px;
+  --scale-size-button-box: 1.3;
+  --scale-size-svg: 1.3;
 }
-
-.sidemenu{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    z-index: 2;
-    font-size: 20px;
-    text-align: center;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -230px ;
-    transition: left 1.0s;
+.sidemenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  font-size: 20px;
+  text-align: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -230px;
+  transition: left 1s;
 }
 
 .sidemenu.visible {
-    left:0px; /* Slide the side menu into view */
+  left: 0px;
 }
-.sidemenu.hide{
-    left: -230px;
-
+.sidemenu.hide {
+  left: -230px;
 }
-.sidemenu.hide-button{
-    left:-200px;
+.sidemenu.hide-button {
+  left: -200px;
 }
-.sidemenu.hide.hide-button{
-    left: -230px;
+.sidemenu.hide.hide-button {
+  left: -230px;
 }
-.sidemenu-container{
-   /*  position: relative;
-    top: 0;
-    right: 0; */
-    width: 200px;
-    border-radius: var(--sidemenu-border-radius);
-    background-color: var(--sidemenu-bg-color);
-    
+.sidemenu-container {
+  width: 200px;
+  border-radius: var(--sidemenu-border-radius);
+  background-color: var(--sidemenu-bg-color);
 }
 
-.sidemenu ul{
-    list-style: none;
-    padding: 0;
+.sidemenu ul {
+  list-style: none;
+  padding: 0;
 }
-.sidemenu li{
-    margin: 20px;
-    padding: 10px;
-    border-radius: var(--sidemenu-border-radius);
-    background: linear-gradient(30deg, rgba(10,10,10,0.5) 0%, rgba(10,10,10,0) 100%);
-
+.sidemenu li {
+  margin: 20px;
+  padding: 10px;
+  border-radius: var(--sidemenu-border-radius);
+  background: linear-gradient(
+    30deg,
+    rgba(10, 10, 10, 0.5) 0%,
+    rgba(10, 10, 10, 0) 100%
+  );
 }
-.sidemenu li:hover{
-    filter: brightness(50%);
-    background: linear-gradient(30deg, var(--secondary-color) 0%, rgba(0, 162, 255,0) 100%);
-    color: white;
-    cursor: pointer;
-}
-
-.sidemenu-button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 50px;
-    background-color: var(--sidemenu-bg-color);
-    border-radius: 0px var(--sidemenu-border-radius) var(--sidemenu-border-radius) 0px;
-    border-style: none;
-    transition: 1s;
-}
-.sidemenu-button:hover{
-    width: 40px;
-    height: 60px;
-    /* background-color: var(--sidemenu-button-bg-color); */
-    cursor: pointer;
-    .sidemenu-button-svg{
-        width: 25px;
-        height:35px;
-        color: var(--secondary-color);
-    }
+.sidemenu li:hover {
+  filter: brightness(50%);
+  background: linear-gradient(
+    30deg,
+    var(--secondary-color) 0%,
+    rgba(0, 162, 255, 0) 100%
+  );
+  cursor: pointer;
 }
 
-.sidemenu-button-svg{
-    width: 20px;
-    height:30px;
-    color: var(--primary-color);
-    rotate: 0deg;
-    transition: rotate 0.6s;
-    transition: 1s;
+.sidemenu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 50px;
+  background-color: var(--sidemenu-bg-color);
+  border-radius: 0px var(--sidemenu-border-radius) var(--sidemenu-border-radius)
+    0px;
+  border-style: none;
+  transition: 1s;
 }
-/* .sidemenu-button-svg:hover{
-    width: 25px;
-    height:35px;
+.sidemenu-button:hover {
+  transform: scale(var(--scale-size-button-box));
+  cursor: pointer;
+  /* Change color and scale up the size for the svg */
+  .sidemenu-button-svg {
+    transform: scale(var(--scale-size-svg));
     color: var(--secondary-color);
-} */
-.sidemenu-button-container{
-    rotate: 0deg;
-}
-.sidemenu-button-svg.rotate-button{
-    rotate: 180deg;
+  }
 }
 
+.sidemenu-button-svg {
+  width: 20px;
+  height: 30px;
+  color: var(--primary-color);
+  rotate: 0deg;
+  transition: rotate 0.6s;
+  transition: 1s;
+}
+
+.sidemenu-button-svg.rotate-button {
+  rotate: 180deg;
+}
 
 @media screen and (max-width: 1224px) {
-    .sidemenu.visible{
-        left: -230px;
-    }
+  .sidemenu.visible {
+    left: -230px;
   }
+}
