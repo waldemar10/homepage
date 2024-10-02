@@ -1,16 +1,4 @@
 {
-    "s ":[{
-        "Modul":" ",
-        "Title":" ",
-        "Image": " ",
-        "Group": " ",
-        "Code":  " ",
-        "Requirements":  " ",
-        "GitHub":" "
-    }
-        
-    ]
-    ,
     "Filmbibliothek":[{
         "Modul":"Grundlagen Informatik",
         "Title":"Die Filmbibliothek",
