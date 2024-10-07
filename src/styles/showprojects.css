@@ -11,7 +11,7 @@
 .showproject-box-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: var(--project-showcase-bg-color);
+  background-color: var(--bg-color-project-showcase);
   border-radius: var(--border-radius-box-outer);
   padding: 20px;
   width: 1000px;
@@ -23,7 +23,7 @@
   display: grid;
   grid-gap: 0rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   background-color: var(--primary-color);
   border-radius: var(--border-radius-box-inner);

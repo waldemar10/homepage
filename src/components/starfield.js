@@ -6,7 +6,7 @@ export default function Starfield(props) {
     starCount = 1500,
     starSize = 1,
   } = props;
-  const backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--main-bg-color');
+  const backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-color-body');
   const starColor1 = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
   const starColor2 = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
   const canvasRef = useRef(null);

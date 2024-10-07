@@ -39,14 +39,26 @@
 .project-figure {
   text-align: center;
   padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-figure img {
+  display:block;
   border-radius: var(--border-radius-box-inner);
   width: 100%;
 }
 .project-figure figcaption {
+  color: var(--font-color);
   font-size: smaller;
+  font-weight: 100;
+  width: auto;
+  padding: 5px 10px 5px 10px;
+  background-color: var(--bg-color-figcaption);
+  border-radius: 0 0 var(--border-radius-box-inner) var(--border-radius-box-inner);
 }
 .project-description {
   flex: 1 1 0px;
@@ -73,10 +85,11 @@
   border: 1px solid var(--secondary-color);
   cursor: pointer;
 }
-.project-figcaption {
+/* .project-figcaption {
   font-size: 18px;
   text-align: center;
-}
+  background-color: aliceblue;
+} */
 .project-image {
   flex: 1 1 0px;
   flex-basis: 0px;
