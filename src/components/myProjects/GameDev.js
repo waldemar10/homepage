@@ -108,7 +108,6 @@ function GameDev() {
             <img
               src={imgProductionTime}
               alt="Beschriftung"
-              style={{ padding: "10px" }}
             />
             <figcaption> Produktionszeit</figcaption>
           </figure>
@@ -116,7 +115,6 @@ function GameDev() {
             <img
               src={imgUnlockMachine}
               alt="Beschriftung"
-              style={{ padding: "10px" }}
             />
             <figcaption>Maschinen freikaufen</figcaption>
           </figure>
@@ -124,7 +122,6 @@ function GameDev() {
             <img
               src={imgMachineEmpty}
               alt="Beschriftung"
-              style={{ padding: "10px" }}
             />
             <figcaption> Maschine leer</figcaption>
           </figure>
@@ -133,10 +130,9 @@ function GameDev() {
 
       <div className="project-box">
         <div className="project-image">
-          <figure>
+          <figure className="project-figure">
             <img
               src={imgUpgradeMenu}
-              style={{ width: "100%", padding: "10px" }}
               alt="Beschriftung"
             />
             <figcaption>Upgrade menu</figcaption>
@@ -189,8 +185,8 @@ function GameDev() {
         {loadGame && (
           <Unity
             unityProvider={unityProvider}
-            
-            style={{ visibility: isLoaded ? "visible" : "hidden", borderRadius: "10px" }}
+            id="unity-container"
+            style={{ visibility: isLoaded ? "visible" : "hidden" }}
           />
         )}
             </div>

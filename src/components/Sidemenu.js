@@ -39,34 +39,34 @@ function Sidemenu({
         <ul>
           <li
             onClick={() => handleSelectedProject("Filmbibliothek",true)}
-            style={{ background: clickedFilm ? "var(--primary-color)" : "" }}>
+            style={{ background: clickedFilm ? "var(--button-section-selected-bg-color)" : "" }}>
             Grundlagen Informatik
           </li>
           <li
             onClick={() => handleSelectedProject("SSP",true)}
-            style={{ background: clickedSSP ? "var(--primary-color)" : "" }}>
+            style={{ background: clickedSSP ? "var(--button-section-selected-bg-color)" : "" }}>
             Visual Computing I
           </li>
           <li
             onClick={() => handleSelectedProject("Yoga",true)}
-            style={{ background: clickedYoga ? "var(--primary-color)" : "" }}>
+            style={{ background: clickedYoga ? "var(--button-section-selected-bg-color)" : "" }}>
             Web Development
           </li>
           <li
             onClick={() => handleSelectedProject("Kugelbahn",true)}
             style={{
-              background: clickedKugelbahn ? "var(--primary-color)" : "",
+              background: clickedKugelbahn ? "var(--button-section-selected-bg-color)" : "",
             }}>
             Visual Computing II
           </li>
           <li
             onClick={() => handleSelectedProject("GameDev",true)}
-            style={{ background: clickedGameDev ? "var(--primary-color)" : "" }}>
+            style={{ background: clickedGameDev ? "var(--button-section-selected-bg-color)" : "" }}>
             Game Development
           </li>
           <li
             onClick={() => handleSelectedProject("Awd",true)}
-            style={{ background: clickedAwd ? "var(--primary-color)" : "" }}>
+            style={{ background: clickedAwd ? "var(--button-section-selected-bg-color)" : "" }}>
             Advanced Web Development
           </li>
         </ul>

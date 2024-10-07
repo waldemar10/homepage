@@ -120,33 +120,30 @@ function SchereSteinPapier() {
           </div>
 
           <div className="project-image">
-            <figure>
+            <figure className="project-figure">
               <img
                 src={imgScissor}
                 alt="Scissors gesture"
-                style={{ width: "100%", padding: "10px" }}
               />
               <figcaption className="project-figcaption">
                 Konvexitätsdefekte ermöglichen die Erkennung der Geste Schere
               </figcaption>
             </figure>
 
-            <figure>
+            <figure className="project-figure">
               <img
                 src={imgStone}
                 alt="Stone gesture"
-                style={{ width: "100%", padding: "10px" }}
               />
               <figcaption className="project-figcaption">
                 Die Erkennung der Geste Stein
               </figcaption>
             </figure>
 
-            <figure>
+            <figure className="project-figure">
               <img
                 src={imgPaper}
                 alt="Paper gesture"
-                style={{ width: "100%", padding: "10px" }}
               />
               <figcaption className="project-figcaption">
                 Die Erkennung der Geste Papier

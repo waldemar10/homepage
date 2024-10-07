@@ -168,7 +168,7 @@ function Section() {
             onClick={() => handleSelectedProject(id_Filmbibliothek,true)}
             style={{
               filter: clickedFilm ? "brightness(100%)" : "brightness(50%)",
-              background: clickedFilm ? "var(--primary-color)" : "",
+              background: clickedFilm ? "var(--button-section-selected-bg-color)" : "",
             }}>
             <p className="sections-showcase-text">Grundlagen Informatik</p>
           </a>
@@ -178,7 +178,7 @@ function Section() {
             onClick={() => handleSelectedProject(id_SSP,true)}
             style={{
               filter: clickedSSP ? "brightness(100%)" : "brightness(50%)",
-              background: clickedSSP ? "var(--primary-color)" : "",
+              background: clickedSSP ? "var(--button-section-selected-bg-color)" : "",
             }}>
             <p className="sections-showcase-text">Visual Computing I</p>
           </a>
@@ -188,7 +188,7 @@ function Section() {
             onClick={() => handleSelectedProject(id_Yoga,true)}
             style={{
               filter: clickedYoga ? "brightness(100%)" : "brightness(50%)",
-              background: clickedYoga ? "var(--primary-color)" : "",
+              background: clickedYoga ? "var(--button-section-selected-bg-color)" : "",
             }}>
             <p className="sections-showcase-text">Web Development</p>
           </a>
@@ -198,7 +198,7 @@ function Section() {
             onClick={() => handleSelectedProject(id_kugelbahn,true)}
             style={{
               filter: clickedKugelbahn ? "brightness(100%)" : "brightness(50%)",
-              background: clickedKugelbahn ? "var(--primary-color)" : "",
+              background: clickedKugelbahn ? "var(--button-section-selected-bg-color)" : "",
             }}>
             <p className="sections-showcase-text">Visual Computing II</p>
           </a>
@@ -208,7 +208,7 @@ function Section() {
             onClick={() => handleSelectedProject(id_GameDev,true)}
             style={{
               filter: clickedGameDev ? "brightness(100%)" : "brightness(50%)",
-              background: clickedGameDev ? "var(--primary-color)" : "",
+              background: clickedGameDev ? "var(--button-section-selected-bg-color)" : "",
             }}>
             <p className="sections-showcase-text">Game Development</p>
           </a>
@@ -217,7 +217,7 @@ function Section() {
             onClick={() => handleSelectedProject(id_Awd,true)}
             style={{
               filter: clickedAwd ? "brightness(100%)" : "brightness(50%)",
-              background: clickedAwd ? "var(--primary-color)" : "",
+              background: clickedAwd ? "var(--button-section-selected-bg-color)" : "",
             }}>
             <p className="sections-showcase-text">Advanced Web Development</p>
           </a>

@@ -1,8 +1,7 @@
 import React from "react";
-import data from "../../data/projects.json";
 import video from "../../videos/Kugelbahn.mp4";
-import thumbnail from "../../images/Kugelbahn.JPG";
-import image from "../../images/KugelbahnNummer.jpg";
+import thumbnail from "../../images/VC2/Kugelbahn.JPG";
+import imgKugelbahn from "../../images/VC2/KugelbahnNummer.jpg";
 function Kugelbahn() {
   return (
     <div className="project-content-box">
@@ -26,12 +25,12 @@ function Kugelbahn() {
 
       <div className="project-box">
         <div className="project-image">
-          <figure>
+          <figure className="project-figure">
             <img
-              src={image}
+              src={imgKugelbahn}
               alt="Beschriftung"
-              style={{ width: "100%", padding: "10px" }}
             />
+            <figcaption>Overlay</figcaption>
           </figure>
         </div>
         <div className="project-description">

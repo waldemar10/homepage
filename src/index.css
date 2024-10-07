@@ -1,36 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 /* @import url('https://fonts.googleapis.com/css?family=Cinzel');
 @import url('https://fonts.googleapis.com/css?family=Exo');
 @import url("https://use.typekit.net/pgm2vji.css"); */
 
 :root {
-  --main-bg-color: #121212;
-  --primary-color: #1e90ff; 
-  --secondary-color: #ff6347; 
-  --font-color: #ececec; 
-  --project-showcase-bg-color: #1c1c1c; 
-  --sidemenu-bg-color: #1a1a1a; 
-  --sidemenu-button-bg-color: #333333; 
-  --sidemenu-button-color: #1e90ff; 
+  --main-bg-color: #0a0a0a;
+  --primary-color: #1e90ff;
+  --secondary-color: #ff6347;
+  --font-color: #ececec;
+  --project-showcase-bg-color: #242424;
+  --sidemenu-bg-color: #242424;
+  --button-section-bg-color: #101010;
+  --button-section-bg-color2: #24242433; /* 20 % Opacity*/
+  --button-section-selected-bg-color: linear-gradient(
+    30deg,
+    var(--primary-color) 0%,
+    var(--button-section-bg-color2) 100%
+  );
   --border-radius-button: 10px;
-  --link-color:#ececec;
-  --link-color-hover:#b3b3b3;
+  --border-radius-box-outer: 20px;
+  --border-radius-box-inner: 10px;
+  --link-color: #ececec;
+  --link-color-hover: #b3b3b3;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins','Roboto','Helvetica',sans-serif;
+  font-family: "Poppins", "Roboto", "Helvetica", sans-serif;
 }
 
-html{
+html {
   background-color: var(--main-bg-color);
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-/*   scroll-behavior: smooth; */
+  /*   scroll-behavior: smooth; */
 }
 
 body {
@@ -38,96 +45,92 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color:var(--font-color);
+  color: var(--font-color);
   min-height: 100vh;
   min-width: 100%;
-  
+
   font-size: 18px;
   background-size: 100%;
 }
-canvas{
+canvas {
   width: 100%;
   height: 100%;
   background: #111;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-h2{
+h2 {
   font-size: 42px;
   text-align: center;
 }
-header{
+header {
   display: flex;
   flex-direction: row;
   justify-content: center;
   font-size: 20px;
   width: 100%;
-  height:0px;
+  height: 0px;
   margin-top: 0px;
 }
-footer{
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width:100%;
-  max-height:100px;
+  width: 100%;
+  max-height: 100px;
   margin-top: 25px;
   scroll-snap-stop: none;
   scroll-snap-align: end;
 }
-p{
+p {
   font-size: 18px;
 }
-a{
+a {
   text-decoration: underline;
-  color:var(--link-color);
+  color: var(--link-color);
 }
-a:hover{
-  color:var(--link-color-hover);
+a:hover {
+  color: var(--link-color-hover);
 }
-a:visited{
-  color:var(--link-color);
+a:visited {
+  color: var(--link-color);
 }
-a:visited:hover{
-  color:var(--link-color-hover);
+a:visited:hover {
+  color: var(--link-color-hover);
 }
-li{
-margin: 5px 0px 5px 5px;
+li {
+  margin: 5px 0px 5px 5px;
 }
-q{
+q {
   font-style: italic;
 }
-figcaption{
+figcaption {
   text-align: center;
 }
-video{
+video {
   width: 100%;
   height: auto;
   margin: 0;
-  object-fit:fill;
+  object-fit: fill;
 }
 
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
 
-
-  /* Tablet */
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-
+/* Smartphone */
+@media screen and (max-width: 768px) {
+  footer {
+    scroll-snap-align: none;
   }
-  
-  /* Smartphone */
-  @media screen and (max-width: 768px) {
-    footer{
-      scroll-snap-align: none;
-    }
-   body {
+  body {
     font-size: 14px;
-   }
-   p{
-     font-size: 14px;
-   }
-
   }
+  p {
+    font-size: 14px;
+  }
+}
