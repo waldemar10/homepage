@@ -47,7 +47,7 @@
 }
 
 .project-figure img {
-  display:block;
+  display: block;
   border-radius: var(--border-radius-box-inner);
   width: 100%;
 }
@@ -58,7 +58,8 @@
   width: auto;
   padding: 5px 10px 5px 10px;
   background-color: var(--bg-color-figcaption);
-  border-radius: 0 0 var(--border-radius-box-inner) var(--border-radius-box-inner);
+  border-radius: 0 0 var(--border-radius-box-inner)
+    var(--border-radius-box-inner);
 }
 .project-description {
   flex: 1 1 0px;
@@ -114,7 +115,7 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .project-box {
     flex-direction: column;
-    max-width: 90%;
+    width: 80%;
   }
   .project-game {
     display: none;

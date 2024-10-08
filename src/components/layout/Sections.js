@@ -66,7 +66,7 @@ function Section() {
     
   }, [clickedFilm, clickedGameDev, clickedKugelbahn, clickedSSP, clickedYoga]);
 
-  function handleSelectedProject(clickedProject,scrollToView) {
+  function handleSelectedProject(clickedProject) {
     resetAllClicked();
 
     switch (clickedProject) {
@@ -107,10 +107,7 @@ function Section() {
         break;
     }
     
-    if(scrollToView === true){
-      refProject.current.scrollIntoView({ behavior: "smooth" });
-    }
-
+    refProject.current.scrollIntoView({ behavior: "smooth" });
     localStorage.setItem("id", clickedProject);
     setID(clickedProject);
   }
@@ -165,7 +162,7 @@ function Section() {
         <div className="sections-box-showcase" id="sections-box-showcase">
           <a
             className="sections-project-box"
-            onClick={() => handleSelectedProject(id_Filmbibliothek,true)}
+            onClick={() => handleSelectedProject(id_Filmbibliothek)}
             style={{
               filter: clickedFilm ? "brightness(100%)" : "brightness(50%)",
               background: clickedFilm ? "var(--button-section-selected-bg-color)" : "",
@@ -175,7 +172,7 @@ function Section() {
 
           <a
             className="sections-project-box"
-            onClick={() => handleSelectedProject(id_SSP,true)}
+            onClick={() => handleSelectedProject(id_SSP)}
             style={{
               filter: clickedSSP ? "brightness(100%)" : "brightness(50%)",
               background: clickedSSP ? "var(--button-section-selected-bg-color)" : "",
@@ -185,7 +182,7 @@ function Section() {
 
           <a
             className="sections-project-box"
-            onClick={() => handleSelectedProject(id_Yoga,true)}
+            onClick={() => handleSelectedProject(id_Yoga)}
             style={{
               filter: clickedYoga ? "brightness(100%)" : "brightness(50%)",
               background: clickedYoga ? "var(--button-section-selected-bg-color)" : "",
@@ -195,7 +192,7 @@ function Section() {
 
           <a
             className="sections-project-box"
-            onClick={() => handleSelectedProject(id_kugelbahn,true)}
+            onClick={() => handleSelectedProject(id_kugelbahn)}
             style={{
               filter: clickedKugelbahn ? "brightness(100%)" : "brightness(50%)",
               background: clickedKugelbahn ? "var(--button-section-selected-bg-color)" : "",
@@ -205,7 +202,7 @@ function Section() {
 
           <a
             className="sections-project-box"
-            onClick={() => handleSelectedProject(id_GameDev,true)}
+            onClick={() => handleSelectedProject(id_GameDev)}
             style={{
               filter: clickedGameDev ? "brightness(100%)" : "brightness(50%)",
               background: clickedGameDev ? "var(--button-section-selected-bg-color)" : "",
@@ -214,7 +211,7 @@ function Section() {
           </a>
           <a
             className="sections-project-box"
-            onClick={() => handleSelectedProject(id_Awd,true)}
+            onClick={() => handleSelectedProject(id_Awd)}
             style={{
               filter: clickedAwd ? "brightness(100%)" : "brightness(50%)",
               background: clickedAwd ? "var(--button-section-selected-bg-color)" : "",

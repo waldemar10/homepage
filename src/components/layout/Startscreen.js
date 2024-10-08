@@ -16,6 +16,7 @@ function Startscreen() {
   return (
     <div className="box">
       <svg
+      id="svg-headline"
         viewBox="0 0 440 300"
         className="svg-headline"
         style={{ fill: "url(#strokeGradient)" }}>

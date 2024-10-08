@@ -62,16 +62,12 @@
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .showproject-box {
-    margin: 20px;
+    scroll-snap-align: none;
+    margin: 0px;
   }
   .showproject-box-wrapper {
     width: 80%;
-  }
-  .showproject-icons-and-text {
-    justify-content: start;
-  }
-  .showproject-icons-box {
-    padding: 20px;
+    padding:10px;
   }
 }
 

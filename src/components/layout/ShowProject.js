@@ -75,7 +75,7 @@ function ShowProject(props) {
 
   return (
     <div id="showProject" className="showproject-box">
-      <div className="showproject-box-wrapper">
+      <div id="showproject-box-wrapper" className="showproject-box-wrapper">
         <div ref={refProject} className="showproject-modul-headline">
           {modul}
         </div>
