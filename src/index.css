@@ -26,15 +26,15 @@
   --link-color-hover: #b3b3b3;
 }
 @font-face {
-  font-family: 'Poppins-Medium';
-  src: url('C:\Users\walde\homepagev2\src\fonts\Poppins\Poppins-Medium.ttf') format('truetype');
+  font-family: 'Poppins-Regular';
+  src: url('C:\Users\walde\homepagev2\src\fonts\Poppins\Poppins-Regular.ttf') format('truetype');
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins-Medium", "Roboto", "Helvetica", sans-serif;
+  font-family: "Poppins-Regular", "Roboto", "Helvetica", sans-serif;
 }
 
 html {

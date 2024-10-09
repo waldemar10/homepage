@@ -11,13 +11,13 @@ function Awd() {
       <div className="project-box">
         <div className="project-description">
           In Advanced Web Development (AWD) war es die Aufgabe, eine progressive
-          Webanwendung zu entwickeln. Dabei war es auch wichtig,
+          Webanwendung zu entwickeln. Dabei war es wichtig,
           Backend-Technologien zu verwenden. Wir entschieden uns im Team für
           eine Sprachlernwebseite, die die Möglichkeit bietet, Vokabeln zu
           lernen und Grammatikübungen zu machen. Der Benutzer kann sich
           registrieren und anmelden. Die Webseite speichert die Daten in einer
           MongoDB-Datenbank. Auch ist sie responsiv und kann auf allen Geräten
-          genutzt werden.
+          verwendet werden.
           <br />
           <br />
           <div className="project-subheader">Was ist LinguPingu?</div>
@@ -27,7 +27,7 @@ function Awd() {
           von Vokabeltraining, interaktiven Lektionen und der Möglichkeit,
           individuelle Vokabelkollektionen zu erstellen, hebt sich LinguPingu
           deutlich von anderen Sprachenlern-Apps ab. Inspiriert von
-          erfolgreichen Anwendungen wie Duolingo und Busuu, legt LinguPingu
+          erfolgreichen Anwendungen wie Duolingo und Busuu legt LinguPingu
           besonderen Wert auf die Integration von Benutzer erstellten
           Vokabelkollektionen. Dies ermöglicht es den Nutzern, ihr persönliches
           Lernumfeld zu gestalten und ihre individuellen Lernziele effizient zu
@@ -42,10 +42,8 @@ function Awd() {
           </figure>
         </div>
           <div className="project-subheader">Grammatikübungen</div>
-          Der Benutzer kann die Grammatik der gewünschten Sprache in zwei
-          Hauptkategorien erlernen. Die Lektionen umfassen einerseits die
-          verschiedenen Zeitformen, sodass der Benutzer jede Zeitform in der
-          gewählten Sprache sicher beherrschen kann. Andererseits gibt es die
+          Die Grammatik ist in zwei Kategorien aufgeteilt. Es gibt zum einen die Kategorie
+          Zeitformen, dort kann der Benutzer jede Zeitform lernen. Zum anderen gibt es die
           Kategorie des täglichen Lebens, in der der Nutzer Situationen und
           Ausdrücke aus dem Alltag erlernt. Hierbei steht vor allem die
           Anwendung grammatikalisch korrekter Sätze des täglichen Umgangs im

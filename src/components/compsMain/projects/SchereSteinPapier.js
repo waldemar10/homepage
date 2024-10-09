@@ -24,8 +24,8 @@ function SchereSteinPapier() {
             <br />
             Meine Aufgabe im Team war es, die Bildverarbeitungsaufgabe zu
             programmieren. Ich arbeitete mit OpenCV und nutzte die
-            Vorlesungsinhalte, um die Erkennung für die Gesten "Schere, Stein und
-            Papier" zu realisieren.
+            Vorlesungsinhalte, um die Erkennung für die Gesten "Schere, Stein
+            und Papier" zu realisieren.
           </div>
           <div className="project-subheader">Video</div>
           <div className="project-video">
@@ -36,117 +36,115 @@ function SchereSteinPapier() {
         <div className="project-box">
           <div className="project-description">
             <div className="project-subheader">Vorgehensweise</div>
-            Ich nutzte meine Webcam, um die Bildverarbeitung zu testen. Die
-            erste Idee war es, eine Momentaufnahme von der Hand zu machen, um
-            diese dann anschließend auszuwerten. Ich wandelte das Bild in ein
-            Graustufenbild um und nutzte dann einen Schwellenwert, der bestimmt,
-            ab welchem Grauwert die Pixel weiß bzw. schwarz dargestellt werden
-            sollen. Für die Konturerkennung nutzte ich den Canny-Algorithmus.
-            Nach einem ersten Test stellten wir fest, dass wir statt Fotos zu
-            erstellen lieber die Bildverarbeitung direkt im Video arbeiten
-            lassen wollen. Daher verwarf ich diesen Ansatz wieder.
-            <br />
-            Der zweite Ansatz:
-            <br />
+            Zu Beginn nutzte ich meine Webcam, um erste Tests zur
+            Bildverarbeitung durchzuführen. Die ursprüngliche Idee war,
+            Momentaufnahmen von der Hand zu machen und diese anschließend zu
+            analysieren. Dazu wandelte ich das Bild in ein Graustufenbild um und
+            wendete einen Schwellenwert an, der festlegte, ab welchem Grauwert
+            die Pixel schwarz oder weiß dargestellt werden sollten. Für die
+            Konturerkennung kam der Canny-Algorithmus zum Einsatz. Nach den
+            ersten Tests stellte sich jedoch heraus, dass es effektiver wäre,
+            die Bildverarbeitung direkt auf das Videomaterial der Webcam
+            anzuwenden, anstatt statische Bilder zu nutzen. Daher verwarf ich
+            diesen ersten Ansatz.
+            <p>
+              Im zweiten Ansatz verfeinerte ich die Vorgehensweise und ging wie
+              folgt vor:
+            </p>
             <ol className="project-list">
-              <li>Webcam wird durch openCV VideoCapture erkannt.</li>
               <li>
-                Erstes Frame der offenen Webcam wird von einem openCV Matrize
-                gespeichert.
+                Die Webcam wurde mithilfe von OpenCVs <code>VideoCapture</code>{" "}
+                erkannt und gestartet.
               </li>
               <li>
-                Danach werden die darauffolgenden Frames der Webcam in
-                Grauwertbilder umgewandelt + der Filter "GaussianBlur"
-                angewendet.
-              </li>
-
-              <li>
-                Dann wird der Threshold für die Grauwerte angewendet. Dieser
-                entscheidet, ab welchem Grauwert die Pixel weiß oder schwarz
-                dargestellt werden.{" "}
+                Das erste Frame des Webcam-Streams wurde als OpenCV-Matrix
+                gespeichert, um es später als Referenz zu nutzen.
               </li>
               <li>
-                Nach dieser Vorbereitung wird die Kantendetektion mit dem
-                Canny-Algorithmus gestartet. Dieser erkennt wegen der zuvor
-                erstellten Vorarbeit schnell die Kontur der Hand.
+                Alle nachfolgenden Frames wurden in Graustufenbilder
+                umgewandelt, und der Filter <code>GaussianBlur</code> wurde
+                angewendet, um das Bild zu glätten und Rauschen zu reduzieren.
               </li>
               <li>
-                Um keine Probleme bei der späteren Erkennung der Handformen zu
-                haben, wird das Kantenbild geweitet.
+                Anschließend wurde ein Schwellenwert (Threshold) auf die
+                Graustufenbilder angewendet, der bestimmt, ab welchem Grauwert
+                die Pixel schwarz oder weiß dargestellt werden.
               </li>
               <li>
-                Dann wird die Hough-Transformation verwendet, um gerade Stellen
-                im Kantenbild zu finden. Das ermöglicht es uns, die Geste für
-                Papier leichter zu erkennen.
+                Nach dieser Vorverarbeitung wurde der Canny-Algorithmus zur
+                Kantenerkennung eingesetzt, der aufgrund der vorherigen
+                Bildbearbeitung schnell die Konturen der Hand identifizierte.
               </li>
               <li>
-                Danach wird eine Hülle um die Finger gezeichnet (rote Linie um
-                die Hand). Dies ermöglicht es, die Konvexitätsdefekte ausfindig
-                zu machen.
+                Um sicherzustellen, dass die Erkennung der Handformen korrekt
+                funktioniert, wurden die Kantenbilder erweitert (Dilatation), um
+                eventuelle Lücken in den Konturen zu schließen.
               </li>
               <li>
-                Mit der vordefinierten Funktion convexityDefects(); von OpenCV
-                bekommen wir die Stellen der Konvexitätsdefekte. Das ermöglicht
-                uns, die Fingerspitzen zu erkennen.{" "}
+                Mithilfe der Hough-Transformation wurden gerade Linien im
+                Kantenbild erkannt, was die Erkennung der Geste „Papier“
+                erleichterte.
               </li>
               <li>
-                Dann folgte die Erkennung des Mittelpunktes der Kontur. Das
-                machen wir mit der Hilfe von "Moments". Es berechnet den
-                Massenschwerpunkt eines Objektes in einem Bild. Die Stellen
-                werden durch die Kontur des Objektes berechnet.
+                Als nächstes zeichnete ich eine konvexe Hülle um die Finger
+                (rote Linien um die Hand), um die sogenannten Konvexitätsdefekte
+                zu ermitteln.
               </li>
               <li>
-                Dadurch erhalten wir die Koordinaten für den Mittelpunkt der
-                Kontur. Die Punkte, die wir von den Konvexitätsdefekten
-                erhalten, werden mit dem Mittelpunkt zusammen verbunden. Dadurch
-                können wir sehen, wie viele Finger angezeigt werden. Das hilft
-                bei der Erkennung der Gesten: Papier und Schere.
+                Mit der OpenCV-Funktion <code>convexityDefects()</code> wurden
+                die Stellen der Konvexitätsdefekte identifiziert, was uns die
+                Erkennung der Fingerspitzen ermöglichte.
               </li>
               <li>
-                Danach wird die Kreisförmigkeit der Kontur berechnet. Das hilft
-                bei der Unterscheidung der Gesten Papier und Stein. Formel:
-                Circularity = (4 * pi * ContourArea) / arcLength^2{" "}
+                Im nächsten Schritt wurde der Mittelpunkt der Handkontur mit der
+                Funktion <code>Moments</code> berechnet. Diese Methode nutzt den
+                Massenschwerpunkt der Hand, um genaue Koordinaten für die Mitte
+                der Kontur zu erhalten.
               </li>
               <li>
-                Das Kantenbild, das zuvor nur in der openCV Matrize bearbeitet
-                wurde, wird nun wieder in ein Bild umgewandelt.
+                Die ermittelten Punkte der Konvexitätsdefekte wurden mit dem
+                Mittelpunkt verbunden, wodurch die Anzahl der sichtbaren Finger
+                bestimmt werden konnte. Dies half bei der Erkennung der Gesten
+                „Papier“ und „Schere“.
               </li>
               <li>
-                Danach wird das Ergebnis auf das aktuelle Frame gezeichnet,
-                wodurch wir direkt die Kontur und die Geste in unserer Webcam
-                sehen können.
+                Um die Geste „Stein“ zu erkennen, wurde die Kreisförmigkeit
+                (Circularity) der Handkontur berechnet. Diese wurde mithilfe der
+                Formel <code>(4 * pi * ContourArea) / arcLength^2</code>{" "}
+                berechnet und ermöglichte eine klare Unterscheidung zwischen den
+                Gesten „Papier“ und „Stein“.
+              </li>
+              <li>
+                Schließlich wurde das zuvor verarbeitete Kantenbild aus der
+                OpenCV-Matrix in ein sichtbares Bild umgewandelt.
+              </li>
+              <li>
+                Zum Abschluss wurde das Ergebnis auf dem aktuellen Webcam-Frame
+                dargestellt, sodass die erkannte Handkontur und die
+                entsprechende Geste in Echtzeit angezeigt wurden.
               </li>
             </ol>
           </div>
 
           <div className="project-image">
             <figure className="project-figure">
-              <img
-                src={imgScissor}
-                alt="Scissors gesture"
-              />
+              <img src={imgScissor} alt="Scissors gesture" />
               <figcaption className="project-figcaption">
-                Konvexitätsdefekte ermöglichen die Erkennung der Geste Schere
+                Geste Schere
               </figcaption>
             </figure>
 
             <figure className="project-figure">
-              <img
-                src={imgStone}
-                alt="Stone gesture"
-              />
+              <img src={imgStone} alt="Stone gesture" />
               <figcaption className="project-figcaption">
-                Die Erkennung der Geste Stein
+                Geste Stein
               </figcaption>
             </figure>
 
             <figure className="project-figure">
-              <img
-                src={imgPaper}
-                alt="Paper gesture"
-              />
+              <img src={imgPaper} alt="Paper gesture" />
               <figcaption className="project-figcaption">
-                Die Erkennung der Geste Papier
+                Geste Papier
               </figcaption>
             </figure>
           </div>

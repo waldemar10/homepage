@@ -27,11 +27,11 @@ function GameDev() {
         <div className="project-description">
           Im Modul "Game Development" musste jede Gruppe ein eigenes Spiel
           erstellen. Meine Gruppe entschied sich für ein Point-And-Click Spiel.
-          Wir teilten uns in ein Development (2) und ein Designer Team (3) ein.
-          Ich war Teil des Development Teams.
+          Die Gruppe wurde in ein Development (2) und ein Designer Team (3) aufgeteilt.
+          Ich war Teil des Development-Teams.
           <br />
           <br />
-          <strong>Unsere Spielbeschreibung:</strong>
+          <strong>Die Spielbeschreibung:</strong>
           <br />
           <q>
             PinkPanda Interactive stellt Ihnen hiermit CinemaCraze vor. Es
@@ -40,7 +40,7 @@ function GameDev() {
             arbeitet in einem Weltraum-Kino, das von vielen Alien-Kunden besucht
             wird. Wenn der Spieler zu viele Kunden verärgert, verliert er. Um
             sein Leben im Kino zu erleichtern, hat der Spieler die Möglichkeit,
-            sich Upgrades zu kaufen. Mit den Upgrades kann der Spieler schneller
+            Upgrades zu kaufen. Mit den Upgrades kann der Spieler schneller
             die Bestellungen abarbeiten und mehr Geld verdienen.
           </q>
           <div className="project-subheader">Steuerung</div>
@@ -86,20 +86,20 @@ function GameDev() {
           Die Maschine hat eine bestimmte Kapazität. Die Menge des Produkts
           reduziert sich bei jeder Anwendung. Wenn die Maschine leer ist, muss
           der Spieler selbst die Maschine befüllen. Das tut der Spieler, indem
-          er auf den Button “Auffüllen” klickt. Danach braucht die Maschine eine
-          vordefinierte Zeit, um aufgefüllt zu werden. Die Füllgeschwindigkeit
+          er auf den Button „Auffüllen“ klickt. Danach braucht die Maschine eine
+          gewisse Zeit, um aufgefüllt zu werden. Die Füllgeschwindigkeit
           lässt sich durch Upgrades verbessern.
           <br />
           <br />
           <strong>Freikaufen der Maschinen</strong>
           <br />
           Am Anfang besitzt der Spieler keine Maschinen. Er kann die erste
-          Maschine kostenlos kaufen. Dabei muss er auf den Button “Kaufen”
+          Maschine kostenlos kaufen. Dabei muss er auf den Button „Kaufen“
           klicken. Die Kundenanfragen begrenzen sich auf die freigekauften
           Maschinen, z.B. wenn man nur die Popcornmaschine besitzt, kommen nur
           Kunden, die Popcorn möchten. Die nächste Maschine kostet 100 $, die
           dritte und damit letzte kostet 250 $. Wenn der Spieler zu wenig Geld
-          hat, um die zweite oder dritte Maschine zu kaufen, wird der “Kaufen”
+          hat, um die zweite oder dritte Maschine zu kaufen, wird der „Kaufen“
           Button mit einer roten Füllfarbe hervorgehoben.
         </div>
 
@@ -151,17 +151,17 @@ function GameDev() {
           <br />
           <br />
           Das Upgrade-Menü ist über einen Button auf der Trennwand hinter den
-          Maschinen zu erreichen. Bei einem erfolgreichen Kauf eines Upgrades,
-          ertönt ein Ton, was den erfolgreichen Kauf des Upgrades bestätigt.
+          Maschinen zu erreichen. Bei einem erfolgreichen Kauf eines Upgrades
+          ertönt ein Ton, der den erfolgreichen Kauf des Upgrades bestätigt.
           Danach wird die nächste Stufe des Upgrades angezeigt. Falls der
           Spieler die letzte Stufe erfolgreich gekauft hat, wird der Text des
-          Buttons zu “Fertig” und farblich gekennzeichnet. Der Spieler kann den
+          Buttons zu „Fertig“ und farblich gekennzeichnet. Der Spieler kann den
           Button dann nicht mehr betätigen und ist fertig mit dieser
           Upgrade-Reihe.
           <br />
           <br />
           Wenn der Spieler mit unzureichendem Geld ein Upgrade versucht zu
-          kaufen, ertönt ein Ton, das den erfolglosen Kauf des Upgrades
+          kaufen, ertönt ein Ton, der den erfolglosen Kauf des Upgrades
           bestätigt. Der Button des Upgrades wird für eine Sekunde rot
           hervorgehoben.
           <br />
