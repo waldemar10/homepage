@@ -10,8 +10,6 @@ export const ProjectsProvider = ({ children }) => {
   const [clickedGameDev, setClickedGameDev] = useState(false);
   const [clickedAwd, setClickedAwd] = useState(false);
   const [projectData, setProjectData] = useState(data.Filmbibliothek[0]);
-  const [isSelectionShown, setIsSelectionShown] = useState(true);
-  const [isProjectShown, setIsProjectShown] = useState(false);
 
   const refProject = useRef(null);
   return (
@@ -31,10 +29,6 @@ export const ProjectsProvider = ({ children }) => {
         setClickedAwd,
         projectData,
         setProjectData,
-        isSelectionShown,
-        setIsSelectionShown,
-        isProjectShown,
-        setIsProjectShown,
         refProject,
       }}>
       {children}

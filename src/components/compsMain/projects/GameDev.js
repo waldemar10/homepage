@@ -1,12 +1,12 @@
 import React,{useState} from "react";
-import "../../styles/projects.css";
-import data from "../../data/projects.json";
-import video from "../../videos/GameDev.mp4";
-import thumbnail from "../../images/GameDev/GameDev.JPG";
-import imgMachineEmpty from "../../images/GameDev/MachineEmpty.JPG";
-import imgProductionTime from "../../images/GameDev/ProductionTime.JPG";
-import imgUnlockMachine from "../../images/GameDev/UnlockMachine.JPG";
-import imgUpgradeMenu from "../../images/GameDev/UpgradeMenu.JPG";
+import "../../../styles/projects.css";
+import data from "../../../data/projects.json";
+import video from "../../../videos/GameDev.mp4";
+import thumbnail from "../../../images/GameDev/GameDev.JPG";
+import imgMachineEmpty from "../../../images/GameDev/MachineEmpty.JPG";
+import imgProductionTime from "../../../images/GameDev/ProductionTime.JPG";
+import imgUnlockMachine from "../../../images/GameDev/UnlockMachine.JPG";
+import imgUpgradeMenu from "../../../images/GameDev/UpgradeMenu.JPG";
 
 import { Unity, useUnityContext } from "react-unity-webgl";
 

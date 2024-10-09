@@ -1,19 +1,16 @@
 import React, { useState, useEffect,useContext } from "react";
 
-import { ProjectsContext } from "../context/projectsContext";
-
+import { ProjectsContext } from "../../context/projectsContext";
+import { SectionContext } from "../../context/sectionContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-import "../styles/sidemenu.css";
-function Sidemenu({
-  handleSelectedProject,
-
-  sidemenu,
-}) {
+import "../../styles/sidemenu.css";
+export default function Sidemenu() {
   const{clickedFilm,clickedKugelbahn,clickedSSP,clickedYoga,clickedGameDev,clickedAwd} =useContext(ProjectsContext);
-  const [showSidemenu, setShowSidemenu] = useState(false);
-
+  const{handleSelectedProject} =useContext(SectionContext);
+  const [showSidemenu, setShowSidemenu] = useState(true);
+  const [isProjectShown, setIsProjectShown] = useState(false);
   useEffect(() => {
     const storedValue = localStorage.getItem("showSidemenu");
     if (storedValue !== null && storedValue !== undefined) {
@@ -27,9 +24,36 @@ function Sidemenu({
     setShowSidemenu(value);
     localStorage.setItem("showSidemenu", JSON.stringify(value));
   }
+
+  const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      switch (entry.target.id) {
+        case "showProject":
+          if (entry.isIntersecting) {
+            setIsProjectShown(true);
+          } else {
+            setIsProjectShown(false);
+          }
+          break;
+        default:
+          break;
+      }
+    });
+  };
+  const options = {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+  const observer = new IntersectionObserver(callback, options);
+
+  useEffect(() => {
+    observer.observe(document.getElementById("showProject"));
+  });
+
   return (
     <div
-      className={` ${sidemenu ? "visible" : "hide"} ${
+      className={` ${isProjectShown ? "visible" : "hide"} ${
         showSidemenu ? "" : "hide-button"
       } sidemenu`}>
       
@@ -83,4 +107,4 @@ function Sidemenu({
   );
 }
 
-export default Sidemenu;
+

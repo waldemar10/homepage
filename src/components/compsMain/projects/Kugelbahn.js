@@ -1,7 +1,7 @@
 import React from "react";
-import video from "../../videos/Kugelbahn.mp4";
-import thumbnail from "../../images/VC2/Kugelbahn.JPG";
-import imgKugelbahn from "../../images/VC2/KugelbahnNummer.jpg";
+import video from "../../../videos/Kugelbahn.mp4";
+import thumbnail from "../../../images/VC2/Kugelbahn.JPG";
+import imgKugelbahn from "../../../images/VC2/KugelbahnNummer.jpg";
 function Kugelbahn() {
   return (
     <div className="project-content-box">

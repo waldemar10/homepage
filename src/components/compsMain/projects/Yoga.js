@@ -1,6 +1,6 @@
 import React from "react";
-import video from "../../videos/Yoga.mp4";
-import thumbnail from "../../images/WebDev/Yoga.JPG";
+import video from "../../../videos/Yoga.mp4";
+import thumbnail from "../../../images/WebDev/Yoga.JPG";
 function Yoga() {
   return (
     <div className="project-content-box">

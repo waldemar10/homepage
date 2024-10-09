@@ -1,10 +1,10 @@
 import React from "react";
 
-import video from "../../videos/LinguPingu.mp4";
-import thumbnail from "../../images/Awd/GrammarHub.JPG";
-import excitedPingu from "../../images/Awd/excitedPingu.png";
-import "../../styles/projects.css";
-import "../../styles/awd.css";
+import video from "../../../videos/LinguPingu.mp4";
+import thumbnail from "../../../images/Awd/GrammarHub.JPG";
+import excitedPingu from "../../../images/Awd/excitedPingu.png";
+import "../../../styles/projects.css";
+import "../../../styles/awd.css";
 function Awd() {
   return (
     <div className="project-content-box">

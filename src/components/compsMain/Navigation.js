@@ -1,16 +1,16 @@
 import React, { useEffect, useState, useContext } from "react";
-import { UsefullContext } from "../context/context";
+import { SectionContext } from "../../context/sectionContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { ProjectsContext } from "../context/projectsContext";
-import "../styles/navigation.css";
-export default function Navigation(props,navigationUp,navigationDown) {
-  /* const [hideUpButton, setHideUpButton] = useState(false);
-  const [hideDownButton, setHideDownButton] = useState(false); */
+import { ProjectsContext } from "../../context/projectsContext";
+import "../../styles/navigation.css";
+
+export default function Navigation() {
+  
   const [isSectionVisible, setIsSectionVisible] = useState(false);
   const [isProjectVisible, setIsProjectVisible] = useState(false);
   const [showNav, setShowNav] = useState(false);
-  const { refSection } = useContext(UsefullContext);
+  const { refSection } = useContext(SectionContext);
   const { refProject } = useContext(ProjectsContext);
 
   const navigateDown = (e) => {
@@ -20,15 +20,13 @@ export default function Navigation(props,navigationUp,navigationDown) {
     refSection.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const navigation= (e) => {
-
+  const navigation = (e) => {
     if (isProjectVisible) {
       navigateUp(e);
-    }
-    else if (isSectionVisible) {
+    } else if (isSectionVisible) {
       navigateDown(e);
     }
-  }
+  };
   const callback = (entries, observer) => {
     entries.forEach((entry) => {
       // If observed element is not visible
@@ -36,30 +34,21 @@ export default function Navigation(props,navigationUp,navigationDown) {
         case "sections-box-showcase":
           if (entry.isIntersecting) {
             setIsSectionVisible(true);
-            // Show side menu
-            /* setHideUpButton(true);
-            setHideDownButton(false); */
           } else {
             setIsSectionVisible(false);
-            // Hide side menu
-            /* setHideUpButton(false);
-            setHideDownButton(true); */
           }
           break;
         case "showproject-box-wrapper":
           if (entry.isIntersecting) {
-            // Show side menu
             setIsProjectVisible(true);
-            /* setHideUpButton(true);
-            setHideDownButton(true); */
-          }else{
+          } else {
             setIsProjectVisible(false);
           }
           break;
-          case "svg-headline":
+        case "svg-headline":
           if (entry.isIntersecting) {
             setShowNav(false);
-          }else{
+          } else {
             setShowNav(true);
           }
           break;
@@ -85,9 +74,10 @@ export default function Navigation(props,navigationUp,navigationDown) {
     <>
       <div className="nav-box">
         <div className="nav-box-inner">
-         
           {showNav && (
-            <a className={` ${isProjectVisible ? "rotate" : ""} nav-arrow`} onClick={(e) => navigation(e)}>
+            <a
+              className={` ${isProjectVisible ? "rotate" : ""} nav-arrow`}
+              onClick={(e) => navigation(e)}>
               <FontAwesomeIcon icon={faChevronDown} className="icon" />
             </a>
           )}

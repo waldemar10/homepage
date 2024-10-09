@@ -1,12 +1,12 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 
 // Import all projects
-import Filmbibliothek from "../myProjects/Filmbibliothek";
-import SchereSteinPapier from "../myProjects/SchereSteinPapier";
-import Yoga from "../myProjects/Yoga";
-import Kugelbahn from "../myProjects/Kugelbahn";
-import GameDev from "../myProjects/GameDev";
-import Awd from "../myProjects/Awd";
+import Filmbibliothek from "./projects/Filmbibliothek";
+import SchereSteinPapier from "./projects/SchereSteinPapier";
+import Yoga from "./projects/Yoga";
+import Kugelbahn from "./projects/Kugelbahn";
+import GameDev from "./projects/GameDev";
+import Awd from "./projects/Awd";
 // Import FontAwesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faListCheck } from "@fortawesome/free-solid-svg-icons";
@@ -27,7 +27,6 @@ function ShowProject(props) {
     clickedGameDev,
     clickedAwd,
     projectData,
-    setIsProjectShown,
     refProject
   } = useContext(ProjectsContext);
   let title, gitHub, code, group, requirements, modul;
@@ -40,39 +39,7 @@ function ShowProject(props) {
     group = projectData.Group;
     requirements = projectData.Requirements;
   }
-
-  const callback = (entries, observer) => {
-    entries.forEach((entry) => {
-      switch (entry.target.id) {
-        case "showProject":
-          if (entry.isIntersecting) {
-            setIsProjectShown(true);
-          } else {
-            setIsProjectShown(false);
-          }
-          break;
-        default:
-          break;
-      }
-    });
-  };
-  const options = {
-    root: null, // Use the viewport as the root
-    rootMargin: "0px",
-    threshold: 0.1,
-  };
-  const observer = new IntersectionObserver(callback, options);
-
-  useEffect(() => {
-    observer.observe(document.getElementById("showProject"));
-  });
- /*  useEffect(() => {
-    if (ref.current !== null && ref.current !== undefined && scrollToProject) {
-      console.log(ref.current);
-      ref.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [scrollToProject]); */
-
+ 
   return (
     <div id="showProject" className="showproject-box">
       <div id="showproject-box-wrapper" className="showproject-box-wrapper">

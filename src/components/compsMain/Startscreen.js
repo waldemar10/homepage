@@ -1,14 +1,14 @@
-import React, { useState, useContext, useEffect, useRef } from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { UsefullContext } from "../../context/context";
+import { SectionContext } from "../../context/sectionContext";
 
 import "../../styles/startscreen.css";
 
 function Startscreen() {
-  const {refSection } = useContext(UsefullContext);
+  const {refSection } = useContext(SectionContext);
 
-  const onSubmit = (e) => {
+  const navToSection = (e) => {
     e.preventDefault();
     refSection.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -49,7 +49,7 @@ function Startscreen() {
       </svg>
 
       <a
-        onClick={(e) => onSubmit(e)}
+        onClick={(e) => navToSection(e)}
         className="icon-box">
         <FontAwesomeIcon icon={faChevronDown} className="icon" />
       </a>

@@ -1,11 +1,11 @@
 import React from "react";
 
-import video from "../../videos/SchereSteinPapier.mp4";
-import thumbnail from "../../images/VC/SSP.JPG";
+import video from "../../../videos/SchereSteinPapier.mp4";
+import thumbnail from "../../../images/VC/SSP.JPG";
 
-import imgPaper from "../../images/VC/Papier.JPG";
-import imgScissor from "../../images/VC/Schere.JPG";
-import imgStone from "../../images/VC/Stein.JPG";
+import imgPaper from "../../../images/VC/Papier.JPG";
+import imgScissor from "../../../images/VC/Schere.JPG";
+import imgStone from "../../../images/VC/Stein.JPG";
 
 function SchereSteinPapier() {
   return (

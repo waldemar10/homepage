@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+/* @import url("https://fonts.googleapis.com/css?family=Poppins"); */
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 /* @import url('https://fonts.googleapis.com/css?family=Cinzel');
 @import url('https://fonts.googleapis.com/css?family=Exo');
@@ -25,12 +25,16 @@
   --link-color: #ececec;
   --link-color-hover: #b3b3b3;
 }
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('C:\Users\walde\homepagev2\src\fonts\Poppins\Poppins-Medium.ttf') format('truetype');
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", "Roboto", "Helvetica", sans-serif;
+  font-family: "Poppins-Medium", "Roboto", "Helvetica", sans-serif;
 }
 
 html {
@@ -49,7 +53,6 @@ body {
   color: var(--font-color);
   min-height: 100vh;
   min-width: 100%;
-
   font-size: 18px;
   background-size: 100%;
 }

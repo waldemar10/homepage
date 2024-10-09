@@ -1,7 +1,7 @@
-import Header from './components/main/Header'
-import Footer from './components/main/Footer'
-import Main from './components/main/Main'
-import Starfield from './components/starfield'
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
+import Main from './components/layout/Main'
+import Starfield from './components/effects/Starfield'
 import "./styles/animations.css";
 
 function App() {
