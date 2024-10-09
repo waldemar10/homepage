@@ -124,6 +124,12 @@ video {
 
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  html{
+    scroll-snap-type:none;
+  }
+  footer {
+    scroll-snap-align: none;
+  }
 }
 
 /* Smartphone */

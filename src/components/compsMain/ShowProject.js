@@ -9,7 +9,7 @@ import GameDev from "./projects/GameDev";
 import Awd from "./projects/Awd";
 // Import FontAwesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faListCheck } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -69,6 +69,14 @@ function ShowProject(props) {
               GitHub
             </a>
           </div>
+          {
+            clickedYoga ?  (
+              <div className="showproject-icons-and-text">
+                <FontAwesomeIcon icon={faGlobe} className="showproject-icon" />
+                <a target="_blank" rel="noreferrer" href="https://yoga.waljus.de/" className="showproject-icons-text">Website</a>
+              </div>
+            ) : null
+          }
         </div>
 
         <div style={{ display: clickedFilm ? "flex" : "none" }}>
