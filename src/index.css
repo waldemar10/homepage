@@ -87,6 +87,7 @@ footer {
   width: 100%;
   max-height: 100px;
   margin-top: 25px;
+  padding: 10px;
   scroll-snap-stop: none;
   scroll-snap-align: end;
 }
