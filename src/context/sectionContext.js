@@ -32,7 +32,7 @@ export const SectionProvider = ({ children }) => {
     setClickedFilm(false);
     setClickedAwd(false);
   }
-  function handleSelectedProject(clickedProject) {
+  function handleSelectedProject(clickedProject, shouldScroll) {
     resetAllClicked();
 
     switch (clickedProject) {
@@ -72,8 +72,9 @@ export const SectionProvider = ({ children }) => {
         setProjectData(data.Filmbibliothek[0]);
         break;
     }
-
+    if(shouldScroll){
     refProject.current.scrollIntoView({ behavior: "smooth" });
+    }
   }
   return (
     <SectionContext.Provider
