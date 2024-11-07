@@ -77,6 +77,14 @@ function ShowProject(props) {
               </div>
             ) : null
           }
+          {
+            clickedAwd ?  (
+              <div className="showproject-icons-and-text">
+                <FontAwesomeIcon icon={faGlobe} className="showproject-icon" />
+                <a target="_blank" rel="noreferrer" href="https://lingupingu.waljus.de/" className="showproject-icons-text">Website</a>
+              </div>
+            ) : null
+          }
         </div>
 
         <div style={{ display: clickedFilm ? "flex" : "none" }}>

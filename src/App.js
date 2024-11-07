@@ -1,20 +1,21 @@
-import Header from './components/layout/Header'
-import Footer from './components/layout/Footer'
-import Main from './components/layout/Main'
-import Starfield from './components/effects/Starfield'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Impressum from "./pages/Impressum";
+import Home from "./pages/Home";
 import "./styles/animations.css";
 
 function App() {
   return (
+    <Router>
     <div className="App">
-      
-      <Header></Header>
-      <Main></Main>
-      <Footer></Footer>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
 
-      <Starfield></Starfield>
-
+        <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/impressum" element={<Impressum />} />
+      </Routes>
     </div>
+    </Router>
   );
 }
 
