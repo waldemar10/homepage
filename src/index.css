@@ -41,7 +41,7 @@ html {
   background-color: var(--bg-color-body);
   overflow-x: hidden;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+/*   scroll-snap-type: y mandatory; */
   /*   scroll-behavior: smooth; */
 }
 
@@ -88,8 +88,8 @@ footer {
   max-height: 100px;
   margin-top: 25px;
   padding: 10px;
-  scroll-snap-stop: none;
-  scroll-snap-align: end;
+/*   scroll-snap-stop: none;
+  scroll-snap-align: end; */
 }
 p {
   font-size: 18px;

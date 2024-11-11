@@ -10,18 +10,20 @@ export default function Sidemenu() {
   const{clickedFilm,clickedKugelbahn,clickedSSP,clickedYoga,clickedGameDev,clickedAwd} =useContext(ProjectsContext);
   const{handleSelectedProject} =useContext(SectionContext);
   const [showSidemenu, setShowSidemenu] = useState(true);
-  const [isProjectShown, setIsProjectShown] = useState(false);
+  const [showSidemenuFull, setShowSidemenuFull] = useState(false);
+  const [projectShown, setProjectShown] = useState(false);
+  const [sectionShown, setSectionShown] = useState(false);
   useEffect(() => {
     const storedValue = localStorage.getItem("showSidemenu");
     if (storedValue !== null && storedValue !== undefined) {
       const parsedValue = JSON.parse(storedValue);
-      setShowSidemenu(parsedValue);
+      setShowSidemenuFull(parsedValue);
     }
   }, []);
 
   function handleShownSidemenu() {
     const value = !showSidemenu;
-    setShowSidemenu(value);
+    setShowSidemenuFull(value);
     localStorage.setItem("showSidemenu", JSON.stringify(value));
   }
 
@@ -30,11 +32,17 @@ export default function Sidemenu() {
       switch (entry.target.id) {
         case "showProject":
           if (entry.isIntersecting) {
-            setIsProjectShown(true);
+            setProjectShown(true);
           } else {
-            setIsProjectShown(false);
+            setProjectShown(false);
           }
           break;
+        case "sections-box":
+          if(entry.isIntersecting){
+            setSectionShown(true);
+          }else{
+            setSectionShown(false);
+          }
         default:
           break;
       }
@@ -49,11 +57,18 @@ export default function Sidemenu() {
 
   useEffect(() => {
     observer.observe(document.getElementById("showProject"));
+    observer.observe(document.getElementById("sections-box"))
   });
-
+  useEffect(() =>{
+    if(!sectionShown && projectShown){
+      setShowSidemenu(true);
+    }else{
+      setShowSidemenu(false);
+    }
+  },[sectionShown,projectShown])
   return (
     <div
-      className={` ${isProjectShown ? "visible" : "hide"} ${
+      className={` ${showSidemenu ? "visible" : "hide"} ${
         showSidemenu ? "" : "hide-button"
       } sidemenu`}>
       
@@ -98,7 +113,7 @@ export default function Sidemenu() {
       <button className="sidemenu-button" onClick={() => handleShownSidemenu()}>
         <FontAwesomeIcon
           className={`sidemenu-button-svg ${
-            showSidemenu ? "" : "rotate-button"
+            showSidemenuFull ? "" : "rotate-button"
           }`}
           icon={faArrowLeft}
         />
