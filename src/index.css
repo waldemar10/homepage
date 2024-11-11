@@ -5,14 +5,14 @@
 @import url("https://use.typekit.net/pgm2vji.css"); */
 
 :root {
-  --bg-color-body: #0a0a0a;
-  --bg-color-project-showcase: #242424;
-  --bg-color-sidemenu: #353535;
+  --bg-color-body: #000000;
+  --bg-color-project-showcase: #0b0b0b;
+  --bg-color-sidemenu: #161616;
   --bg-color-figcaption:#353535;
   --primary-color: #1e90ff;
   --secondary-color: #ff6347;
   --font-color: #ececec;
-  --button-section-bg-color: #101010;
+  --button-section-bg-color: #383838;
   --button-section-bg-color2: #24242433; /* 20 % Opacity*/
   --button-section-selected-bg-color: linear-gradient(
     30deg,

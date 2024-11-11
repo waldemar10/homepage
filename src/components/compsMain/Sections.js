@@ -47,7 +47,7 @@ function Section() {
               filter: clickedFilm ? "brightness(100%)" : "brightness(50%)",
               background: clickedFilm ? "var(--button-section-selected-bg-color)" : "",
             }}>
-            <p className="sections-showcase-text">Grundlagen Informatik</p>
+            <p className="sections-showcase-text">Die Filmbibliothek</p>
           </a>
 
           <a
@@ -57,7 +57,7 @@ function Section() {
               filter: clickedSSP ? "brightness(100%)" : "brightness(50%)",
               background: clickedSSP ? "var(--button-section-selected-bg-color)" : "",
             }}>
-            <p className="sections-showcase-text">Visual Computing I</p>
+            <p className="sections-showcase-text">Schere Stein Papier Ultimate</p>
           </a>
 
           <a
@@ -67,7 +67,7 @@ function Section() {
               filter: clickedYoga ? "brightness(100%)" : "brightness(50%)",
               background: clickedYoga ? "var(--button-section-selected-bg-color)" : "",
             }}>
-            <p className="sections-showcase-text">Web Development</p>
+            <p className="sections-showcase-text">Die Yoga-Website</p>
           </a>
 
           <a
@@ -77,7 +77,7 @@ function Section() {
               filter: clickedKugelbahn ? "brightness(100%)" : "brightness(50%)",
               background: clickedKugelbahn ? "var(--button-section-selected-bg-color)" : "",
             }}>
-            <p className="sections-showcase-text">Visual Computing II</p>
+            <p className="sections-showcase-text">Die Kugelbahn</p>
           </a>
 
           <a
@@ -87,7 +87,7 @@ function Section() {
               filter: clickedGameDev ? "brightness(100%)" : "brightness(50%)",
               background: clickedGameDev ? "var(--button-section-selected-bg-color)" : "",
             }}>
-            <p className="sections-showcase-text">Game Development</p>
+            <p className="sections-showcase-text">Cinemacraze</p>
           </a>
           <a
             className="sections-project-box"
@@ -96,7 +96,7 @@ function Section() {
               filter: clickedAwd ? "brightness(100%)" : "brightness(50%)",
               background: clickedAwd ? "var(--button-section-selected-bg-color)" : "",
             }}>
-            <p className="sections-showcase-text">Advanced Web Development</p>
+            <p className="sections-showcase-text">LinguPingu</p>
           </a>
         </div>
       </div>

@@ -15,13 +15,13 @@
   justify-content: center;
   align-content: center;
 }
+.sections-box-showcase a{
+  text-decoration: none;
+}
 .sections-showcase-text {
-  font-size: 32px;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 28px;
+  padding: 10px;
+
   background-color: transparent;
   text-shadow: 0.1vw 0.1vw 0.4vw #000000;
   overflow-wrap: break-word;
@@ -31,7 +31,9 @@
 
 .sections-project-box {
   color: var(--font-color);
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 250px;
   height: 175px;
   margin: 0px;
