@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect,useState } from "react";
 
 import { ProjectsContext } from "../../context/projectsContext";
 import { SectionContext } from "../../context/sectionContext";
@@ -6,6 +6,7 @@ import "../../styles/sections.css";
 
 function Section() {
   const { handleSelectedProject, refSection } = useContext(SectionContext);
+  const [isVisible, setIsVisible] = useState(false); 
   const {
     clickedFilm,
     clickedKugelbahn,
@@ -33,13 +34,36 @@ function Section() {
       handleSelectedProject(localStorage.getItem("clickedProject", false));
     }
   }, []);
-  const SectionBox = ({ id, clicked, projectname }) => (
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (refSection.current) {
+      observer.observe(refSection.current);
+    }
+
+    return () => {
+      if (refSection.current) observer.unobserve(refSection.current);
+    };
+  }, [refSection]);
+
+  const SectionBox = ({ id, clicked, projectname,index }) => (
     <a
-      className="sections-project-box"
+    className="sections-project-box"
       onClick={() => handleSelectedProject(id, true)}
       style={{
         filter: clicked ? "brightness(100%)" : "brightness(50%)",
         background: clicked ? "var(--button-section-selected-bg-color)" : "",
+        animationDelay: `${index * 0.5}s`,
       }}>
       <p className="sections-showcase-text">{projectname}</p>
     </a>
@@ -53,11 +77,12 @@ function Section() {
         </h2>
 
         <div className="sections-box-showcase" id="sections-box-showcase">
-          {projects.map((project) => (
+          {projects.map((project,index) => (
             <SectionBox
               id={project.id}
               clicked={project.clickedKey}
               projectname={project.name}
+              index={index}
             />
           ))}
         </div>
