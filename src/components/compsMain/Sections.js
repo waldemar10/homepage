@@ -28,12 +28,11 @@ function Section() {
   ];
   useEffect(() => {
     if (
-      localStorage.getItem("clickedProject") !== null &&
-      localStorage.getItem("clickedProject") !== undefined
+      !localStorage.getItem("clickedProject")
     ) {
       handleSelectedProject(localStorage.getItem("clickedProject", false));
     }
-  }, [clickedFilm, clickedGameDev, clickedKugelbahn, clickedSSP, clickedYoga]);
+  }, []);
   const SectionBox = ({ id, clicked, projectname }) => (
     <a
       className="sections-project-box"

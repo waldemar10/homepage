@@ -15,6 +15,18 @@ export default function Sidemenu() {
     clickedGameDev,
     clickedAwd,
   } = useContext(ProjectsContext);
+  const projects = [
+    {
+      id: "Filmbibliothek",
+      name: "Die Filmbibliothek",
+      clickedKey: clickedFilm,
+    },
+    { id: "SSP", name: "Schere Stein Papier Ultimate", clickedKey: clickedSSP },
+    { id: "Yoga", name: "Die Yoga-Website", clickedKey: clickedYoga },
+    { id: "Kugelbahn", name: "Die Kugelbahn", clickedKey: clickedKugelbahn },
+    { id: "GameDev", name: "Cinemacraze", clickedKey: clickedGameDev },
+    { id: "Awd", name: "LinguPingu", clickedKey: clickedAwd },
+  ];
   const { handleSelectedProject } = useContext(SectionContext);
   const [showSidemenu, setShowSidemenu] = useState(false);
   const [showSidemenuFull, setShowSidemenuFull] = useState(false);
@@ -74,6 +86,17 @@ export default function Sidemenu() {
       setShowSidemenu(false);
     }
   }, [sectionShown, projectShown]);
+
+  const SidemenuBox = ({ id, clicked, projectname }) => (
+    <li
+      onClick={() => handleSelectedProject(id, true)}
+      style={{
+        background: clicked ? "var(--button-section-selected-bg-color)" : "",
+      }}>
+      {projectname}
+    </li>
+  );
+
   return (
     <div
       className={` ${showSidemenu ? "visible" : "hide"} ${
@@ -81,60 +104,15 @@ export default function Sidemenu() {
       } sidemenu`}>
       <div className="sidemenu-container">
         <ul>
-          <li
-            onClick={() => handleSelectedProject("Filmbibliothek", true)}
-            style={{
-              background: clickedFilm
-                ? "var(--button-section-selected-bg-color)"
-                : "",
-            }}>
-            Die Filmbibliothek
-          </li>
-          <li
-            onClick={() => handleSelectedProject("SSP", true)}
-            style={{
-              background: clickedSSP
-                ? "var(--button-section-selected-bg-color)"
-                : "",
-            }}>
-            Schere Stein Papier Ultimate
-          </li>
-          <li
-            onClick={() => handleSelectedProject("Yoga", true)}
-            style={{
-              background: clickedYoga
-                ? "var(--button-section-selected-bg-color)"
-                : "",
-            }}>
-            Die Yoga-Website
-          </li>
-          <li
-            onClick={() => handleSelectedProject("Kugelbahn", true)}
-            style={{
-              background: clickedKugelbahn
-                ? "var(--button-section-selected-bg-color)"
-                : "",
-            }}>
-            Die Kugelbahn
-          </li>
-          <li
-            onClick={() => handleSelectedProject("GameDev", true)}
-            style={{
-              background: clickedGameDev
-                ? "var(--button-section-selected-bg-color)"
-                : "",
-            }}>
-            Cinemacraze
-          </li>
-          <li
-            onClick={() => handleSelectedProject("Awd", true)}
-            style={{
-              background: clickedAwd
-                ? "var(--button-section-selected-bg-color)"
-                : "",
-            }}>
-            LinguPingu
-          </li>
+          {projects.map((project) => (
+       
+            <SidemenuBox
+              id={project.id}
+              clicked={project.clickedKey}
+              projectname={project.name}
+            />
+         
+          ))}
         </ul>
       </div>
       <button className="sidemenu-button" onClick={() => handleShownSidemenu()}>
