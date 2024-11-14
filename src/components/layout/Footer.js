@@ -5,15 +5,15 @@ function Footer() {
     <>
       <footer>
         <p>
-          Website erstellt mit {" "}
-          <a href="https://react.dev/" target="_blank" rel="noreferrer">
+          Website selbstständig erstellt mit {" "}
+          <a href="https://github.com/waldemar10/homepage" target="_blank" rel="noreferrer">
             
             React
           </a>
         </p>
         <p>© 2023 - {year}</p>
-      {/*   <p><a href="/privacyPolicy">Datenschutzerklärung</a>{" "}&{" "}
-        <a href="/impressum">Impressum</a></p> */}
+        <p><a href="/privacyPolicy">Datenschutzerklärung</a>{" "}&{" "}
+        <a href="/impressum">Impressum</a></p>
       </footer>
     </>
   );
