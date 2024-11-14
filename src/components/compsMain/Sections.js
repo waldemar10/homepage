@@ -4,33 +4,47 @@ import { ProjectsContext } from "../../context/projectsContext";
 import { SectionContext } from "../../context/sectionContext";
 import "../../styles/sections.css";
 
-const id_Filmbibliothek = "Filmbibliothek";
-const id_kugelbahn = "Kugelbahn";
-const id_SSP = "SSP";
-const id_Yoga = "Yoga";
-const id_GameDev = "GameDev";
-const id_Awd = "Awd";
-
 function Section() {
-  const {handleSelectedProject,refSection} = useContext(SectionContext);
+  const { handleSelectedProject, refSection } = useContext(SectionContext);
   const {
     clickedFilm,
     clickedKugelbahn,
     clickedSSP,
     clickedYoga,
     clickedGameDev,
-    clickedAwd
+    clickedAwd,
   } = useContext(ProjectsContext);
-
+  const projects = [
+    {
+      id: "Filmbibliothek",
+      name: "Die Filmbibliothek",
+      clickedKey: clickedFilm,
+    },
+    { id: "SSP", name: "Schere Stein Papier Ultimate", clickedKey: clickedSSP },
+    { id: "Yoga", name: "Die Yoga-Website", clickedKey: clickedYoga },
+    { id: "Kugelbahn", name: "Die Kugelbahn", clickedKey: clickedKugelbahn },
+    { id: "GameDev", name: "Cinemacraze", clickedKey: clickedGameDev },
+    { id: "Awd", name: "LinguPingu", clickedKey: clickedAwd },
+  ];
   useEffect(() => {
     if (
       localStorage.getItem("clickedProject") !== null &&
       localStorage.getItem("clickedProject") !== undefined
     ) {
-      handleSelectedProject(localStorage.getItem("clickedProject",false));
+      handleSelectedProject(localStorage.getItem("clickedProject", false));
     }
-    
   }, [clickedFilm, clickedGameDev, clickedKugelbahn, clickedSSP, clickedYoga]);
+  const SectionBox = ({ id, clicked, projectname }) => (
+    <a
+      className="sections-project-box"
+      onClick={() => handleSelectedProject(id, true)}
+      style={{
+        filter: clicked ? "brightness(100%)" : "brightness(50%)",
+        background: clicked ? "var(--button-section-selected-bg-color)" : "",
+      }}>
+      <p className="sections-showcase-text">{projectname}</p>
+    </a>
+  );
 
   return (
     <>
@@ -40,64 +54,13 @@ function Section() {
         </h2>
 
         <div className="sections-box-showcase" id="sections-box-showcase">
-          <a
-            className="sections-project-box"
-            onClick={() => handleSelectedProject(id_Filmbibliothek,true)}
-            style={{
-              filter: clickedFilm ? "brightness(100%)" : "brightness(50%)",
-              background: clickedFilm ? "var(--button-section-selected-bg-color)" : "",
-            }}>
-            <p className="sections-showcase-text">Die Filmbibliothek</p>
-          </a>
-
-          <a
-            className="sections-project-box"
-            onClick={() => handleSelectedProject(id_SSP,true)}
-            style={{
-              filter: clickedSSP ? "brightness(100%)" : "brightness(50%)",
-              background: clickedSSP ? "var(--button-section-selected-bg-color)" : "",
-            }}>
-            <p className="sections-showcase-text">Schere Stein Papier Ultimate</p>
-          </a>
-
-          <a
-            className="sections-project-box"
-            onClick={() => handleSelectedProject(id_Yoga,true)}
-            style={{
-              filter: clickedYoga ? "brightness(100%)" : "brightness(50%)",
-              background: clickedYoga ? "var(--button-section-selected-bg-color)" : "",
-            }}>
-            <p className="sections-showcase-text">Die Yoga-Website</p>
-          </a>
-
-          <a
-            className="sections-project-box"
-            onClick={() => handleSelectedProject(id_kugelbahn,true)}
-            style={{
-              filter: clickedKugelbahn ? "brightness(100%)" : "brightness(50%)",
-              background: clickedKugelbahn ? "var(--button-section-selected-bg-color)" : "",
-            }}>
-            <p className="sections-showcase-text">Die Kugelbahn</p>
-          </a>
-
-          <a
-            className="sections-project-box"
-            onClick={() => handleSelectedProject(id_GameDev,true)}
-            style={{
-              filter: clickedGameDev ? "brightness(100%)" : "brightness(50%)",
-              background: clickedGameDev ? "var(--button-section-selected-bg-color)" : "",
-            }}>
-            <p className="sections-showcase-text">Cinemacraze</p>
-          </a>
-          <a
-            className="sections-project-box"
-            onClick={() => handleSelectedProject(id_Awd,true)}
-            style={{
-              filter: clickedAwd ? "brightness(100%)" : "brightness(50%)",
-              background: clickedAwd ? "var(--button-section-selected-bg-color)" : "",
-            }}>
-            <p className="sections-showcase-text">LinguPingu</p>
-          </a>
+          {projects.map((project) => (
+            <SectionBox
+              id={project.id}
+              clicked={project.clickedKey}
+              projectname={project.name}
+            />
+          ))}
         </div>
       </div>
     </>
