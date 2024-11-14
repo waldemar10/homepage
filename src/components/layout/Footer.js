@@ -11,9 +11,10 @@ function Footer() {
             React
           </a>
         </p>
-        <p>© 2023 - {year}</p>
+       
         <p><a href="/privacyPolicy">Datenschutzerklärung</a>{" "}&{" "}
         <a href="/impressum">Impressum</a></p>
+        <p>© 2023 - {year}</p>
       </footer>
     </>
   );
