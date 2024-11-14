@@ -50,9 +50,7 @@
   font-weight: bold;
   text-align: center;
   margin: 10px 0px 10px 0px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--font-color);
 }
 
 .showproject-icons-text {
