@@ -5,20 +5,26 @@
 @import url("https://use.typekit.net/pgm2vji.css"); */
 
 :root {
-  --bg-color-body: #000000;
-  --bg-color-project-showcase: #0b0b0b;
-  --bg-color-sidemenu: #161616;
+  --bg-color-body: #090909;
+  --bg-color-project-showcase: #111111;
+  --bg-color-sidemenu: #111111;
   --bg-color-figcaption:#353535;
   --primary-color: #1e90ff;
   --secondary-color: #ff6347;
   --font-color: #ececec;
+  --button-sidemenu-section-bg-color: #212121;
   --button-section-bg-color: #383838;
   --button-section-bg-color2: #24242433; /* 20 % Opacity*/
-  --button-section-selected-bg-color: linear-gradient(
+  --button-section-selected-bg-color: radial-gradient(
+    closest-corner,
+    var(--primary-color),
+    var(--button-section-bg-color2)
+  );
+  /* --button-section-selected-bg-color: linear-gradient(
     30deg,
     var(--primary-color) 0%,
     var(--button-section-bg-color2) 100%
-  );
+  ); */
   --border-radius-button: 10px;
   --border-radius-box-outer: 20px;
   --border-radius-box-inner: 10px;

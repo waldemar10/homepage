@@ -40,19 +40,11 @@
   border-radius: var(--border-radius-box-outer);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
   transition-duration: 1s;
-  background: linear-gradient(
-    30deg,
-    var(--button-section-bg-color) 0%,
-    var(--button-section-bg-color2) 100%
-  );
+  background: radial-gradient(var(--button-section-bg-color),var(--button-section-bg-color2));
 }
 .sections-project-box:hover {
   cursor: pointer;
-  background: linear-gradient(
-    30deg,
-    var(--secondary-color) 0%,
-    var(--button-section-bg-color2) 100%
-  );
+  background: radial-gradient(var(--secondary-color) ,var(--button-section-bg-color2));
   transform: scale(1.1);
 }
 .sections-headline {

@@ -49,21 +49,14 @@
   user-select: none;
   padding: 20px;
   border-radius: var(--border-radius-box-inner);
-  background: linear-gradient(
-    30deg,
-    var(--button-section-bg-color) 0%,
-    var(--button-section-bg-color2) 100%
-  );
+  background-color: var(--button-sidemenu-section-bg-color);
   height:100px;
   min-width: 100%;
 }
 .sidemenu li:hover {
   filter: brightness(50%);
-  background: linear-gradient(
-    30deg,
-    var(--secondary-color) 0%,
-    var(--button-section-bg-color2) 100%
-  );
+  background-color: var(--secondary-color);
+  background: radial-gradient(closest-corner,var(--secondary-color),var(--button-section-bg-color2));
   cursor: pointer;
 }
 
