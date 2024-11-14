@@ -19,8 +19,8 @@ function Footer() {
         </p>
 
         <p>
-          <a href="/privacyPolicy">Datenschutzerklärung</a> &{" "}
-          <a href="/impressum">Impressum</a>
+          <a href="#/privacyPolicy">Datenschutzerklärung</a> &{" "}
+          <a href="#/impressum">Impressum</a>
         </p>
         <p>© 2023 - {year}</p>
       </footer>

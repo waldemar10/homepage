@@ -15,11 +15,9 @@ function Impressum() {
       <p>
         Telefon: Auf Anfrage
         <br />
-        E-Mail: waldemar.ju98@gmail.com
+        E-Mail: waljuscontact@gmail.com
       </p>
-      <p>
-        Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>
-      </p>
+
     </div>
   );
 }
