@@ -5,16 +5,13 @@ function Footer() {
     <>
       <footer>
         <p>
-          Website
-          {" "}
+          Website{" "}
           <a
             href="https://github.com/waldemar10/homepage"
             target="_blank"
             rel="noreferrer">
-            
             selbstständig
-          </a>
-          {" "}
+          </a>{" "}
           erstellt mit React
         </p>
 

@@ -9,7 +9,6 @@
         "Requirements":  "Such- und Sortieralgorithmen verwenden",
         "GitHub":"https://github.com/waldemar10/DieFilmbibliothek"
     }
-        
     ]
     ,
     "Kugelbahn":[{
@@ -22,7 +21,6 @@
         "Requirements":  "Physikalische Bewegung anhand einer Kugelbahn darstellen",
         "GitHub":"https://github.com/waldemar10/Kugelbahn"
     }
-        
     ]
     ,
     "SSP":[{
@@ -46,7 +44,6 @@
         "Code":  "HTML, CSS und JavaScript",
         "Requirements":  "Eine Website mit HTML, CSS und JavaScript erstellen",
         "GitHub":"https://github.com/waldemar10/Yoga-Website"
-        
     }
     ],
     "GameDev":[{
@@ -58,7 +55,6 @@
         "Code":  "Game-Engine Unity",
         "Requirements":  "Ein Spiel mit Unity entwickeln",
         "GitHub":"https://github.com/pinkpandainteractive/cinemacraze"
-        
     }
     ],
     "Awd":[{

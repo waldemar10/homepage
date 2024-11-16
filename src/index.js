@@ -3,13 +3,18 @@ import ReactDOM from 'react-dom/client';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { ProjectsProvider } from './context/projectsContext';
+import { SectionProvider } from './context/sectionContext';
 import './index.css';
 import "./styles/animations.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+       <ProjectsProvider>
+       <SectionProvider>
     <App />
+    </SectionProvider>
+    </ProjectsProvider>
   </React.StrictMode>
 );
 

@@ -7,26 +7,8 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 import "../../styles/sidemenu.css";
 export default function Sidemenu() {
-  const {
-    clickedFilm,
-    clickedKugelbahn,
-    clickedSSP,
-    clickedYoga,
-    clickedGameDev,
-    clickedAwd,
-  } = useContext(ProjectsContext);
-  const projects = [
-    {
-      id: "Filmbibliothek",
-      name: "Die Filmbibliothek",
-      clickedKey: clickedFilm,
-    },
-    { id: "SSP", name: "Schere Stein Papier Ultimate", clickedKey: clickedSSP },
-    { id: "Yoga", name: "Die Yoga-Website", clickedKey: clickedYoga },
-    { id: "Kugelbahn", name: "Die Kugelbahn", clickedKey: clickedKugelbahn },
-    { id: "GameDev", name: "Cinemacraze", clickedKey: clickedGameDev },
-    { id: "Awd", name: "LinguPingu", clickedKey: clickedAwd },
-  ];
+  const { projects } = useContext(ProjectsContext);
+
   const { handleSelectedProject } = useContext(SectionContext);
   const [showSidemenu, setShowSidemenu] = useState(false);
   const [showSidemenuFull, setShowSidemenuFull] = useState(false);
@@ -87,9 +69,9 @@ export default function Sidemenu() {
     }
   }, [sectionShown, projectShown]);
 
-  const SidemenuBox = ({ id, clicked, projectname }) => (
+  const ProjectBox = ({ index, clicked, projectname }) => (
     <li
-      onClick={() => handleSelectedProject(id, true)}
+      onClick={() => handleSelectedProject(index, true)}
       style={{
         background: clicked ? "var(--button-section-selected-bg-color)" : "",
       }}>
@@ -104,14 +86,13 @@ export default function Sidemenu() {
       } sidemenu`}>
       <div className="sidemenu-container">
         <ul>
-          {projects.map((project) => (
-       
-            <SidemenuBox
-              id={project.id}
-              clicked={project.clickedKey}
-              projectname={project.name}
+          {projects.map((project, index) => (
+            <ProjectBox
+              key={project.Title}
+              index={index}
+              clicked={project.isClicked}
+              projectname={project.Title}
             />
-         
           ))}
         </ul>
       </div>

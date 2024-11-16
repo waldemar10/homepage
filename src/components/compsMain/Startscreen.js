@@ -6,7 +6,7 @@ import { SectionContext } from "../../context/sectionContext";
 import "../../styles/startscreen.css";
 
 function Startscreen() {
-  const {refSection } = useContext(SectionContext);
+  const { refSection } = useContext(SectionContext);
 
   const navToSection = (e) => {
     e.preventDefault();
@@ -16,19 +16,35 @@ function Startscreen() {
   return (
     <div className="box">
       <svg
-      id="svg-headline"
+        id="svg-headline"
         viewBox="0 0 440 300"
         className="svg-headline"
         style={{ fill: "url(#strokeGradient)" }}>
         <linearGradient id="strokeGradient">
-          <stop offset="15%" stopColor="var(--primary-color)" stopOpacity="100%" />
+          <stop
+            offset="15%"
+            stopColor="var(--primary-color)"
+            stopOpacity="100%"
+          />
 
-          <stop offset="74%" stopColor="var(--secondary-color)" stopOpacity="100%" />
+          <stop
+            offset="74%"
+            stopColor="var(--secondary-color)"
+            stopOpacity="100%"
+          />
         </linearGradient>
         <linearGradient id="strokeGradient2">
-          <stop offset="15%" stopColor="var(--primary-color)" stopOpacity="50%" />
+          <stop
+            offset="15%"
+            stopColor="var(--primary-color)"
+            stopOpacity="50%"
+          />
 
-          <stop offset="74%" stopColor="var(--secondary-color)" stopOpacity="50%" />
+          <stop
+            offset="74%"
+            stopColor="var(--secondary-color)"
+            stopOpacity="50%"
+          />
         </linearGradient>
         <text
           x="50%"
@@ -48,9 +64,7 @@ function Startscreen() {
         </text>
       </svg>
 
-      <a
-        onClick={(e) => navToSection(e)}
-        className="icon-box">
+      <a onClick={(e) => navToSection(e)} className="icon-box">
         <FontAwesomeIcon icon={faChevronDown} className="icon" />
       </a>
     </div>

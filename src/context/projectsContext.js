@@ -1,35 +1,19 @@
-import React, {useState, createContext, useRef } from "react";
-import data from "../data/projects.json";
+import React, { useState, createContext, useRef } from "react";
 export const ProjectsContext = createContext();
 
 export const ProjectsProvider = ({ children }) => {
-  const [clickedFilm, setClickedFilm] = useState(true);
-  const [clickedKugelbahn, setClickedKugelbahn] = useState(false);
-  const [clickedSSP, setClickedSSP] = useState(false);
-  const [clickedYoga, setClickedYoga] = useState(false);
-  const [clickedGameDev, setClickedGameDev] = useState(false);
-  const [clickedAwd, setClickedAwd] = useState(false);
-  const [projectData, setProjectData] = useState(data.Filmbibliothek[0]);
-
+  const [selectedProject, setSelectedProject] = useState();
+  const [projects, setProjects] = useState();
   const refProject = useRef(null);
+
   return (
     <ProjectsContext.Provider
       value={{
-        clickedFilm,
-        setClickedFilm,
-        clickedKugelbahn,
-        setClickedKugelbahn,
-        clickedSSP,
-        setClickedSSP,
-        clickedYoga,
-        setClickedYoga,
-        clickedGameDev,
-        setClickedGameDev,
-        clickedAwd,
-        setClickedAwd,
-        projectData,
-        setProjectData,
+        selectedProject,
+        setSelectedProject,
         refProject,
+        projects,
+        setProjects,
       }}>
       {children}
     </ProjectsContext.Provider>

@@ -12,7 +12,8 @@
   --primary-color: #1e90ff;
   --secondary-color: #ff6347;
   --font-color: #ececec;
-  --button-sidemenu-section-bg-color: #2d2d2d;
+  --button-sidemenu-section-bg-color: #282828;
+  --button-sidemenu-section-bg-color2: #656565;
   --button-section-bg-color: #5a5a5a;
   --button-section-bg-color2: #24242433; /* 20 % Opacity*/
   --button-section-selected-bg-color: radial-gradient(
