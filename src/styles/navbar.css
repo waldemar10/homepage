@@ -1,0 +1,210 @@
+:root {
+  --scale-size-button-box: 1.3;
+  --scale-size-svg: 1.3;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+  font-size: 20px;
+  text-align: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -230px;
+  transition: all 0.6s ease-in-out;
+}
+
+.navbar.visible {
+  left: 0px;
+}
+.navbar.hide {
+  left: -230px;
+}
+.navbar.hide-button {
+  left: -200px;
+}
+.navbar.hide.hide-button {
+  left: -230px;
+}
+.navbar-container {
+  width: 200px;
+  border-radius: 0 var(--border-radius-box-outer) var(--border-radius-box-outer) 0;
+  background-color: var(--bg-color-navbar);
+}
+
+.navbar-container ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 20px;
+  gap: 10px;
+}
+
+.navbar-container li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  padding: 20px;
+  border-radius: var(--border-radius-box-inner);
+  background: radial-gradient(var(--button-navbar-section-bg-color2),var(--button-navbar-section-bg-color));;
+  /* background-color: var(--button-navbar-section-bg-color); */
+  height:100px;
+  min-width: 100%;
+}
+.navbar li:hover {
+  filter: brightness(50%);
+  background-color: var(--secondary-color);
+  background: radial-gradient(closest-corner,var(--secondary-color),var(--button-section-bg-color2));
+  cursor: pointer;
+}
+
+.navbar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 50px;
+  background-color: var(--bg-color-navbar);
+  border-radius: 0px var(--border-radius-box-outer)
+    var(--border-radius-box-outer) 0px;
+  border-style: none;
+  transition: 1s;
+}
+.navbar-button:hover {
+  transform: scale(var(--scale-size-button-box));
+  cursor: pointer;
+  /* Change color and scale up the size for the svg */
+  .navbar-button-svg {
+    transform: scale(var(--scale-size-svg));
+    color: var(--secondary-color);
+  }
+}
+
+.navbar-button-svg {
+  width: 20px;
+  height: 30px;
+  color: var(--primary-color);
+  rotate: 0deg;
+  transition: rotate 0.6s;
+  transition: 1s;
+}
+
+.navbar-button-svg.rotate-button {
+  rotate: 180deg;
+}
+
+/* @media screen and (max-width: 1224px) {
+  
+} */
+
+/* Large desktops and larger screens */
+@media screen and (min-width: 1450px) {
+}
+
+/* Medium desktops and laptops */
+@media screen and (max-width: 1450px) {
+  .navbar {
+    position: sticky;
+    font-size: 18px;
+    flex-direction: row; 
+    height: auto; 
+    width: 100%; 
+    top: auto; 
+    bottom: 0; 
+    left: 0;
+    padding: 0px;
+  }
+
+  .navbar-container {
+    width: auto;
+    height: auto;
+    border-radius: var(--border-radius-box-outer) var(--border-radius-box-outer) 0 0;
+    padding: 10px;
+    display: flex;
+  
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .navbar-container ul {
+    flex-direction: row;
+    padding: 10px;
+    margin: 0;
+    gap: 0; 
+    width: 100%; 
+  }
+
+  .navbar-container li {
+    flex: 1;
+    height: auto;
+    padding: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: auto;
+  }
+
+  .navbar-button {
+    display: none; 
+  }
+  .navbar.visible {
+    left: 0;
+    bottom: 0px;
+  }
+  .navbar.hide {
+    left: 0;
+    bottom: -130px;
+  }
+  .navbar.hide-button {
+    left: 0;
+  }
+  .navbar.hide.hide-button {
+    left: 0;
+  }
+}
+
+/* Tablets (Querformat) and small laptops */
+@media screen and (max-width: 1000px) {
+  .navbar {
+    font-size: 14px;
+  }
+  .navbar-container {
+    padding: 7px;
+  }
+  .navbar-container ul {
+    padding: 7px;
+  }
+  .navbar-container li {
+    padding: 7px;
+  }
+}
+
+/* Tablets (Hochformat) and larger smartphones */
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    padding: 5px;
+  }
+  .navbar-container ul {
+    padding: 5px;
+  }
+  .navbar-container li {
+    padding: 5px;
+  }
+  .navbar {
+    font-size: 12px;
+  }
+}
+
+/* Small smartphones and small devices */
+@media screen and (max-width: 600px) {
+
+  .navbar {
+    display: none;
+    font-size: 8px;
+  }
+}

@@ -7,13 +7,13 @@
 :root {
   --bg-color-body: #090909;
   --bg-color-project-showcase: #1c1c1c;
-  --bg-color-sidemenu: #1c1c1c;
+  --bg-color-navbar: #1c1c1c;
   --bg-color-figcaption:#353535;
   --primary-color: #1e90ff;
   --secondary-color: #ff6347;
   --font-color: #ececec;
-  --button-sidemenu-section-bg-color: #282828;
-  --button-sidemenu-section-bg-color2: #656565;
+  --button-navbar-section-bg-color: #282828;
+  --button-navbar-section-bg-color2: #656565;
   --button-section-bg-color: #5a5a5a;
   --button-section-bg-color2: #24242433; /* 20 % Opacity*/
   --button-section-selected-bg-color: radial-gradient(
@@ -139,7 +139,8 @@ video {
     scroll-snap-align: none;
   }
 }
-
+@media screen and (max-width: 1450px) {
+}
 /* Smartphone */
 @media screen and (max-width: 768px) {
   footer {

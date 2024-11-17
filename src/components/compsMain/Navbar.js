@@ -5,27 +5,27 @@ import { SectionContext } from "../../context/sectionContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-import "../../styles/sidemenu.css";
-export default function Sidemenu() {
+import "../../styles/navbar.css";
+export default function Navbar() {
   const { projects } = useContext(ProjectsContext);
 
   const { handleSelectedProject } = useContext(SectionContext);
-  const [showSidemenu, setShowSidemenu] = useState(false);
-  const [showSidemenuFull, setShowSidemenuFull] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
+  const [showNavbarFull, setShowNavbarFull] = useState(false);
   const [projectShown, setProjectShown] = useState(false);
   const [sectionShown, setSectionShown] = useState(false);
   useEffect(() => {
-    const storedValue = localStorage.getItem("showSidemenu");
+    const storedValue = localStorage.getItem("showNavbar");
     if (storedValue !== null && storedValue !== undefined) {
       const parsedValue = JSON.parse(storedValue);
-      setShowSidemenuFull(parsedValue);
+      setShowNavbarFull(parsedValue);
     }
   }, []);
 
-  function handleShownSidemenu() {
-    const value = !showSidemenuFull;
-    setShowSidemenuFull(value);
-    localStorage.setItem("showSidemenu", JSON.stringify(value));
+  function handleShownNavbar() {
+    const value = !showNavbarFull;
+    setShowNavbarFull(value);
+    localStorage.setItem("showNavbar", JSON.stringify(value));
   }
 
   const callback = (entries, observer) => {
@@ -63,9 +63,9 @@ export default function Sidemenu() {
   });
   useEffect(() => {
     if (!sectionShown && projectShown) {
-      setShowSidemenu(true);
+      setShowNavbar(true);
     } else {
-      setShowSidemenu(false);
+      setShowNavbar(false);
     }
   }, [sectionShown, projectShown]);
 
@@ -78,13 +78,14 @@ export default function Sidemenu() {
       {projectname}
     </li>
   );
-
   return (
     <div
-      className={` ${showSidemenu ? "visible" : "hide"} ${
-        showSidemenuFull ? "" : "hide-button"
-      } sidemenu`}>
-      <div className="sidemenu-container">
+      className={` ${showNavbar ? "visible" : "hide"} ${
+        showNavbarFull ? "" : "hide-button"
+      } navbar`}
+      
+      >
+      <div className="navbar-container">
         <ul>
           {projects.map((project, index) => (
             <ProjectBox
@@ -96,10 +97,10 @@ export default function Sidemenu() {
           ))}
         </ul>
       </div>
-      <button className="sidemenu-button" onClick={() => handleShownSidemenu()}>
+      <button className="navbar-button" onClick={() => handleShownNavbar()}>
         <FontAwesomeIcon
-          className={`sidemenu-button-svg ${
-            showSidemenuFull ? "" : "rotate-button"
+          className={`navbar-button-svg ${
+            showNavbarFull ? "" : "rotate-button"
           }`}
           icon={faArrowLeft}
         />

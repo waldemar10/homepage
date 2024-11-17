@@ -1,8 +1,8 @@
 import Startscreen from "../compsMain/Startscreen";
 import Section from "../compsMain/Sections";
 import ShowProject from "../compsMain/ShowProject";
-import Navigation from "../compsMain/Navigation";
-import Sidemenu from "../compsMain/Sidemenu";
+import Navigation from "../compsMain/NavigationOld";
+import Sidemenu from "../compsMain/Navbar";
 // * Main represents the main component of the website.
 function Main() {
   return (
@@ -10,8 +10,8 @@ function Main() {
       <Startscreen />
       <Section />
       <ShowProject />
-      <Navigation />
-      <Sidemenu />
+  {/*     <Navigation /> */}
+ {/*      <Sidemenu /> */}
     </>
   );
 }

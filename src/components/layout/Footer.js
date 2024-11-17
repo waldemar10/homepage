@@ -3,7 +3,7 @@ function Footer() {
   const [year] = useState(new Date().getFullYear());
   return (
     <>
-      <footer>
+      <footer id="footer">
         <p>
           Website{" "}
           <a
