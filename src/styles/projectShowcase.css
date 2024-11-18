@@ -1,0 +1,119 @@
+.projectShowcase-box-wrapper {
+
+  background-color: var(--bg-color-project-showcase);
+  border-radius: var(--border-radius-box-outer);
+  padding: 20px;
+  width: 1000px;
+}
+
+.icons-box-wrapper {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: var(--border-radius-box-inner);
+}
+.projectShowcase-icon {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+.icons-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.projectShowcase-modul-headline {
+  text-align: center;
+  font-size: var(--fs-600);
+}
+.projectShowcase-title-headline {
+  font-size: var(--fs-headline);
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+  color: var(--font-color);
+}
+
+.projectShowcase-icons-text {
+  font-size: var(--fs-200);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+@media screen and (max-width: 1450px) {
+}
+/* Tablets (Querformat) and small laptops */
+@media screen and (max-width: 1000px) {
+  .projectShowcase-box {
+    margin: 20px;
+  }
+  .projectShowcase-box-wrapper {
+    width: 750px;
+    padding: 15px;
+  }
+  .icons-box-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .projectShowcase-icons-text {
+    font-size: var(--fs-100);
+  }
+}
+/* Tablet */
+@media screen and (max-width: 768px) {
+  .projectShowcase-title-headline {
+    font-size: var(--fs-500);
+  }
+  .icons-box {
+    flex-direction: column;
+  }
+  .projectShowcase-box-wrapper {
+    width: 600px;
+    padding: 10px;
+  }
+  .projectShowcase-box {
+    margin-top: 20px;
+  }
+}
+/* Smartphone */
+@media screen and (max-width: 600px) {
+
+  .icons-box {
+    padding: 5px;
+    justify-content: start;
+  }
+  .projectShowcase-box-wrapper {
+    width: 90%;
+  }
+  .projectShowcase-modul-headline {
+    font-size: var(--fs-400);
+  }
+  .projectShowcase-title-headline {
+    font-size: var(--fs-400);
+    overflow-wrap: break-word;
+  }
+  .projectShowcase-icons-text {
+    font-size: var(--fs-small);
+    font-weight: 500;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+  .projectShowcase-icon {
+    width: 25px;
+    height: 25px;
+    color: white;
+  }
+  .icons-box-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+}

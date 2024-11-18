@@ -31,14 +31,14 @@ export default function Navigation() {
     entries.forEach((entry) => {
       // If observed element is not visible
       switch (entry.target.id) {
-        case "sections-box-showcase":
+        case "projectSelection-box-showcase":
           if (entry.isIntersecting) {
             setIsSectionVisible(true);
           } else {
             setIsSectionVisible(false);
           }
           break;
-        case "showproject-box-wrapper":
+        case "projectShowcase":
           if (entry.isIntersecting) {
             setIsProjectVisible(true);
           } else {
@@ -65,8 +65,8 @@ export default function Navigation() {
   };
   const observer = new IntersectionObserver(callback, options);
   useEffect(() => {
-    observer.observe(document.getElementById("sections-box-showcase"));
-    observer.observe(document.getElementById("showproject-box-wrapper"));
+    observer.observe(document.getElementById("projectSelection-box-showcase"));
+    observer.observe(document.getElementById("projectShowcase"));
     observer.observe(document.getElementById("svg-headline"));
   });
 

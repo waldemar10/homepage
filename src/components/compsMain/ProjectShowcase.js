@@ -8,9 +8,9 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import { ProjectsContext } from "../../context/projectsContext";
 import allProjects from "../../utils/projectUtil";
-import "../../styles/showprojects.css";
+import "../../styles/projectShowcase.css";
 
-function ShowProject() {
+function ProjectShowcase() {
   const { projects, refProject, selectedProject } = useContext(ProjectsContext);
 
   const Project = () => {
@@ -27,46 +27,46 @@ function ShowProject() {
     const { GitHub: gitHub, Code: code, Group: group } = selectedProject;
     return (
       <>
-        <div className="showproject-icons-and-text">
-          <FontAwesomeIcon icon={faUserGroup} className="showproject-icon" />
-          <p className="showproject-icons-text">{group}</p>
+        <div className="icons-box">
+          <FontAwesomeIcon icon={faUserGroup} className="projectShowcase-icon" />
+          <p className="projectShowcase-icons-text">{group}</p>
         </div>
 
-        <div className="showproject-icons-and-text">
-          <FontAwesomeIcon icon={faLaptopCode} className="showproject-icon" />
-          <p className="showproject-icons-text">{code}</p>
+        <div className="icons-box">
+          <FontAwesomeIcon icon={faLaptopCode} className="projectShowcase-icon" />
+          <p className="projectShowcase-icons-text">{code}</p>
         </div>
 
-        <div className="showproject-icons-and-text">
-          <FontAwesomeIcon icon={faGithub} className="showproject-icon" />
+        <div className="icons-box">
+          <FontAwesomeIcon icon={faGithub} className="projectShowcase-icon" />
           <a
-            className="showproject-icons-text"
+            className="projectShowcase-icons-text"
             href={gitHub}
             target="_blank"
             rel="noreferrer">
             GitHub
           </a>
         </div>
-        {projects[0].Title === "Die Yoga-Website" ? (
-          <div className="showproject-icons-and-text">
-            <FontAwesomeIcon icon={faGlobe} className="showproject-icon" />
+        {selectedProject.Title === "Die Yoga-Website" ? (
+          <div className="icons-box">
+            <FontAwesomeIcon icon={faGlobe} className="projectShowcase-icon" />
             <a
               target="_blank"
               rel="noreferrer"
               href="https://yoga.waljus.de/"
-              className="showproject-icons-text">
+              className="projectShowcase-icons-text">
               Website
             </a>
           </div>
         ) : null}
-        {projects[0].Title === "LinguPingu" ? (
-          <div className="showproject-icons-and-text">
-            <FontAwesomeIcon icon={faGlobe} className="showproject-icon" />
+        {selectedProject.Title === "LinguPingu" ? (
+          <div className="icons-box">
+            <FontAwesomeIcon icon={faGlobe} className="projectShowcase-icon" />
             <a
               target="_blank"
               rel="noreferrer"
               href="https://lingupingu.waljus.de/"
-              className="showproject-icons-text">
+              className="projectShowcase-icons-text">
               Website
             </a>
           </div>
@@ -76,21 +76,16 @@ function ShowProject() {
   });
 
   return (
-    <div id="showProject" className="showproject-box">
-      <div id="showproject-box-wrapper" className="showproject-box-wrapper">
-        {/* <div  className="showproject-modul-headline">
-          {modul}
-        </div> */}
-        <div ref={refProject} className="showproject-title-headline">
+      <div id="projectShowcase" className="projectShowcase-box-wrapper">
+        <div ref={refProject} className="projectShowcase-title-headline">
           {selectedProject.Title}
         </div>
 
-        <div className="showproject-icons-box">
+        <div className="icons-box-wrapper">
           <IconBar selectedProject={selectedProject} projects={projects} />
         </div>
         <Project />
       </div>
-    </div>
   );
 }
-export default ShowProject;
+export default ProjectShowcase;

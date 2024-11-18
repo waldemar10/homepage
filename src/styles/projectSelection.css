@@ -1,0 +1,99 @@
+.projectSelection-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 20px;
+}
+.projectSelection-box-showcase {
+  display: grid;
+  width: 1000px;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  justify-content: center;
+  align-content: center;
+}
+.projectSelection-headline {
+  font-size: var(--fs-headline);
+  margin-bottom: 50px;
+}
+.projectSelection-showcase-text {
+  font-size: var(--fs-300);
+  padding: 10px;
+  opacity: 0;
+  background-color: transparent;
+  text-shadow: 0.1vw 0.1vw 0.4vw #000000;
+  overflow-wrap: break-word;
+  user-select: none;
+  text-align: center;
+}
+.projectSelection-showcase-text.fade-in {
+  animation: fadeIn 1.5s forwards;
+}
+.projectSelection-project-box {
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 175px;
+  margin: 0px;
+  border-radius: var(--border-radius-box-outer);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  background: radial-gradient(
+    var(--button-section-bg-color),
+    var(--button-section-bg-color2)
+  );
+  transition: 1s;
+}
+
+.projectSelection-project-box:hover {
+  cursor: pointer;
+  background: radial-gradient(
+    var(--secondary-color),
+    var(--button-section-bg-color2)
+  );
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1450px) {
+}
+
+/* Tablets (Querformat) and small laptops */
+@media screen and (max-width: 1000px) {
+
+  .projectSelection-box-showcase {
+  width: 700px;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+
+  .projectSelection-box-showcase {
+    width: 600px;
+  }
+}
+
+/* Smartphone */
+@media screen and (max-width: 600px) {
+
+  .projectSelection-project-box {
+    width: 150px;
+    height: 150px;
+    margin: 0px;
+  }
+  .projectSelection-showcase-text {
+    font-size: var(--fs-100);
+    padding: 5px;
+    text-shadow: unset;
+  }
+  .projectSelection-box-showcase {
+    width: 300px;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+  }
+  .projectSelection-headline {
+    font-size: var(--fs-600);
+  }
+}

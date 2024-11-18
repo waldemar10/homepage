@@ -48,14 +48,14 @@ export default function Navbar() {
   const callback = (entries, observer) => {
     entries.forEach((entry) => {
       switch (entry.target.id) {
-        case "showProject":
+        case "projectShowcase":
           if (entry.isIntersecting) {
             setProjectShown(true);
           } else {
             setProjectShown(false);
           }
           break;
-        case "sections-box":
+        case "projectSelection-box":
           if (entry.isIntersecting) {
             setSectionShown(true);
           } else {
@@ -75,8 +75,8 @@ export default function Navbar() {
   const observer = new IntersectionObserver(callback, options);
 
   useEffect(() => {
-    observer.observe(document.getElementById("showProject"));
-    observer.observe(document.getElementById("sections-box"));
+    observer.observe(document.getElementById("projectShowcase"));
+    observer.observe(document.getElementById("projectSelection-box"));
   });
   useEffect(() => {
     if (!sectionShown && projectShown) {
