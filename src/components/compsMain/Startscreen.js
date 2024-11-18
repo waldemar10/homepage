@@ -1,4 +1,4 @@
-import React, { useContext, useState,useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { SectionContext } from "../../context/sectionContext";
@@ -26,68 +26,66 @@ function Startscreen() {
     <div className="box">
       {isMobile ? (
         <div className="mobile-startscreen">
-        <h2 className="mobile-greeting">
-          Hallo!
-        </h2>
-        <p className="mobile-name">
-          Ich bin <span>Waldemar Justus</span> <span>👋</span>
-        </p>
-        <p className="mobile-introduction">
-          Hier findest du meine Informatik Projekte.
-        </p>
-        <p className="mobile-fun">
-          <strong>Viel Spaß!</strong>
-        </p>
-      </div>
-      ) :(
-      <svg
-        id="svg-headline"
-        viewBox="0 0 440 300"
-        className="svg-headline"
-        style={{ fill: "url(#strokeGradient)" }}>
-        <linearGradient id="strokeGradient">
-          <stop
-            offset="15%"
-            stopColor="var(--primary-color)"
-            stopOpacity="100%"
-          />
+          <h2 className="mobile-greeting">Hallo!</h2>
+          <p className="mobile-name">
+            Ich bin <span>Waldemar Justus</span> <span>👋</span>
+          </p>
+          <p className="mobile-introduction">
+            Hier findest du meine Informatik Projekte.
+          </p>
+          <p className="mobile-fun">
+            <strong>Viel Spaß!</strong>
+          </p>
+        </div>
+      ) : (
+        <svg
+          id="svg-headline"
+          viewBox="0 0 440 300"
+          className="svg-headline"
+          style={{ fill: "url(#strokeGradient)" }}>
+          <linearGradient id="strokeGradient">
+            <stop
+              offset="15%"
+              stopColor="var(--primary-color)"
+              stopOpacity="100%"
+            />
 
-          <stop
-            offset="74%"
-            stopColor="var(--secondary-color)"
-            stopOpacity="100%"
-          />
-        </linearGradient>
-        <linearGradient id="strokeGradient2">
-          <stop
-            offset="15%"
-            stopColor="var(--primary-color)"
-            stopOpacity="50%"
-          />
+            <stop
+              offset="74%"
+              stopColor="var(--secondary-color)"
+              stopOpacity="100%"
+            />
+          </linearGradient>
+          <linearGradient id="strokeGradient2">
+            <stop
+              offset="15%"
+              stopColor="var(--primary-color)"
+              stopOpacity="50%"
+            />
 
-          <stop
-            offset="74%"
-            stopColor="var(--secondary-color)"
-            stopOpacity="50%"
-          />
-        </linearGradient>
-        <text
-          x="50%"
-          y="50%"
-          dy=".32rem"
-          textAnchor="middle"
-          className="text-body">
-          Waldemar
-        </text>
-        <text
-          x="50%"
-          y="50%"
-          dy="1.0em"
-          textAnchor="middle"
-          className="text-body">
-          Justus
-        </text>
-      </svg>
+            <stop
+              offset="74%"
+              stopColor="var(--secondary-color)"
+              stopOpacity="50%"
+            />
+          </linearGradient>
+          <text
+            x="50%"
+            y="50%"
+            dy=".32rem"
+            textAnchor="middle"
+            className="text-body">
+            Waldemar
+          </text>
+          <text
+            x="50%"
+            y="50%"
+            dy="1.0em"
+            textAnchor="middle"
+            className="text-body">
+            Justus
+          </text>
+        </svg>
       )}
       <a onClick={(e) => navToSection(e)} className="icon-box">
         <svg

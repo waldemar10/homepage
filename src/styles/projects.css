@@ -9,7 +9,7 @@
   width: 100px;
   height: 50px;
   font-weight: lighter;
-  font-size: 90%;
+  font-size: var(--fs-100);
   text-decoration: none;
   border: none;
   border-radius: var(--border-radius-button);
@@ -53,7 +53,7 @@
 }
 .project-figure figcaption {
   color: var(--font-color);
-  font-size: smaller;
+  font-size: var(--fs-100);
   font-weight: 100;
   width: auto;
   padding: 5px 10px 5px 10px;
@@ -63,12 +63,12 @@
 }
 .project-description {
   flex: 1 1 0px;
-  font-size: 18px;
+  font-size: var(--fs-100);
 }
 
 .project-subheader {
   margin: 10px 0px 10px 0px;
-  font-size: 32px;
+  font-size: var(--fs-200);
 }
 .project-video {
   position: relative;
@@ -102,7 +102,7 @@
   border-radius: var(--border-radius-box-inner);
 }
 .project-list {
-  font-size: 18px;
+  font-size: var(--fs-100);
   margin: 10px 0px 10px 10px;
 }
 .project-game {
@@ -111,8 +111,8 @@
 #unity-container {
   border-radius: var(--border-radius-box-inner);
 }
-/* Tablet */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+/* Tablets (Querformat) and small laptops */
+@media screen and (max-width: 1000px) {
   .project-box {
     flex-direction: column;
     width: 80%;
@@ -121,9 +121,12 @@
     display: none;
   }
 }
-
-/* Smartphone */
+/* Tablet */
 @media screen and (max-width: 768px) {
+
+}
+/* Smartphone */
+@media screen and (max-width: 600px) {
   .project-box {
     width: 100%;
     flex-direction: column;
@@ -135,7 +138,7 @@
     display: none;
   }
   .project-description {
-    font-size: 14px;
+    font-size: var(--fs-small);
     width: 100%;
   }
   .project-video {
@@ -145,13 +148,17 @@
     width: 100%;
   }
   .project-list {
-    font-size: 14px;
+    font-size: var(--fs-small);
   }
   .project-figcaption {
-    font-size: 14px;
+    font-size: var(--fs-small);
+  }
+  .project-figure figcaption {
+    font-size: var(--fs-small);
   }
   .project-subheader {
-    font-size: 24px;
+    font-size: var(--fs-100);
+    font-weight: bold;
   }
   .project-image-box {
     align-items: center;
