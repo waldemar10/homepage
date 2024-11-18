@@ -31,7 +31,8 @@
 }
 .navbar-container {
   width: 200px;
-  border-radius: 0 var(--border-radius-box-outer) var(--border-radius-box-outer) 0;
+  border-radius: 0 var(--border-radius-box-outer) var(--border-radius-box-outer)
+    0;
   background-color: var(--bg-color-navbar);
 }
 
@@ -50,15 +51,22 @@
   user-select: none;
   padding: 20px;
   border-radius: var(--border-radius-box-inner);
-  background: radial-gradient(var(--button-navbar-section-bg-color2),var(--button-navbar-section-bg-color));;
+  background: radial-gradient(
+    var(--button-navbar-section-bg-color2),
+    var(--button-navbar-section-bg-color)
+  );
   /* background-color: var(--button-navbar-section-bg-color); */
-  height:100px;
+  height: 100px;
   min-width: 100%;
 }
 .navbar li:hover {
   filter: brightness(50%);
   background-color: var(--secondary-color);
-  background: radial-gradient(closest-corner,var(--secondary-color),var(--button-section-bg-color2));
+  background: radial-gradient(
+    closest-corner,
+    var(--secondary-color),
+    var(--button-section-bg-color2)
+  );
   cursor: pointer;
 }
 
@@ -110,22 +118,24 @@
   .navbar {
     position: sticky;
     font-size: 18px;
-    flex-direction: row; 
-    height: auto; 
-    width: 100%; 
-    top: auto; 
-    bottom: 0; 
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    top: auto;
+    bottom: 0;
     left: 0;
     padding: 0px;
   }
 
   .navbar-container {
+    box-shadow: 0px -5px 15px var(--shadow-color);
     width: auto;
     height: auto;
-    border-radius: var(--border-radius-box-outer) var(--border-radius-box-outer) 0 0;
+    border-radius: var(--border-radius-box-outer) var(--border-radius-box-outer)
+      0 0;
     padding: 10px;
     display: flex;
-  
+
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -135,14 +145,14 @@
     flex-direction: row;
     padding: 10px;
     margin: 0;
-    gap: 0; 
-    width: 100%; 
+    gap: 0;
+    width: 100%;
   }
 
   .navbar-container li {
     flex: 1;
     height: auto;
-    padding: 10px; 
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,7 +160,7 @@
   }
 
   .navbar-button {
-    display: none; 
+    display: none;
   }
   .navbar.visible {
     left: 0;
@@ -202,9 +212,100 @@
 
 /* Small smartphones and small devices */
 @media screen and (max-width: 600px) {
+  .body-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+  }
 
+  .body-overlay.visible {
+    display: block;
+  }
   .navbar {
     display: none;
     font-size: 8px;
+  }
+
+  .navbar-smartphone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 50px;
+    bottom: 0;
+    margin-top: 20px;
+    padding: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: var(--button-mobile-menu);
+    box-shadow: 0px 0px 10px white;
+    opacity: 0;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .navbar-smartphone.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  .navbar-smartphone.hide {
+    opacity: 0;
+    transform: translate(-50%, 20%);
+  }
+  .navbar-buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-buttons-container button {
+    position: absolute;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    /* padding: 5px; */
+    margin: 5px 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .navbar-buttons-container button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  .navbar-buttons-container button:nth-child(1) {
+    transform: rotate(240deg) translateX(60px) rotate(-240deg);
+  }
+
+  .navbar-buttons-container button:nth-child(2) {
+    transform: rotate(270deg) translateX(60px) rotate(-270deg);
+  }
+
+  .navbar-buttons-container button:nth-child(3) {
+    transform: rotate(300deg) translateX(60px) rotate(-300deg);
+  }
+
+  .navbar-buttons-container button:nth-child(4) {
+    transform: rotate(330deg) translateX(60px) rotate(-330deg);
+  }
+
+  .navbar-buttons-container button:nth-child(5) {
+    transform: rotate(360deg) translateX(60px) rotate(-360deg);
+  }
+
+  .navbar-buttons-container button:nth-child(6) {
+    transform: rotate(390deg) translateX(60px) rotate(-390deg);
   }
 }

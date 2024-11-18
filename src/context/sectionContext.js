@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useRef } from "react";
+import React, { createContext, useContext, useRef, useEffect } from "react";
 import { ProjectsContext } from "./projectsContext";
 
 export const SectionContext = createContext();
@@ -17,10 +17,12 @@ export const SectionProvider = ({ children }) => {
     resetAllClicked();
     projects[index].isClicked = true;
     setSelectedProject(projects[index]);
-    localStorage.setItem("clickedProject", index);
-
+    
+    localStorage.setItem("WJ_HP_clickedProject", index);
     if (shouldScroll) {
-      refProject.current.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        refProject.current?.scrollIntoView({ behavior: "smooth" });
+      }, 50);
     }
   }
   return (

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect} from "react";
+import React, { useContext, memo } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
@@ -11,31 +11,20 @@ import allProjects from "../../utils/projectUtil";
 import "../../styles/showprojects.css";
 
 function ShowProject() {
-  const {
-    projects,
-    refProject,
-    selectedProject
-  } = useContext(ProjectsContext);
-  useEffect(()=>{
-
-  })
-  const title = selectedProject.Title;
+  const { projects, refProject, selectedProject } = useContext(ProjectsContext);
 
   const Project = () => {
     const Comp = allProjects[selectedProject.id];
+
     return (
       <div key={selectedProject.id}>
         <Comp />
       </div>
     );
   };
-  const IconBar = () => {
-    let  gitHub, code, group, requirements, modul;
-    gitHub = selectedProject.GitHub;
-    modul = selectedProject.Modul;
-    code = selectedProject.Code;
-    group = selectedProject.Group;
-    requirements = selectedProject.Requirements;
+
+  const IconBar = memo(({ selectedProject, projects }) => {
+    const { GitHub: gitHub, Code: code, Group: group } = selectedProject;
     return (
       <>
         <div className="showproject-icons-and-text">
@@ -84,7 +73,8 @@ function ShowProject() {
         ) : null}
       </>
     );
-  };
+  });
+
   return (
     <div id="showProject" className="showproject-box">
       <div id="showproject-box-wrapper" className="showproject-box-wrapper">
@@ -92,11 +82,11 @@ function ShowProject() {
           {modul}
         </div> */}
         <div ref={refProject} className="showproject-title-headline">
-          {title}
+          {selectedProject.Title}
         </div>
 
         <div className="showproject-icons-box">
-          <IconBar />
+          <IconBar selectedProject={selectedProject} projects={projects} />
         </div>
         <Project />
       </div>

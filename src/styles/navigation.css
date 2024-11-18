@@ -1,4 +1,4 @@
-.nav-box {
+/* .nav-box {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -14,7 +14,7 @@
 .rotate {
   transform: rotate(180deg);
 }
-/* Smartphone */
+
 @media screen and (max-width: 768px) {
   .nav-arrow {
     width: 30px;
@@ -23,4 +23,4 @@
     background-color: var(--link-color);
     border-radius: 50%;
   }
-}
+} */

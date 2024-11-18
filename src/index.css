@@ -5,27 +5,35 @@
 @import url("https://use.typekit.net/pgm2vji.css"); */
 
 :root {
-  --bg-color-body: #090909;
-  --bg-color-project-showcase: #1c1c1c;
-  --bg-color-navbar: #1c1c1c;
+  --bg-color-body: #141414;
+  --bg-color-project-showcase: #202020;
+  --bg-color-navbar: #242424;
   --bg-color-figcaption:#353535;
-  --primary-color: #1e90ff;
+  --shadow-color: #101010;
+  --primary-color: #7462eb;
   --secondary-color: #ff6347;
   --font-color: #ececec;
+  --fs-headline: 5rem;
+  --fs-700: 4rem;
+  --fs-600: 3.75rem;
+  --fs-500: 3rem;
+  --fs-400: 2.5rem;
+  --fs-300: 2rem;
+  --fs-200: 1.5rem;
+  --fs-100: 1rem;
+  --fs-small: 0.75rem;
   --button-navbar-section-bg-color: #282828;
   --button-navbar-section-bg-color2: #656565;
   --button-section-bg-color: #5a5a5a;
   --button-section-bg-color2: #24242433; /* 20 % Opacity*/
   --button-section-selected-bg-color: radial-gradient(
- 
     var(--primary-color),
     var(--button-section-bg-color2)
   );
-  /* --button-section-selected-bg-color: linear-gradient(
-    30deg,
-    var(--primary-color) 0%,
-    var(--button-section-bg-color2) 100%
-  ); */
+  --button-mobile-menu:radial-gradient(
+    var(--button-section-bg-color),
+    var(--button-section-bg-color2)
+  );
   --border-radius-button: 10px;
   --border-radius-box-outer: 20px;
   --border-radius-box-inner: 10px;
@@ -46,13 +54,13 @@
 
 html {
   background-color: var(--bg-color-body);
+  font-size:100%;
   overflow-x: hidden;
   overflow-y: scroll;
-/*   scroll-snap-type: y mandatory; */
-  /*   scroll-behavior: smooth; */
 }
 
 body {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,9 +68,10 @@ body {
   color: var(--font-color);
   min-height: 100vh;
   min-width: 100%;
-  font-size: 18px;
-  background-size: 100%;
+  background: 
+    radial-gradient(circle at top,#222222  0%, var(--bg-color-body) 100vh);
 }
+
 canvas {
   width: 100%;
   height: 100%;
@@ -132,24 +141,44 @@ video {
 
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  html{
+ /*  html{
     scroll-snap-type:none;
   }
   footer {
     scroll-snap-align: none;
-  }
+  } */
 }
 @media screen and (max-width: 1450px) {
 }
-/* Smartphone */
-@media screen and (max-width: 768px) {
-  footer {
-    scroll-snap-align: none;
+
+/* Tablets (Querformat) and small laptops */
+@media screen and (max-width: 1000px) {
+  body {
+    font-size: 16px;
   }
+  p {
+    font-size: 16px;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  /* footer {
+    scroll-snap-align: none;
+  } */
   body {
     font-size: 14px;
   }
   p {
     font-size: 14px;
+  }
+}
+/* Smartphone */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 13px;
+  }
+  p {
+    font-size: 13px;
   }
 }

@@ -11,7 +11,7 @@ function Home() {
       <Main></Main>
       <Footer></Footer>
       <Navbar></Navbar>
-      <Starfield></Starfield>
+      {/* <Starfield></Starfield> */}
     </div>
   );
 }

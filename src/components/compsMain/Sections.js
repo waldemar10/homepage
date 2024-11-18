@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 
 import { ProjectsContext } from "../../context/projectsContext";
 import { SectionContext } from "../../context/sectionContext";
@@ -6,25 +6,58 @@ import "../../styles/sections.css";
 function Section() {
   const { handleSelectedProject, refSection } = useContext(SectionContext);
   const { projects } = useContext(ProjectsContext);
-
   useEffect(() => {
-    if (localStorage.getItem("clickedProject")) {
-      handleSelectedProject(localStorage.getItem("clickedProject"), false);
+    if (localStorage.getItem("WJ_HP_clickedProject")) {
+      handleSelectedProject(localStorage.getItem("WJ_HP_clickedProject"), false);
     }
   }, []);
 
-  const ProjectBox = ({ index, clicked, projectname }) => (
-    <a
-      className="sections-project-box"
+  const ProjectBox = ({ index, clicked, projectname }) => {
+    const [isVisible, setIsVisible] = useState(false); 
+    const boxRef = useRef();
+
+    const callback = (entries, observer) => {
+      entries.forEach((entry) => {
+       
+        switch (entry.target.id) {
+          case "sections-box-showcase":
+            if (entry.isIntersecting) {
+              setIsVisible(true);
+            } else {
+              setIsVisible(false);
+            }
+            break;
+         
+          default:
+            break;
+        }
+      });
+    };
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+    const observer = new IntersectionObserver(callback, options);
+    useEffect(() => {
+      observer.observe(document.getElementById("sections-box-showcase"));
+    });
+    console.log("isVisible", isVisible);
+    return(
+    <div
+    ref={boxRef}
+    id="sections-project-box"
+    className="sections-project-box"
       onClick={() => handleSelectedProject(index, true)}
       style={{
         filter: clicked ? "brightness(100%)" : "brightness(50%)",
         background: clicked ? "var(--button-section-selected-bg-color)" : "",
       }}>
-      <p className="sections-showcase-text">{projectname}</p>
-    </a>
-  );
-  console.log(projects);
+      <p className={`sections-showcase-text ${isVisible ? "fade-in" : ""}`}>{projectname}</p>
+    </div>
+    );
+  }
+
   return (
     <>
       <div ref={refSection} id="sections-box" className="sections-box">

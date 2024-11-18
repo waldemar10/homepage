@@ -6,15 +6,13 @@ function Footer() {
       <footer id="footer">
         <p>
           Website{" "}
-          <a
+          erstellt mit React - {" "}
+          <strong><a
             href="https://github.com/waldemar10/homepage"
             target="_blank"
-            rel="noreferrer">
-            selbstständig
-          </a>{" "}
-          erstellt mit React
+            rel="noreferrer">Code</a></strong>
         </p>
-
+        
         <p>
           <a href="#/privacyPolicy">Datenschutzerklärung</a> &{" "}
           <a href="#/impressum">Impressum</a>
