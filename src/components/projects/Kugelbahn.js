@@ -1,18 +1,20 @@
 import React from "react";
-import video from "../../../videos/Kugelbahn.mp4";
-import thumbnail from "../../../images/VC2/Kugelbahn.JPG";
-import imgKugelbahn from "../../../images/VC2/KugelbahnNummer.jpg";
+import video from "../../videos/Kugelbahn.mp4";
+import thumbnail from "../../images/VC2/Kugelbahn.JPG";
+import imgKugelbahn from "../../images/VC2/KugelbahnNummer.jpg";
 function Kugelbahn() {
   return (
     <div className="project-content-box">
       <div className="project-box">
         <div className="project-description">
+          <p>
           Die Aufgabe bei diesem Projekt war es, eine realistische Simulation
           einer Kugelbahn zu entwickeln, bei der physikalische Gesetze möglichst
           genau nachgebildet werden sollten. Ziel war es, die Dynamik einer
           Kugel, die auf verschiedenen Bahnelementen rollt, in einer virtuellen
           Umgebung zu simulieren und dabei physikalische Größen wie
           Beschleunigung, Geschwindigkeit und Kollisionen zu berücksichtigen.
+          </p>
           <p>
             Besondere Herausforderungen lagen in der korrekten Umsetzung der
             physikalischen Prinzipien, wie der Fallbeschleunigung, der Trägheit
@@ -20,7 +22,7 @@ function Kugelbahn() {
             ansprechend dargestellt werden, um ein realistisches Verhalten der
             Kugeln zu gewährleisten.
           </p>
-          <div className="project-subheader">Vorgehensweise</div>
+          <h3>Vorgehensweise</h3>
           <p>
             Zunächst entwickelten wir eine Simulation der Fallbeschleunigung,
             die dafür sorgt, dass die Kugeln durch die Schwerkraft nach unten
@@ -59,19 +61,17 @@ function Kugelbahn() {
             nachzustellen.
           </p>
         </div>
-        <div className="project-subheader">Video</div>
+        <h3>Video</h3>
         <div className="project-video">
           <video controls src={video} poster={thumbnail}></video>
         </div>
       </div>
 
       <div className="project-box">
-        <div className="project-image">
           <figure className="project-figure">
             <img src={imgKugelbahn} alt="Beschriftung" />
             <figcaption>Overlay</figcaption>
           </figure>
-        </div>
         <div className="project-description">
           <ol className="project-list">
             <li>

@@ -1,13 +1,12 @@
-import React, { createContext, useContext, useRef, useEffect } from "react";
+import React, { createContext, useContext, useRef } from "react";
 import { ProjectsContext } from "./projectsContext";
 
-export const SectionContext = createContext();
-export const SectionProvider = ({ children }) => {
+export const ProjectSelectionContext = createContext();
+export const ProjectSelectionProvider = ({ children }) => {
   const { refProject, projects, setSelectedProject } =
     useContext(ProjectsContext);
 
-  const refSection = useRef(null);
-
+  const refProjectSelection = useRef(null);
   function resetAllClicked() {
     projects.map((project) => {
       project.isClicked = false;
@@ -17,7 +16,7 @@ export const SectionProvider = ({ children }) => {
     resetAllClicked();
     projects[index].isClicked = true;
     setSelectedProject(projects[index]);
-    
+
     localStorage.setItem("WJ_HP_clickedProject", index);
     if (shouldScroll) {
       setTimeout(() => {
@@ -26,12 +25,12 @@ export const SectionProvider = ({ children }) => {
     }
   }
   return (
-    <SectionContext.Provider
+    <ProjectSelectionContext.Provider
       value={{
         handleSelectedProject,
-        refSection,
+        refProjectSelection,
       }}>
       {children}
-    </SectionContext.Provider>
+    </ProjectSelectionContext.Provider>
   );
 };

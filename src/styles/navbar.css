@@ -2,304 +2,124 @@
   --scale-size-button-box: 1.3;
   --scale-size-svg: 1.3;
 }
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  font-size: var(--fs-100);
-  text-align: center;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: -230px;
-  transition: all 0.6s ease-in-out;
-}
 
-.navbar.visible {
-  left: 0px;
+.navbar-wrapper {
+  opacity: 0;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 98;
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
 }
-.navbar.hide {
-  left: -230px;
+.navbar-wrapper.visible {
+  transform: translateY(0);
 }
-.navbar.hide-button {
-  left: -200px;
-}
-.navbar.hide.hide-button {
-  left: -230px;
-}
-.navbar-container {
-  width: 200px;
-  border-radius: 0 var(--border-radius-box-outer) var(--border-radius-box-outer)
+/* .navbar-content {
+  display: grid;
+  grid-template-rows: repeat(2, 50px);
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color-navbar);
+  border-radius: var(--border-radius-box-outer) var(--border-radius-box-outer) 0
     0;
-  background-color: var(--bg-color-navbar);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
 }
 
-.navbar-container ul {
+.navbar-wrapper button {
   display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 20px;
-  gap: 10px;
-}
-
-.navbar-container li {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  user-select: none;
-  padding: 20px;
-  border-radius: var(--border-radius-box-inner);
-  background: radial-gradient(
-    var(--button-navbar-section-bg-color2),
-    var(--button-navbar-section-bg-color)
-  );
-  /* background-color: var(--button-navbar-section-bg-color); */
-  height: 85px;
-  min-width: 100%;
-}
-.navbar li:hover {
-  filter: brightness(50%);
-  background-color: var(--secondary-color);
-  background: radial-gradient(
-    closest-corner,
-    var(--secondary-color),
-    var(--button-section-bg-color2)
-  );
-  cursor: pointer;
-}
-
-.navbar-button {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 30px;
+  margin: 20px;
   height: 50px;
-  background-color: var(--bg-color-navbar);
-  border-radius: 0px var(--border-radius-box-outer)
-    var(--border-radius-box-outer) 0px;
-  border-style: none;
-  transition: 1s;
+  padding: 5px;
+  border-radius: var(--border-radius-box-inner);
+  border: 2px solid var(--border-color);
+  font-size: var(--fs-100);
+  color: var(--font-color-light);
+  background-color: var(--bg-color-btn);
+  overflow-wrap: break-word;
+  transition: all 0.5s ease;
 }
-.navbar-button:hover {
-  transform: scale(var(--scale-size-button-box));
+.navbar-wrapper button:hover {
+  transform: scale(1.1);
   cursor: pointer;
-  /* Change color and scale up the size for the svg */
-  .navbar-button-svg {
-    transform: scale(var(--scale-size-svg));
-    color: var(--secondary-color);
-  }
-}
-
-.navbar-button-svg {
-  width: 20px;
-  height: 30px;
-  color: var(--primary-color);
-  rotate: 0deg;
-  transition: rotate 0.6s;
-  transition: 1s;
-}
-
-.navbar-button-svg.rotate-button {
-  rotate: 180deg;
-}
-
-/* @media screen and (max-width: 1224px) {
-  
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.723);
 } */
 
-/* Large desktops and larger screens */
-@media screen and (min-width: 1450px) {
-}
 
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 10px;
+  bottom: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: var(--button-mobile-menu);
+  box-shadow: 0px 0px 10px white;
+}
+.navbar:hover {
+  cursor: pointer;
+}
+#icon-mobile-menu {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+/* .navbar-smartphone {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: var(--button-mobile-menu);
+  box-shadow: 0px 0px 10px white;
+  z-index: 99;
+  opacity: 0;
+  transition: all 1s ease;
+} */
+.navbar-wrapper.visible {
+  opacity: 1;
+}
 /* Medium desktops and laptops */
 @media screen and (max-width: 1450px) {
-  .navbar {
-    position: sticky;
-    flex-direction: row;
-    height: auto;
-    width: 100%;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    padding: 0px;
-  }
-
-  .navbar-container {
-    box-shadow: 0px -5px 15px var(--shadow-color);
-    width: auto;
-    height: auto;
-    border-radius: var(--border-radius-box-outer) var(--border-radius-box-outer)
-      0 0;
-    padding: 10px;
-    display: flex;
-
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .navbar-container ul {
-    flex-direction: row;
-    padding: 10px;
-    margin: 0;
-    gap: 0;
-    width: 100%;
-  }
-
-  .navbar-container li {
-    flex: 1;
-    height: auto;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: auto;
-  }
-
-  .navbar-button {
-    display: none;
-  }
-  .navbar.visible {
-    left: 0;
-    bottom: 0px;
-  }
-  .navbar.hide {
-    left: 0;
-    bottom: -130px;
-  }
-  .navbar.hide-button {
-    left: 0;
-  }
-  .navbar.hide.hide-button {
-    left: 0;
-  }
 }
 
 /* Tablets (Querformat) and small laptops */
 @media screen and (max-width: 1000px) {
-  .navbar-container {
-    padding: 7px;
+  .navbar-content {
+    width: 95%;
   }
-  .navbar-container ul {
-    padding: 7px;
-  }
-  .navbar-container li {
-    padding: 7px;
+  .navbar{
+    right: 20px;
   }
 }
 
 /* Tablets (Hochformat) and larger smartphones */
 @media screen and (max-width: 768px) {
-  .navbar-container {
-    padding: 5px;
-  }
-  .navbar-container ul {
-    padding: 5px;
-  }
-  .navbar-container li {
-    padding: 5px;
-  }
-  .navbar {
-    font-size: var(--fs-small);
-  }
 }
 
 /* Small smartphones and small devices */
 @media screen and (max-width: 600px) {
-  .body-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+  .navbar-content {
     display: none;
   }
-
-  .body-overlay.visible {
-    display: block;
-  }
- /*  .navbar {
-    display: none;
-  } */
-
   .navbar-smartphone {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    left: 50px;
-    bottom: 0;
-    margin-top: 20px;
-    padding: 0;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    background: var(--button-mobile-menu);
-    box-shadow: 0px 0px 10px white;
-    opacity: 0;
-    z-index: 1000;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .navbar-smartphone.visible {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  .navbar-smartphone.hide {
-    opacity: 0;
-    transform: translate(-50%, 20%);
-  }
-  .navbar-buttons-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .navbar-buttons-container button {
-    position: absolute;
-    background-color: white;
-    border: none;
-    border-radius: 50%;
-    /* padding: 5px; */
-    margin: 5px 0;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
-
-  .navbar-buttons-container button img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-  }
-
-  .navbar-buttons-container button:nth-child(1) {
-    transform: rotate(240deg) translateX(60px) rotate(-240deg);
-  }
-
-  .navbar-buttons-container button:nth-child(2) {
-    transform: rotate(270deg) translateX(60px) rotate(-270deg);
-  }
-
-  .navbar-buttons-container button:nth-child(3) {
-    transform: rotate(300deg) translateX(60px) rotate(-300deg);
-  }
-
-  .navbar-buttons-container button:nth-child(4) {
-    transform: rotate(330deg) translateX(60px) rotate(-330deg);
-  }
-
-  .navbar-buttons-container button:nth-child(5) {
-    transform: rotate(360deg) translateX(60px) rotate(-360deg);
-  }
-
-  .navbar-buttons-container button:nth-child(6) {
-    transform: rotate(390deg) translateX(60px) rotate(-390deg);
   }
 }

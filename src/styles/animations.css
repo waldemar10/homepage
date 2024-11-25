@@ -46,6 +46,16 @@
     transform: translateY(0);
   }
 }
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
 @keyframes scaleUp{
   from{
     transform: scale(1);
@@ -53,4 +63,102 @@
   to{
     transform: scale(1.1);
   }
+}
+:root{
+  --deg-shake: 10deg;
+  --deg-shake-negative: -10deg;
+}
+@keyframes shake {
+  /* 0% {
+    transform: rotate(var(--deg-shake));
+  }
+  10% {
+    transform: rotate(var(--deg-shake-negative));
+  }
+  20% {
+    transform: rotate(var(--deg-shake));
+  }
+  30% {
+    transform: rotate(var(--deg-shake-negative));
+  }
+  40% {
+    transform: rotate(var(--deg-shake));
+  }
+  50% {
+    transform: rotate(var(--deg-shake-negative));
+  }
+  60% {
+    transform: rotate(var(--deg-shake));
+  }
+  70% {
+    transform: rotate(var(--deg-shake-negative));
+  }
+  80% {
+    transform: rotate(var(--deg-shake));
+  } */
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(var(--deg-shake));
+  }
+  75% {
+    transform: rotate(var(--deg-shake-negative));
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes drop{
+  0%{
+    top:0%;
+  }
+  100%{
+    top:100%;
+  }
+}
+@keyframes flow{
+  0%{
+    left:-20%;
+  }
+  100%{
+    left:120%;
+  }
+}
+
+.line {
+  opacity: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 5%,
+    var(--border-color) 50%,
+    transparent 96%
+  );
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0px;
+  left: 0;
+  display: block;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+  overflow: hidden;
+  mask: linear-gradient(90deg, transparent 5%, black 50%, transparent 96%);
+  -webkit-mask: linear-gradient(90deg, transparent 5%, black 50%, transparent 96%);
+}
+.line::after {
+  content: "";
+  position: absolute;
+  width: 15vh;
+  height: 2px;
+  bottom: 0px;
+  left: 0;
+  display: block;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  animation: flow 14s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line-delayed::after {
+  animation-delay: 2s;
 }

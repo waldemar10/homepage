@@ -1,11 +1,11 @@
 import React from "react";
 
-import video from "../../../videos/SchereSteinPapier.mp4";
-import thumbnail from "../../../images/VC/SSP.JPG";
+import video from "../../videos/SchereSteinPapier.mp4";
+import thumbnail from "../../images/VC/SSP.JPG";
 
-import imgPaper from "../../../images/VC/Papier.JPG";
-import imgScissor from "../../../images/VC/Schere.JPG";
-import imgStone from "../../../images/VC/Stein.JPG";
+import imgPaper from "../../images/VC/Papier.JPG";
+import imgScissor from "../../images/VC/Schere.JPG";
+import imgStone from "../../images/VC/Stein.JPG";
 
 function SchereSteinPapier() {
   return (
@@ -13,6 +13,7 @@ function SchereSteinPapier() {
       <div className="project-content-box">
         <div className="project-box">
           <div className="project-description">
+            <p>
             Schere Stein Papier Ultimate war ein Softwareprojekt im 3. Semester
             im Modul Visual Computing. Die Aufgabe war es, eine Java-Anwendung
             zu entwickeln, die eine Bildverarbeitungsaufgabe erledigt und die
@@ -26,8 +27,9 @@ function SchereSteinPapier() {
             programmieren. Ich arbeitete mit OpenCV und nutzte die
             Vorlesungsinhalte, um die Erkennung für die Gesten "Schere, Stein
             und Papier" zu realisieren.
+            </p>
           </div>
-          <div className="project-subheader">Video</div>
+          <h3>Video</h3>
           <div className="project-video">
             <video controls src={video} poster={thumbnail}></video>
           </div>
@@ -35,7 +37,8 @@ function SchereSteinPapier() {
 
         <div className="project-box">
           <div className="project-description">
-            <div className="project-subheader">Vorgehensweise</div>
+            <h3>Vorgehensweise</h3>
+            <p>
             Zu Beginn nutzte ich meine Webcam, um erste Tests zur
             Bildverarbeitung durchzuführen. Die ursprüngliche Idee war,
             Momentaufnahmen von der Hand zu machen und diese anschließend zu
@@ -47,6 +50,7 @@ function SchereSteinPapier() {
             die Bildverarbeitung direkt auf das Videomaterial der Webcam
             anzuwenden, anstatt statische Bilder zu nutzen. Daher verwarf ich
             diesen ersten Ansatz.
+            </p>
             <p>
               Im zweiten Ansatz verfeinerte ich die Vorgehensweise und ging wie
               folgt vor:
@@ -126,7 +130,6 @@ function SchereSteinPapier() {
             </ol>
           </div>
 
-          <div className="project-image">
             <figure className="project-figure">
               <img src={imgScissor} alt="Scissors gesture" />
               <figcaption className="project-figcaption">
@@ -147,7 +150,6 @@ function SchereSteinPapier() {
                 Geste Papier
               </figcaption>
             </figure>
-          </div>
         </div>
       </div>
     </>

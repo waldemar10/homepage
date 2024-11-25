@@ -1,77 +1,84 @@
-.projectShowcase-box-wrapper {
+:root {
+  --bg-color-showcase: #212121;
+  --icon-box-width: 200px;
+  --icon-box-bg-color-selected: var(--ln-gradient-primary);
+}
 
-  background-color: var(--bg-color-project-showcase);
+.projectShowcase-box-wrapper {
+  background-color: var(--bg-color-showcase);
   border-radius: var(--border-radius-box-outer);
-  padding: 20px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
   width: 1000px;
 }
-
-.icons-box-wrapper {
+.projectShowcase-headline {
+  text-align: center;
+  padding: 15px 5px 15px 5px;
+  color: var(--font-color-light);
+  overflow-wrap: break-word;
+}
+.projectShowcase-icons-box-wrapper {
   display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(var(--icon-box-width), 1fr));
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    90deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  border-radius: var(--border-radius-box-inner);
+  background: var(--icon-box-bg-color-selected);
+  padding: 10px;
+  overflow-wrap: break-word;
 }
-.projectShowcase-icon {
-  width: 30px;
-  height: 30px;
-  color: white;
-}
+
 .icons-box {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-}
-.projectShowcase-modul-headline {
-  text-align: center;
-  font-size: var(--fs-600);
-}
-.projectShowcase-title-headline {
-  font-size: var(--fs-headline);
-  font-weight: bold;
-  text-align: center;
-  margin: 10px 0px 10px 0px;
-  color: var(--font-color);
 }
 
-.projectShowcase-icons-text {
-  font-size: var(--fs-200);
+.icons-box p,
+a {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  font-size: var(--fs-150);
+  color: var(--font-color-light);
+  padding: 10px;
+  overflow-wrap: break-word;
 }
+
+.projectShowcase-icon {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
 @media screen and (max-width: 1450px) {
+  .projectShowcase-box-wrapper {
+    width: 900px;
+  }
 }
 /* Tablets (Querformat) and small laptops */
 @media screen and (max-width: 1000px) {
+  :root {
+    --icon-box-width: 100px;
+  }
   .projectShowcase-box {
     margin: 20px;
   }
   .projectShowcase-box-wrapper {
     width: 750px;
-    padding: 15px;
   }
-  .icons-box-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  .projectShowcase-icons-box-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(var(--icon-box-width), 1fr));
   }
-  .projectShowcase-icons-text {
+  .icons-box p,
+  a {
     font-size: var(--fs-100);
   }
 }
 /* Tablet */
 @media screen and (max-width: 768px) {
-  .projectShowcase-title-headline {
+  .projectShowcase-headline {
     font-size: var(--fs-500);
   }
   .icons-box {
@@ -79,7 +86,6 @@
   }
   .projectShowcase-box-wrapper {
     width: 600px;
-    padding: 10px;
   }
   .projectShowcase-box {
     margin-top: 20px;
@@ -87,10 +93,8 @@
 }
 /* Smartphone */
 @media screen and (max-width: 600px) {
-
-  .icons-box {
-    padding: 5px;
-    justify-content: start;
+  :root {
+    --icon-box-width: 80px;
   }
   .projectShowcase-box-wrapper {
     width: 90%;
@@ -98,12 +102,12 @@
   .projectShowcase-modul-headline {
     font-size: var(--fs-400);
   }
-  .projectShowcase-title-headline {
+  .projectShowcase-headline {
     font-size: var(--fs-400);
-    overflow-wrap: break-word;
   }
-  .projectShowcase-icons-text {
-    font-size: var(--fs-small);
+  .icons-box p,
+  a {
+    font-size: var(--fs-75);
     font-weight: 500;
     overflow-wrap: break-word;
     text-align: center;
@@ -111,9 +115,36 @@
   .projectShowcase-icon {
     width: 25px;
     height: 25px;
-    color: white;
   }
-  .icons-box-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  .projectShowcase-icons-box-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(var(--icon-box-width), 1fr));
+  }
+}
+/* Smartphone small */
+@media screen and (max-width: 400px) {
+  .projectShowcase-icons-box-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .icons-box {
+    flex-direction: row;
+    padding: 5px;
+  }
+  .icons-box p,
+  a {
+    font-size: var(--fs-100);
+    padding: 10px;
+    font-weight: 400;
+    text-align: start;
+  }
+  .projectShowcase-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .projectShowcase-headline {
+    font-size: var(--fs-200);
   }
 }

@@ -6,9 +6,9 @@ import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import { ProjectsContext } from "../../context/projectsContext";
-import allProjects from "../../utils/projectUtil";
-import "../../styles/projectShowcase.css";
+import { ProjectsContext } from "../context/projectsContext";
+import allProjects from "../utils/projectUtil";
+import "../styles/projectShowcase.css";
 
 function ProjectShowcase() {
   const { projects, refProject, selectedProject } = useContext(ProjectsContext);
@@ -28,64 +28,61 @@ function ProjectShowcase() {
     return (
       <>
         <div className="icons-box">
-          <FontAwesomeIcon icon={faUserGroup} className="projectShowcase-icon" />
-          <p className="projectShowcase-icons-text">{group}</p>
+          <FontAwesomeIcon
+            icon={faUserGroup}
+            className="projectShowcase-icon"
+          />
+          <p>{group}</p>
         </div>
 
         <div className="icons-box">
-          <FontAwesomeIcon icon={faLaptopCode} className="projectShowcase-icon" />
-          <p className="projectShowcase-icons-text">{code}</p>
+          <FontAwesomeIcon
+            icon={faLaptopCode}
+            className="projectShowcase-icon"
+          />
+          <p>{code}</p>
         </div>
 
         <div className="icons-box">
           <FontAwesomeIcon icon={faGithub} className="projectShowcase-icon" />
-          <a
-            className="projectShowcase-icons-text"
-            href={gitHub}
-            target="_blank"
-            rel="noreferrer">
+          <a href={gitHub} target="_blank" rel="noreferrer">
             GitHub
           </a>
         </div>
-        {selectedProject.Title === "Die Yoga-Website" ? (
+       {/*  {selectedProject.Title === "Die Yoga-Website" ? (
+          <div className="icons-box">
+            <FontAwesomeIcon icon={faGlobe} className="projectShowcase-icon" />
+            <a target="_blank" rel="noreferrer" href="https://yoga.waljus.de/">
+              Website
+            </a>
+          </div>
+        ) : null} */}
+        {/* {selectedProject.Title === "LinguPingu" ? (
           <div className="icons-box">
             <FontAwesomeIcon icon={faGlobe} className="projectShowcase-icon" />
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://yoga.waljus.de/"
-              className="projectShowcase-icons-text">
+              href="https://lingupingu.waljus.de/">
               Website
             </a>
           </div>
-        ) : null}
-        {selectedProject.Title === "LinguPingu" ? (
-          <div className="icons-box">
-            <FontAwesomeIcon icon={faGlobe} className="projectShowcase-icon" />
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://lingupingu.waljus.de/"
-              className="projectShowcase-icons-text">
-              Website
-            </a>
-          </div>
-        ) : null}
+        ) : null} */}
       </>
     );
   });
 
   return (
-      <div id="projectShowcase" className="projectShowcase-box-wrapper">
-        <div ref={refProject} className="projectShowcase-title-headline">
-          {selectedProject.Title}
-        </div>
+    <div id="projectShowcase" className="projectShowcase-box-wrapper">
+      <h2 ref={refProject} className="projectShowcase-headline">
+        {selectedProject.Title}
+      </h2>
 
-        <div className="icons-box-wrapper">
-          <IconBar selectedProject={selectedProject} projects={projects} />
-        </div>
-        <Project />
+      <div className="projectShowcase-icons-box-wrapper">
+        <IconBar selectedProject={selectedProject} projects={projects} />
       </div>
+      <Project />
+    </div>
   );
 }
 export default ProjectShowcase;

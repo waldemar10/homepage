@@ -1,132 +1,100 @@
-.box {
+.startscreen-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  width: 100%;
+  padding: 0px 20px 20px 20px;
+}
+.startscreen-greeting {
+  background: var(--ln-gradient-primary);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s forwards;
+}
+
+.startscreen-introduction-box {
+  opacity: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  width: 800px;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
 }
-
-.icon-box {
-  position: relative;
-  width: 10%;
-  height: 10%;
+.startscreen-introduction-box p {
   text-align: center;
-  animation: UpAndDown 4s infinite ease-in-out;
 }
-.icon {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.icon-path {
-  transition: opacity 1s ease;
-}
-
-.icon-gradient {
-  transition: opacity 1s ease;
+.startscreen-name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: var(--bg-color-figcaption);
+  border-radius: var(--border-radius-box-outer);
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  font-size: var(--fs-200);
+  transition: all 0.7s;
 }
 
-.icon:hover .icon-path {
-  opacity: 0;
+.startscreen-description {
+  font-size: var(--fs-200);
 }
-
-.icon:hover .icon-gradient {
-  opacity: 1;
+#startscreen-arrow {
+  transform: rotate(-90deg);
+  transition: all 0.7s;
 }
-
-.svg-headline {
-  width: 1200px;
+.startscreen-button {
+  font-size: var(--fs-200);
+  background: var(--ln-gradient-primary);
+  color: var(--font-color-light);
+  border-radius: var(--border-radius-box-outer);
+  border: none;
+  max-width: 200px;
+  max-height: 100px;
+  padding: 10px 20px 10px 20px;
+  margin: 50px;
   font-weight: 500;
+  transition: all 0.7s;
 }
-.svg-headline text {
-  user-select: none;
-  font-size: var(--fs-headline);
-  stroke-width: 1;
-  letter-spacing: -6px;
+.startscreen-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.723);
+  transform: scale(1.1);
 }
-.svg-headline text.text-body {
-  /* stroke:white; */
-  animation: 10s infinite alternate AnimateStroke;
+.startscreen-button:hover > #startscreen-arrow {
+  transform: rotate(0deg);
+  font-size: larger;
 }
+
 @media screen and (max-width: 1450px) {
-  .svg-headline {
-    width: 1000px;
-  }
 }
 /* Tablets (Querformat) and small laptops */
 @media screen and (max-width: 1000px) {
-  .svg-headline {
-    width: 700px;
-  }
-  .icon-box {
-    width: 15%;
-    height: 15%;
+  .startscreen-introduction-box {
+    width: 90%;
   }
 }
 /* Tablet */
 @media screen and (max-width: 768px) {
-  .svg-headline {
-    width: 600px;
+  .startscreen-introduction-box {
+    width: 95%;
   }
-  .icon-box {
-    width: 15%;
-    height: 15%;
+  #startscreen-arrow {
+    transform: rotate(0deg);
   }
 }
 
 /* Smartphone */
 @media screen and (max-width: 600px) {
-  .mobile-startscreen {
-    text-align: center;
-    padding: 20px;
-    background: radial-gradient(
-      circle,
-      rgba(87, 64, 236, 0.1),
-      var(--bg-color-body)
-    );
-    border-radius: 10px;
-    max-width: 90%;
-    margin: auto;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-wrap: wrap;
+  .startscreen-introduction-box {
+    width: 100%;
   }
-  .mobile-greeting {
-    font-size: var(--fs-600);
-    color: var(--font-color);
-    margin-bottom: 15px;
-  }
-
-  /* Name */
-  .mobile-name {
-    font-size: var(--fs-300);
-    animation: fadeIn 1s ease-out;
-    animation-fill-mode: forwards;
-  }
-
-  .mobile-introduction {
-    text-wrap: balance;
-    font-size: var(--fs-300);
-    color: var(--font-color);
-    opacity: 0;
-    animation: fadeIn 1s ease-out;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-  }
-
-  .mobile-fun strong {
-    opacity: 0;
-    font-size: var(--fs-300);
-    color: var(--secondary-color);
-    text-shadow: 0px 0px 5px var(--secondary-color);
-    animation: fadeIn 1s ease-out;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
-  }
-  .icon-box {
-    position: relative;
-    width: 20%;
-    height: 20%;
-    margin-bottom: 50px;
+  .startscreen-description {
+    font-size: var(--fs-150);
   }
 }

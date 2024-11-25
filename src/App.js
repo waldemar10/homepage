@@ -2,9 +2,11 @@ import {useState, useContext, useEffect} from 'react'
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Impressum from "./pages/Impressum";
+import Contact from './pages/Contact';
 import Home from "./pages/Home";
 import { ProjectsContext } from './context/projectsContext';
 import data from "./data/projects.json";
+import './App.css';
 function App() {
   const [loading,isLoading] = useState(true);
   const {projects, setProjects,selectedProject,setSelectedProject} = useContext(ProjectsContext);
@@ -34,11 +36,12 @@ function App() {
 
   return (
     <Router>
-    <div className="App">
+    <div className="layout">
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="impressum" element={<Impressum />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
     </div>
     </Router>

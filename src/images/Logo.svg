@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1017.86 796.07">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Unbenannter_Verlauf_24-2);
+      }
+
+      .cls-2 {
+        fill: url(#Unbenannter_Verlauf_24);
+      }
+    </style>
+    <linearGradient id="Unbenannter_Verlauf_24" data-name="Unbenannter Verlauf 24" x1="198.06" y1="796.07" x2="198.06" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#428ac9"/>
+      <stop offset="1" stop-color="#454a9a"/>
+    </linearGradient>
+    <linearGradient id="Unbenannter_Verlauf_24-2" data-name="Unbenannter Verlauf 24" x1="-134.2" y1="796.07" x2="-134.2" y2="0" gradientTransform="translate(685.59) rotate(-180) scale(1 -1)" xlink:href="#Unbenannter_Verlauf_24"/>
+  </defs>
+  <path class="cls-2" d="M376.08,3.46L16.51,363.03c-22.01,22.01-22.01,57.71,0,79.72l349.85,349.85c7.4,7.4,20.04,2.16,20.04-8.3v-126.92c0-32.29-12.83-63.25-35.66-86.08l-159.51-159.51,169.22-169.22c22.83-22.83,35.66-53.8,35.66-86.08V11.76c0-10.46-12.65-15.7-20.04-8.3Z"/>
+  <path class="cls-1" d="M641.77,3.46l359.57,359.57c22.01,22.01,22.01,57.71,0,79.72l-349.85,349.85c-7.4,7.4-20.04,2.16-20.04-8.3v-126.92c0-32.29,12.83-63.25,35.66-86.08l159.51-159.51-169.22-169.22c-22.83-22.83-35.66-53.8-35.66-86.08V11.76c0-10.46,12.65-15.7,20.04-8.3Z"/>
+</svg>

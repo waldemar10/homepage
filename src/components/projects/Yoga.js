@@ -1,11 +1,12 @@
 import React from "react";
-import video from "../../../videos/Yoga.mp4";
-import thumbnail from "../../../images/WebDev/Yoga.JPG";
+import video from "../../videos/Yoga.mp4";
+import thumbnail from "../../images/WebDev/Yoga.JPG";
 function Yoga() {
   return (
     <div className="project-content-box">
       <div className="project-box">
         <div className="project-description">
+          <p>
           Das Ziel des Projekts war es, eine informative und ansprechende
           Website zum Thema Gesundheit zu entwickeln. Nach sorgfältiger
           Überlegung entschieden wir uns, den Schwerpunkt auf Yoga zu legen.
@@ -15,13 +16,16 @@ function Yoga() {
           abbaut. Unser Ziel war es, eine Website zu schaffen, die sowohl
           Anfänger als auch Fortgeschrittene anspricht und sie in ihrer
           Yoga-Praxis unterstützt.
-          <div className="project-subheader">Vorgehensweise</div>
+          </p>
+          <h3>Vorgehensweise</h3>
+          <p>
           Zu Beginn des Projekts erstellten wir mithilfe von Mindmapping ein
           umfassendes Leitbild, um die Kernaussagen und Ziele unserer Website
           klar zu definieren. Dies half uns, unsere Ideen zu strukturieren und
           die Richtung des Projekts festzulegen. Aus diesem Leitbild leiteten
           wir vier zentrale Entwurfskriterien ab, die unsere Vision für das
           Unternehmen und die Website widerspiegeln sollten:
+          </p>
           <ul className="project-list">
             <li>
               <b>Freundlich</b>
@@ -36,6 +40,7 @@ function Yoga() {
               <b>Sicher</b> 
             </li>
           </ul>
+          <p>
           Anschließend erstellten wir ein Moodboard, um visuelle Ideen und
           Stimmungen für die Gestaltung der Website zu sammeln. Dies half uns,
           eine klare Vorstellung davon zu entwickeln, wie die Website aussehen
@@ -58,9 +63,10 @@ function Yoga() {
           war, begannen wir mit der Programmierung der Website, wobei wir darauf
           achteten, dass die Umsetzung sowohl technisch als auch ästhetisch den
           im Vorfeld festgelegten Kriterien entsprach.
+          </p>
         </div>
 
-        <div className="project-subheader">Video</div>
+        <h3>Video</h3>
         <div className="project-video">
           <video controls src={video} poster={thumbnail}></video>
         </div>
