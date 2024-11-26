@@ -6,9 +6,9 @@ import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import { ProjectsContext } from "../context/projectsContext";
-import allProjects from "../utils/projectUtil";
-import "../styles/projectShowcase.css";
+import { ProjectsContext } from "../../context/projectsContext";
+import allProjects from "../../utils/projectUtil";
+import "../../styles/projectShowcase.css";
 
 function ProjectShowcase() {
   const { projects, refProject, selectedProject } = useContext(ProjectsContext);

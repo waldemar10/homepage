@@ -1,7 +1,7 @@
 :root {
   --box-width: 250px;
   --box-height: 200px;
-  --box-bg-color-grey: #5c5c5c;
+  --box-bg-color-grey: #515151;
   --box-bg-color-dark-grey: #1c1c1c;
   --box-bg-color-selected:var(--ln-gradient-primary);
 }
@@ -48,6 +48,7 @@
   transform: scale(1.1);
 }
 .projectSelection-project-box p {
+  color: var(--font-color-light);
   font-size: var(--fs-300);
   padding: 10px;
   text-shadow: 0px 0px 10px #000000;

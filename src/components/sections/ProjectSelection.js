@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 
-import { ProjectsContext } from "../context/projectsContext";
-import { ProjectSelectionContext } from "../context/projectSelectionContext";
-import "../styles/projectSelection.css";
+import { ProjectsContext } from "../../context/projectsContext";
+import { ProjectSelectionContext } from "../../context/projectSelectionContext";
+import "../../styles/projectSelection.css";
 function ProjectSelection() {
   const { handleSelectedProject, refProjectSelection } = useContext(ProjectSelectionContext);
   const { projects } = useContext(ProjectsContext);
@@ -63,10 +63,11 @@ function ProjectSelection() {
         className="projectSelection-project-box"
         onClick={() => handleSelectedProject(index, true)}
         style={{
-          filter: clicked ? "brightness(100%)" : "brightness(30%)",
+          filter: clicked ? "brightness(100%)" : "brightness(70%)",
           background: clicked ? selectedBackgroundColor : "",
+          border: clicked ? "none" : "",
         }}>
-        <p className={`projectSelection-showcase-text ${isVisible ? "fade-in" : ""}`}>
+        <p className={`${isVisible ? "fade-in" : ""}`}>
           {projectname}
         </p>
       </div>

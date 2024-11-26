@@ -1,9 +1,9 @@
 import React, { useContext} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { ProjectSelectionContext } from "../context/projectSelectionContext";
+import { ProjectSelectionContext } from "../../context/projectSelectionContext";
 
-import "../styles/startscreen.css";
+import "../../styles/startscreen.css";
 
 function Startscreen() {
   const { refProjectSelection } = useContext(ProjectSelectionContext);

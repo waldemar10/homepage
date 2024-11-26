@@ -2,11 +2,11 @@ import React from "react";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import Starfield from "../components/effects/Starfield";
-import Startscreen from "../components/Startscreen";
-import AboutMe from "../components/AboutMe";
-import ProjectSelection from "../components/ProjectSelection";
-import ProjectShowcase from "../components/ProjectShowcase";
-import Navbar from "../components/Navbar";
+import Startscreen from "../components/sections/Startscreen";
+import AboutMe from "../components/sections/AboutMe";
+import ProjectSelection from "../components/sections/ProjectSelection";
+import ProjectShowcase from "../components/sections/ProjectShowcase";
+import Navbar from "../components/layout/Navbar";
 function Home() {
   return (
     <>

@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
-import { ProjectSelectionContext } from "../context/projectSelectionContext";
-import { AboutMeContext } from "../context/aboutMeContext";
-import "../styles/aboutMe.css";
+import { AboutMeContext } from "../../context/aboutMeContext";
+import "../../styles/aboutMe.css";
 const AboutMe = () => {
   const { refAboutMe } = useContext(AboutMeContext);
   return (
@@ -47,6 +46,10 @@ const AboutMe = () => {
           <div>
             <h4>Design</h4>
             <p>Adobe XD, Adobe Illustrator, Figma</p>
+          </div>
+          <div>
+            <h4>Projektmanagement</h4>
+            <p>Trello</p>
           </div>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 
-import { ProjectsContext } from "../context/projectsContext";
-import { ProjectSelectionContext } from "../context/projectSelectionContext";
+import { ProjectsContext } from "../../context/projectsContext";
+import { ProjectSelectionContext } from "../../context/projectSelectionContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import "../styles/navbar.css";
+import "../../styles/navbar.css";
 export default function Navbar() {
   const { projects } = useContext(ProjectsContext);
 
