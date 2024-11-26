@@ -30,8 +30,6 @@
   padding-top: var(--padding-top-title);
 }
 .project-description {
-  text-align: justify;
-  text-align-last: none;
   flex: 1 1 0px;
   font-size: var(--fs-100);
 }
@@ -91,7 +89,6 @@
 }
 
 .project-list {
-  font-size: var(--fs-100);
   margin: 10px 0px 10px 10px;
 }
 .project-button {

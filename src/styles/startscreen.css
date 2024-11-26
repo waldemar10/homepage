@@ -12,18 +12,14 @@
   background: var(--ln-gradient-primary);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: fadeIn 1s forwards;
 }
 
 .startscreen-introduction-box {
-  opacity: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 800px;
-  animation: fadeIn 1s forwards;
-  animation-delay: 1s;
 }
 .startscreen-introduction-box p {
   text-align: center;
@@ -42,7 +38,7 @@
 }
 
 .startscreen-description {
-  font-size: var(--fs-200);
+  font-size: var(--fs-150);
 }
 #startscreen-arrow {
   transform: rotate(-90deg);
