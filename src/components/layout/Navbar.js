@@ -69,7 +69,7 @@ export default function Navbar() {
     };
   }, []);
   const handleFadeOut = (e) => {
-    if (e.animationName === "fadeOut") {
+    if (e.animationName === "navbarFadeOut") {
       document
         .getElementsByClassName("navbar-wrapper")[0]
         .classList.add("navbar-wrapper-hidden");
@@ -79,7 +79,7 @@ export default function Navbar() {
     }
   };
   const handleFadeIn = (e) => {
-    if (e.animationName === "fadeIn") {
+    if (e.animationName === "navbarFadeIn") {
       document
         .getElementsByClassName("navbar-wrapper")[0]
         .classList.add("navbar-wrapper-show");
@@ -88,6 +88,7 @@ export default function Navbar() {
         .classList.remove("navbar-wrapper-hidden");
     }
   };
+
   return (
     <div
       className={` navbar-wrapper ${isNavbarVisible ? "visible" : "hidden"}`}>

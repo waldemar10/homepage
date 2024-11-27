@@ -4,23 +4,26 @@
 }
 
 .navbar-wrapper {
+  display: flex;
   opacity: 0;
   position: sticky;
   bottom: 0;
   left: 0;
-  display: flex;
+  
   justify-content: center;
   align-items: center;
   width: 100%;
   z-index: 98;
   transform: translateY(100%);
-  animation: fadeOut 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 .navbar-wrapper.visible {
-  animation: fadeIn 0.5s;
+  opacity: 1;
+  animation: navbarFadeIn 0.5s;
 }
 .navbar-wrapper.hidden {
-  animation: fadeOut 0.5s;
+  opacity: 0;
+  animation: navbarFadeOut 0.5s;
 }
 .navbar-wrapper-show {
   display: flex;
