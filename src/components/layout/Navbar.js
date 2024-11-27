@@ -11,12 +11,14 @@ export default function Navbar() {
   const [isProjectShowcase, setIsProjectShowcase] = useState(false);
   const [isProjectSelection, setIsProjectSelection] = useState(false);
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
-  const { refProjectSelection, handleSelectedProject } = useContext(ProjectSelectionContext);
+  const { refProjectSelection, handleSelectedProject } = useContext(
+    ProjectSelectionContext
+  );
+
   const navToProjectSelection = (e) => {
     e.preventDefault();
     refProjectSelection.current.scrollIntoView({ behavior: "smooth" });
   };
- 
 
   const callback = (entries, observer) => {
     entries.forEach((entry) => {
@@ -52,37 +54,46 @@ export default function Navbar() {
     observer.observe(document.getElementById("projectSelection-box"));
   });
   useEffect(() => {
-    if(isProjectShowcase && !isProjectSelection){
+    if (isProjectShowcase && !isProjectSelection) {
       setIsNavbarVisible(true);
-    }
-    else{
+    } else {
       setIsNavbarVisible(false);
     }
-  }
-  ,[isProjectShowcase, isProjectSelection]);
+  }, [isProjectShowcase, isProjectSelection]);
+  useEffect(() => {
+    document.addEventListener("animationend", handleFadeOut);
+    document.addEventListener("animationend", handleFadeIn);
+    return () => {
+      document.removeEventListener("animationend", handleFadeOut);
+      document.removeEventListener("animationend", handleFadeIn);
+    };
+  }, []);
+  const handleFadeOut = (e) => {
+    if (e.animationName === "fadeOut") {
+      document
+        .getElementsByClassName("navbar-wrapper")[0]
+        .classList.add("navbar-wrapper-hidden");
+      document
+        .getElementsByClassName("navbar-wrapper")[0]
+        .classList.remove("navbar-wrapper-show");
+    }
+  };
+  const handleFadeIn = (e) => {
+    if (e.animationName === "fadeIn") {
+      document
+        .getElementsByClassName("navbar-wrapper")[0]
+        .classList.add("navbar-wrapper-show");
+      document
+        .getElementsByClassName("navbar-wrapper")[0]
+        .classList.remove("navbar-wrapper-hidden");
+    }
+  };
   return (
-    <div className={` navbar-wrapper ${isNavbarVisible ? "visible" : ""}`}>
-      <div
-        className={`navbar`}
-        onClick={(e) => navToProjectSelection(e)}>
+    <div
+      className={` navbar-wrapper ${isNavbarVisible ? "visible" : "hidden"}`}>
+      <div className={`navbar`} onClick={(e) => navToProjectSelection(e)}>
         <FontAwesomeIcon id="icon-mobile-menu" icon={faChevronUp} />
       </div>
-      {/* <div className="navbar-content">
-        {projects.map((project, index) => (
-          <button
-            key={project.Title}
-            onClick={() => handleSelectedProject(index, true)}
-            style={{
-              background: project.isClicked
-                ? "var(--box-bg-color-selected)"
-                : "",
-              border: project.isClicked ? "none" : "",
-            }}>
-            {project.Title}
-          </button>
-        ))}
-      </div> */}
-      
     </div>
   );
 }
