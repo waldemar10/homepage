@@ -57,7 +57,7 @@ function ProjectShowcase() {
             </a>
           </div>
         ) : null} */}
-        {/* {selectedProject.Title === "LinguPingu" ? (
+        {selectedProject.Title === "LinguPingu" ? (
           <div className="icons-box">
             <FontAwesomeIcon icon={faGlobe} className="projectShowcase-icon" />
             <a
@@ -67,7 +67,7 @@ function ProjectShowcase() {
               Website
             </a>
           </div>
-        ) : null} */}
+        ) : null}
       </>
     );
   });

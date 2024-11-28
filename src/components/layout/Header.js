@@ -1,4 +1,5 @@
 import React, { useState, useRef, useContext, useEffect } from "react";
+import { useIsMobile } from "../../hooks/useIsMobile";
 import { ProjectSelectionContext } from "../../context/projectSelectionContext";
 import { AboutMeContext } from "../../context/aboutMeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,42 +8,56 @@ import "../../styles/header.css";
 function Header() {
   const { refProjectSelection } = useContext(ProjectSelectionContext);
   const { refAboutMe } = useContext(AboutMeContext);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navToAnker = (e, ref) => {
+  let isMobile = useIsMobile();
+  const navBoxRef = useRef(null);
+
+  const navToAnchor = (e, ref) => {
     if (document.readyState !== "complete") return;
+    if (!ref.current) return;
     e.preventDefault();
-    ref.current.scrollIntoView({ behavior: "smooth" });
+
+    if (isMobile) {
+      const header = document.querySelector(".header-content-box");
+      const headerHeight = header ? header.getBoundingClientRect().height : 0;
+      const elementPosition =
+        ref.current.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerHeight;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    } else {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+
     if (!isMobile) return;
     closeMobileMenu();
   };
-  const navBoxRef = useRef(null);
+
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    const handleScroll = () => {
+    const handleMobileHeaderOnScroll = () => {
       if (window.scrollY > 0) {
         document
           .querySelector(".header-content")
-          .classList.add("header-content-scroll");
+          .classList.add("header-content-mobile-scroll");
       } else {
         document
           .querySelector(".header-content")
-          .classList.remove("header-content-scroll");
+          .classList.remove("header-content-mobile-scroll");
       }
     };
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleMobileHeaderOnScroll);
     return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleMobileHeaderOnScroll);
     };
   }, []);
+
   const openMobileMenu = () => {
     setIsMobileMenuOpen(true);
     document.body.classList.add("body-no-scroll");
   };
+
   const handleAnimationEnd = (e) => {
     if (e.animationName === "fadeOut") {
       setIsMobileMenuOpen(false);
@@ -50,16 +65,15 @@ function Header() {
   };
 
   const closeMobileMenu = () => {
+    if (!navBoxRef.current) return;
     navBoxRef.current.classList.add("header-nav-box-mobile-hidden");
     const navBox = navBoxRef.current;
-    if (navBox) {
-      navBox.addEventListener("animationend", handleAnimationEnd);
-    }
+
+    navBox.addEventListener("animationend", handleAnimationEnd);
+
     document.body.classList.remove("body-no-scroll");
     return () => {
-      if (navBox) {
-        navBox.removeEventListener("animationend", handleAnimationEnd);
-      }
+      navBox.removeEventListener("animationend", handleAnimationEnd);
     };
   };
 
@@ -105,8 +119,8 @@ function Header() {
 
           {!isMobile ? (
             <nav className="header-nav-box">
-              <a onClick={(e) => navToAnker(e, refAboutMe)}>Über mich</a>
-              <a onClick={(e) => navToAnker(e, refProjectSelection)}>
+              <a onClick={(e) => navToAnchor(e, refAboutMe)}>Über mich</a>
+              <a onClick={(e) => navToAnchor(e, refProjectSelection)}>
                 Projekte
               </a>
               {/*  <a href="#/contact" target="_blank">
@@ -127,8 +141,8 @@ function Header() {
         </div>
         {isMobileMenuOpen && (
           <nav ref={navBoxRef} className={`header-nav-box-mobile`}>
-            <a onClick={(e) => navToAnker(e, refAboutMe)}>Über mich</a>
-            <a onClick={(e) => navToAnker(e, refProjectSelection)}>Projekte</a>
+            <a onClick={(e) => navToAnchor(e, refAboutMe)}>Über mich</a>
+            <a onClick={(e) => navToAnchor(e, refProjectSelection)}>Projekte</a>
             {/*  <a href="#/contact" target="_blank">
             Kontakt
           </a> */}

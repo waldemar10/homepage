@@ -124,7 +124,7 @@
     width: 100%;
     transition: all 1s ease;
   }
-  .header-content-scroll {
+  .header-content-mobile-scroll {
     background-color: var(--bg-color-header);
     border-bottom: 1px solid var(--border-color);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);

@@ -1,58 +1,20 @@
 import React, { useState, useEffect, useContext } from "react";
-
-import { ProjectsContext } from "../../context/projectsContext";
+import { useObserver } from "../../hooks/useObserver";
 import { ProjectSelectionContext } from "../../context/projectSelectionContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "../../styles/navbar.css";
-export default function Navbar() {
-  const { projects } = useContext(ProjectsContext);
 
-  const [isProjectShowcase, setIsProjectShowcase] = useState(false);
-  const [isProjectSelection, setIsProjectSelection] = useState(false);
+export default function Navbar() {
+  const { isProjectShowcase, isProjectSelection } = useObserver();
+  const { refProjectSelection } = useContext(ProjectSelectionContext);
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
-  const { refProjectSelection, handleSelectedProject } = useContext(
-    ProjectSelectionContext
-  );
 
   const navToProjectSelection = (e) => {
     e.preventDefault();
     refProjectSelection.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const callback = (entries, observer) => {
-    entries.forEach((entry) => {
-      switch (entry.target.id) {
-        case "projectShowcase":
-          if (entry.isIntersecting) {
-            setIsProjectShowcase(true);
-          } else {
-            setIsProjectShowcase(false);
-          }
-          break;
-        case "projectSelection-box":
-          if (entry.isIntersecting) {
-            setIsProjectSelection(true);
-          } else {
-            setIsProjectSelection(false);
-          }
-          break;
-        default:
-          break;
-      }
-    });
-  };
-  const options = {
-    root: null, // Use the viewport as the root
-    rootMargin: "0px",
-    threshold: 0.1,
-  };
-  const observer = new IntersectionObserver(callback, options);
-
-  useEffect(() => {
-    observer.observe(document.getElementById("projectShowcase"));
-    observer.observe(document.getElementById("projectSelection-box"));
-  });
   useEffect(() => {
     if (isProjectShowcase && !isProjectSelection) {
       setIsNavbarVisible(true);
@@ -60,6 +22,7 @@ export default function Navbar() {
       setIsNavbarVisible(false);
     }
   }, [isProjectShowcase, isProjectSelection]);
+
   useEffect(() => {
     document.addEventListener("animationend", handleFadeOut);
     document.addEventListener("animationend", handleFadeIn);
@@ -68,6 +31,7 @@ export default function Navbar() {
       document.removeEventListener("animationend", handleFadeIn);
     };
   }, []);
+
   const handleFadeOut = (e) => {
     if (e.animationName === "navbarFadeOut") {
       document
@@ -78,6 +42,7 @@ export default function Navbar() {
         .classList.remove("navbar-wrapper-show");
     }
   };
+
   const handleFadeIn = (e) => {
     if (e.animationName === "navbarFadeIn") {
       document
@@ -92,9 +57,9 @@ export default function Navbar() {
   return (
     <div
       className={` navbar-wrapper ${isNavbarVisible ? "visible" : "hidden"}`}>
-      <div className={`navbar`} onClick={(e) => navToProjectSelection(e)}>
+      <button className={`navbar`} onClick={(e) => navToProjectSelection(e)}>
         <FontAwesomeIcon id="icon-mobile-menu" icon={faChevronUp} />
-      </div>
+      </button>
     </div>
   );
 }
