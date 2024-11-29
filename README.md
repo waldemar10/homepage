@@ -1,9 +1,47 @@
-Dies ist meine persönliche Website. Sie ist hier zu finden: www.waljus.de
+## Hallo :wave:
 
-### Überblick
+Hier befindet sich der Quellcode für meine persönliche Homepage (www.waljus.de).
+Die Website wurde mit dem Frontend-Framework React.js erstellt und besteht momentan nur aus einer Client-Anwendung.
+Dementsprechend gibt es keinen Backend-Server. Die Website wird in einem Webhosting-Unternehmen in Deutschland bereitgestellt.
+<br/>
+Die Seite dient als Portfolio, um meine Fähigkeiten und Projekte vorzustellen, und wird regelmäßig erweitert :computer:
 
-Die Website ist eine React-basierte Webanwendung, die ohne Backend-Server funktioniert. Es wird vollständig auf einem Server-Hoster bereitgestellt.
+---
 
 ### Tech-Stack
-Frontend: React (JavaScript)
-CSS
+- HTML 
+- CSS
+- JavaScript (React)
+
+---
+
+### Projektstruktur (Client)
+- src
+  - components/   # Wiederverwendbare UI-Komponenten
+  - context/      # React Context für globale Zustände
+  - data/         # Statische Daten und Konfigurationsdateien
+  - hooks/        # Eigene React Hooks
+  - images/       # Bilder und Assets
+  - pages/        # Seiten
+  - styles/       # CSS Styles
+  - utils/        # Hilfsfunktionen
+  - videos/       # Video-Assets
+  - App.js        # Hauptkomponente
+  - App.css       # Styles für die Hauptkomponente
+  - Index.js      # Einstiegspunkt
+  - Index.css     # Globale Styles
+
+---
+
+### Features
+- **Responsives Design:** Die Website passt sich verschiedenen Geräten (Desktop, Tablet, Smartphone) an.
+- **Leichtgewichtige Struktur:** Minimalistische Architektur.
+- **Einseitige Anwendung (SPA):** Schnelle Navigation.
+
+---
+
+### Zukünftige Features
+- Backend-Integration
+- Mehrsprachigkeit (Englisch)
+- Kontaktformular
+- Barrierefreiheit: Optimierung für Screenreader und Tastaturnavigation.
