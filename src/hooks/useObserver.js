@@ -21,6 +21,11 @@ export const useObserver = () => {
                 setIsProjectSelection(false);
               }
               break;
+            case "footer":
+              if (entry.isIntersecting) {
+                setIsProjectShowcase(true);
+              } 
+              break;
             default:
               break;
           }
@@ -29,12 +34,12 @@ export const useObserver = () => {
       const options = {
         root: null,
         rootMargin: "0px",
-        threshold: 0.1,
       };
       const observer = new IntersectionObserver(callback, options);
       useEffect(() => {
         observer.observe(document.getElementById("projectShowcase"));
         observer.observe(document.getElementById("projectSelection-box"));
+        observer.observe(document.getElementById("footer"));
       });
       return { isProjectShowcase, isProjectSelection };
 }
