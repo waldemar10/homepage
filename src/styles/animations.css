@@ -143,7 +143,7 @@
 }
 
 .line {
-  opacity: 0;
+/*   opacity: 0; */
   background: linear-gradient(
     90deg,
     transparent 5%,
@@ -156,7 +156,7 @@
   bottom: 0px;
   left: 0;
   display: block;
-  animation: fadeIn 1s forwards;
+/*   animation: fadeIn 1s forwards; */
   animation-delay: 1s;
   overflow: hidden;
   mask: linear-gradient(90deg, transparent 5%, black 50%, transparent 96%);
