@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import Socials from "../common/Socials";
 import { AboutMeContext } from "../../context/aboutMeContext";
 import "../../styles/aboutMe.css";
 const AboutMe = () => {
@@ -8,17 +9,24 @@ const AboutMe = () => {
       <h2>Leidenschaftlicher Entwickler</h2>
       <div className="aboutme-container">
         <div className="aboutme-introduction">
-          <p>Im Jahr 2019 entdeckte ich erstmals die Welt der Informatik für mich. Anfangs programmierte ich Handelsalgorithmen mit MQL4, mit dem Ziel,
-            positive Renditen mit verschiedenen Handlungsstrategien auf dem Devisenmarkt zu realisieren.
+          <p>
+            Im Jahr 2019 entdeckte ich erstmals für mich die Welt der
+            Informatik. Anfangs programmierte ich Handelsalgorithmen mit MQL4,
+            mit dem Ziel, positive Renditen mit verschiedenen
+            Handlungsstrategien auf dem Devisenmarkt zu realisieren.
           </p>
           <p>
-            Mich begeisterte das Programmieren so sehr, dass ich mich entschied, ein Informatik-Studium zu starten. Während meines Studiums
-            kam ich mit verschiedenen Programmiersprachen in Kontakt und lernte die Grundlagen der Softwareentwicklung kennen. Auch Teamarbeit und Projektmanagement waren wichtige Bestandteile
-             meines Studiums. Meine Leidenschaft für die Webentwicklung entdeckte ich während des Studiums. 
+            Mich begeisterte das Programmieren so sehr, dass ich mich entschied,
+            ein Informatik-Studium zu starten. Während meines Studiums kam ich
+            mit verschiedenen Programmiersprachen in Kontakt und lernte die
+            Grundlagen der Softwareentwicklung kennen. Auch Teamarbeit und
+            Projektmanagement waren wichtige Bestandteile meines Studiums.
           </p>
           <p>
-            Mein Ziel ist es nun, meine Kenntnisse in der Webentwicklung zu
-             vertiefen und mich auf die Entwicklung von Webanwendungen zu spezialisieren, um anschließend ein Experte in diesem Bereich zu werden.
+            Mein Ziel ist es, mein Wissen kontinuierlich zu erweitern und mit
+            meiner Arbeit einen positiven Beitrag zu leisten, sei es durch die
+            Entwicklung innovativer Softwarelösungen oder die Zusammenarbeit an
+            Projekten, die Menschen und Unternehmen unterstützen.
           </p>
         </div>
         <div className="aboutme-skills">
@@ -53,7 +61,10 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-      <div className="line line-delayed"/>
+
+      <Socials />
+
+      <div className="line line-delayed" />
     </div>
   );
 };

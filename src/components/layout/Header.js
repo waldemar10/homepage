@@ -1,4 +1,5 @@
 import React, { useState, useRef, useContext, useEffect } from "react";
+import Socials from "../common/Socials";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { ProjectSelectionContext } from "../../context/projectSelectionContext";
 import { AboutMeContext } from "../../context/aboutMeContext";
@@ -17,25 +18,55 @@ function Header() {
     if (!ref.current) return;
     e.preventDefault();
 
-    if (isMobile) {
-      const header = document.querySelector(".header-content-box");
-      const headerHeight = header ? header.getBoundingClientRect().height : 0;
-      const elementPosition =
-        ref.current.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - headerHeight;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    } else {
+    if (!isMobile) {
       ref.current.scrollIntoView({ behavior: "smooth" });
+      return;
     }
 
-    if (!isMobile) return;
+    const header = document.querySelector(".header-content-box");
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    const elementPosition =
+      ref.current.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - headerHeight;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
     closeMobileMenu();
   };
 
   useEffect(() => {
+    if (!isMobile) return;
+    const navMobileMenu = document.getElementById("nav-mobile-menu");
+    if (!navMobileMenu) return;
+    if (!window.scrollY === 0) return;
+    const headerContent = document.querySelector(".header-content");
+    if (!headerContent) return;
+
+    const handleClickOnFullTop = () => {
+      if (headerContent.classList.contains("header-content-background")) {
+        headerContent.classList.remove("header-content-background");
+      } else {
+        headerContent.classList.add("header-content-background");
+      }
+    };
+
+    navMobileMenu.addEventListener("click", handleClickOnFullTop);
+    return () => {
+      navMobileMenu.removeEventListener("click", handleClickOnFullTop);
+    };
+  }, [isMobile, isMobileMenuOpen]);
+
+  useEffect(() => {
+    if (!isMobile) return;
+    if (window.scrollY === 0) return;
+    document
+      .querySelector(".header-content")
+      .classList.add("header-content-mobile-scroll");
+  }, [isMobile]);
+
+  useEffect(() => {
+    if (!isMobile) return;
     const handleMobileHeaderOnScroll = () => {
       if (window.scrollY > 0) {
         document
@@ -47,16 +78,12 @@ function Header() {
           .classList.remove("header-content-mobile-scroll");
       }
     };
+    console.log("handleMobileHeaderOnScroll");
     window.addEventListener("scroll", handleMobileHeaderOnScroll);
     return () => {
       window.removeEventListener("scroll", handleMobileHeaderOnScroll);
     };
-  }, []);
-
-  const openMobileMenu = () => {
-    setIsMobileMenuOpen(true);
-    document.body.classList.add("body-no-scroll");
-  };
+  }, [isMobile, isMobileMenuOpen]);
 
   const handleAnimationEnd = (e) => {
     if (e.animationName === "fadeOut") {
@@ -64,19 +91,43 @@ function Header() {
     }
   };
 
+  const openMobileMenu = () => {
+    setIsMobileMenuOpen(true);
+    document.body.classList.add("body-no-scroll");
+  };
+
   const closeMobileMenu = () => {
     if (!navBoxRef.current) return;
-    navBoxRef.current.classList.add("header-nav-box-mobile-hidden");
     const navBox = navBoxRef.current;
+    navBox.classList.add("header-nav-box-mobile-hidden");
 
     navBox.addEventListener("animationend", handleAnimationEnd);
-
     document.body.classList.remove("body-no-scroll");
     return () => {
       navBox.removeEventListener("animationend", handleAnimationEnd);
     };
   };
 
+  const MobileMenu = ({ isOpen }) => {
+    if (!isOpen) return null;
+    return (
+      <nav ref={navBoxRef} className={`header-nav-box-mobile`}>
+        <a className="header-nav" onClick={(e) => navToAnchor(e, refAboutMe)}>
+          Über mich
+        </a>
+        <a
+          className="header-nav"
+          onClick={(e) => navToAnchor(e, refProjectSelection)}>
+          Projekte
+        </a>
+        {/*  <a href="#/contact" target="_blank">
+        Kontakt
+      </a> */}
+
+        <Socials height={"25px"} width={"25px"} />
+      </nav>
+    );
+  };
   return (
     <>
       <div className="header-placeholder" />
@@ -119,8 +170,14 @@ function Header() {
 
           {!isMobile ? (
             <nav className="header-nav-box">
-              <a onClick={(e) => navToAnchor(e, refAboutMe)}>Über mich</a>
-              <a onClick={(e) => navToAnchor(e, refProjectSelection)}>
+              <a
+                className="header-nav"
+                onClick={(e) => navToAnchor(e, refAboutMe)}>
+                Über mich
+              </a>
+              <a
+                className="header-nav"
+                onClick={(e) => navToAnchor(e, refProjectSelection)}>
                 Projekte
               </a>
               {/*  <a href="#/contact" target="_blank">
@@ -129,6 +186,7 @@ function Header() {
             </nav>
           ) : (
             <FontAwesomeIcon
+              id="nav-mobile-menu"
               className={`menu-icon ${
                 isMobileMenuOpen ? "fa-close" : "fa-bars"
               }`}
@@ -139,15 +197,7 @@ function Header() {
             />
           )}
         </div>
-        {isMobileMenuOpen && (
-          <nav ref={navBoxRef} className={`header-nav-box-mobile`}>
-            <a onClick={(e) => navToAnchor(e, refAboutMe)}>Über mich</a>
-            <a onClick={(e) => navToAnchor(e, refProjectSelection)}>Projekte</a>
-            {/*  <a href="#/contact" target="_blank">
-            Kontakt
-          </a> */}
-          </nav>
-        )}
+        <MobileMenu isOpen={isMobileMenuOpen} />
       </div>
     </>
   );

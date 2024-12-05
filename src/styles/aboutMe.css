@@ -56,6 +56,21 @@
   left: 50%;
   display: block;
 }
+.aboutme-socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+.aboutme-socials a{
+    padding: 0px 10px 0px 10px;
+}
+.aboutme-social-icon{
+    width: 40px;
+    height: 40px;
+}
 @media screen and (max-width: 768px){
     .aboutme-wrapper h2{
         background: linear-gradient(90deg,var(--secondary-color), #f6a829);
@@ -71,4 +86,9 @@
         display: none;
     }
     
+}
+@media screen and (max-width:400px){
+    .aboutme-socials{
+        justify-content: center;
+    }
 }
