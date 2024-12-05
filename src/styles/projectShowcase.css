@@ -34,8 +34,17 @@
   justify-content: center;
 }
 
-.icons-box p,
-a {
+.icons-box a {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-150);
+  color: var(--font-color-light);
+  padding: 10px;
+  overflow-wrap: break-word;
+}
+.icons-box p {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -71,8 +80,10 @@ a {
   .projectShowcase-icons-box-wrapper {
     grid-template-columns: repeat(auto-fit, minmax(var(--icon-box-width), 1fr));
   }
-  .icons-box p,
-  a {
+  .icons-box p {
+    font-size: var(--fs-100);
+  }
+  .icons-box a {
     font-size: var(--fs-100);
   }
 }
@@ -105,8 +116,13 @@ a {
   .projectShowcase-headline {
     font-size: var(--fs-400);
   }
-  .icons-box p,
-  a {
+  .icons-box p {
+    font-size: var(--fs-75);
+    font-weight: 500;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+  .icons-box a {
     font-size: var(--fs-75);
     font-weight: 500;
     overflow-wrap: break-word;
@@ -133,8 +149,13 @@ a {
     flex-direction: row;
     padding: 5px;
   }
-  .icons-box p,
-  a {
+  .icons-box p{
+    font-size: var(--fs-100);
+    padding: 10px;
+    font-weight: 400;
+    text-align: start;
+  }
+  .icons-box a {
     font-size: var(--fs-100);
     padding: 10px;
     font-weight: 400;

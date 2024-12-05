@@ -29,7 +29,7 @@
     align-items: flex-start;
     justify-content: center;
     flex: 1 1 0px;
-    padding: 20px;
+    padding: 20px 0px 20px 20px;
 }
 .aboutme-skills h3{
     padding-bottom: 20px;
@@ -41,7 +41,7 @@
     flex: 1 1 0px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
 }
 .aboutme-introduction p{
     padding: 5px 0px 5px 0px;
@@ -56,21 +56,7 @@
   left: 50%;
   display: block;
 }
-.aboutme-socials{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-}
-.aboutme-socials a{
-    padding: 0px 10px 0px 10px;
-}
-.aboutme-social-icon{
-    width: 40px;
-    height: 40px;
-}
+
 @media screen and (max-width: 768px){
     .aboutme-wrapper h2{
         background: linear-gradient(90deg,var(--secondary-color), #f6a829);
@@ -79,6 +65,12 @@
     }
 }
 @media screen and (max-width: 600px){
+    .aboutme-skills {
+        padding: 20px 0px 20px 0px;
+    }
+    .aboutme-introduction{
+        padding: 20px 0px 20px 0px;
+    }
     .aboutme-container{
         flex-direction: column;
     }

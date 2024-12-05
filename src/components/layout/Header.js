@@ -1,5 +1,4 @@
 import React, { useState, useRef, useContext, useEffect } from "react";
-import Socials from "../common/Socials";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { ProjectSelectionContext } from "../../context/projectSelectionContext";
 import { AboutMeContext } from "../../context/aboutMeContext";
@@ -123,8 +122,6 @@ function Header() {
         {/*  <a href="#/contact" target="_blank">
         Kontakt
       </a> */}
-
-        <Socials height={"25px"} width={"25px"} />
       </nav>
     );
   };

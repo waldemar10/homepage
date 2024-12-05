@@ -90,7 +90,10 @@
   .startscreen-introduction-box {
     width: 100%;
   }
-  .startscreen-description {
+  .startscreen-name {
     font-size: var(--fs-150);
+  }
+  .startscreen-description {
+    font-size: var(--fs-100);
   }
 }

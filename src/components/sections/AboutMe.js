@@ -62,7 +62,7 @@ const AboutMe = () => {
         </div>
       </div>
 
-      <Socials />
+      <Socials width={"35px"} height={"35px"} className="aboutme-socials" />
 
       <div className="line line-delayed" />
     </div>
