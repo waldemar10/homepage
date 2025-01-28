@@ -37,7 +37,7 @@ const AboutMe = () => {
           </div>
           <div>
             <h4>Frontend</h4>
-            <p>Angular, Bootstrap, CSS, HTML, React</p>
+            <p>Angular, Bootstrap, CSS (SCSS), HTML, React</p>
           </div>
           <div>
             <h4>Backend</h4>
@@ -45,7 +45,7 @@ const AboutMe = () => {
           </div>
           <div>
             <h4>Datenbanken</h4>
-            <p>MongoDB</p>
+            <p>MongoDB, MySQL</p>
           </div>
           <div>
             <h4>Tools</h4>
