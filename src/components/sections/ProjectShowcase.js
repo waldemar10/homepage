@@ -49,14 +49,14 @@ function ProjectShowcase() {
             GitHub
           </a>
         </div>
-       {/*  {selectedProject.Title === "Die Yoga-Website" ? (
+        {selectedProject.Title === "Die Yoga-Website" ? (
           <div className="icons-box">
             <FontAwesomeIcon icon={faGlobe} className="projectShowcase-icon" />
             <a target="_blank" rel="noreferrer" href="https://yoga.waljus.de/">
               Website
             </a>
           </div>
-        ) : null} */}
+        ) : null}
         {selectedProject.Title === "LinguPingu" ? (
           <div className="icons-box">
             <FontAwesomeIcon icon={faGlobe} className="projectShowcase-icon" />
