@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+/* import React, { useState, useEffect, useContext } from "react";
 import { useObserver } from "../../hooks/useObserver";
 import { ProjectSelectionContext } from "../../context/projectSelectionContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -63,3 +63,4 @@ export default function Navbar() {
     </div>
   );
 }
+ */

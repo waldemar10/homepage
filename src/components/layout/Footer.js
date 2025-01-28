@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Socials from "../common/Socials";
+import { ProjectSelectionContext } from "../../context/projectSelectionContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "../../styles/footer.css";
 function Footer() {
   const [year] = useState(new Date().getFullYear());
+
+  const { refProjectSelection } = useContext(ProjectSelectionContext);
+
+  const navToProjectSelection = (e) => {
+    e.preventDefault();
+    refProjectSelection.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="footer-wrapper" id="footer">
       <div className="footer-content">
-      
         <div className="footer-socials">
           <Socials width={"20px"} height={"20px"} />
         </div>
@@ -28,7 +36,13 @@ function Footer() {
           </a>
         </div>
       </div>
-      
+      <button
+        className="footer-btn-up-nav"
+        href="#top"
+        rel="noreferrer"
+        onClick={(e) => navToProjectSelection(e)}>
+        <FontAwesomeIcon id="icon-up-footer" icon={faChevronUp} />
+      </button>
     </div>
   );
 }
