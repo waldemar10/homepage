@@ -1,8 +1,12 @@
 :root {
-  --padding-bottom-title: 10px;
-  --padding-top-title: 10px;
+  --padding-bottom-title: 5px;
+  --padding-top-title: 5px;
 }
-
+#yoga-logo{
+  width: 250px;
+  height: 250px;
+  fill: #DFD1C9;
+}
 .project-content-box {
   display: flex;
   flex-direction: column;
@@ -30,6 +34,10 @@
   padding-top: var(--padding-top-title);
 }
 .project-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex: 1 1 0px;
   font-size: var(--fs-100);
 }
@@ -37,12 +45,15 @@
   padding: 10px 0px 10px 0px;
 }
 .project-description h3 {
+  width: 100%;
   padding-bottom: var(--padding-bottom-title);
 }
 .project-description h4 {
+  width: 100%;
   padding-bottom: var(--padding-bottom-title);
 }
 .project-description h5 {
+  width: 100%;
   padding-bottom: var(--padding-bottom-title);
 }
 .project-figure {
@@ -89,6 +100,7 @@
 }
 
 .project-list {
+  width: 100%;
   margin: 10px 0px 10px 10px;
 }
 .project-button {
@@ -123,9 +135,15 @@
   .project-box {
     width: 95%;
   }
+  .project-figure {
+    padding: 10px;
+  }
 }
 /* Smartphone small */
 @media screen and (max-width: 400px) {
+  .project-figure {
+    padding: 0px;
+  }
   .project-description {
     font-size: var(--fs-75);
   }

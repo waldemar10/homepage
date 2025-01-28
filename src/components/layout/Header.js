@@ -37,10 +37,8 @@ function Header() {
   useEffect(() => {
     if (!isMobile) return;
     const navMobileMenu = document.getElementById("nav-mobile-menu");
-    if (!navMobileMenu) return;
-    if (!window.scrollY === 0) return;
     const headerContent = document.querySelector(".header-content");
-    if (!headerContent) return;
+    if (!navMobileMenu || !window.scrollY === 0 ||!headerContent) return;
 
     const handleClickOnFullTop = () => {
       if (headerContent.classList.contains("header-content-background")) {
@@ -77,7 +75,6 @@ function Header() {
           .classList.remove("header-content-mobile-scroll");
       }
     };
-    console.log("handleMobileHeaderOnScroll");
     window.addEventListener("scroll", handleMobileHeaderOnScroll);
     return () => {
       window.removeEventListener("scroll", handleMobileHeaderOnScroll);
