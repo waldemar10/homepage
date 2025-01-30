@@ -129,8 +129,8 @@ function Header() {
       <div className="header-content">
         <div className="header-content-box">
           <div className="header-logo-wrapper">
-            <div className="header-logo-box">
-              <a href="/">
+        
+              <a href="/" className="header-logo-box">
                 <svg
                   className="header-logo"
                   id="Ebene1"
@@ -158,8 +158,8 @@ function Header() {
                   />
                 </svg>
               </a>
-            </div>
-            <h3>Waldemar Justus</h3>
+            
+            <h4>Waldemar Justus</h4>
           </div>
 
           {!isMobile ? (

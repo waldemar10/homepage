@@ -1,28 +1,5 @@
 {
-    "Filmbibliothek":[{
-        "Modul":"Grundlagen Informatik",
-        "Title":"Die Filmbibliothek",
-        "Image": "Filmbibliothek/Filmbibliothek.jpg",
-        "Video": "./videos/Filmbibliothek.mp4",
-        "Group": "Teamgröße: 3",
-        "Code":  "Java mit JavaFX",
-        "Requirements":  "Such- und Sortieralgorithmen verwenden",
-        "GitHub":"https://github.com/waldemar10/DieFilmbibliothek"
-    }
-    ]
-    ,
-    "Kugelbahn":[{
-        "Modul":"Visual Computing II",
-        "Title":"Die Kugelbahn",
-        "Image": "Kugelbahn/Kugelbahn.jpg",
-        "Video": "Kugelbahn/Kugelbahn.mp4",
-        "Group": "Teamgröße: 2",
-        "Code":  "Java mit JavaFX",
-        "Requirements":  "Physikalische Bewegung anhand einer Kugelbahn darstellen",
-        "GitHub":"https://github.com/waldemar10/Kugelbahn"
-    }
-    ]
-    ,
+    
     "SSP":[{
         "Modul":"Visual Computing I",
         "Title":"Schere Stein Papier Ultimate",

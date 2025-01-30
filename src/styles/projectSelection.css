@@ -1,6 +1,6 @@
 :root {
-  --box-width: 250px;
-  --box-height: 200px;
+  --box-width: 200px;
+  --box-height: 150px;
   --box-bg-color-grey: #515151;
   --box-bg-color-dark-grey: #1c1c1c;
   --box-bg-color-selected:var(--ln-gradient-primary);
@@ -39,7 +39,7 @@
     var(--box-bg-color-grey),
     var(--box-bg-color-dark-grey)
   );
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
   transition: all 0.5s ease;
 }
 
@@ -49,7 +49,7 @@
 }
 .projectSelection-project-box p {
   color: var(--font-color-light);
-  font-size: var(--fs-300);
+  font-size: var(--fs-200);
   padding: 10px;
   text-shadow: 0px 0px 10px #000000;
   user-select: none;
@@ -75,8 +75,8 @@
   }
 
   .projectSelection-project-box p {
-    font-size: var(--fs-200);
-    padding: 3px;
+    font-size: var(--fs-150);
+    padding: 5px;
   }
   .projectSelection-box-showcase {
     grid-gap: 0.5rem;
