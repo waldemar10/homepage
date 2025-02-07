@@ -104,7 +104,7 @@ h6 {
   font-weight: 500;
 }
 p{
-  font-size: var(--fs-150);
+  font-size: var(--fs-100);
   color: var(--font-color);
 }
 a {
@@ -122,11 +122,11 @@ a:visited:hover {
 }
 li {
   margin: 5px 0px 5px 5px;
-  font-size: var(--fs-150);
+  font-size: var(--fs-100);
 }
 q {
   font-style: italic;
-  font-size: var(--fs-150);
+  font-size: var(--fs-100);
 }
 figcaption {
   text-align: center;
@@ -193,14 +193,14 @@ video {
     font-weight: 500;
   }
   p{
-    font-size: var(--fs-100);
+    font-size: var(--fs-75);
   }
   q{
-    font-size: var(--fs-100);
+    font-size: var(--fs-75);
   }
   li {
     margin: 5px 0px 5px 5px;
-    font-size: var(--fs-100);
+    font-size: var(--fs-75);
   }
 }
 /* Smartphone small */
@@ -208,8 +208,7 @@ video {
   h1 {
     font-size: var(--fs-400);
   }
-  h2 {
+  h2{
     font-size: var(--fs-200);
   }
-  
 }

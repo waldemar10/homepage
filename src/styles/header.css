@@ -10,7 +10,6 @@
   z-index: 99;
   background-color: transparent;
   border-color: transparent;
- /*  backdrop-filter: blur(10px); */
   margin-bottom: 100px;
 }
 .header-placeholder {
@@ -61,9 +60,6 @@
   transform: translateX(50px);
 }
 .header-logo-wrapper h4 {
-  font-weight:200;
-  /* padding: 20px; */
-  font-style: italic;
   margin-left: 10px;
 }
 
@@ -72,7 +68,7 @@
 }
 .header-nav-box .header-nav {
   font-size: var(--fs-150);
-  font-weight: bolder;
+  font-weight: smaller;
   border-radius: var(--border-radius-box-outer);
   background-color: transparent;
   padding: 10px;

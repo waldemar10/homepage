@@ -45,7 +45,7 @@
   transition: all 0.7s;
 }
 .startscreen-button {
-  font-size: var(--fs-200);
+  font-size: var(--fs-150);
   background: var(--ln-gradient-primary);
   color: var(--font-color-light);
   border-radius: var(--border-radius-box-outer);
@@ -87,13 +87,16 @@
 
 /* Smartphone */
 @media screen and (max-width: 600px) {
+  .startscreen-button {
+    font-size: var(--fs-100);
+  }
   .startscreen-introduction-box {
     width: 100%;
   }
   .startscreen-name {
-    font-size: var(--fs-150);
+    font-size: var(--fs-100);
   }
   .startscreen-description {
-    font-size: var(--fs-100);
+    font-size: var(--fs-75);
   }
 }

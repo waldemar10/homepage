@@ -9,8 +9,9 @@
     padding: 100px 20px 100px 20px;
 }
 
-.aboutme-wrapper h2{
-    background: var(--ln-gradient-secondary);
+.aboutme-headline{
+    width: 100%;
+    background: var(--ln-gradient-primary);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -58,8 +59,8 @@
 }
 
 @media screen and (max-width: 768px){
-    .aboutme-wrapper h2{
-        background: linear-gradient(90deg,var(--secondary-color), #f6a829);
+    .aboutme-headline{
+        background: linear-gradient(90deg,var(--primary-color), #2952f6);
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }

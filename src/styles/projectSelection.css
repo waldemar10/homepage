@@ -14,7 +14,13 @@
   padding: 100px 0px 100px 0px;
 }
 .projectSelection-box-showcase {
-  display: grid;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  /* display: grid;
   width: 100%;
   grid-gap: 1rem;
   grid-template-columns: repeat(
@@ -22,7 +28,7 @@
     minmax(var(--box-width), max-content)
   );
   justify-content: center;
-  align-content: center;
+  align-content: center; */
 }
 .projectSelection-headline {
   margin-bottom: 50px;
@@ -89,14 +95,12 @@
 /* Smartphone small */
 @media screen and (max-width: 400px) {
   :root {
-    --box-width: 125px;
+    --box-width: 150px;
     --box-height: 100px;
   }
 
   .projectSelection-project-box p {
     font-size: var(--fs-100);
   }
-  .projectSelection-box-showcase {
-    grid-gap: 0.2rem;
-  }
+
 }
