@@ -42,6 +42,7 @@
   font-size: var(--fs-100);
 }
 .project-description p {
+  width: 100%;
   padding: 0px 0px 10px 0px;
 }
 .project-description h3 {
