@@ -1,6 +1,6 @@
 :root {
-  --box-width: 200px;
-  --box-height: 150px;
+  --box-width: 300px;
+  --box-height: 200px;
   --box-bg-color-grey: #515151;
   --box-bg-color-dark-grey: #1c1c1c;
   --box-bg-color-selected:var(--ln-gradient-primary);

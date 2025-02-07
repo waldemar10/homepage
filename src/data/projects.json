@@ -23,17 +23,6 @@
         "GitHub":"https://github.com/waldemar10/Yoga-Website"
     }
     ],
-    "GameDev":[{
-        "Modul":"Game Development",
-        "Title":"CinemaCraze",
-        "Image": "GameDev.jpg",
-        "Video": "/GameDev.mp4",
-        "Group": "Teamgröße: 5",
-        "Code":  "Game-Engine Unity",
-        "Requirements":  "Ein Spiel mit Unity entwickeln",
-        "GitHub":"https://github.com/pinkpandainteractive/cinemacraze"
-    }
-    ],
     "Awd":[{
         "Modul":"Advanced Web Development",
         "Title":"LinguPingu",
