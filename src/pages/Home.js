@@ -5,7 +5,7 @@ import Startscreen from "../components/sections/Startscreen";
 import AboutMe from "../components/sections/AboutMe";
 import ProjectSelection from "../components/sections/ProjectSelection";
 import ProjectShowcase from "../components/sections/ProjectShowcase";
-/* import Navbar from "../components/layout/Navbar"; */
+
 function Home() {
   return (
     <>
@@ -15,7 +15,6 @@ function Home() {
       <ProjectSelection />
       <ProjectShowcase />
       <Footer></Footer>
-      {/* <Navbar></Navbar> */}
     </>
   );
 }

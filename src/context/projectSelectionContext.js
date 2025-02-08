@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useRef,useState } from "react";
+import React, { createContext, useContext, useRef} from "react";
 import { ProjectsContext } from "./projectsContext";
 import { useIsMobile } from "../hooks/useIsMobile";
 
@@ -20,7 +20,7 @@ export const ProjectSelectionProvider = ({ children }) => {
     projects[index].isClicked = true;
     setSelectedProject(projects[index]);
 
-    localStorage.setItem("WJ_HP_clickedProject", index);
+    sessionStorage.setItem("WJ_HP_clickedProject", index);
 
     if (!refProject.current) return;
 

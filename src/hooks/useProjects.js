@@ -12,7 +12,7 @@ export const useProjects = (setProjects, setSelectedProject) => {
     }));
 
     setProjects(loadedProjects);
-    const index = localStorage.getItem("WJ_HP_clickedProject") || 0;
+    const index = sessionStorage.getItem("WJ_HP_clickedProject") || 0;
     loadedProjects[index].isClicked = true;
     setSelectedProject(loadedProjects[index]);
 
