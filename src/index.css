@@ -58,11 +58,6 @@ body {
   min-width: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
-  background: radial-gradient(
-    at top left,
-    #292929 0%,
-    var(--bg-color-body) 100vh
-  );
 }
 
 canvas {
