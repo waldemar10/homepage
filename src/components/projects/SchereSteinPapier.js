@@ -125,10 +125,10 @@ function SchereSteinPapier() {
 
           <figure className="project-figure">
             <img src={imgScissor} alt="Scissors gesture" />
-            <figcaption className="project-figcaption">Geste Schere</figcaption>
+            <figcaption className="project-figcaption">Die Bildverarbeitung erkennt die Geste „Schere“</figcaption>
           </figure>
 
-          <figure className="project-figure">
+          {/* <figure className="project-figure">
             <img src={imgStone} alt="Stone gesture" />
             <figcaption className="project-figcaption">Geste Stein</figcaption>
           </figure>
@@ -136,7 +136,7 @@ function SchereSteinPapier() {
           <figure className="project-figure">
             <img src={imgPaper} alt="Paper gesture" />
             <figcaption className="project-figcaption">Geste Papier</figcaption>
-          </figure>
+          </figure> */}
         </div>
       </div>
     </>
