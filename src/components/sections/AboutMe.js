@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Socials from "../common/Socials";
 import { AboutMeContext } from "../../context/aboutMeContext";
-import "../../styles/aboutMe.scss";
+
 const AboutMe = () => {
   const { refAboutMe } = useContext(AboutMeContext);
   return (

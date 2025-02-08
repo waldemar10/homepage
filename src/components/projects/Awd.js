@@ -2,7 +2,7 @@ import React from "react";
 
 import video from "../../videos/LinguPingu.mp4";
 import thumbnail from "../../images/Awd/GrammarHub.JPG";
-import "../../styles/projects.scss";
+
 function Awd() {
   return (
     <div className="project-content-box">

@@ -8,7 +8,6 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import { ProjectsContext } from "../../context/projectsContext";
 import allProjects from "../../utils/projectUtil";
-import "../../styles/projectShowcase.scss";
 
 function ProjectShowcase() {
   const { projects, refProject, selectedProject } = useContext(ProjectsContext);

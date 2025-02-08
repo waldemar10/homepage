@@ -3,7 +3,6 @@ import { useObserver } from "../../hooks/useObserver";
 import { ProjectSelectionContext } from "../../context/projectSelectionContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import "../../styles/navbar.css";
 
 export default function Navbar() {
   const { isProjectShowcase, isProjectSelection } = useObserver();

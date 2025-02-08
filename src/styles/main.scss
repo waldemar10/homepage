@@ -1,0 +1,30 @@
+// ** Abstracts **
+@import "./abstracts/variables";
+
+// ** Base **
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/mediaqueries";
+
+// ** Components **
+@import "./components/navbar";
+@import "./components/socials";
+
+// ** Layout **
+@import "./layout/global";
+@import "./layout/app";
+@import "./layout/footer";
+@import "./layout/header";
+
+// ** Sections **
+@import "sections/aboutme";
+@import "sections/contact";
+@import "sections/contactForm";
+@import "sections/projects";
+@import "sections/projectSelection";
+@import "sections/projectShowcase";
+@import "sections/startscreen";
+
+// ** Utilities **
+@import "./utilities/animations";
+

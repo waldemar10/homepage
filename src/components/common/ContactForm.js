@@ -1,5 +1,3 @@
-import "../../styles/contactForm.scss";
-
 const ContactForm = () => {
   return (
     <form className="contact-form">

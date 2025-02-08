@@ -1,7 +1,7 @@
 import ContactForm from "../components/common/ContactForm";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-import "../styles/contact.scss";
+
 const Contact = () => {
   return (
     <>

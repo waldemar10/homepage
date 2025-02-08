@@ -4,7 +4,7 @@ import { ProjectSelectionContext } from "../../context/projectSelectionContext";
 import { AboutMeContext } from "../../context/aboutMeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
-import "../../styles/header.scss";
+
 function Header() {
   const { refProjectSelection } = useContext(ProjectSelectionContext);
   const { refAboutMe } = useContext(AboutMeContext);
