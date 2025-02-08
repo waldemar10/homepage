@@ -107,7 +107,7 @@ function Header() {
   const MobileMenu = ({ isOpen }) => {
     if (!isOpen) return null;
     return (
-      <nav ref={navBoxRef} className={`header-nav-box-mobile`}>
+      <nav ref={navBoxRef} className="header-nav-box-mobile">
         <a className="header-nav" onClick={(e) => navToAnchor(e, refAboutMe)}>
           Über mich
         </a>

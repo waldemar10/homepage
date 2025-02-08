@@ -39,11 +39,11 @@
   justify-content: center;
   align-items: center;
   flex: 1 1 0px;
-  font-size: var(--fs-100);
+  /* font-size: var(--fs-100); */
 }
 .project-description p {
   width: 100%;
-  padding: 0px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
 }
 .project-description h3 {
   width: 100%;
@@ -63,6 +63,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  margin-bottom: 10px;
 }
 
 .project-figure img {
@@ -71,7 +72,6 @@
 }
 .project-figure figcaption {
   color: var(--font-color-light);
-  font-size: var(--fs-100);
   padding: 5px 10px 5px 10px;
   background-color: var(--bg-color-figcaption);
   border-radius: 0 0 var(--border-radius-box-inner)
@@ -107,7 +107,6 @@
 .project-button {
   width: 100px;
   height: 50px;
-  font-size: var(--fs-100);
   color: var(--font-color-light);
   border: 2px solid var(--border-color);
   background-color: var(--bg-color-btn);
@@ -144,17 +143,5 @@
 @media screen and (max-width: 400px) {
   .project-figure {
     padding: 0px;
-  }
-  .project-description {
-    font-size: var(--fs-75);
-  }
-  .project-list {
-    font-size: var(--fs-75);
-  }
-  .project-figcaption {
-    font-size: var(--fs-75);
-  }
-  .project-figure figcaption {
-    font-size: var(--fs-75);
   }
 }

@@ -29,28 +29,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-}
-
-.icons-box a {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: var(--fs-100);
-  color: var(--font-color-light);
-  padding: 10px;
-  overflow-wrap: break-word;
-}
-.icons-box p {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: var(--fs-100);
-  color: var(--font-color-light);
-  padding: 10px;
-  overflow-wrap: break-word;
+  > a {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-color-light);
+    padding: 10px;
+    overflow-wrap: break-word;
+  }
+  > p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-color-light);
+    padding: 10px;
+    overflow-wrap: break-word;
+  }
 }
 
 .projectShowcase-icon {
@@ -65,7 +61,7 @@
     width: 900px;
   }
 }
-/* Tablets (Querformat) and small laptops */
+
 @media screen and (max-width: 1000px) {
   :root {
     --icon-box-width: 100px;
@@ -76,18 +72,9 @@
   .projectShowcase-box-wrapper {
     width: 750px;
   }
-  .icons-box p {
-    font-size: var(--fs-100);
-  }
-  .icons-box a {
-    font-size: var(--fs-100);
-  }
 }
-/* Tablet */
+
 @media screen and (max-width: 768px) {
-  .projectShowcase-headline {
-    font-size: var(--fs-500);
-  }
   .icons-box {
     flex-direction: column;
   }
@@ -106,24 +93,19 @@
   .projectShowcase-box-wrapper {
     width: 90%;
   }
-  .projectShowcase-modul-headline {
-    font-size: var(--fs-400);
-  }
-  .projectShowcase-headline {
-    font-size: var(--fs-400);
-  }
-  .icons-box p {
-    font-size: var(--fs-75);
+  .icons-box {
+    > p {
     font-weight: 500;
     overflow-wrap: break-word;
     text-align: center;
+    }
+    > a {
+      font-weight: 500;
+      overflow-wrap: break-word;
+      text-align: center;
+    }
   }
-  .icons-box a {
-    font-size: var(--fs-75);
-    font-weight: 500;
-    overflow-wrap: break-word;
-    text-align: center;
-  }
+
   .projectShowcase-icon {
     width: 25px;
     height: 25px;
@@ -144,24 +126,20 @@
   .icons-box {
     flex-direction: row;
     padding: 5px;
+    p{
+      padding: 10px;
+      font-weight: 400;
+      text-align: start;
+    }
+    a {
+      padding: 10px;
+      font-weight: 400;
+      text-align: start;
+    }
   }
-  .icons-box p{
-    font-size: var(--fs-75);
-    padding: 10px;
-    font-weight: 400;
-    text-align: start;
-  }
-  .icons-box a {
-    font-size: var(--fs-75);
-    padding: 10px;
-    font-weight: 400;
-    text-align: start;
-  }
+
   .projectShowcase-icon {
     width: 25px;
     height: 25px;
-  }
-  .projectShowcase-headline {
-    font-size: var(--fs-200);
   }
 }

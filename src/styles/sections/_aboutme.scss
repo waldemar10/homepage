@@ -31,31 +31,32 @@
     justify-content: center;
     flex: 1 1 0px;
     padding: 20px 0px 20px 20px;
+    > h3{
+        padding-bottom: 20px;
+    }
+    > p{
+        padding-bottom: 10px;
+    }
 }
-.aboutme-skills h3{
-    padding-bottom: 20px;
-}
-.aboutme-skills p{
-    padding-bottom: 10px;
-}
+
 .aboutme-introduction{
     flex: 1 1 0px;
     display: flex;
     flex-direction: column;
     padding: 20px 20px 20px 0px;
-}
-.aboutme-introduction p{
-    padding: 5px 0px 5px 0px;
-}
-.aboutme-introduction:after{
-    content: "";
-  background:linear-gradient(0deg, transparent 5%,var(--border-color) 50%, transparent 96%);
-  position: absolute;
-  width: 2px;
-  height: 100%;
-  top: 0px;
-  left: 50%;
-  display: block;
+    > p{
+        padding: 5px 0px 5px 0px;
+    }
+    &:after{
+        content: "";
+      background:linear-gradient(0deg, transparent 5%,var(--border-color) 50%, transparent 96%);
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      top: 0px;
+      left: 50%;
+      display: block;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -71,12 +72,12 @@
     }
     .aboutme-introduction{
         padding: 20px 0px 20px 0px;
+        &:after{
+            display: none;
+        }
     }
     .aboutme-container{
         flex-direction: column;
-    }
-    .aboutme-introduction:after{
-        display: none;
     }
     
 }

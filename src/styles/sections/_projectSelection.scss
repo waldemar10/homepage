@@ -1,9 +1,7 @@
 :root {
-  --box-width: 300px;
-  --box-height: 200px;
   --box-bg-color-grey: #515151;
   --box-bg-color-dark-grey: #1c1c1c;
-  --box-bg-color-selected:var(--ln-gradient-primary);
+  --box-bg-color-selected: var(--ln-gradient-primary);
 }
 .projectSelection-box {
   display: flex;
@@ -12,25 +10,32 @@
   align-items: center;
   width: 100%;
   padding: 100px 0px 100px 0px;
+  > h2{
+    margin-bottom: 25px;
+  }
 }
 .projectSelection-box-showcase {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
   width: 100%;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
 }
-.projectSelection-headline {
-  margin-bottom: 50px;
-}
+
 .projectSelection-project-box {
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--font-color-light);
-  width: var(--box-width);
-  height: var(--box-height);
+
+  width: calc(20vw + 150px);
+  height: calc(15vw + 120px);
+  max-width: 300px;
+  max-height: 200px;
+  min-width: 100px;
+  min-height: 50px;
+
   border-radius: var(--border-radius-box-outer);
   background: radial-gradient(
     var(--box-bg-color-grey),
@@ -38,60 +43,16 @@
   );
   border: 2px solid var(--border-color);
   transition: all 0.5s ease;
-}
 
-.projectSelection-project-box:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-.projectSelection-project-box p {
-  color: var(--font-color-light);
-  font-size: var(--fs-200);
-  padding: 10px;
-  text-shadow: 0px 0px 10px #000000;
-  user-select: none;
-  text-align: center;
-}
-
-@media screen and (max-width: 1450px) {
-}
-
-/* Tablets (Querformat) and small laptops */
-@media screen and (max-width: 1000px) {
-}
-
-/* Tablet */
-@media screen and (max-width: 768px) {
-}
-
-/* Smartphone */
-@media screen and (max-width: 600px) {
-  :root {
-    --box-width: 200px;
-    --box-height: 150px;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
   }
-
-  .projectSelection-project-box p {
-    font-size: var(--fs-150);
-    padding: 5px;
+  > h3 {
+    color: var(--font-color-light);
+    padding: calc(5px + 0.5rem);
+    text-shadow: 0px 0px 10px #000000;
+    user-select: none;
+    text-align: center;
   }
-  .projectSelection-box-showcase {
-    grid-gap: 0.5rem;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(var(--box-width), max-content)
-    );
-  }
-}
-/* Smartphone small */
-@media screen and (max-width: 400px) {
-  :root {
-    --box-width: 150px;
-    --box-height: 100px;
-  }
-
-  .projectSelection-project-box p {
-    font-size: var(--fs-100);
-  }
-
 }

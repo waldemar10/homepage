@@ -33,7 +33,7 @@ function ProjectSelection() {
           background: clicked ? selectedBackgroundColor : "",
           border: clicked ? "none" : "",
         }}>
-        <p>{projectname}</p>
+        <h3>{projectname}</h3>
       </div>
     );
   };
@@ -43,7 +43,7 @@ function ProjectSelection() {
       ref={refProjectSelection}
       id="projectSelection-box"
       className="projectSelection-box">
-      <h2 id="project" className="projectSelection-headline">
+      <h2 id="project">
         Projekte
       </h2>
 

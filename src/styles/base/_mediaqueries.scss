@@ -1,6 +1,5 @@
-@media screen and (max-width: 1450px) {}
+/* @media screen and (max-width: 1450px) {}
 
-/* Tablets (Querformat) and small laptops */
 @media screen and (max-width: 1000px) {
   body {
     background: radial-gradient(
@@ -11,10 +10,8 @@
   }
 }
 
-/* Tablet */
 @media screen and (max-width: 768px) {}
 
-/* Smartphone */
 @media screen and (max-width: 600px) {
   body {
     background: radial-gradient(
@@ -56,7 +53,6 @@
   }
 }
 
-/* Smartphone small */
 @media screen and (max-width: 400px) {
   h1 {
     font-size: var(--fs-400);
@@ -65,3 +61,4 @@
     font-size: var(--fs-200);
   }
 }
+ */
