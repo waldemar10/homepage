@@ -6,7 +6,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import { ProjectsContext } from "./context/projectsContext";
 import { useProjects } from "./hooks/useProjects";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const { setProjects, selectedProject, setSelectedProject } =

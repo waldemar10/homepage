@@ -1,0 +1,14 @@
+.layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    min-height: 100dvh;
+    position: relative;
+}
+@media screen and (max-width: 1024px){
+    .layout{
+        width: 100%;
+    }
+}

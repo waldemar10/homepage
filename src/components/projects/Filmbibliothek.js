@@ -3,7 +3,7 @@ import React from "react";
 import video from "../../videos/Filmbibliothek.mp4";
 import thumbnail from "../../images/GrundlagenInfo/Filmbibliothek.JPG";
 
-import "../../styles/projects.css";
+import "../../styles/projects.scss";
 
 function Filmbibliothek() {
   return (

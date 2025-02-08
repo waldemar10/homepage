@@ -1,0 +1,106 @@
+:root {
+  --box-width: 300px;
+  --box-height: 200px;
+  --box-bg-color-grey: #515151;
+  --box-bg-color-dark-grey: #1c1c1c;
+  --box-bg-color-selected:var(--ln-gradient-primary);
+}
+.projectSelection-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 100px 0px 100px 0px;
+}
+.projectSelection-box-showcase {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  /* display: grid;
+  width: 100%;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--box-width), max-content)
+  );
+  justify-content: center;
+  align-content: center; */
+}
+.projectSelection-headline {
+  margin-bottom: 50px;
+}
+.projectSelection-project-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--font-color-light);
+  width: var(--box-width);
+  height: var(--box-height);
+  border-radius: var(--border-radius-box-outer);
+  background: radial-gradient(
+    var(--box-bg-color-grey),
+    var(--box-bg-color-dark-grey)
+  );
+  border: 2px solid var(--border-color);
+  transition: all 0.5s ease;
+}
+
+.projectSelection-project-box:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.projectSelection-project-box p {
+  color: var(--font-color-light);
+  font-size: var(--fs-200);
+  padding: 10px;
+  text-shadow: 0px 0px 10px #000000;
+  user-select: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 1450px) {
+}
+
+/* Tablets (Querformat) and small laptops */
+@media screen and (max-width: 1000px) {
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+}
+
+/* Smartphone */
+@media screen and (max-width: 600px) {
+  :root {
+    --box-width: 200px;
+    --box-height: 150px;
+  }
+
+  .projectSelection-project-box p {
+    font-size: var(--fs-150);
+    padding: 5px;
+  }
+  .projectSelection-box-showcase {
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(var(--box-width), max-content)
+    );
+  }
+}
+/* Smartphone small */
+@media screen and (max-width: 400px) {
+  :root {
+    --box-width: 150px;
+    --box-height: 100px;
+  }
+
+  .projectSelection-project-box p {
+    font-size: var(--fs-100);
+  }
+
+}

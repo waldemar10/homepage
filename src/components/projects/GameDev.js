@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/projects.css";
+import "../../styles/projects.scss";
 import video from "../../videos/GameDev.mp4";
 import thumbnail from "../../images/GameDev/GameDev.JPG";
 import imgMachineEmpty from "../../images/GameDev/MachineEmpty.JPG";

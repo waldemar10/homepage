@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { ProjectSelectionContext } from "../../context/projectSelectionContext";
 
-import "../../styles/startscreen.css";
+import "../../styles/startscreen.scss";
 
 function Startscreen() {
   const { refProjectSelection } = useContext(ProjectSelectionContext);
@@ -30,8 +30,9 @@ function Startscreen() {
           <button
             className="startscreen-button"
             onClick={(e) => navToProjectSelection(e)}>
-            Projekte{" "}
-            <FontAwesomeIcon id="startscreen-arrow" icon={faChevronDown} />
+              <FontAwesomeIcon id="startscreen-arrow-1" className="rotate" icon={faChevronDown} />
+            Projekte
+            <FontAwesomeIcon id="startscreen-arrow-2" icon={faChevronDown} />
           </button>
         </div>
         <div className="line" />

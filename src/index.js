@@ -6,8 +6,8 @@ import { ProjectsProvider } from "./context/projectsContext";
 import { ProjectSelectionProvider } from "./context/projectSelectionContext";
 import { AboutMeProvider } from "./context/aboutMeContext";
 
-import "./index.css";
-import "./styles/animations.css";
+import "./index.scss";
+import "./styles/animations.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

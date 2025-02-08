@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef } from "react";
 
 import { ProjectsContext } from "../../context/projectsContext";
 import { ProjectSelectionContext } from "../../context/projectSelectionContext";
-import "../../styles/projectSelection.css";
+import "../../styles/projectSelection.scss";
 function ProjectSelection() {
   const { handleSelectedProject, refProjectSelection } = useContext(
     ProjectSelectionContext
