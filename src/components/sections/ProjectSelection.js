@@ -2,7 +2,9 @@ import React, { useContext, useEffect, useRef } from "react";
 
 import { ProjectsContext } from "../../context/projectsContext";
 import { ProjectSelectionContext } from "../../context/projectSelectionContext";
-
+import LinguPingu from "../../images/Awd/excitedPingu.png";
+import Yoga from "../../images/YogaWebsite/YogaStartscreen.jpg";
+import SSP from "../../images/VC/Arena.jpg";
 function ProjectSelection() {
   const { handleSelectedProject, refProjectSelection } = useContext(
     ProjectSelectionContext
@@ -13,27 +15,32 @@ function ProjectSelection() {
   const selectedBackgroundColor = "var(--box-bg-color-selected)";
 
   useEffect(() => {
-    if (localStorage.getItem("WJ_HP_clickedProject")) {
+    if (sessionStorage.getItem("WJ_HP_clickedProject")) {
       handleSelectedProject(
-        localStorage.getItem("WJ_HP_clickedProject"),
+        sessionStorage.getItem("WJ_HP_clickedProject"),
         false
       );
     }
   }, []);
-
-  const ProjectBox = ({ index, clicked, projectname }) => {
+  const projectImages = {
+    "LinguPingu": LinguPingu,
+    "Die Yoga-Website": Yoga,
+    "Schere Stein Papier Ultimate": SSP,
+  };
+  const ProjectBox = ({ index, clicked, projectname,image }) => {
     return (
       <div
         ref={boxRef}
         id="projectSelection-project-box"
         className="projectSelection-project-box"
         onClick={() => handleSelectedProject(index, true)}
-        style={{
-          filter: clicked ? "brightness(100%)" : "brightness(70%)",
-          background: clicked ? selectedBackgroundColor : "",
-          border: clicked ? "none" : "",
-        }}>
-        <h3>{projectname}</h3>
+        >
+          <img  style={{
+          filter: clicked ? "brightness(100%)" : "brightness(30%)"
+        }} src={image}></img>
+        <span style={{
+          filter: clicked ? "brightness(100%)" : "brightness(30%)"
+        }}>{projectname}</span>
       </div>
     );
   };
@@ -56,6 +63,7 @@ function ProjectSelection() {
             index={index}
             clicked={project.isClicked}
             projectname={project.Title}
+            image={projectImages[project.Title]}
           />
         ))}
       </div>
