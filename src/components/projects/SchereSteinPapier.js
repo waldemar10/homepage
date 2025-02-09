@@ -6,7 +6,7 @@ import thumbnail from "../../images/VC/SSP.JPG";
 import imgPaper from "../../images/VC/Papier.JPG";
 import imgScissor from "../../images/VC/Schere.JPG";
 import imgStone from "../../images/VC/Stein.JPG";
-
+import hull from "../../images/VC/convexityHull.JPG";
 function SchereSteinPapier() {
   return (
     <>
@@ -29,9 +29,7 @@ function SchereSteinPapier() {
               Bildverarbeitungskomponente. Hierbei setzte ich OpenCV ein und
               nutzte die in der Vorlesung vermittelten Konzepte, um die
               Erkennung der Handgesten für „Schere“, „Stein“ und „Papier“ zu
-              realisieren. Dies umfasste die Entwicklung eines robusten
-              Algorithmus zur Erkennung und Klassifizierung der Gesten, der die
-              Grundlage für die Interaktion mit der 3D-Umgebung bildete.
+              realisieren.
             </p>
           </div>
           <h3>Video</h3>

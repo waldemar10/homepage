@@ -2,7 +2,9 @@ import React from "react";
 
 import video from "../../videos/LinguPingu.mp4";
 import thumbnail from "../../images/Awd/GrammarHub.JPG";
-
+import grammar from "../../images/Awd/Grammatik.jpg";
+import vocabel from "../../images/Awd/Vokabeln.jpg";
+import settings from "../../images/Awd/Einstellungen.jpg";
 function Awd() {
   return (
     <div className="project-content-box">
@@ -31,15 +33,14 @@ function Awd() {
             persönliches Lernumfeld zu gestalten und ihre individuellen
             Lernziele effizient zu verfolgen.
           </p>
-          {/*  <div  >
-          <figure >
-            <img
-            style={{width:"50%"}}
-              src={excitedPingu}
-              alt="Beschriftung"
-            />
-          </figure>
-        </div> */}
+          <div>
+            <figure className="project-figure">
+              <img src={vocabel} alt="Beschriftung" />
+              <figcaption className="project-figcaption">
+                Die Möglichkeit Vokabeln zu lernen
+              </figcaption>
+            </figure>
+          </div>
           <h3>Grammatikübungen</h3>
           <p>
             Die Grammatik ist in zwei Kategorien aufgeteilt. Es gibt zum einen
@@ -69,6 +70,22 @@ function Awd() {
             jeden Benutzer individuell.
           </p>
         </div>
+
+        <div className="project-image-box">
+          <figure className="project-figure" style={{ margin: "5px" }}>
+            <img src={grammar} alt="Beschriftung" />
+            <figcaption className="project-figcaption">
+              Grammatikübungen
+            </figcaption>
+          </figure>
+          <figure className="project-figure" style={{ margin: "5px" }}>
+            <img src={settings} alt="Beschriftung" />
+            <figcaption className="project-figcaption">
+              Einstellungen für das Konto des Benutzers
+            </figcaption>
+          </figure>
+        </div>
+
         <h3>Video</h3>
         <div className="project-video">
           <video controls src={video} poster={thumbnail} />
