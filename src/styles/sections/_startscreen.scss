@@ -73,7 +73,10 @@
   transform: rotate(0deg);
   font-size: larger;
 }
-
+#icon-hello{
+  display: inline-block;
+  animation: wave 0.5s ease-in-out 2;
+}
 @media screen and (max-width: 1000px) {
   .startscreen-introduction-box {
     width: 90%;

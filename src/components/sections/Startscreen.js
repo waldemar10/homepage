@@ -17,7 +17,7 @@ function Startscreen() {
         <span className="startscreen-greeting"> Willkommen</span>
         <div className="startscreen-introduction-box">
           <div id="startscreen-name" className="startscreen-name">
-            Ich bin <span>Waldemar Justus</span> <span>👋</span>
+            Ich bin <span>Waldemar Justus</span> <span id="icon-hello">👋</span>
           </div>
           <span className="startscreen-description">
             Meinen Bachelor habe ich seit Oktober 2024 erfolgreich in
