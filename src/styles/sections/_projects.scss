@@ -1,7 +1,3 @@
-:root {
-  --padding-bottom-title: 5px;
-  --padding-top-title: 5px;
-}
 #yoga-logo{
   width: 250px;
   height: 250px;
@@ -12,34 +8,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 .project-box {
   display: flex;
   flex-direction: column;
   padding: 10px 10px 25px 10px;
-  width: 90%;
-}
-.project-box h3 {
-  padding-bottom: var(--padding-bottom-title);
-  padding-top: var(--padding-top-title);
 }
 
-.project-box h4 {
-  padding-bottom: var(--padding-bottom-title);
-  padding-top: var(--padding-top-title);
-}
-.project-box h5 {
-  padding-bottom: var(--padding-bottom-title);
-  padding-top: var(--padding-top-title);
-}
 .project-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex: 1 1 0px;
-  /* font-size: var(--fs-100); */
 }
 .project-description p {
   width: 100%;
@@ -47,22 +30,18 @@
 }
 .project-description h3 {
   width: 100%;
-  padding-bottom: var(--padding-bottom-title);
 }
 .project-description h4 {
   width: 100%;
-  padding-bottom: var(--padding-bottom-title);
 }
 .project-description h5 {
   width: 100%;
-  padding-bottom: var(--padding-bottom-title);
 }
 .project-figure {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   margin-bottom: 10px;
 }
 
@@ -102,7 +81,6 @@
 
 .project-list {
   width: 100%;
-  margin: 10px 0px 10px 10px;
 }
 .project-button {
   width: 100px;
@@ -121,15 +99,13 @@
 #unity-container {
   border-radius: var(--border-radius-box-inner);
 }
-/* Tablets (Querformat) and small laptops */
+
 @media screen and (max-width: 1000px) {
   #unity-game {
     display: none;
   }
 }
-/* Tablet */
-@media screen and (max-width: 768px) {
-}
+
 /* Smartphone */
 @media screen and (max-width: 600px) {
   .project-box {
@@ -137,6 +113,9 @@
   }
   .project-figure {
     padding: 10px;
+  }
+  .project-content-box {
+    padding: 5px;
   }
 }
 /* Smartphone small */

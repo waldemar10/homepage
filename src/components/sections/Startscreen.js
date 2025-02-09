@@ -14,17 +14,17 @@ function Startscreen() {
   return (
     <>
       <div className="startscreen-wrapper">
-        <h1 className="startscreen-greeting"> Willkommen</h1>
+        <span className="startscreen-greeting"> Willkommen</span>
         <div className="startscreen-introduction-box">
           <div id="startscreen-name" className="startscreen-name">
             Ich bin <span>Waldemar Justus</span> <span>👋</span>
           </div>
-          <p className="startscreen-description">
+          <span className="startscreen-description">
             Meinen Bachelor habe ich seit Oktober 2024 erfolgreich in
             Computervisualistik und Design an der Hochschule Hamm-Lippstadt
             absolviert. Ausgewählte Projekte, die ich während des Studiums oder
             privat gemacht habe, werden hier vorgestellt.
-          </p>
+          </span>
           <button
             className="startscreen-button"
             onClick={(e) => navToProjectSelection(e)}>

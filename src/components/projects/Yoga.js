@@ -20,7 +20,7 @@ function Yoga() {
             Yoga-Praxis unterstützt.
           </p>
           <h3>Vorgehensweise</h3>
-          <p>
+          <p style={{ marginBottom: "0" }}>
             Zu Beginn des Projekts erstellten wir mithilfe von Mindmapping ein
             umfassendes Leitbild, um die Kernaussagen und Ziele unserer Website
             klar zu definieren. Dies half uns, unsere Ideen zu strukturieren und

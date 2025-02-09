@@ -9,6 +9,8 @@
   padding: 0px 20px 20px 20px;
 }
 .startscreen-greeting {
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: bold;
   background: var(--ln-gradient-primary);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -21,10 +23,12 @@
   justify-content: center;
   width: 800px;
 }
-.startscreen-introduction-box p {
+.startscreen-description {
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
   text-align: center;
 }
 .startscreen-name {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px;
@@ -48,9 +52,7 @@
   color: var(--font-color-light);
   border-radius: var(--border-radius-box-outer);
   border: none;
-  max-width: 200px;
-  max-height: 150px;
-  font-size: var(--fs-150);
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
   padding: 10px 20px 10px 20px;
   margin: 50px;
   font-weight: 500;
@@ -70,9 +72,6 @@
 .startscreen-button:hover > #startscreen-arrow-2 {
   transform: rotate(0deg);
   font-size: larger;
-}
-
-@media screen and (max-width: 1450px) {
 }
 
 @media screen and (max-width: 1000px) {

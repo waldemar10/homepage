@@ -60,7 +60,8 @@
 .header-logo:hover .cls-2 {
   transform: translateX(50px);
 }
-.header-logo-wrapper h4 {
+.header-logo-wrapper span {
+  font-weight: bold;
   margin-left: 10px;
 }
 
@@ -158,5 +159,8 @@
 @media screen and (max-width: 400px) {
   .header-logo-wrapper {
     width: 80%;
+  }
+  .header-logo-wrapper span {
+    font-size: small;
   }
 }

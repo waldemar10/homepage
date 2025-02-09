@@ -5,12 +5,18 @@
 }
 
 .projectShowcase-box-wrapper {
+  display: flex;
+  flex-direction: column;
   background-color: var(--bg-color-showcase);
   border-radius: var(--border-radius-box-outer);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
-  width: 1000px;
+  margin: 10px;
 }
+
 .projectShowcase-headline {
+  width: 100%;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: bold;
   text-align: center;
   padding: 15px 5px 15px 5px;
   color: var(--font-color-light);
@@ -29,23 +35,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  > a {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: var(--font-color-light);
-    padding: 10px;
-    overflow-wrap: break-word;
-  }
-  > p {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: var(--font-color-light);
-    padding: 10px;
-    overflow-wrap: break-word;
+  color: var(--font-color-light);
+  padding: 10px;
+  overflow-wrap: break-word;
+  > span {
+    @media (max-width: 768px) {
+      font-size: 0.75rem;
+    }
   }
 }
 
@@ -53,24 +49,13 @@
   width: 30px;
   height: 30px;
   padding: 5px;
+  margin-right: 5px;
   color: white;
-}
-
-@media screen and (max-width: 1450px) {
-  .projectShowcase-box-wrapper {
-    width: 900px;
-  }
 }
 
 @media screen and (max-width: 1000px) {
   :root {
     --icon-box-width: 100px;
-  }
-  .projectShowcase-box {
-    margin: 20px;
-  }
-  .projectShowcase-box-wrapper {
-    width: 750px;
   }
 }
 
@@ -78,32 +63,11 @@
   .icons-box {
     flex-direction: column;
   }
-  .projectShowcase-box-wrapper {
-    width: 600px;
-  }
-  .projectShowcase-box {
-    margin-top: 20px;
-  }
 }
 /* Smartphone */
 @media screen and (max-width: 600px) {
   :root {
     --icon-box-width: 80px;
-  }
-  .projectShowcase-box-wrapper {
-    width: 90%;
-  }
-  .icons-box {
-    > p {
-    font-weight: 500;
-    overflow-wrap: break-word;
-    text-align: center;
-    }
-    > a {
-      font-weight: 500;
-      overflow-wrap: break-word;
-      text-align: center;
-    }
   }
 
   .projectShowcase-icon {
@@ -126,20 +90,10 @@
   .icons-box {
     flex-direction: row;
     padding: 5px;
-    p{
-      padding: 10px;
-      font-weight: 400;
-      text-align: start;
-    }
-    a {
-      padding: 10px;
-      font-weight: 400;
-      text-align: start;
-    }
   }
 
   .projectShowcase-icon {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
   }
 }

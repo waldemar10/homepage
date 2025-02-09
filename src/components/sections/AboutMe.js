@@ -6,7 +6,7 @@ const AboutMe = () => {
   const { refAboutMe } = useContext(AboutMeContext);
   return (
     <div ref={refAboutMe} className="aboutme-wrapper">
-      <h2 className="aboutme-headline">Leidenschaftlicher Entwickler</h2>
+      <span className="aboutme-headline">Leidenschaftlicher Entwickler</span>
       <div className="aboutme-container">
         <div className="aboutme-introduction">
           <p>

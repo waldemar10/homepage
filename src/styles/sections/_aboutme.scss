@@ -9,13 +9,17 @@
     padding: 100px 20px 100px 20px;
 }
 
-.aboutme-headline{
+.aboutme-headline {
     width: 100%;
     background: var(--ln-gradient-primary);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-}
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin-bottom: clamp(0.2em, 1vw, 0.5em);
+  }
+  
 .aboutme-container{
     position: relative;
     display: flex;
@@ -79,7 +83,6 @@
     .aboutme-container{
         flex-direction: column;
     }
-    
 }
 @media screen and (max-width:400px){
     .aboutme-socials{

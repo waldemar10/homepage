@@ -21,7 +21,7 @@ function Footer() {
           <Socials width={"20px"} height={"20px"} />
         </div>
         <div className="footer-copyright">
-          <p>Copyright © 2023 - {year} Waldemar Justus</p>
+          Copyright © 2023 - {year} Waldemar Justus
         </div>
         <div className="footer-links">
           <a href="#/privacyPolicy">Datenschutzerklärung</a>

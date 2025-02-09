@@ -11,8 +11,9 @@
   width: 100%;
   padding: 100px 0px 100px 0px;
   margin: 50px;
-  > h2{
+  #project{
     margin-bottom: 50px;
+    font-size: clamp(2rem, 3vw, 3rem);
   }
 }
 .projectSelection-box-showcase {
@@ -45,12 +46,12 @@
     transform: scale(1.1);
   }
   > span {
-    font-size: var(--fs-300);
     font-weight: bold;
     position: absolute;
     color: var(--font-color-light);
     padding: calc(5px + 0.5rem);
     text-shadow: 2px 2px 5px #000000;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     user-select: none;
     text-align: center;
   }
@@ -63,10 +64,5 @@
 }
 
 @media screen and (max-width: 768px) {
-  .projectSelection-project-box {
-    > span {
-      font-size: var(--fs-500);
-    }
-    
-  }
+
 }

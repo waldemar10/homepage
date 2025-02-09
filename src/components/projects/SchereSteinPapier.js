@@ -43,7 +43,7 @@ function SchereSteinPapier() {
         <div className="project-box">
           <div className="project-description">
             <h3>Vorgehensweise</h3>
-            <p>Wie die Gestenerkennenung funktioniert:</p>
+            <p style={{marginBottom:"0px"}}>Wie die Gestenerkennenung funktioniert:</p>
 
             <ol className="project-list">
               <li>

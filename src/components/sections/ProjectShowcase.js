@@ -31,7 +31,7 @@ function ProjectShowcase() {
             icon={faUserGroup}
             className="projectShowcase-icon"
           />
-          <p>{group}</p>
+          <span>{group}</span>
         </div>
 
         <div className="icons-box">
@@ -39,7 +39,7 @@ function ProjectShowcase() {
             icon={faLaptopCode}
             className="projectShowcase-icon"
           />
-          <p>{code}</p>
+          <span>{code}</span>
         </div>
 
         <div className="icons-box">
@@ -73,9 +73,9 @@ function ProjectShowcase() {
 
   return (
     <div id="projectShowcase" className="projectShowcase-box-wrapper">
-      <h2 ref={refProject} className="projectShowcase-headline">
+      <span ref={refProject} className="projectShowcase-headline">
         {selectedProject.Title}
-      </h2>
+      </span>
 
       <div className="projectShowcase-icons-box-wrapper">
         <IconBar selectedProject={selectedProject} projects={projects} />

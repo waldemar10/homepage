@@ -159,7 +159,7 @@ function Header() {
                 </svg>
               </a>
             
-            <h4>Waldemar Justus</h4>
+            <span>Waldemar Justus</span>
           </div>
 
           {!isMobile ? (
