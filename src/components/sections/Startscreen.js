@@ -1,6 +1,4 @@
 import React, { useContext } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { ProjectSelectionContext } from "../../context/projectSelectionContext";
 
 function Startscreen() {
@@ -28,14 +26,9 @@ function Startscreen() {
           <button
             className="startscreen-button"
             onClick={(e) => navToProjectSelection(e)}>
-          
-              <FontAwesomeIcon
-                id="startscreen-arrow-1"
-                icon={faChevronDown}
-              />
+            <div className="startscreen-button-text">
               Projekte
-              <FontAwesomeIcon id="startscreen-arrow-2" icon={faChevronDown} />
-      
+            </div>
           </button>
         </div>
         <div className="line" />
