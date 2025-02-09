@@ -47,49 +47,19 @@
 
 .startscreen-button {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
   background: transparent;
   font-size: clamp(0.9rem, 2vw, 1.5rem);
   padding: 10px 20px;
   margin: 50px;
   font-weight: 500;
-  cursor: pointer;
-  border: none;
-  transition: transform 0.3s ease-in-out;
+  border: 2px solid var(--border-color);
   border-radius: var(--border-radius-box-outer);
-  color: transparent;
-  background: linear-gradient(45deg, #0f95fb, #5629f6);
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    z-index: -1;
-    border-radius: inherit;
-    background: linear-gradient(45deg, #0f95fb, #5629f6);
-    mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
-    mask-composite: exclude;
-    padding: 2px;
-  }
-
-  svg {
-    fill: none;
-  }
-
+  color: var(--font-color-light);
+  transition: all 0.3s ease-in-out;
   &:hover {
+    background: var(--border-color);
+    cursor: pointer;
     transform: scale(1.1);
-
-    #startscreen-arrow-1 {
-      transform: translateX(-8px);
-    }
-
-    #startscreen-arrow-2 {
-      transform: translateX(8px);
-    }
   }
 }
 
