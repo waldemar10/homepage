@@ -72,7 +72,11 @@
   .hero__content {
     width: 95%;
   }
-
+  .hero__button {
+    &:hover {
+      background: unset;
+    }
+  }
 }
 
 @media screen and (max-width: 600px) {

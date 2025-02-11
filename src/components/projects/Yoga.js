@@ -5,9 +5,10 @@ import persona from "../../images/YogaWebsite/Persona.jpg"
 
 function Yoga() {
   return (
-    <div className="project-content-box">
-      <div className="project-box">
-        <div className="project-description">
+    <>
+    <div className="project__content-box">
+      <div className="project__box">
+        <div className="project__description">
           <p>
             Das Ziel des Projekts war es, eine informative und ansprechende
             Website zum Thema Gesundheit zu entwickeln. Nach sorgfältiger
@@ -28,7 +29,7 @@ function Yoga() {
             wir vier zentrale Entwurfskriterien ab, die unsere Vision für das
             Unternehmen und die Website widerspiegeln sollten:
           </p>
-          <ul className="project-list">
+          <ul className="project__list">
             <li>
               <b>Freundlich</b>
             </li>
@@ -50,7 +51,7 @@ function Yoga() {
             eine klare Vorstellung davon zu entwickeln, wie die Website aussehen
             und sich anfühlen sollte.
             </p>
-            <figure className="project-figure">
+            <figure className="project__figure">
               <img src={moodboard}></img>
               <figcaption>
                 Mehr Informationen im {" "}
@@ -88,7 +89,7 @@ function Yoga() {
             Interesse daran haben, ihr Wohlbefinden zu verbessern und dabei eine
             gesunde Balance zwischen Körper und Geist zu finden.  
             </p>
-            <figure className="project-figure">
+            <figure className="project__figure">
               <img src={persona}></img>
               <figcaption>
                 Persona
@@ -115,6 +116,7 @@ function Yoga() {
 
       </div>
     </div>
+    </>
   );
 }
 export default Yoga;

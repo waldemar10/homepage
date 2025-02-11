@@ -2,17 +2,14 @@ import React from "react";
 
 import video from "../../videos/SchereSteinPapier.mp4";
 import thumbnail from "../../images/VC/SSP.JPG";
-
-import imgPaper from "../../images/VC/Papier.JPG";
 import imgScissor from "../../images/VC/Schere.JPG";
-import imgStone from "../../images/VC/Stein.JPG";
-import hull from "../../images/VC/convexityHull.JPG";
+
 function SchereSteinPapier() {
   return (
     <>
-      <div className="project-content-box">
-        <div className="project-box">
-          <div className="project-description">
+      <div className="project__content-box">
+        <div className="project__box">
+          <div className="project__description">
             <p>
               Schere-Stein-Papier Ultimate war ein Softwareprojekt im dritten
               Semester im Rahmen des Moduls Visual Computing. Ziel des Projekts
@@ -33,17 +30,17 @@ function SchereSteinPapier() {
             </p>
           </div>
           <h3>Video</h3>
-          <div className="project-video">
+          <div className="project__video">
             <video controls src={video} poster={thumbnail}></video>
           </div>
         </div>
 
-        <div className="project-box">
-          <div className="project-description">
+        <div className="project__box">
+          <div className="project__description">
             <h3>Vorgehensweise</h3>
             <p style={{marginBottom:"0px"}}>Wie die Gestenerkennenung funktioniert:</p>
 
-            <ol className="project-list">
+            <ol className="project__list">
               <li>
                 Die Webcam wird mithilfe von OpenCVs <code>VideoCapture</code>{" "}
                 erkannt und gestartet.
@@ -121,20 +118,10 @@ function SchereSteinPapier() {
             </ol>
           </div>
 
-          <figure className="project-figure">
+          <figure className="project__figure">
             <img src={imgScissor} alt="Scissors gesture" />
-            <figcaption className="project-figcaption">Die Bildverarbeitung erkennt die Geste „Schere“</figcaption>
+            <figcaption className="project__figcaption">Die Bildverarbeitung erkennt die Geste „Schere“</figcaption>
           </figure>
-
-          {/* <figure className="project-figure">
-            <img src={imgStone} alt="Stone gesture" />
-            <figcaption className="project-figcaption">Geste Stein</figcaption>
-          </figure>
-
-          <figure className="project-figure">
-            <img src={imgPaper} alt="Paper gesture" />
-            <figcaption className="project-figcaption">Geste Papier</figcaption>
-          </figure> */}
         </div>
       </div>
     </>

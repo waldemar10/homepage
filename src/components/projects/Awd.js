@@ -7,9 +7,9 @@ import vocabel from "../../images/Awd/Vokabeln.jpg";
 import settings from "../../images/Awd/Einstellungen.jpg";
 function Awd() {
   return (
-    <div className="project-content-box">
-      <div className="project-box">
-        <div className="project-description">
+    <div className="project__content-box">
+      <div className="project__box">
+        <div className="project__description">
           <p>
             In Advanced Web Development (AWD) war es die Aufgabe, eine
             progressive Webanwendung zu entwickeln. Dabei war es wichtig,
@@ -34,9 +34,9 @@ function Awd() {
             Lernziele effizient zu verfolgen.
           </p>
           <div>
-            <figure className="project-figure">
+            <figure className="project__figure">
               <img src={vocabel} alt="Beschriftung" />
-              <figcaption className="project-figcaption">
+              <figcaption className="project__figcaption">
                 Die Möglichkeit Vokabeln zu lernen
               </figcaption>
             </figure>
@@ -71,23 +71,23 @@ function Awd() {
           </p>
         </div>
 
-        <div className="project-image-box">
-          <figure className="project-figure" style={{ margin: "5px" }}>
+        <div className="project__image-box">
+          <figure className="project__figure" style={{ margin: "5px" }}>
             <img src={grammar} alt="Beschriftung" />
-            <figcaption className="project-figcaption">
+            <figcaption className="project__figcaption">
               Grammatikübungen
             </figcaption>
           </figure>
-          <figure className="project-figure" style={{ margin: "5px" }}>
+          <figure className="project__figure" style={{ margin: "5px" }}>
             <img src={settings} alt="Beschriftung" />
-            <figcaption className="project-figcaption">
+            <figcaption className="project__figcaption">
               Einstellungen für das Konto des Benutzers
             </figcaption>
           </figure>
         </div>
 
         <h3>Video</h3>
-        <div className="project-video">
+        <div className="project__video">
           <video controls src={video} poster={thumbnail} />
         </div>
       </div>

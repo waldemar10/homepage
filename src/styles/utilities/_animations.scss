@@ -72,54 +72,37 @@
     transform: translateY(20px);
   }
 }
-@keyframes scaleUp{
-  from{
+@keyframes scaleUp {
+  from {
     transform: scale(1);
   }
-  to{
+  to {
     transform: scale(1.1);
   }
 }
-:root{
+:root {
   --deg-shake: 10deg;
   --deg-shake-negative: -10deg;
 }
 @keyframes wave {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(20deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(20deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes shake {
-  /* 0% {
-    transform: rotate(var(--deg-shake));
-  }
-  10% {
-    transform: rotate(var(--deg-shake-negative));
-  }
-  20% {
-    transform: rotate(var(--deg-shake));
-  }
-  30% {
-    transform: rotate(var(--deg-shake-negative));
-  }
-  40% {
-    transform: rotate(var(--deg-shake));
-  }
-  50% {
-    transform: rotate(var(--deg-shake-negative));
-  }
-  60% {
-    transform: rotate(var(--deg-shake));
-  }
-  70% {
-    transform: rotate(var(--deg-shake-negative));
-  }
-  80% {
-    transform: rotate(var(--deg-shake));
-  } */
   0% {
     transform: rotate(0deg);
   }
@@ -133,25 +116,26 @@
     transform: rotate(0deg);
   }
 }
-@keyframes drop{
-  0%{
-    top:0%;
+
+@keyframes drop {
+  0% {
+    top: 0%;
   }
-  100%{
-    top:100%;
+  100% {
+    top: 100%;
   }
 }
-@keyframes flow{
-  0%{
-    left:-20%;
+@keyframes flow {
+  0% {
+    left: -20%;
   }
-  100%{
-    left:120%;
+  100% {
+    left: 120%;
   }
 }
 
 .line {
-/*   opacity: 0; */
+  /*   opacity: 0; */
   background: linear-gradient(
     90deg,
     transparent 5%,
@@ -164,11 +148,16 @@
   bottom: 0px;
   left: 0;
   display: block;
-/*   animation: fadeIn 1s forwards; */
+  /*   animation: fadeIn 1s forwards; */
   animation-delay: 1s;
   overflow: hidden;
   mask: linear-gradient(90deg, transparent 5%, black 50%, transparent 96%);
-  -webkit-mask: linear-gradient(90deg, transparent 5%, black 50%, transparent 96%);
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent 5%,
+    black 50%,
+    transparent 96%
+  );
 }
 .line::after {
   content: "";
@@ -178,7 +167,12 @@
   bottom: 0px;
   left: 0;
   display: block;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 75%,
+    #ffffff 100%
+  );
   animation: flow 14s 0s infinite;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);

@@ -22,47 +22,38 @@ function ProjectShowcase() {
     );
   };
 
-  const IconBar = memo(({ selectedProject, projects }) => {
+  const IconBar = memo(({ selectedProject }) => {
     const { GitHub: gitHub, Code: code, Group: group } = selectedProject;
     return (
       <>
-        <div className="icons-box">
-          <FontAwesomeIcon
-            icon={faUserGroup}
-            className="projectShowcase-icon"
-          />
+        <div className="project-showcase__icon-box">
+          <FontAwesomeIcon icon={faUserGroup} className="project-showcase__icon" />
           <span>{group}</span>
         </div>
 
-        <div className="icons-box">
-          <FontAwesomeIcon
-            icon={faLaptopCode}
-            className="projectShowcase-icon"
-          />
+        <div className="project-showcase__icon-box">
+          <FontAwesomeIcon icon={faLaptopCode} className="project-showcase__icon" />
           <span>{code}</span>
         </div>
 
-        <div className="icons-box">
-          <FontAwesomeIcon icon={faGithub} className="projectShowcase-icon" />
+        <div className="project-showcase__icon-box">
+          <FontAwesomeIcon icon={faGithub} className="project-showcase__icon" />
           <a href={gitHub} target="_blank" rel="noreferrer">
             GitHub
           </a>
         </div>
         {selectedProject.Title === "Die Yoga-Website" ? (
-          <div className="icons-box">
-            <FontAwesomeIcon icon={faGlobe} className="projectShowcase-icon" />
+          <div className="project-showcase__icon-box">
+            <FontAwesomeIcon icon={faGlobe} className="project-showcase__icon" />
             <a target="_blank" rel="noreferrer" href="https://yoga.waljus.de/">
               Website
             </a>
           </div>
         ) : null}
         {selectedProject.Title === "LinguPingu" ? (
-          <div className="icons-box">
-            <FontAwesomeIcon icon={faGlobe} className="projectShowcase-icon" />
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://lingupingu.waljus.de/">
+          <div className="project-showcase__icon-box">
+            <FontAwesomeIcon icon={faGlobe} className="project-showcase__icon" />
+            <a target="_blank" rel="noreferrer" href="https://lingupingu.waljus.de/">
               Website
             </a>
           </div>
@@ -72,16 +63,17 @@ function ProjectShowcase() {
   });
 
   return (
-    <div id="projectShowcase" className="projectShowcase-box-wrapper">
-      <span ref={refProject} className="projectShowcase-headline">
+    <div id="projectShowcase" className="project-showcase">
+      <span ref={refProject} className="project-showcase__headline">
         {selectedProject.Title}
       </span>
 
-      <div className="projectShowcase-icons-box-wrapper">
+      <div className="project-showcase__icons-box-wrapper">
         <IconBar selectedProject={selectedProject} projects={projects} />
       </div>
       <Project />
     </div>
   );
 }
+
 export default ProjectShowcase;

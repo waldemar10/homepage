@@ -1,101 +1,102 @@
-#yoga-logo{
+#yoga-logo {
   width: 250px;
   height: 250px;
   fill: #DFD1C9;
 }
-.project-content-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+
+.project {
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 25px 10px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 0px;
+
+    p, h3, h4, h5 {
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+
+  &__figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    img {
+      border-radius: var(--border-radius-box-inner);
+      width: 100%;
+    }
+
+    figcaption {
+      color: var(--font-color-light);
+      padding: 5px 10px;
+      background-color: var(--bg-color-figcaption);
+      border-radius: 0 0 var(--border-radius-box-inner) var(--border-radius-box-inner);
+    }
+  }
+
+  &__video {
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+
+    video {
+      width: 100%;
+      border-radius: var(--border-radius-box-inner);
+      border: 2px solid var(--border-color);
+
+      &:hover {
+        filter: brightness(50%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__image-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__list {
+    width: 100%;
+  }
+
+  &__button {
+    width: 100px;
+    height: 50px;
+    color: var(--font-color-light);
+    border: 2px solid var(--border-color);
+    background-color: var(--bg-color-btn);
+    border-radius: var(--border-radius-button);
+    transition: all 0.7s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.723);
+    }
+  }
 }
 
-.project-box {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 10px 25px 10px;
-}
-
-.project-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1 1 0px;
-}
-.project-description p {
-  width: 100%;
-  padding: 10px 0px 10px 0px;
-}
-.project-description h3 {
-  width: 100%;
-}
-.project-description h4 {
-  width: 100%;
-}
-.project-description h5 {
-  width: 100%;
-}
-.project-figure {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.project-figure img {
-  border-radius: var(--border-radius-box-inner);
-  width: 100%;
-}
-.project-figure figcaption {
-  color: var(--font-color-light);
-  padding: 5px 10px 5px 10px;
-  background-color: var(--bg-color-figcaption);
-  border-radius: 0 0 var(--border-radius-box-inner)
-    var(--border-radius-box-inner);
-}
-
-.project-video {
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-}
-.project-video video {
-  width: 100%;
-  border-radius: var(--border-radius-box-inner);
-  border: 2px solid var(--border-color);
-}
-.project-video video:hover {
-  filter: brightness(50%);
-  cursor: pointer;
-}
-
-.project-image-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.project-list {
-  width: 100%;
-}
-.project-button {
-  width: 100px;
-  height: 50px;
-  color: var(--font-color-light);
-  border: 2px solid var(--border-color);
-  background-color: var(--bg-color-btn);
-  border-radius: var(--border-radius-button);
-  transition: all 0.7s;
-}
-.project-button:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.723);
-}
 #unity-container {
   border-radius: var(--border-radius-box-inner);
 }
@@ -108,19 +109,24 @@
 
 /* Smartphone */
 @media screen and (max-width: 600px) {
-  .project-box {
-    width: 95%;
-  }
-  .project-figure {
-    padding: 10px;
-  }
-  .project-content-box {
-    padding: 5px;
+  .project {
+    &__box {
+      width: 95%;
+    }
+
+    &__figure {
+      padding: 10px;
+    }
+
+    &__content-box {
+      padding: 5px;
+    }
   }
 }
+
 /* Smartphone small */
 @media screen and (max-width: 400px) {
-  .project-figure {
-    padding: 0px;
+  .project__figure {
+    padding: 0;
   }
 }
