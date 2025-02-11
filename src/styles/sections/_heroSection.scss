@@ -1,4 +1,4 @@
-.startscreen-wrapper {
+.hero {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   width: 100%;
   padding: 0px 20px 20px 20px;
 }
-.startscreen-greeting {
+.hero__greeting {
   font-size: clamp(2rem, 8vw, 5rem);
   font-weight: bold;
   background: var(--ln-gradient-primary);
@@ -16,18 +16,18 @@
   -webkit-text-fill-color: transparent;
 }
 
-.startscreen-introduction-box {
+.hero__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 800px;
 }
-.startscreen-description {
+.hero__description {
   font-size: clamp(0.9rem, 2vw, 1.5rem);
   text-align: center;
 }
-.startscreen-name {
+.hero__name {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   margin-top: 20px;
   margin-bottom: 20px;
@@ -39,13 +39,8 @@
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.7s;
 }
-.startscreen-arrow {
-  width: 24px;
-  height: 24px;
-  transition: all 0.7s;
-}
 
-.startscreen-button {
+.hero__button {
   position: relative;
   background: transparent;
   font-size: clamp(0.9rem, 2vw, 1.5rem);
@@ -63,13 +58,7 @@
   }
 }
 
-.startscreen-button-text{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#icon-hello{
+.hero__icon{
   display: inline-block;
   animation: wave 0.5s ease-in-out 2;
 }
