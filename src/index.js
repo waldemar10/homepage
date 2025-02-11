@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import App from "./App";
 import { ProjectsProvider } from "./context/projectsContext";
-import { ProjectSelectionProvider } from "./context/projectSelectionContext";
+import { ProjectGalleryProvider } from "./context/projectGalleryContext";
 import { AboutMeProvider } from "./context/aboutMeContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -11,11 +11,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ProjectsProvider>
-      <ProjectSelectionProvider>
+      <ProjectGalleryProvider>
         <AboutMeProvider>
           <App />
         </AboutMeProvider>
-      </ProjectSelectionProvider>
+      </ProjectGalleryProvider>
     </ProjectsProvider>
   </React.StrictMode>
 );

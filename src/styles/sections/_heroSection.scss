@@ -63,13 +63,13 @@
   animation: wave 0.5s ease-in-out 2;
 }
 @media screen and (max-width: 1000px) {
-  .startscreen-introduction-box {
+  .hero__content {
     width: 90%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .startscreen-introduction-box {
+  .hero__content {
     width: 95%;
   }
 
@@ -77,7 +77,7 @@
 
 @media screen and (max-width: 600px) {
 
-  .startscreen-introduction-box {
+  .hero__content {
     width: 100%;
   }
 

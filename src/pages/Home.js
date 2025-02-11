@@ -3,7 +3,7 @@ import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import Hero from "../components/sections/HeroSection";
 import AboutMe from "../components/sections/AboutMe";
-import ProjectSelection from "../components/sections/ProjectSelection";
+import ProjectGallery from "../components/sections/ProjectGallery";
 import ProjectShowcase from "../components/sections/ProjectShowcase";
 
 function Home() {
@@ -12,7 +12,7 @@ function Home() {
       <Header></Header>
       <Hero />
       <AboutMe />
-      <ProjectSelection />
+      <ProjectGallery />
       <ProjectShowcase />
       <Footer></Footer>
     </>

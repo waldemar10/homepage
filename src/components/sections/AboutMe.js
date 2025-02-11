@@ -4,16 +4,18 @@ import { AboutMeContext } from "../../context/aboutMeContext";
 
 const AboutMe = () => {
   const { refAboutMe } = useContext(AboutMeContext);
+
   return (
-    <div ref={refAboutMe} className="aboutme-wrapper">
-      <span className="aboutme-headline">Leidenschaftlicher Entwickler</span>
-      <div className="aboutme-container">
-        <div className="aboutme-introduction">
+    <section ref={refAboutMe} className="aboutme">
+      <h2 className="aboutme__headline">Leidenschaftlicher Entwickler</h2>
+
+      <div className="aboutme__container">
+        <div className="aboutme__introduction">
           <p>
-            Im Jahr 2019 entdeckte ich erstmals für mich die Welt der
-            Informatik. Anfangs programmierte ich Handelsalgorithmen mit MQL4,
-            mit dem Ziel, positive Renditen mit verschiedenen
-            Handlungsstrategien auf dem Devisenmarkt zu realisieren.
+            Im Jahr 2019 entdeckte ich erstmals für mich die Welt der Informatik.
+            Anfangs programmierte ich Handelsalgorithmen mit MQL4, mit dem Ziel,
+            positive Renditen mit verschiedenen Handlungsstrategien auf dem
+            Devisenmarkt zu realisieren.
           </p>
           <p>
             Mich begeisterte das Programmieren so sehr, dass ich mich entschied,
@@ -29,7 +31,8 @@ const AboutMe = () => {
             Projekten, die Menschen und Unternehmen unterstützen.
           </p>
         </div>
-        <div className="aboutme-skills">
+
+        <div className="aboutme__skills">
           <h3>Fähigkeiten</h3>
           <div>
             <h4>Programmiersprachen</h4>
@@ -62,10 +65,10 @@ const AboutMe = () => {
         </div>
       </div>
 
-      <Socials width={"35px"} height={"35px"} className="aboutme-socials" />
+      <Socials width="35px" height="35px" className="aboutme__socials" />
 
       <div className="line line-delayed" />
-    </div>
+    </section>
   );
 };
 

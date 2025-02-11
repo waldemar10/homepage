@@ -1,12 +1,12 @@
 import React, { useState, useRef, useContext, useEffect } from "react";
 import { useIsMobile } from "../../hooks/useIsMobile";
-import { ProjectSelectionContext } from "../../context/projectSelectionContext";
+import { ProjectGalleryContext } from "../../context/projectGalleryContext";
 import { AboutMeContext } from "../../context/aboutMeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
-  const { refProjectSelection } = useContext(ProjectSelectionContext);
+  const { refProjectGallery } = useContext(ProjectGalleryContext);
   const { refAboutMe } = useContext(AboutMeContext);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
@@ -104,7 +104,7 @@ function Header() {
           {!isMobile ? (
             <nav className="header-nav-box">
               <a className="header-nav" onClick={(e) => navToAnchor(e, refAboutMe)}>Über mich</a>
-              <a className="header-nav" onClick={(e) => navToAnchor(e, refProjectSelection)}>Projekte</a>
+              <a className="header-nav" onClick={(e) => navToAnchor(e, refProjectGallery)}>Projekte</a>
             </nav>
           ) : (
             <>
@@ -125,7 +125,7 @@ function Header() {
               </a>
               <a
                 className="header-nav"
-                onClick={(e) => navToAnchor(e, refProjectSelection)}>
+                onClick={(e) => navToAnchor(e, refProjectGallery)}>
                 Projekte
               </a>
               {/*  <a href="#/contact" target="_blank">

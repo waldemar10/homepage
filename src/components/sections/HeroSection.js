@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import { ProjectSelectionContext } from "../../context/projectSelectionContext";
+import { ProjectGalleryContext } from "../../context/projectGalleryContext";
 
 function HeroSection() {
-  const { refProjectSelection } = useContext(ProjectSelectionContext);
+  const { refProjectGallery } = useContext(ProjectGalleryContext);
 
   const handleScrollToProjects = (e) => {
     e.preventDefault();
-    refProjectSelection.current.scrollIntoView({ behavior: "smooth" });
+    refProjectGallery.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
