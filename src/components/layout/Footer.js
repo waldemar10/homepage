@@ -31,7 +31,7 @@ function Footer() {
             href="https://github.com/waldemar10/homepage"
             target="_blank"
             rel="noreferrer">
-            <FontAwesomeIcon class="footer__icon" icon={faCode} />
+            <FontAwesomeIcon className="footer__icon" icon={faCode} />
             Quellcode von der Website
           </a>
         </div>
@@ -41,7 +41,7 @@ function Footer() {
         href="#top"
         rel="noreferrer"
         onClick={(e) => navToProjectSelection(e)}>
-        <FontAwesomeIcon class="footer__icon-up" icon={faChevronUp} />
+        <FontAwesomeIcon className="footer__icon-up" icon={faChevronUp} />
       </button>
     </div>
   );

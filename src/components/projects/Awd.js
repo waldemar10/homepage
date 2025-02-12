@@ -35,53 +35,79 @@ function Awd() {
           </p>
           <div>
             <figure className="project__figure">
-              <img src={vocabel} alt="Beschriftung" />
+              <img src={vocabel} alt="Vokabeln" />
               <figcaption className="project__figcaption">
-                Die Möglichkeit Vokabeln zu lernen
+                Vokabeln lernen mit LinguPingu
               </figcaption>
             </figure>
           </div>
           <h3>Grammatikübungen</h3>
+          <p>Die Grammatik ist in zwei Kategorien unterteilt:</p>
+          <ul>
+            <li>
+              <b>Zeitformen:</b> Hier lernt der Benutzer verschiedene Zeitformen
+              kennen und vertieft sein Verständnis für die korrekte Anwendung.
+            </li>
+            <li>
+              <b>Tägliches Leben:</b> In dieser Kategorie geht es um Situationen
+              und Ausdrücke aus dem Alltag. Der Fokus liegt darauf,
+              grammatikalisch korrekte Sätze für den täglichen Umgang zu
+              erlernen.
+            </li>
+          </ul>
+
           <p>
-            Die Grammatik ist in zwei Kategorien aufgeteilt. Es gibt zum einen
-            die Kategorie Zeitformen, dort kann der Benutzer jede Zeitform
-            lernen. Zum anderen gibt es die Kategorie des täglichen Lebens, in
-            der der Nutzer Situationen und Ausdrücke aus dem Alltag erlernt.
-            Hierbei steht vor allem die Anwendung grammatikalisch korrekter
-            Sätze des täglichen Umgangs im Vordergrund. Bei einem Klick auf eine
-            Lektion erscheint ein erklärender Text zur Grammatik. Anschließend
-            kann der Benutzer die Übung starten, bei der er den dargestellten
-            Satz in die zu lernende Sprache übersetzen muss. Dort wählt er aus
-            vorgegebenen Wörtern. Die Übung enthält auch falsche Wörter, um die
-            Schwierigkeit zu erhöhen. Um eine Antwort zu ändern oder einen
-            Tippfehler zu korrigieren, kann der Benutzer einfach auf das
-            entsprechende Wort klicken und es erneut auswählen. Nach der
-            Bestätigung wird die Antwort überprüft. Wenn die Antwort falsch ist,
-            wird die Karte wackeln und ein trauriger Pinguin erscheint. Die
-            Antwort des Benutzers wird gelöscht und er muss den Satz erneut
-            bilden. Wenn die Antwort richtig ist, wird die Karte grün umrandet
-            und ein fröhlicher Pinguin erscheint. Die neue Aufgabe wird
-            anschließend angezeigt und dies geschieht so lange, bis alle
-            Aufgaben für die jeweilige Lektion erledigt sind. Danach erscheint
-            ein Feld, um den Abschluss der Lektion zu bestätigen. Der Benutzer
-            kann nun zur Grammatik-Seite zurückkehren. Die abgeschlossene
-            Lektion wird mit grüner Hintergrundfarbe hervorgehoben. Jede
-            abgeschlossene Lektion wird in der Datenbank gespeichert und ist für
-            jeden Benutzer individuell.
+            Bei einem Klick auf eine Lektion wird ein erklärender Grammatiktext
+            angezeigt. Anschließend kann der Benutzer die Übung starten, bei der
+            er einen Satz in die zu lernende Sprache übersetzen muss. Dabei
+            wählt er aus vorgegebenen Wörtern – einige davon sind falsch, um die
+            Herausforderung zu erhöhen.
+          </p>
+
+          <p>
+            <b>Interaktive Features:</b>
+          </p>
+          <ul>
+            <li>
+              Der Benutzer kann auf ein Wort klicken, um es zu ändern oder
+              Tippfehler zu korrigieren.
+            </li>
+            <li>
+              Nach der Bestätigung wird die Antwort überprüft:
+              <ul>
+                <li>
+                  <b>Falsche Antwort:</b> Die Karte wackelt, und ein trauriger
+                  Pinguin erscheint. Der Benutzer muss den Satz erneut bilden.
+                </li>
+                <li>
+                  <b>Richtige Antwort:</b> Die Karte wird grün umrandet, und ein
+                  fröhlicher Pinguin erscheint. Die nächste Aufgabe wird
+                  angezeigt.
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <p>
+            Dieser Prozess wiederholt sich, bis alle Aufgaben der Lektion
+            abgeschlossen sind. Danach erscheint ein Bestätigungsfeld, und der
+            Benutzer kehrt zur Grammatik-Seite zurück. Abgeschlossene Lektionen
+            werden mit einer grünen Hintergrundfarbe hervorgehoben und
+            individuell in der Datenbank gespeichert.
           </p>
         </div>
 
         <div className="project__image-box">
           <figure className="project__figure" style={{ margin: "5px" }}>
-            <img src={grammar} alt="Beschriftung" />
+            <img src={grammar} alt="Grammatik" />
             <figcaption className="project__figcaption">
-              Grammatikübungen
+              Grammatik
             </figcaption>
           </figure>
           <figure className="project__figure" style={{ margin: "5px" }}>
-            <img src={settings} alt="Beschriftung" />
+            <img src={settings} alt="Konto" />
             <figcaption className="project__figcaption">
-              Einstellungen für das Konto des Benutzers
+              Kontoeinstellungen
             </figcaption>
           </figure>
         </div>
