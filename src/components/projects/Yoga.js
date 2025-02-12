@@ -66,11 +66,11 @@ function Yoga() {
             <br></br>
             <h3>Logo</h3>
             <p>
-              Um das Branding abzurunden, wurde ein passendes Logo gestaltet, das
-              aus Kreiselementen bestand. Das Logo sollte sowohl sportlich als
-              auch spirituell wirken, um die Verbindung zwischen körperlicher
-              Bewegung und geistigem Wohlbefinden zu unterstreichen, was ideal
-              zu Yoga passt.
+              Um das Branding abzurunden, wurde ein passendes Logo gestaltet,
+              das aus Kreiselementen bestand. Das Logo sollte sowohl sportlich
+              als auch spirituell wirken, um die Verbindung zwischen
+              körperlicher Bewegung und geistigem Wohlbefinden zu
+              unterstreichen, was ideal zu Yoga passt.
             </p>
             <svg
               id="yoga-logo"
@@ -123,10 +123,12 @@ function Yoga() {
               verschiedene Bildschirmgrößen und Geräte zu optimieren, wurde das
               Design responsiv gestaltet.
             </p>
-            <p className="notice">
-              📢 Hinweis: Diese Website wurde seit der Studienabgabe umfassend
-              überarbeitet und entspricht nicht mehr der ursprünglichen Version.
-              Sie wurde optimiert und erweitert. Neue Features:
+            <div className="notice">
+              <p>
+                📢 Hinweis: Diese Website wurde seit der Studienabgabe umfassend
+                überarbeitet und entspricht nicht mehr der ursprünglichen
+                Version. Sie wurde optimiert und erweitert. Neue Features:
+              </p>
               <ul>
                 <li>
                   Implementierung eines Backends mit PHP nach dem MVC-Pattern.
@@ -137,8 +139,10 @@ function Yoga() {
                 </li>
                 <li>Komplett neues Design.</li>
               </ul>
-              <span className="notice__date">Stand 2025</span>
-            </p>
+              <p className="notice__date">
+                Stand 2025
+              </p>
+            </div>
           </div>
         </div>
       </div>
