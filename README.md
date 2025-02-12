@@ -1,8 +1,7 @@
 ## Hallo :wave:
 
 Hier befindet sich der Quellcode für meine persönliche Homepage (www.waljus.de).
-Die Website wurde mit dem Frontend-Framework React.js erstellt und besteht momentan nur aus einer Client-Anwendung.
-Dementsprechend gibt es keinen Backend-Server. Die Website wird in einem Webhosting-Unternehmen in Deutschland bereitgestellt.
+Die Website wurde mit dem Frontend-Framework React.js erstellt und besteht momentan nur aus einer Client-Anwendung. Die Website wird in einem Webhosting-Unternehmen in Deutschland bereitgestellt.
 <br/>
 Die Seite dient als Portfolio, um meine Fähigkeiten und Projekte vorzustellen, und wird regelmäßig erweitert :computer:
 
@@ -42,6 +41,6 @@ Die Seite dient als Portfolio, um meine Fähigkeiten und Projekte vorzustellen, 
 
 ### Zukünftige Features
 - Backend-Integration
-- Mehrsprachigkeit (Englisch)
+- Mehrsprachigkeit (Englisch) -> soon
 - Kontaktformular
 - Barrierefreiheit: Optimierung für Screenreader und Tastaturnavigation.
