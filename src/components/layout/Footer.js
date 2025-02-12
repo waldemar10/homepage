@@ -7,11 +7,11 @@ import { faCode, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 function Footer() {
   const [year] = useState(new Date().getFullYear());
 
-  const { refProjectSelection } = useContext(ProjectGalleryContext);
+  const { refProjectGallery } = useContext(ProjectGalleryContext);
 
   const navToProjectSelection = (e) => {
     e.preventDefault();
-    refProjectSelection.current.scrollIntoView({ behavior: "smooth" });
+    refProjectGallery.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
-  const { refProjectSelection } = useContext(ProjectGalleryContext);
+  const { refProjectGallery } = useContext(ProjectGalleryContext);
   const { refAboutMe } = useContext(AboutMeContext);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
@@ -102,7 +102,7 @@ function Header() {
           {!isMobile ? (
             <nav className="header__nav-box">
               <a className="header__nav" onClick={(e) => navToAnchor(e, refAboutMe)}>Über mich</a>
-              <a className="header__nav" onClick={(e) => navToAnchor(e, refProjectSelection)}>Projekte</a>
+              <a className="header__nav" onClick={(e) => navToAnchor(e, refProjectGallery)}>Projekte</a>
             </nav>
           ) : (
             <>
@@ -118,7 +118,7 @@ function Header() {
         {isMobileMenuOpen && (  
           <nav ref={navBoxRef} className="header__nav-box-mobile">
             <a className="header__nav" onClick={(e) => navToAnchor(e, refAboutMe)}>Über mich</a>
-            <a className="header__nav" onClick={(e) => navToAnchor(e, refProjectSelection)}>Projekte</a>
+            <a className="header__nav" onClick={(e) => navToAnchor(e, refProjectGallery)}>Projekte</a>
           </nav>
         )}
       </div>
