@@ -2,7 +2,7 @@ import React from "react";
 
 import moodboard from "../../images/YogaWebsite/Moodboard.jpg";
 import persona from "../../images/YogaWebsite/Persona.jpg";
-
+import database from "../../images/YogaWebsite/Datenbank.png";
 function Yoga() {
   return (
     <>
@@ -123,6 +123,18 @@ function Yoga() {
               verschiedene Bildschirmgrößen und Geräte zu optimieren, wurde das
               Design responsiv gestaltet.
             </p>
+            <h3>Datenbank</h3>
+            <p>
+              Zur Speicherung von Benutzerdaten wurde eine MySQL-Datenbank
+              verwendet. Die Datenbank enthält Informationen zu den Benutzern
+              sowie zu den Kursen, die auf der Website angeboten werden.
+            </p>
+            <figure className="project__figure">
+              <img src={database}></img>
+              <figcaption>
+                Vollständige Datenbankstruktur
+              </figcaption>
+            </figure>
             <div className="notice">
               <p>
                 📢 Hinweis: Diese Website wurde seit der Studienabgabe umfassend
