@@ -4,9 +4,10 @@
 // ** Base **
 @import "base/reset";
 @import "base/typography";
-@import "base/mediaqueries";
 
 // ** Components **
+@import "components/circle";
+@import "components/arrows";
 @import 'components/notice';
 @import "components/navbar";
 @import "components/socials";
@@ -28,4 +29,5 @@
 
 // ** Utilities **
 @import "utilities/animations";
+@import "utilities/placeholder";
 

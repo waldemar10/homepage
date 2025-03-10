@@ -5,81 +5,91 @@
 }
 
 .project-gallery {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 100px 0;
-  margin: 50px;
-
-  .project-gallery__heading {
+  margin: 50px 20px 100px 20px;
+  @media screen and (max-width: 400px) {
+    margin: 20px 0px;
+    
+  }
+  &__heading {
+    color: var(--font-color-dark);
     margin-bottom: 50px;
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(2.5rem, 1vw, 5rem);
+  
   }
 
-  .project-gallery__grid {
+  &__grid {
     display: flex;
-    gap: 1em;
-    width: 100%;
+    gap: 2em;
+    width: 100%; 
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
   }
 
-  .project-gallery__item {
+  &__item {
+    user-select: none;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--font-color-light);
+    background-color: var(--primary-color);
+    box-shadow: 0px 0px 5px 0px var(--shadow-color);
     width: calc(20vw + 150px);
     height: calc(15vw + 120px);
-    max-width: 300px;
-    max-height: 200px;
+    max-width: 350px;
+    max-height: 170px;
     min-width: 100px;
     min-height: 50px;
     border-radius: var(--border-radius-box-outer);
-    border: 2px solid var(--border-color);
-    transition: all 0.5s ease;
-    cursor: pointer;
-
-    &.selected {
-      background-color: var(--box-bg-color-selected);
-    }
-
+    transition: var(--transition);
+    
     &:hover {
+      cursor: pointer;
       transform: scale(1.1);
     }
 
     > img {
-      width: 100%;
+      max-width: 130px;
+  
       height: 100%;
       object-fit: cover;
       border-radius: var(--border-radius-box-outer);
     }
-
-    > span {
-      font-weight: bold;
-      position: absolute;
-      color: var(--font-color-light);
-      padding: calc(5px + 0.5rem);
-      text-shadow: 2px 2px 5px #000000;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      user-select: none;
-      text-align: center;
-    }
+    
+  
   }
-}
+  &__title{
+    user-select: none;
+    font-weight: bold;
+    color: var(--font-color-light);
+    font-size: 1.25rem;
+  }
+  &__box{
+    padding: 10px;
+  }
+  &__arrows{
+    position: absolute;
+    top:0;
+    left:0;
+  }
 
 @media screen and (max-width: 768px) {
-  .project-gallery__grid {
+  &__grid {
     flex-direction: column;
-    gap: 2em;
+    gap: 1em;
+    width: unset;
+    margin: 20px;
   }
 
-  .project-gallery__item {
+  &__item {
     width: 100%;
-    height: auto;
   }
+}
 }

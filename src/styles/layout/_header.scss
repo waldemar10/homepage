@@ -1,30 +1,52 @@
-:root {
-  --header-transition: all 0.5s ease-in-out;
-}
-
 .header {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: var(--transition);
+  @media screen and (max-width: 768px) {
+    position: fixed;
+  }
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--bg-color-dark);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    @media screen and (max-width: 768px) {
+      background-color: unset;
+    }
+  }
   &__content {
+    transition: var(--transition);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 1200px;
     width: 100%;
-    z-index: 99;
-    background-color: transparent;
     border-color: transparent;
-    margin-bottom: 100px;
-  }
-
-  &__placeholder {
-    display: none;
   }
 
   &__content-box {
+    background-color: var(--bg-color-dark);
     display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+    @media screen and (max-width: 768px) {
+      box-shadow: 0px 0px 10px 0px var(--shadow-color);
+    }
   }
 
   &__logo-wrapper {
@@ -32,12 +54,28 @@
     align-items: center;
     padding: 10px;
     width: 100%;
+    @media screen and (max-width: 400px) {
+      width: 80%;
+    }
+  }
+  &__logo-text {
+    color: var(--font-color-light);
+    font-family: "Jura", serif;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 800;
+    margin-left: 10px;
+    max-width: 250px;
+    width: 100%;
+    transition: var(--transition);
+    &--light {
+      color: var(--font-color-light);
+    }
   }
 
   &__logo-box {
     display: flex;
     align-items: center;
-    
+
     > a {
       padding: 0px;
       margin: 0px;
@@ -45,144 +83,102 @@
   }
 
   &__logo {
-    width: 35px;
-    height: 35px;
-    transition: var(--header-transition);
-    
-    &:hover {
-      transition: var(--header-transition);
+    width: 45px;
+    height: 45px;
+    transition: var(--transition);
+    @media screen and (max-width: 400px) {
+      width: 35px;
+      height: 35px;
     }
-  }
-
-  &__logo .cls-1,
-  &__logo .cls-2 {
-    transform: translateX(0px);
-    transition: var(--header-transition);
-  }
-
-  &__logo:hover .cls-1 {
-    transform: translateX(-50px);
-  }
-
-  &__logo:hover .cls-2 {
-    transform: translateX(50px);
-  }
-
-  &__logo-wrapper span {
-    font-size: clamp(0.9rem, 2vw, 1.5rem);
-    font-weight: 200;
-    margin-left: 10px;
+    &:hover {
+      cursor: pointer;
+      scale: 1.1;
+      transition: var(--transition);
+    }
   }
 
   &__nav-box {
     display: flex;
     > a {
+      font-family: "Jura", serif;
       font-size: clamp(0.9rem, 2vw, 1.5rem);
-      font-weight: smaller;
       border-radius: var(--border-radius-box-outer);
       background-color: transparent;
       padding: 10px;
       margin: 10px;
-      color: var(--link-color);
+      color: var(--font-color-light);
       position: relative;
-      transition: all 0.5s ease;
+      transition: var(--transition);
       text-decoration: none;
       text-wrap: nowrap;
 
       &:hover {
         cursor: pointer;
-        background-color: rgba(72, 72, 72, 0.63);
-      }
-    }
-  }
-
-  
-
-  @media screen and (max-width: 768px) {
-    .body-no-scroll {
-      overflow-y: hidden;
-      scrollbar-width: 0px;
-    }
-
-    &__placeholder {
-      display: block;
-      height: 125px;
-    }
-
-    &__content {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      transition: all 1s ease;
-    }
-
-    &__content-background {
-      background-color: var(--bg-color-header);
-      backdrop-filter: blur(10px);
-    }
-
-    &__content-mobile-scroll {
-      background-color: var(--bg-color-header);
-      border-bottom: 1px solid var(--border-color);
-      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(10px);
-    }
-
-    &__nav-box-mobile {
-      opacity: 1;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-direction: column;
-      width: 100%;
-      height: 100vh;
-      overflow-y: hidden;
-      animation: fadeIn 0.5s ease forwards;
-
-      .header__nav {
-        font-size: var(--fs-300);
-        padding: 20px;
-        width: 100%;
-        border-bottom: 1px solid var(--border-color);
+        background-color: var(--secondary-color);
         color: var(--font-color-light);
-        text-decoration: none;
-        
       }
-      .header__nav:nth-child(1) {
-
-        border-top: 1px solid var(--border-color);
-      }
-      
-    }
-
-    &__nav-box-mobile-hidden {
-      animation: fadeOut 0.5s ease forwards;
     }
   }
 
-  @media screen and (max-width: 400px) {
-    &__logo-wrapper {
-      width: 80%;
-    }
-
-    &__logo-wrapper span {
-      font-size: small;
-    }
+  &__nav-box-mobile {
+    background-color: var(--bg-color-dark);
+    opacity: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    animation: fadeIn 0.5s ease forwards;
   }
+  &__nav {
+    font-size: var(--fs-300);
+    padding: 20px;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--font-color-light);
+    text-decoration: none;
+  }
+  &__nav:nth-child(1) {
+    border-top: 1px solid var(--border-color);
+  }
+  &__nav-box-mobile-hidden {
+    animation: fadeOut 0.5s ease forwards;
+  }
+
 }
 
+.body-no-scroll {
+  overflow-y: hidden;
+  scrollbar-width: 0px;
+}
 .menu-icon {
   position: fixed;
   right: 20px;
   width: 30px;
   height: 30px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  &.fa-bars {
-    transform: rotate(0deg);
-  }
+  color: var(--font-color-light);
+  transition: var(--transition);
+}
 
-  &.fa-close {
+.fa-bars {
+  opacity: 1;
+  transform: rotate(0deg);
+
+  &--hidden {
+    opacity: 0;
+    user-select: none;
+    transform: rotate(180deg);
+  }
+}
+
+.fa-close {
+  opacity: 0;
+  user-select: none;
+  &--active {
+    opacity: 1;
+    user-select: all;
     transform: rotate(180deg);
   }
 }

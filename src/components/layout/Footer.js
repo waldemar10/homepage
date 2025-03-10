@@ -17,9 +17,9 @@ function Footer() {
   return (
     <div className="footer__wrapper" id="footer">
       <div className="footer__content">
-        <div className="footer__socials">
-          <Socials width={"20px"} height={"20px"} />
-        </div>
+       
+          <Socials width={"25px"} height={"25px"} color={"var(--font-color-dark"} />
+     
         <div className="footer__copyright">
           Copyright © 2023 - {year} Waldemar Justus
         </div>
@@ -31,7 +31,6 @@ function Footer() {
             href="https://github.com/waldemar10/homepage"
             target="_blank"
             rel="noreferrer">
-            <FontAwesomeIcon className="footer__icon" icon={faCode} />
             Quellcode von der Website
           </a>
         </div>

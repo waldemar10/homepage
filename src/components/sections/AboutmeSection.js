@@ -1,74 +1,215 @@
-import React, { useContext } from "react";
-import Socials from "../common/Socials";
+import React, { useContext,useEffect,useState, useRef } from "react";
 import { AboutMeContext } from "../../context/aboutMeContext";
-
+import Arrow from "../common/Arrows";
+import Circle from "../common/Circles";
+import mql4 from "../../images/MQL4.png";
+import laptop from "../../images/Laptop.jpg";
 const AboutMe = () => {
   const { refAboutMe } = useContext(AboutMeContext);
+  const refSeperator = useRef(null);
+  const [dimensions, setDimensions] = useState({ width: 1200, height: 1200 });
+ useEffect(() => {
+     const observer = new ResizeObserver((entries) => {
+       for (let entry of entries) {
+         setDimensions({
+           width: entry.contentRect.width,
+           height: entry.contentRect.height,
+         });
+       }
+     });
+ 
+     if (refSeperator.current) {
+       observer.observe(refSeperator.current);
+     }
+ 
+     return () => {
+       observer.disconnect();
+     };
+   }, []);
 
+  const Seperator = () => {
+    return (
+      <div  className="aboutme__arrows-seperator">
+        <svg
+          width="1200px"
+          height="100px"
+          viewBox={`0 0 ${1200} ${100}`}
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <Arrow
+            x1={dimensions.width*-0.1}
+            y1={dimensions.height*0.55}
+            length={dimensions.width * 0.60}
+            withCircles
+            
+            color="var(--font-color-light)"
+            strokeWidth={2}
+            animation
+          />
+          <Arrow
+            x1={dimensions.width*-0.1}
+            y1={dimensions.height*0.15}
+            length={dimensions.width * 0.25}
+            withCircles
+            
+            color="var(--font-color-light)"
+            strokeWidth={2}
+            animation
+          />
+          <Arrow
+            x1={dimensions.width*-0.1}
+            y1={dimensions.height*0.35}
+            length={dimensions.width * 0.4}
+            withCircles
+            
+            color="var(--font-color-dark)"
+            strokeWidth={2}
+            animation
+          />
+          <Arrow
+            x1={dimensions.width*0.5}
+            y1={dimensions.height*0.1}
+            length={dimensions.width * 0.3}
+            withCircles
+            
+            color="var(--font-color-dark)"
+            strokeWidth={2}
+            animation
+          />
+          <Arrow
+            x1={dimensions.width*0.9}
+            y1={dimensions.height*0.55}
+            
+            length={dimensions.width * 0.5}
+            withCircles
+            color="var(--font-color-light)"
+            strokeWidth={2}
+          />
+          <Arrow
+            x1={dimensions.width*0.75}
+            y1={dimensions.height*0.85}
+            
+            length={dimensions.width * 0.5}
+            withArrow
+            color="var(--font-color-dark)"
+            strokeWidth={2}
+          />
+          <Arrow
+            x1={dimensions.width*-0.1}
+            y1={dimensions.height*0.76}
+            length={dimensions.width * 0.25}
+            withArrow
+            color="var(--font-color-light)"
+            strokeWidth={2}
+            dashed
+          />
+       
+          <Circle
+            x1={dimensions.width*0.6}
+            y1={dimensions.height*0.25}
+            radius={dimensions.width * 0.025}
+            color="var(--font-color-dark)"
+            dashed
+            strokeWidth={2}
+            animation
+          />
+        </svg>
+      </div>
+    );
+  };
   return (
+    <>
     <section ref={refAboutMe} className="aboutme">
-      <h2 className="aboutme__headline">Leidenschaftlicher Entwickler</h2>
+      <h2 className="aboutme__headline">
+      Herzblut. <span className="aboutme__headline--red">Leidenschaft. </span>
+        Entwicklung.
+      </h2>
 
       <div className="aboutme__container">
         <div className="aboutme__introduction">
+          <div className="aboutme__text">
           <p>
-            Im Jahr 2019 entdeckte ich erstmals für mich die Welt der Informatik.
-            Anfangs programmierte ich Handelsalgorithmen mit MQL4, mit dem Ziel,
-            positive Renditen mit verschiedenen Handlungsstrategien auf dem
-            Devisenmarkt zu realisieren.
+            Im Jahr 2019 entdeckte ich meine Begeisterung für die Welt der
+            Informatik. Mein Einstieg in die Programmierung begann mit
+            Handelsalgorithmen in MQL4, mit dem Ziel, verschiedene
+            Handelsstrategien auf dem Devisenmarkt zu entwickeln, um damit positive Renditen zu erzielen.
+            Dabei faszinierte mich nicht nur die
+            technische Umsetzung, sondern auch die Herausforderung, Algorithmen
+            effizient und präzise zu gestalten.
           </p>
+          <img className="aboutme__image" src={mql4} ></img>
+          </div>
           <p>
-            Mich begeisterte das Programmieren so sehr, dass ich mich entschied,
-            ein Informatik-Studium zu starten. Während meines Studiums kam ich
-            mit verschiedenen Programmiersprachen in Kontakt und lernte die
-            Grundlagen der Softwareentwicklung kennen. Auch Teamarbeit und
-            Projektmanagement waren wichtige Bestandteile meines Studiums.
+            Diese Faszination für das Programmieren motivierte mich dazu, ein
+            Informatikstudium zu beginnen. Während meines Studiums erweiterte
+            ich mein Wissen in verschiedenen Programmiersprachen und vertiefte
+            mich in die Softwareentwicklung, von der objektorientierten
+            Programmierung bis hin zur Entwicklung komplexer Webanwendungen.
+            Neben der technischen Expertise lernte ich, wie wichtig Teamarbeit,
+            agile Methoden und strukturiertes Projektmanagement für die
+            erfolgreiche Umsetzung von Softwareprojekten sind.
           </p>
+          <div className="aboutme__text">
+          <img className="aboutme__image" src={laptop} ></img>
           <p>
-            Mein Ziel ist es, mein Wissen kontinuierlich zu erweitern und mit
-            meiner Arbeit einen positiven Beitrag zu leisten, sei es durch die
-            Entwicklung innovativer Softwarelösungen oder die Zusammenarbeit an
-            Projekten, die Menschen und Unternehmen unterstützen.
+            Mein Ziel ist es, mich kontinuierlich weiterzuentwickeln und
+            innovative Softwarelösungen zu gestalten, die einen echten Mehrwert
+            bieten. Ich lege besonderen Wert auf sauberen, gut strukturierten
+            Code und nutze moderne Technologien, um skalierbare und effiziente
+            Anwendungen zu entwickeln. Dabei begeistert mich nicht nur die
+            Technik selbst, sondern auch die Möglichkeit, mit meiner Arbeit
+            Menschen und Unternehmen in ihrer digitalen Transformation zu
+            unterstützen und nachhaltige Lösungen zu schaffen.
           </p>
-        </div>
-
-        <div className="aboutme__skills">
-          <h3>Fähigkeiten</h3>
-          <div>
-            <h4>Programmiersprachen</h4>
-            <p>Java, JavaScript, Kotlin, PHP, Python</p>
-          </div>
-          <div>
-            <h4>Frontend</h4>
-            <p>Angular, Bootstrap, CSS (SCSS), HTML, React</p>
-          </div>
-          <div>
-            <h4>Backend</h4>
-            <p>Express, Node.js</p>
-          </div>
-          <div>
-            <h4>Datenbanken</h4>
-            <p>MongoDB, MySQL</p>
-          </div>
-          <div>
-            <h4>Tools</h4>
-            <p>Git, Visual Studio Code</p>
-          </div>
-          <div>
-            <h4>Design</h4>
-            <p>Adobe XD, Adobe Illustrator, Figma</p>
-          </div>
-          <div>
-            <h4>Projektmanagement</h4>
-            <p>Trello</p>
+          
           </div>
         </div>
+        
+        <section className="aboutme__skills">
+          <h2 className="aboutme__headline">
+            Meine <span className="aboutme__headline--red">Fähigkeiten</span>
+          </h2>
+          <ul className="aboutme__skills-list">
+            <li className="aboutme__skills-item">
+              <strong>Programmiersprachen</strong>
+              <span>Java, JavaScript, Kotlin, PHP, Python</span>
+            </li>
+            <li className="aboutme__skills-item">
+              <strong>Frontend</strong>
+              <span>Angular, Bootstrap, CSS (SCSS), HTML, React</span>
+            </li>
+            <li className="aboutme__skills-item">
+              <strong>Backend</strong>
+              <span>Express, Node.js</span>
+            </li>
+            <li className="aboutme__skills-item">
+              <strong>Datenbanken</strong>
+              <span>MongoDB, MySQL</span>
+            </li>
+            <li className="aboutme__skills-item">
+              <strong>Tools</strong>
+              <span>
+                Git, IntelliJ, Unity, Visual Studio, Visual Studio Code
+              </span>
+            </li>
+            <li className="aboutme__skills-item">
+              <strong>Design</strong>
+              <span>Adobe XD, Adobe Illustrator, Figma</span>
+            </li>
+            <li className="aboutme__skills-item">
+              <strong>Projektmanagement</strong>
+              <span>Jira, Kanban, MS Teams, Trello</span>
+            </li>
+          </ul>
+        </section>
       </div>
-
-      <Socials width="35px" height="35px" className="aboutme__socials" />
-
-      <div className="line line-delayed" />
+      
+      
     </section>
+    <div ref={refSeperator}  className="aboutme__seperator">
+    <Seperator />
+    </div>
+    </>
   );
 };
 

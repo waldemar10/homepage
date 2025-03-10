@@ -5,6 +5,8 @@ import { AboutMeContext } from "../../context/aboutMeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
+import Socials from "../common/Socials";
+import Logo from "../../images/Logo.svg";
 function Header() {
   const { refProjectGallery } = useContext(ProjectGalleryContext);
   const { refAboutMe } = useContext(AboutMeContext);
@@ -12,36 +14,56 @@ function Header() {
   const isMobile = useIsMobile();
   const navBoxRef = useRef(null);
 
+  // Set placeholder height to header height
   useEffect(() => {
-    if (!isMobile) return;
-    const headerContent = document.querySelector(".header__content");
+    function updateNavBoxHeight() {
+      let placeholder = document.querySelector(".placeholder__header");
+      let header = document.querySelector(".header");
+      let headerHeight = header.getBoundingClientRect().height;
 
-    const handleScroll = () => {
-      if (window.scrollY === 0 && !isMobileMenuOpen) {
-        headerContent.classList.remove("header__content-background");
-      } else {
-        headerContent.classList.add("header__content-background");
+      if (!placeholder) {
+        console.error("Placeholder not found");
+        return;
       }
-    };
 
-    window.addEventListener("scroll", handleScroll);
+      placeholder.style.height = `${headerHeight}px`;
+    }
+
+    updateNavBoxHeight();
+    window.addEventListener("resize", updateNavBoxHeight);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", updateNavBoxHeight);
     };
-  }, [isMobile, isMobileMenuOpen]);
+  }, []);
 
   const openMobileMenu = () => {
+    const faClose = document.querySelector(".fa-close");
+    const faBars = document.querySelector(".fa-bars");
+    if (!faClose || !faBars) return;
     setIsMobileMenuOpen(true);
     document.body.classList.add("body-no-scroll");
-    document.querySelector(".header__content").classList.add("header__content-background");
+    faClose.classList.add("fa-close--active");
+    faBars.classList.add("fa-bars--hidden");
   };
 
   const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-    document.body.classList.remove("body-no-scroll");
-    if (window.scrollY === 0) {
-      document.querySelector(".header__content").classList.remove("header__content-background");
+    const faClose = document.querySelector(".fa-close");
+    const faBars = document.querySelector(".fa-bars");
+    const navBox = document.querySelector(".header__nav-box-mobile");
+
+    if (!navBox || !faClose || !faBars) return;
+
+    navBox.classList.add("header__nav-box-mobile-hidden");
+    faClose.classList.remove("fa-close--active");
+    faBars.classList.remove("fa-bars--hidden");
+    function handleAnimationEnd() {
+      setIsMobileMenuOpen(false);
+      document.body.classList.remove("body-no-scroll");
+
+      navBox.removeEventListener("animationend", handleAnimationEnd);
     }
+
+    navBox.addEventListener("animationend", handleAnimationEnd);
   };
 
   const navToAnchor = (e, ref) => {
@@ -53,8 +75,11 @@ function Header() {
       return;
     }
 
-    const headerHeight = document.querySelector(".header__content-box")?.getBoundingClientRect().height || 0;
-    const offsetPosition = ref.current.getBoundingClientRect().top + window.scrollY - headerHeight;
+    const headerHeight =
+      document.querySelector(".header__content-box")?.getBoundingClientRect()
+        .height || 0;
+    const offsetPosition =
+      ref.current.getBoundingClientRect().top + window.scrollY - headerHeight;
     window.scrollTo({
       top: offsetPosition,
       behavior: "smooth",
@@ -64,64 +89,70 @@ function Header() {
 
   return (
     <>
-      <div className="header__placeholder" />
-      <div className="header__content">
-        <div className="header__content-box">
-          <div className="header__logo-wrapper">
-            <a href="/" className="header__logo-box">
-              <svg
-                className="header__logo"
-                id="Ebene1"
-                viewBox="0 0 1017.86 796.07">
-                <defs>
-                  <linearGradient
-                    id="gradient-primary"
-                    x1="0%"
-                    y1="0%"
-                    x2="0%"
-                    y2="100%">
-                    <stop offset="0%" stopColor="var(--primary-color)" />
-                    <stop offset="100%" stopColor="#5629f6" />
-                  </linearGradient>
-                </defs>
-                <path
-                  fill="url(#gradient-primary)"
-                  className="cls-2"
-                  d="M376.08,3.46L16.51,363.03c-22.01,22.01-22.01,57.71,0,79.72l349.85,349.85c7.4,7.4,20.04,2.16,20.04-8.3v-126.92c0-32.29-12.83-63.25-35.66-86.08l-159.51-159.51,169.22-169.22c22.83-22.83,35.66-53.8,35.66-86.08V11.76c0-10.46-12.65-15.7-20.04-8.3Z"
-                />
-                <path
-                  fill="url(#gradient-primary)"
-                  className="cls-1"
-                  d="M641.77,3.46l359.57,359.57c22.01,22.01,22.01,57.71,0,79.72l-349.85,349.85c-7.4,7.4-20.04,2.16-20.04-8.3v-126.92c0-32.29,12.83-63.25,35.66-86.08l159.51-159.51-169.22-169.22c-22.83-22.83-35.66-53.8-35.66-86.08V11.76c0-10.46,12.65-15.7,20.04-8.3Z"
-                />
-              </svg>
-            </a>
-            <span>Waldemar Justus</span>
-          </div>
+      <div className="placeholder__header" />
 
-          {!isMobile ? (
-            <nav className="header__nav-box">
-              <a className="header__nav" onClick={(e) => navToAnchor(e, refAboutMe)}>Über mich</a>
-              <a className="header__nav" onClick={(e) => navToAnchor(e, refProjectGallery)}>Projekte</a>
+      <header className="header">
+        <div className="header__background"> </div>
+        <div className="header__content">
+          <div className="header__content-box">
+            <div className="header__logo-wrapper">
+              <a href="/" className="header__logo-box">
+                <img src={Logo} alt="Logo" className="header__logo" />
+              </a>
+              <span className="header__logo-text">Waldemar Justus</span>
+            </div>
+
+            {!isMobile ? (
+              <nav className="header__nav-box">
+                <a onClick={(e) => navToAnchor(e, refAboutMe)}>Über mich</a>
+                <a onClick={(e) => navToAnchor(e, refProjectGallery)}>
+                  Projekte
+                </a>
+              </nav>
+            ) : (
+              <>
+                <FontAwesomeIcon
+                  id="nav-mobile-menu"
+                  className="menu-icon fa-bars"
+                  icon={faBars}
+                  onClick={() =>
+                    isMobileMenuOpen ? closeMobileMenu() : openMobileMenu()
+                  }
+                />
+                <FontAwesomeIcon
+                  id="nav-mobile-menu"
+                  className="menu-icon fa-close"
+                  icon={faClose}
+                  onClick={() =>
+                    isMobileMenuOpen ? closeMobileMenu() : openMobileMenu()
+                  }
+                />
+              </>
+            )}
+          </div>
+          {isMobileMenuOpen && (
+            <nav ref={navBoxRef} className="header__nav-box-mobile">
+              <a
+                className="header__nav"
+                onClick={(e) => navToAnchor(e, refAboutMe)}>
+                Über mich
+              </a>
+              <a
+                className="header__nav"
+                onClick={(e) => navToAnchor(e, refProjectGallery)}>
+                Projekte
+              </a>
+              <div className="header__nav">
+                <Socials
+                  width={"30px"}
+                  height={"30px"}
+                  color={"var(--font-color-light"}
+                />
+              </div>
             </nav>
-          ) : (
-            <>
-              <FontAwesomeIcon
-                id="nav-mobile-menu"
-                className={`menu-icon ${isMobileMenuOpen ? "fa-close" : "fa-bars"}`}
-                icon={isMobileMenuOpen ? faClose : faBars}
-                onClick={() => (isMobileMenuOpen ? closeMobileMenu() : openMobileMenu())}
-              />
-            </>
           )}
         </div>
-        {isMobileMenuOpen && (  
-          <nav ref={navBoxRef} className="header__nav-box-mobile">
-            <a className="header__nav" onClick={(e) => navToAnchor(e, refAboutMe)}>Über mich</a>
-            <a className="header__nav" onClick={(e) => navToAnchor(e, refProjectGallery)}>Projekte</a>
-          </nav>
-        )}
-      </div>
+      </header>
     </>
   );
 }

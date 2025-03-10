@@ -14,4 +14,7 @@ canvas {
     margin: 0;
     object-fit: fill;
   }
-  
+  *::selection {
+    background: var(--secondary-color);
+    color: var(--font-color-light);
+  }

@@ -6,7 +6,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import { ProjectsContext } from "./context/projectsContext";
 import { useProjects } from "./hooks/useProjects";
-
+import Header from "./components/layout/Header";
 import './styles/main.scss';
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
 
   return (
     <Router>
+      <Header />
       <div className="layout">
         <Routes>
           <Route path="/" element={<Home />} />

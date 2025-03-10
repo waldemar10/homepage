@@ -40,7 +40,7 @@
     border: none;
     padding: 10px 20px 10px 20px;
     width:fit-content;
-    transition: all 0.5s ease;
+    transition: var(--transition);
   }
   .contact-form button:hover{
     cursor: pointer;

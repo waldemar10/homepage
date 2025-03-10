@@ -31,17 +31,6 @@ function ProjectShowcase() {
           <span>{group}</span>
         </div>
 
-        <div className="project-showcase__icon-box">
-          <FontAwesomeIcon icon={faLaptopCode} className="project-showcase__icon" />
-          <span>{code}</span>
-        </div>
-
-        <div className="project-showcase__icon-box">
-          <FontAwesomeIcon icon={faGithub} className="project-showcase__icon" />
-          <a href={gitHub} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        </div>
         {selectedProject.Title === "Die Yoga-Website" ? (
           <div className="project-showcase__icon-box">
             <FontAwesomeIcon icon={faGlobe} className="project-showcase__icon" />
@@ -50,7 +39,8 @@ function ProjectShowcase() {
             </a>
           </div>
         ) : null}
-        {selectedProject.Title === "LinguPingu" ? (
+
+        {selectedProject.Title === "PWA LinguPingu" ? (
           <div className="project-showcase__icon-box">
             <FontAwesomeIcon icon={faGlobe} className="project-showcase__icon" />
             <a target="_blank" rel="noreferrer" href="https://lingupingu.waljus.de/">
@@ -58,6 +48,18 @@ function ProjectShowcase() {
             </a>
           </div>
         ) : null}
+
+        <div className="project-showcase__icon-box">
+          <FontAwesomeIcon icon={faGithub} className="project-showcase__icon" />
+          <a href={gitHub} target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+        </div>
+        
+        <div className="project-showcase__icon-box">
+          <FontAwesomeIcon icon={faLaptopCode} className="project-showcase__icon" />
+          <span>{code}</span>
+        </div>
       </>
     );
   });

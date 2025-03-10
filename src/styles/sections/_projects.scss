@@ -1,38 +1,30 @@
-#yoga-logo {
-  margin: 10px 0;
-  width: 250px;
-  height: 250px;
-  fill: #DFD1C9;
-}
-
 .project {
-  &__content-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  max-width: 1000px;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    padding: 20px 20px;
   }
-
-  &__box {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 10px 25px 10px;
+  p,
+  h3,
+  h4,
+  h5 {
+    width: 100%;
   }
-
-  &__description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 0px;
-
-    p, h3, h4, h5 {
-      width: 100%;
-      /* padding: 10px 0; */
-    }
+  &__title {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
   }
-
+  &__logo {
+    margin: 10px 0;
+    width: 250px;
+    height: 250px;
+    fill: #dfd1c9;
+  }
   &__figure {
     display: flex;
     flex-direction: column;
@@ -49,19 +41,25 @@
       color: var(--font-color-light);
       padding: 5px 10px;
       background-color: var(--bg-color-figcaption);
-      border-radius: 0 0 var(--border-radius-box-inner) var(--border-radius-box-inner);
+      border-radius: 0 0 var(--border-radius-box-inner)
+        var(--border-radius-box-inner);
+    }
+    @media screen and (max-width: 600px) {
+      padding: 10px;
+    }
+    @media screen and (max-width: 400px) {
+      padding: 0;
     }
   }
 
   &__video {
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
-
+    margin: 10px 0;
     video {
       width: 100%;
       border-radius: var(--border-radius-box-inner);
       border: 2px solid var(--border-color);
-      margin: 10px 0;
       &:hover {
         filter: brightness(50%);
         cursor: pointer;
@@ -89,7 +87,7 @@
     border: 2px solid var(--border-color);
     background-color: var(--bg-color-btn);
     border-radius: var(--border-radius-button);
-    transition: all 0.7s;
+    transition: var(--transition);
 
     &:hover {
       cursor: pointer;
@@ -97,38 +95,14 @@
       box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.723);
     }
   }
-}
 
-#unity-container {
-  border-radius: var(--border-radius-box-inner);
-}
-
-@media screen and (max-width: 1000px) {
-  #unity-game {
-    display: none;
+  #unity-container {
+    border-radius: var(--border-radius-box-inner);
   }
-}
 
-/* Smartphone */
-@media screen and (max-width: 600px) {
-  .project {
-    &__box {
-      width: 95%;
+  @media screen and (max-width: 1000px) {
+    #unity-game {
+      display: none;
     }
-
-    &__figure {
-      padding: 10px;
-    }
-
-    &__content-box {
-      padding: 5px;
-    }
-  }
-}
-
-/* Smartphone small */
-@media screen and (max-width: 400px) {
-  .project__figure {
-    padding: 0;
   }
 }
