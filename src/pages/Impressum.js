@@ -2,7 +2,7 @@ import React from "react";
 
 function Impressum() {
   return (
-    <div>
+    <div style={{maxWidth: "100%",color:"var(--font-color-dark)"}}>
       <h1>Impressum</h1>
       <p>
         Waldemar Justus

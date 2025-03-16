@@ -5,7 +5,6 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-
 import { ProjectsContext } from "../../context/projectsContext";
 import allProjects from "../../utils/projectUtil";
 
@@ -21,48 +20,38 @@ function ProjectShowcase() {
       </div>
     );
   };
-
+ 
   const IconBar = memo(({ selectedProject }) => {
-    const { GitHub: gitHub, Code: code, Group: group } = selectedProject;
+    const { GitHub: gitHub, Code: code, Group: group, Link: link } = selectedProject;
+  
+    const icons = [
+      { condition: group, icon: faUserGroup, content: group },
+      { condition: link, icon: faGlobe, link: link, text: "Website" },
+      { condition: gitHub, icon: faGithub, link: gitHub, text: "GitHub" },
+      { condition: code, icon: faLaptopCode, content: code },
+    ];
+  
     return (
       <>
-        <div className="project-showcase__icon-box">
-          <FontAwesomeIcon icon={faUserGroup} className="project-showcase__icon" />
-          <span>{group}</span>
-        </div>
-
-        {selectedProject.Title === "Die Yoga-Website" ? (
-          <div className="project-showcase__icon-box">
-            <FontAwesomeIcon icon={faGlobe} className="project-showcase__icon" />
-            <a target="_blank" rel="noreferrer" href="https://yoga.waljus.de/">
-              Website
-            </a>
-          </div>
-        ) : null}
-
-        {selectedProject.Title === "PWA LinguPingu" ? (
-          <div className="project-showcase__icon-box">
-            <FontAwesomeIcon icon={faGlobe} className="project-showcase__icon" />
-            <a target="_blank" rel="noreferrer" href="https://lingupingu.waljus.de/">
-              Website
-            </a>
-          </div>
-        ) : null}
-
-        <div className="project-showcase__icon-box">
-          <FontAwesomeIcon icon={faGithub} className="project-showcase__icon" />
-          <a href={gitHub} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        </div>
-        
-        <div className="project-showcase__icon-box">
-          <FontAwesomeIcon icon={faLaptopCode} className="project-showcase__icon" />
-          <span>{code}</span>
-        </div>
+        {icons
+          .filter(({ condition }) => condition)
+          .map(({ icon, content, link, text }, index) => (
+            <div key={index} className="project-showcase__icon-box">
+              <FontAwesomeIcon icon={icon} className="project-showcase__icon" />
+              {link ? (
+                <a href={link} target="_blank" rel="noreferrer">
+                  {text}
+                </a>
+              ) : (
+                <span>{content}</span>
+              )}
+            </div>
+          ))}
       </>
     );
   });
+  
+  
 
   return (
     <div id="projectShowcase" className="project-showcase">

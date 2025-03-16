@@ -37,7 +37,6 @@
     text-wrap: wrap;
     font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: bold;
-    color: var(--font-color-dark);
 
     @media screen and (max-width: 768px) {
       font-size: clamp(3.5rem, 10vw, 5rem);
@@ -73,7 +72,6 @@
   }
   &__description {
     font-size: clamp(0.9rem, 2vw, 1rem);
-    color: var(--font-color-dark);
     @media screen and (max-width: 768px) {
       text-align: center;
       padding: 20px;
@@ -84,11 +82,10 @@
   &__name {
     font-size: clamp(1rem, 3vw, 2rem);
     margin-bottom: 30px;
-    color: var(--font-color-dark);
     font-weight: bold;
     transition: var(--transition);
 
-    &--red {
+    &--highlight {
       color: var(--secondary-color);
     }
     @media screen and (max-width: 768px) {
