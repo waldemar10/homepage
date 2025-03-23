@@ -1,7 +1,6 @@
 ## Hallo :wave:
 
-Hier befindet sich der Quellcode für meine persönliche Homepage (www.waljus.de).
-Die Website wurde mit dem Frontend-Framework React.js erstellt und besteht momentan nur aus einer Client-Anwendung. Die Website wird in einem Webhosting-Unternehmen in Deutschland bereitgestellt.
+Auf dieser Seite findest du den Quellcode für meine persönliche Homepage (www.waljus.de). Die Website wurde mit dem Frontend-Framework React.js entwickelt, während das Backend in PHP programmiert wurde und eine MySQL-Datenbank verwendet. Die Seite wird auf einem Webhosting-Server in Deutschland gehostet.
 <br/>
 Die Seite dient als Portfolio, um meine Fähigkeiten und Projekte vorzustellen, und wird regelmäßig erweitert :computer:
 
@@ -14,21 +13,38 @@ Die Seite dient als Portfolio, um meine Fähigkeiten und Projekte vorzustellen, 
 
 ---
 
-### Projektstruktur (Client)
+### Projektstruktur (frontend)
+- public
+  - gameBuild
+  - index.html
+  - favicon.ico
+  - manifext.json
+  - robots.txt
 - src
-  - components/   # Wiederverwendbare UI-Komponenten
-  - context/      # React Context für globale Zustände
-  - data/         # Statische Daten und Konfigurationsdateien
-  - hooks/        # Eigene React Hooks
-  - images/       # Bilder und Assets
-  - pages/        # Seiten
-  - styles/       # CSS Styles
-  - utils/        # Hilfsfunktionen
-  - videos/       # Video-Assets
-  - App.js        # Hauptkomponente
-  - App.css       # Styles für die Hauptkomponente
-  - Index.js      # Einstiegspunkt
-  - Index.css     # Globale Styles
+  - api/
+  - components/
+  - context/
+  - hooks/
+  - images/
+  - pages/
+  - styles/
+  - utils/
+  - videos/
+  - App.js
+  - App.css
+  - Index.js
+  - Index.css
+
+### Projektstruktur (backend)
+- public
+  - index.php
+- src
+  - config/
+  - controllers/
+  - core/
+  - includes/
+  - models/
+  - routes/
 
 ---
 
@@ -40,7 +56,7 @@ Die Seite dient als Portfolio, um meine Fähigkeiten und Projekte vorzustellen, 
 ---
 
 ### Zukünftige Features
-- Backend-Integration
-- Mehrsprachigkeit (Englisch) -> soon
+- <del>Backend-Integration</del>
+- Mehrsprachigkeit (Englisch)
 - Kontaktformular
 - Barrierefreiheit: Optimierung für Screenreader und Tastaturnavigation.

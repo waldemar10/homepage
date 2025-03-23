@@ -1,0 +1,13 @@
+.socials {
+  display: flex;
+  width: 100%;
+
+  &__icon{
+    
+    padding: 2px;
+    &:not(:first-child){
+      margin-left: 5px;
+    }
+  }
+
+}

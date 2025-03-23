@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 867.64 616.11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Unbenannter_Verlauf_338);
+      }
+
+      .cls-2 {
+        fill: url(#Unbenannter_Verlauf_338-3);
+      }
+
+      .cls-3 {
+        fill: url(#Unbenannter_Verlauf_338-2);
+      }
+    </style>
+    <linearGradient id="Unbenannter_Verlauf_338" data-name="Unbenannter Verlauf 338" x1="479.33" y1="429.11" x2="867.64" y2="429.11" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d21f3c"/>
+      <stop offset="1" stop-color="#d21f3c"/>
+    </linearGradient>
+    <linearGradient id="Unbenannter_Verlauf_338-2" data-name="Unbenannter Verlauf 338" x1="260.96" y1="267.65" x2="610.56" y2="267.65" xlink:href="#Unbenannter_Verlauf_338"/>
+    <linearGradient id="Unbenannter_Verlauf_338-3" data-name="Unbenannter Verlauf 338" x1="0" y1="428.61" x2="387.25" y2="428.61" xlink:href="#Unbenannter_Verlauf_338"/>
+  </defs>
+  <path class="cls-1" d="M503.51,612.02l359.74-345.44c9.23-8.87,2.96-24.46-9.84-24.46h-168.61c-5.17,0-9.93,2.81-12.43,7.33l-191.13,345.44c-7.89,14.26,10.52,28.42,22.28,17.13Z"/>
+  <path class="cls-3" d="M608.63,249.28l-160.35,278.77c-5.56,9.66-19.5,9.66-25.06,0l-160.35-278.77c-2.8-4.87-2.53-10.93.71-15.53L423.94,6.13c5.76-8.17,17.87-8.17,23.63,0l160.35,227.62c3.24,4.6,3.52,10.66.71,15.53Z"/>
+  <path class="cls-2" d="M362.67,610.94L4.47,266.98c-9.38-9.01-3.01-24.86,10.01-24.86h167.89c5.26,0,10.1,2.85,12.64,7.45l190.31,343.96c8.02,14.49-10.7,28.89-22.64,17.41Z"/>
+</svg>
