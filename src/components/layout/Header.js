@@ -4,16 +4,17 @@ import { ProjectGalleryContext } from "../../context/projectGalleryContext";
 import { AboutMeContext } from "../../context/aboutMeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
-
+import { useLocation } from "react-router-dom";
 import Socials from "../common/Socials";
 import Logo from "../../images/Logo.svg";
 function Header() {
   const { refProjectGallery } = useContext(ProjectGalleryContext);
   const { refAboutMe } = useContext(AboutMeContext);
+  const [showNav, setShowNav] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
   const navBoxRef = useRef(null);
-
+  const location = useLocation();
   // Set placeholder height to header height
   useEffect(() => {
     function updateNavBoxHeight() {
@@ -86,7 +87,14 @@ function Header() {
     });
     closeMobileMenu();
   };
-
+  useEffect(() => {
+    const url = location.pathname;
+    if (url.includes("/impressum") || url.includes("/privacyPolicy")) {
+      setShowNav(false);
+    } else {
+      setShowNav(true);
+    }
+  }, [location]);
   return (
     <>
       <div className="placeholder__header" />
@@ -102,13 +110,14 @@ function Header() {
               <span className="header__logo-text">Waldemar Justus</span>
             </div>
 
-            {!isMobile ? (
+            {!isMobile ? (showNav &&(
               <nav className="header__nav-box">
                 <a onClick={(e) => navToAnchor(e, refAboutMe)}>Über mich</a>
                 <a onClick={(e) => navToAnchor(e, refProjectGallery)}>
                   Projekte
                 </a>
               </nav>
+            )
             ) : (
               <>
                 <FontAwesomeIcon
@@ -130,7 +139,7 @@ function Header() {
               </>
             )}
           </div>
-          {isMobileMenuOpen && (
+          {isMobileMenuOpen && showNav && (
             <nav ref={navBoxRef} className="header__nav-box-mobile">
               <a
                 className="header__nav"

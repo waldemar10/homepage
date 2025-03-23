@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import Socials from "../common/Socials";
 import { ProjectGalleryContext } from "../../context/projectGalleryContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   const [year] = useState(new Date().getFullYear());

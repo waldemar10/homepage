@@ -14,7 +14,7 @@ function Yoga() {
         körperliche Gesundheit fördert, sondern auch eine spirituelle Praxis,
         die das geistige Wohlbefinden stärkt und Stress abbaut. Unser Ziel war
         es, eine Website zu schaffen, die sowohl Anfänger als auch
-        Fortgeschrittene anspricht und sie in ihrer Yoga-Praxis unterstützt.
+        Fortgeschrittene anspricht.
       </p>
 
       <h3 className="project__title">Vorgehensweise</h3>

@@ -1,6 +1,5 @@
 .footer {
   &__wrapper {
-    color: var(--font-color-dark);
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
@@ -35,12 +34,16 @@
     justify-content: flex-start;
     text-align: start;
     width: 100%;
+
     > a {
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0px 10px 0px 0;
-      color: var(--font-color-dark);
+      font-size: 1rem;
+      @media (max-width: 600px) {
+        font-size: 0.75rem;
+      }
       @media (max-width: 400px) {
         font-size: 0.6rem;
       }

@@ -59,6 +59,10 @@
       background-color: var(--icon-box-bg-color-selected);
     }
     > a {
+      color: var(--font-color-light);
+      &:hover {
+        color: var(--secondary-color);
+      }
       padding: 10px;
       @media (max-width: 400px) {
         font-size: 0.6rem;

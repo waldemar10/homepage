@@ -10,7 +10,7 @@ export const useProjects = (setProjects, setSelectedProject) => {
       ...data[key][0],
       isClicked: false,
     }));
-
+    console.log(loadedProjects);
     setProjects(loadedProjects);
     const index = sessionStorage.getItem("WJ_HP_clickedProject") || 0;
     loadedProjects[index].isClicked = true;
