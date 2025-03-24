@@ -8,7 +8,7 @@ import "./styles/main.scss";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Header />
       <div className="layout">
         <Routes>
