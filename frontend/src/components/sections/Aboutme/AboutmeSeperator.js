@@ -3,8 +3,8 @@ import Arrow from "../../common/Arrows";
 import Circle from "../../common/Circles";
 
 const AboutmeSeperator = ({ dimensions }) => {
-  const color1 = "var(--primary-color)";
-  const color2 = "var(--font-color-light)";
+  const color1 = "var(--arrow-color-1)";
+  const color2 = "var(--arrow-color-3)";
   return (
     <div className="aboutme__arrows-seperator">
       <svg

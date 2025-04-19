@@ -1,11 +1,9 @@
-// ** Abstracts **
-@import "abstracts/variables";
-
 // ** Base **
 @import "base/reset";
 @import "base/typography";
 
 // ** Components **
+@import "components/switch";
 @import "components/errors";
 @import "components/circle";
 @import "components/arrows";
@@ -32,3 +30,6 @@
 @import "utilities/animations";
 @import "utilities/placeholder";
 
+@import "themes/themes";
+@import "themes/darkTheme";
+@import "themes/lightTheme";

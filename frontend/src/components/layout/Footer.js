@@ -18,7 +18,7 @@ function Footer() {
     <div className="footer__wrapper" id="footer">
       <div className="footer__content">
        
-          <Socials width={"25px"} height={"25px"} color={"var(--font-color-dark"} />
+          <Socials width={"25px"} height={"25px"} color={"var(--font-color"} />
      
         <div className="footer__copyright">
           Copyright © 2023 - {year} Waldemar Justus

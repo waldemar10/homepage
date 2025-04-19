@@ -35,7 +35,7 @@ function HeroSection() {
           x1={0}
           y1={0}
           radius={isMobileSmall ? 150 : 190}
-          color="var(--font-color-dark)"
+          color="var(--arrow-color-1)"
           dashed
           strokeWidth={2}
           animation

@@ -2,7 +2,7 @@ import React from "react";
 import Arrow from "../../common/Arrows";
 import Circle from "../../common/Circles";
 const HeroSeperator = () => {
-  const color1 = "var(--font-color-light)";
+  const color1 = "var(--arrow-color-1)";
   return (
     <div className="hero__arrows-seperator">
       <svg

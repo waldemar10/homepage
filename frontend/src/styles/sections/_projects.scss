@@ -17,9 +17,9 @@
     width: 100%;
   }
   a{
-    color: var(--font-color-light);
+    color: var(--font-color);
     &:hover {
-      color: var(--secondary-color);
+      color: var(--accent-color);
     }
   }
   &__title {
@@ -44,7 +44,7 @@
     }
 
     figcaption {
-      color: var(--font-color-light);
+      color: var(--font-color);
       padding: 5px 10px;
       background-color: var(--bg-color-figcaption);
       border-radius: 0 0 var(--border-radius-box-inner)
@@ -89,7 +89,7 @@
   &__button {
     width: 100px;
     height: 50px;
-    color: var(--font-color-light);
+    color: var(--font-color);
     border: 2px solid var(--border-color);
     background-color: var(--bg-color-btn);
     border-radius: var(--border-radius-button);

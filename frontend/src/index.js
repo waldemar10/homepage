@@ -5,7 +5,7 @@ import App from "./App";
 import { ProjectsProvider } from "./context/projectsContext";
 import { ProjectGalleryProvider } from "./context/projectGalleryContext";
 import { AboutMeProvider } from "./context/aboutMeContext";
-
+import { ThemeProvider } from "./context/themeContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -13,7 +13,9 @@ root.render(
     <ProjectsProvider>
       <ProjectGalleryProvider>
         <AboutMeProvider>
+          <ThemeProvider>
           <App />
+          </ThemeProvider>
         </AboutMeProvider>
       </ProjectGalleryProvider>
     </ProjectsProvider>

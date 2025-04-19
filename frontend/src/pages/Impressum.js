@@ -2,7 +2,7 @@ import React from "react";
 
 function Impressum() {
   return (
-    <div style={{maxWidth: "100%",color:"var(--font-color-dark)"}}>
+    <div style={{flex:1, marginTop: "50px", padding: "20px", display:"flex", width:"100%",flexDirection:"column",justifyContent:"start", alignItems:"start"}}>
       <h1>Impressum</h1>
       <p>
         Waldemar Justus
@@ -19,6 +19,7 @@ function Impressum() {
       </p>
 
     </div>
+
   );
 }
 export default Impressum;

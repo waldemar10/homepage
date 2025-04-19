@@ -14,12 +14,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--font-color-dark);
+    color: var(--font-color);
     min-width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
 
-    background-color: #eaeaea;
+    background-color: var(--bg-color-body);
     /* background-image: url("../../images/BackgroundGrey.svg");
     background-repeat: repeat;
     background-size: 45px 20px; */

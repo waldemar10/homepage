@@ -5,6 +5,7 @@ import { AboutMeContext } from "../../context/aboutMeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "react-router-dom";
+import Switch from "../common/Switch";
 import Socials from "../common/Socials";
 import Logo from "../../images/Logo.svg";
 function Header() {
@@ -95,6 +96,14 @@ function Header() {
       setShowNav(true);
     }
   }, [location]);
+
+  useEffect(() => {
+    const content = document.querySelector(".header__content");
+    if (!content) return;
+    content.style.transform = "translateY(0px)";
+    content.style.opacity = "1";
+  }, []);
+
   return (
     <>
       <div className="placeholder__header" />
@@ -110,14 +119,24 @@ function Header() {
               <span className="header__logo-text">Waldemar Justus</span>
             </div>
 
-            {!isMobile ? (showNav &&(
-              <nav className="header__nav-box">
-                <a onClick={(e) => navToAnchor(e, refAboutMe)}>Über mich</a>
-                <a onClick={(e) => navToAnchor(e, refProjectGallery)}>
-                  Projekte
-                </a>
-              </nav>
-            )
+            {!isMobile ? (
+              showNav && (
+                <nav className="header__nav-box">
+                  <a
+                    className="header__nav-box-item"
+                    onClick={(e) => navToAnchor(e, refAboutMe)}>
+                    Über mich
+                  </a>
+                  <a
+                    className="header__nav-box-item"
+                    onClick={(e) => navToAnchor(e, refProjectGallery)}>
+                    Projekte
+                  </a>
+                  <div className="header__nav-box-switch">
+                    <Switch />
+                  </div>
+                </nav>
+              )
             ) : (
               <>
                 <FontAwesomeIcon
@@ -155,8 +174,11 @@ function Header() {
                 <Socials
                   width={"30px"}
                   height={"30px"}
-                  color={"var(--font-color-light"}
+                  color={"var(--font-color"}
                 />
+              </div>
+              <div className="header__nav">
+                <Switch />
               </div>
             </nav>
           )}

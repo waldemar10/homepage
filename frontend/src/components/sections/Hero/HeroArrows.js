@@ -2,8 +2,8 @@ import React from "react";
 import Arrow from "../../common/Arrows";
 
 const HeroArrows = ({ isMobile, isMobileSmall, dimensions }) => {
-  const color1 = "var(--primary-color)";
-  const color2 = "var(--secondary-color)";
+  const color1 = "var(--arrow-color-1)";
+  const color2 = "var(--arrow-color-2)";
   const ArrowSvgDesktop = () => {
     return (
       <svg

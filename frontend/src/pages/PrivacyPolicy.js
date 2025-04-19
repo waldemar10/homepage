@@ -2,7 +2,7 @@ import React from "react";
 
 function PrivacyPolicy() {
   return (
-    <div style={{maxWidth: "100%",display:"flex",justifyContent:"center", color:"var(--font-color-dark)"}}>
+    <div style={{flex:1, marginTop: "50px", padding: "20px"}}>
       <div style={{maxWidth: "80%",padding:"10px"}}>
       <h1>Datenschutz&shy;erkl&auml;rung</h1>
       <h2>1. Datenschutz auf einen Blick</h2>
@@ -394,7 +394,7 @@ function PrivacyPolicy() {
         k&ouml;nnen Sie dieser Datenschutzerkl&auml;rung entnehmen.
       </p>
       <p>
-        Quelle: <a style={{color:"var(--font-color-dark)"}} href="https://www.e-recht24.de">https://www.e-recht24.de</a>
+        Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>
       </p>
     </div>
     </div>
