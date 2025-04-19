@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect, createContext,useRef } from "react";
 export const ThemeContext = createContext();
 const getDefaultTheme = () => {
   const savedTheme = sessionStorage.getItem("theme");
@@ -22,7 +22,7 @@ export const ThemeProvider = ({ children }) => {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme}}>
       {children}
     </ThemeContext.Provider>
   );

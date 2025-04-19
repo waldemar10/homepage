@@ -3,24 +3,16 @@ import React, { useContext, useEffect, useRef } from "react";
 import { ThemeContext } from "../../context/themeContext";
 
 function Switch() {
-  const { toggleTheme } = useContext(ThemeContext);
-  const checkboxRef = useRef(null);
-  const switchRef = useRef(null);
+  const { theme,toggleTheme } = useContext(ThemeContext);
 
-  useEffect(() => {
-    const theme = sessionStorage.getItem("theme");
-    if (!theme) return;
+  const isDark = theme === "dark";
 
-    if (theme === "dark" && checkboxRef.current) {
-      checkboxRef.current.checked = true;
-    }
-  }, []);
   return (
-    <label ref={switchRef} className="switch-theme">
+    <label className="switch-theme">
       <input
-        ref={checkboxRef}
         type="checkbox"
         className="switch-theme__toggle"
+        checked={isDark}
         onChange={(e) => toggleTheme(e.target.checked ? "dark" : "light")}
       />
       <span className="switch-theme__slider">
