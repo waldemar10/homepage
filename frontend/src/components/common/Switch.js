@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext } from "react";
 
 import { ThemeContext } from "../../context/themeContext";
 
 function Switch() {
-  const { theme,toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const isDark = theme === "dark";
 
