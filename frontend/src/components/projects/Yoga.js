@@ -70,7 +70,7 @@ function Yoga() {
       </p>
 
       <svg
-        className="project__logo"
+        className="project__logo project__logo--yoga"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 200 300">
         <g>
