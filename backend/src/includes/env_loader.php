@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 function loadEnv($envFile)
 {
     if (!file_exists($envFile)) {
@@ -16,6 +19,6 @@ function loadEnv($envFile)
 
 $env = getenv('APP_ENV') ?: 'development';
 
-$envFile = $env === 'development' ? __DIR__ . "/../../../.env.development" : __DIR__ . "/../../../.env.production";
+$envFile = $env === 'development' ? __DIR__ . "/../../.env.development" : __DIR__ . "/../../.env.production";
 
 loadEnv($envFile);

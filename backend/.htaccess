@@ -1,12 +1,27 @@
 RewriteEngine On
 RewriteBase /backend/
 
+SetEnvIf Host ^localhost APP_ENV=development
+SetEnvIf Host !^localhost APP_ENV=production
+
 <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"
     Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
     Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+    
+    <If "%{ENV:APP_ENV} == 'development'">
+        Header set Access-Control-Allow-Origin "*"
+    </If>
+
+    <If "%{ENV:APP_ENV} == 'production'">
+        Header set Access-Control-Allow-Origin "https://waljus.de"
+    </If>
 </IfModule>
-SetEnv APP_ENV development
+
+<FilesMatch "^(\.env|\.git|composer\.json|composer\.lock|package\.json|package\-lock\.json)$">
+  Require all denied
+</FilesMatch>
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [QSA,L]
