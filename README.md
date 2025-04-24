@@ -57,6 +57,6 @@ Die Seite dient als Portfolio, um meine Fähigkeiten und Projekte vorzustellen, 
 
 ### Zukünftige Features
 - <del>Backend-Integration</del>
-- Mehrsprachigkeit (Englisch)
+- <del>Mehrsprachigkeit (Englisch)</del>
 - Kontaktformular
 - Barrierefreiheit: Optimierung für Screenreader und Tastaturnavigation.
