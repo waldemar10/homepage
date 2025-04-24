@@ -31,7 +31,7 @@ i18n
 
   i18n.on('failedLoading', async (lng, ns, msg) => {
     try {
-      const response = await fetch(`/frontend/locales/${lng}/${ns}.json`);
+      const response = await fetch(`frontend/locales/${lng}/${ns}.json`);
       if (!response.ok) throw new Error('Fallback not found');
   
       const fallbackTranslations = await response.json();
