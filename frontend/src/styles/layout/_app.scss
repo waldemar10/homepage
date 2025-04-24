@@ -8,6 +8,9 @@
   position: relative;
   background-color: var(--bg-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  @media  screen and (max-width: 768px) {
+    box-shadow: unset;
+  }
   @media screen and (max-width: 1200px) {
     width: 100%;
   }

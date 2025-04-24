@@ -1,0 +1,35 @@
+{
+    "title": "Rock Paper Scissors Ultimate",
+    "intro": "Rock Paper Scissors Ultimate was a software project in the third semester as part of the Visual Computing module. The goal of the project was to develop a Java application that performs an image processing task and visually presents the results in a self-created 3D environment. As a team, we decided to implement the classic game 'Rock, Paper, Scissors'. Using image processing methods, the software was able to recognize the hand gestures for rock, paper, and scissors and process them accordingly. My main responsibility in the team was programming the image processing component. I used OpenCV and applied the concepts taught in the lecture to implement gesture recognition for 'rock', 'paper', and 'scissors'.",
+    "video": {
+      "title": "Video",
+      "src": "../../videos/SchereSteinPapier.mp4",
+      "poster": "../../images/VC/SSP.JPG"
+    },
+    "approach": {
+      "title": "Approach",
+      "intro": "How gesture recognition works:",
+      "steps": [
+        "The webcam is detected and started using OpenCV's VideoCapture.",
+        "The first frame of the webcam stream is stored as an OpenCV matrix to be used later as a reference.",
+        "All subsequent frames are converted into grayscale images, and the GaussianBlur filter is applied to smooth the image and reduce noise.",
+        "A threshold is then applied to the grayscale images to determine the pixel intensity at which pixels are displayed as black or white.",
+        "After this preprocessing, the Canny edge detection algorithm is used to quickly identify the hand contours due to the previous image processing.",
+        "To ensure accurate detection of hand shapes, the edge images are dilated to close any gaps in the contours.",
+        "Using the Hough transformation, straight lines are detected in the edge image, which aids in recognizing the 'paper' gesture.",
+        "Next, a convex hull is drawn around the fingers (red lines around the hand) to determine the so-called convexity defects.",
+        "With the OpenCV function convexityDefects(), the points of convexity defects are identified, allowing fingertip detection.",
+        "The center of the hand contour is then calculated using the Moments function. This method uses the center of mass to obtain accurate coordinates for the contour’s center.",
+        "The identified convexity defect points are connected to the center point, allowing the number of visible fingers to be determined. This helps recognize the 'paper' and 'scissors' gestures.",
+        "To recognize the 'rock' gesture, the circularity of the hand contour is calculated using the formula (4 * π * ContourArea) / arcLength², enabling clear distinction between 'paper' and 'rock'.",
+        "Finally, the processed edge image from the OpenCV matrix is converted into a visible image.",
+        "As the last step, the result is displayed on the current webcam frame, so that the recognized hand contour and corresponding gesture are shown in real-time."
+      ]
+    },
+    "image": {
+      "src": "../../images/VC/Schere.JPG",
+      "alt": "Scissors gesture",
+      "caption": "The image processing detects the 'scissors' gesture"
+    }
+  }
+  

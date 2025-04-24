@@ -7,7 +7,7 @@ import HeroArrows from "./HeroArrows";
 import HeroSeperator from "./HeroSeperator";
 import Circle from "../../common/Circles";
 import foto from "../../../images/Waldemar.jpg";
-
+import { useTranslation } from "react-i18next";
 function HeroSection() {
   const isMobile = useIsMobile();
   const containerRef = useRef();
@@ -16,7 +16,7 @@ function HeroSection() {
   const { scrollToAboutMe } = useContext(AboutMeContext);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMobileSmall, setIsMobileSmall] = useState(window.innerWidth <= 400);
-
+  const { t } = useTranslation("common");
   useEffect(() => {
     const handleResize = () => {
       setIsMobileSmall(window.innerWidth <= 400);
@@ -45,7 +45,7 @@ function HeroSection() {
           onClick={!isMobile ? scrollToAboutMe : null}
           target="_blank"
           rel="noreferrer">
-          <img src={foto} alt="Waldemar Justus Foto"></img>
+          <img src={foto} alt={t("hero.alt")}></img>
         </a>
       </div>
     );
@@ -53,7 +53,7 @@ function HeroSection() {
   const HeroButton = () => {
     return (
       <button className="hero__button" onClick={scrollToProjectGallery}>
-        <span>Meine Projekte</span>
+        <span>{t("hero.buttonText")}</span>
       </button>
     );
   };
@@ -70,10 +70,10 @@ function HeroSection() {
 
         <div className="hero__content">
           <div className="hero__box">
-            <span className="hero__greeting">Willkommen</span>
+            <span className="hero__greeting">{t("hero.greeting")}</span>
             <div className="hero__name">
-              Ich bin <span className="hero__name--highlight">Waldemar</span>{" "}
-              Justus <span className="hero__icon">👋</span>
+            {t("hero.introduction.part1")} <span className="hero__name--highlight">{t("hero.introduction.part2")}</span>{" "}
+            {t("hero.introduction.part3")} <span className="hero__icon">{t("hero.introduction.part4")}</span>
             </div>
             {isMobile && (
               <>
@@ -82,10 +82,7 @@ function HeroSection() {
               </>
             )}
             <p className="hero__description">
-              Meinen Bachelor habe ich seit Oktober 2024 erfolgreich in
-              Computervisualistik und Design an der Hochschule Hamm-Lippstadt
-              absolviert. Ausgewählte Projekte, die ich während des Studiums
-              oder privat gemacht habe, werden hier vorgestellt.
+            {t("hero.description")}
             </p>
 
             {!isMobile && <HeroButton />}

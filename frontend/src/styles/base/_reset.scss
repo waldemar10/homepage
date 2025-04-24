@@ -20,7 +20,7 @@
     overflow-y: scroll;
 
     background-color: var(--bg-color-body);
-    /* background-image: url("../../images/BackgroundGrey.svg");
-    background-repeat: repeat;
-    background-size: 45px 20px; */
+    @media  screen and (max-width: 768px) {
+      background-color: var(--bg-color);
+    }
   }

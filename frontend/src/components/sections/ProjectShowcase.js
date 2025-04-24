@@ -58,8 +58,8 @@ function ProjectShowcase() {
   return (
     <>
     {projects && (
-    <div id="projectShowcase" className="project-showcase">
-      <span ref={refProject} className="project-showcase__headline">
+    <div ref={refProject} id="projectShowcase" className="project-showcase">
+      <span  className="project-showcase__headline">
         {selectedProject.title}
       </span>
 

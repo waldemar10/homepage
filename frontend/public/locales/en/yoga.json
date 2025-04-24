@@ -1,0 +1,54 @@
+{
+  "intro": "The goal of this project was to develop an informative and visually appealing website on the topic of health. After careful consideration, we decided to focus on yoga for a fictional company. Yoga is not only a physical activity, that promotes health through movement and stretching, but also a spiritual practice that enhances mental well-being and reduces stress. Our goal was to create a website that appeals to both beginners and more advanced users.",
+  "approach": {
+    "title": "Approach",
+    "text": "At the beginning of the project, we created a comprehensive mission statement using mind mapping to clearly define the core messages and goals of our website. This helped us structure our ideas and determine the direction of the project. From this mission statement we created four key criteria:"
+  },
+  "criteria": {
+    "friendly": "Friendly",
+    "accurate": "Accurate",
+    "effective": "Effective",
+    "safe": "Safe"
+  },
+  "moodboard": {
+    "title": "Moodboard",
+    "text": "A moodboard was created to collect visual ideas and moods for the design of the website. This helped develop a clear vision for the look and feel of the site.",
+    "caption": "More informations in",
+    "alt": "Moodboard for the website design"
+  },
+  "logo": {
+    "title": "Logo",
+    "text": "To complete the branding, a fitting logo was designed, consisting of circular elements. The logo was intended to appear both sporty and spiritual, emphasizing the connection between physical movement and mental well-being, which fits perfectly with yoga.",
+    "alt": "Logo design for the website"
+  },
+  "persona": {
+    "title": "Persona",
+    "text": "The next step was to develop a persona to better understand and target the intended audience. The persona represented young adult women who have an active interest in improving their well-being and finding a healthy balance between body and mind.",
+    "caption": "Persona",
+    "alt": "Example persona for the target audience"
+  },
+  "mockup": {
+    "title": "Mock-up",
+    "text": "Based on this preliminary work, a detailed mock-up of the website was created in Figma. This mock-up served as a visual blueprint for the final design and helped to implement the layout as well as the elements such as colors and typography defined in the mood board. After completing the mock-up, the development of the website began."
+  },
+  "development": {
+    "title": "Development",
+    "text": "The website was built using HTML, SCSS, JavaScript, and PHP. It follows the MVC (Model-View-Controller) approach. To optimize the site for various screen sizes and devices, the design was made responsive."
+  },
+  "database": {
+    "title": "Database",
+    "text": "A MySQL database was used to store user data. The database contains information about the users as well as the courses offered on the website.",
+    "caption": "Complete database structure",
+    "alt": "Database structure for the website"
+  },
+  "notice": {
+    "headline": "📢 Note: ",
+    "text": "This website has been extensively revised and optimized since submission. New features:",
+    "features": {
+      "backend": "Implementation of a backend using PHP based on the MVC pattern.",
+      "mysql": "Database structure using MySQL.",
+      "design": "Completely new design."
+    },
+    "date": "As of 2025"
+  }
+}

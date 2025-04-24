@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "greeting": "Welcome",
+    "introduction": {
+      "part1": "I am",
+      "part2": "Waldemar",
+      "part3": "Justus",
+      "part4": "👋"
+    },
+    "description": "Since October 2024, I have successfully completed my Bachelor's degree in Computer Visualization and Design at the Hamm-Lippstadt University of Applied Sciences. Selected projects that I completed during my studies or privately are presented here.",
+    "buttonText": "My Projects",
+    "alt": "Photo of Waldemar Justus"
+  },
+  "aboutme": {
+    "headline1": "My journey into the world of ",
+    "headline2": "Computer Science.",
+    "intro1": "In 2019, I discovered my passion for computer science. My entry into programming began with trading algorithms in MQL4, aiming to develop various trading strategies for the foreign exchange market to achieve positive returns. I was fascinated not only by the technical implementation but also by the challenge of designing algorithms to be efficient and precise.",
+    "intro2": "This fascination with programming motivated me to begin a computer science degree. During my studies, I expanded my knowledge in various programming languages and delved deeper into software development, from object-oriented programming to developing complex web applications. In addition to technical expertise, I learned how important teamwork, agile methods, and structured project management are for the successful implementation of software projects.",
+    "intro3": "My goal is to continuously grow and develop innovative software solutions that offer real value. I place great importance on clean, well-structured code and use modern technologies to build scalable and efficient applications. What excites me is not just the technology itself, but the opportunity to support people and businesses in their digital transformation and create sustainable solutions through my work.",
+    "skillsHeadline1": "My ",
+    "skillsHeadline2": "Skills.",
+    "skills": {
+      "programming": {
+        "label": "Programming Languages",
+        "items": ["Java", "JavaScript", "Kotlin", "PHP", "Python"]
+      },
+      "frontend": {
+        "label": "Frontend",
+        "items": [
+          "Angular",
+          "Bootstrap",
+          "CSS (SCSS)",
+          "HTML",
+          "React",
+          "WordPress (Elementor & Betheme)"
+        ]
+      },
+      "backend": {
+        "label": "Backend",
+        "items": ["Express", "Node.js"]
+      },
+      "databases": {
+        "label": "Databases",
+        "items": ["MongoDB", "MySQL"]
+      },
+      "tools": {
+        "label": "Tools",
+        "items": [
+          "Git",
+          "IntelliJ",
+          "Unity",
+          "Visual Studio",
+          "Visual Studio Code"
+        ]
+      },
+      "design": {
+        "label": "Design",
+        "items": ["Adobe XD", "Adobe Illustrator", "Figma"]
+      },
+      "projectManagement": {
+        "label": "Project Management",
+        "items": ["Jira", "Kanban", "MS Teams", "Trello"]
+      }
+    }
+  },
+  "gallery": {
+    "headline1": "My ",
+    "headline2": "Projects.",
+    "loading": "Loading projects...",
+    "error": "Error loading projects."
+  }
+}

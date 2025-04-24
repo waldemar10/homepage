@@ -1,0 +1,34 @@
+
+
+.language-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-width);
+  height: var(--icon-height);
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    color: inherit;
+    box-shadow: 0 0 5px var(--shadow-color);
+    transition: var(--transition);
+    &:hover {
+      scale: 1.1;
+    }
+    > img {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+    "intro": "In the Advanced Web Development (AWD) course, the task was to develop a progressive web application using backend technologies. As a team, we decided to create a language learning platform that allows users to study vocabulary and complete grammar exercises. Users can register and log in. The site stores data in a MongoDB database and is fully responsive across all devices.",
+    "linguPingu": {
+      "title": "What is LinguPingu?",
+      "text": "LinguPingu is a language learning app that turns vocabulary training into an entertaining and effective experience. By combining vocabulary practice, interactive lessons, and the ability to create custom vocabulary collections, LinguPingu stands out from other language learning apps. Inspired by successful apps like Duolingo and Busuu, it emphasizes user-created vocabulary collections, allowing learners to personalize their experience and reach their goals more efficiently."
+    },
+    "image1": 
+      {
+        "alt": "Vocabulary",
+        "caption": "Learning vocabulary with LinguPingu"
+      }
+    ,
+    "image2": {
+      "alt": "Grammar",
+      "caption": "Grammar"
+    },
+    "image3": {
+      "alt": "Account",
+      "caption": "Account Settings"
+    },
+    "grammar": {
+      "title": "Grammar Exercises",
+      "text": "Grammar is divided into two categories:",
+      "categories": [
+        {
+          "title": "Tenses",
+          "description": "Here, users learn different tenses and deepen their understanding of correct usage."
+        },
+        {
+          "title": "Daily Life",
+          "description": "This section covers everyday situations and expressions, focusing on grammatically correct sentences for daily use."
+        }
+      ],
+      "interaction": "By clicking on a lesson, a grammar explanation appears. Afterwards, the user starts an exercise where they translate a sentence into the target language by choosing from suggested words – some of which are intentionally incorrect to increase the challenge."
+    },
+    "features": {
+      "title": "Interactive Features",
+      "items": [
+        "Users can click on a word to edit it or correct typos.",
+        {
+          "title": "After submitting an answer, the system checks it:",
+          "cases": [
+            {
+              "type": "Incorrect",
+              "effect": "The card shakes, and a sad penguin appears. The user must try again."
+            },
+            {
+              "type": "Correct",
+              "effect": "The card is highlighted in green, and a happy penguin appears. The next task is shown."
+            }
+          ]
+        }
+      ],
+      "text": "This process repeats until all tasks in the lesson are completed. A confirmation field appears, and the user is redirected back to the grammar section. Completed lessons are highlighted in green and individually stored in the database."
+    },
+    "video": {
+      "title": "Video"
+    }
+  }
+  

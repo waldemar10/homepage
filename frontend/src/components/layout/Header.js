@@ -5,7 +5,9 @@ import { AboutMeContext } from "../../context/aboutMeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Switch from "../common/Switch";
+import LanguageButton from "../common/LanguageButton";
 import Socials from "../common/Socials";
 import Logo from "../../images/Logo.svg";
 function Header() {
@@ -16,6 +18,7 @@ function Header() {
   const isMobile = useIsMobile();
   const navBoxRef = useRef(null);
   const location = useLocation();
+  const { t } = useTranslation("common");
   // Set placeholder height to header height
   useEffect(() => {
     function updateNavBoxHeight() {
@@ -90,7 +93,7 @@ function Header() {
   };
   useEffect(() => {
     const url = location.pathname;
-    if (url.includes("/impressum") || url.includes("/privacyPolicy")) {
+    if (url.includes("/imprint") || url.includes("/privacyPolicy")) {
       setShowNav(false);
     } else {
       setShowNav(true);
@@ -125,15 +128,18 @@ function Header() {
                   <a
                     className="header__nav-box-item"
                     onClick={(e) => navToAnchor(e, refAboutMe)}>
-                    Über mich
+                    {t("header.aboutme")}
                   </a>
                   <a
                     className="header__nav-box-item"
                     onClick={(e) => navToAnchor(e, refProjectGallery)}>
-                    Projekte
+                    {t("header.projects")}
                   </a>
                   <div className="header__nav-box-switch">
                     <Switch />
+                  </div>
+                  <div className="header__nav-box-switch">
+                    <LanguageButton />
                   </div>
                 </nav>
               )
@@ -163,22 +169,25 @@ function Header() {
               <a
                 className="header__nav"
                 onClick={(e) => navToAnchor(e, refAboutMe)}>
-                Über mich
+                {t("header.aboutme")}
               </a>
               <a
                 className="header__nav"
                 onClick={(e) => navToAnchor(e, refProjectGallery)}>
-                Projekte
+                {t("header.projects")}
               </a>
               <div className="header__nav">
                 <Socials
-                  width={"30px"}
-                  height={"30px"}
+                  width={"var(--icon-width"}
+                  height={"var(--icon-height"}
                   color={"var(--font-color"}
                 />
               </div>
               <div className="header__nav">
                 <Switch />
+              </div>
+              <div className="header__nav">
+                <LanguageButton />
               </div>
             </nav>
           )}

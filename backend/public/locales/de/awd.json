@@ -1,0 +1,58 @@
+{
+    "intro": "Im Kurs Advanced Web Development (AWD) bestand die Aufgabe darin, eine progressive Webanwendung mit Backend-Technologien zu entwickeln. Wir entschieden uns im Team für eine Sprachlernplattform, die es den Nutzern ermöglicht, Vokabeln zu lernen und Grammatikübungen zu absolvieren. Die Benutzer können sich registrieren und anmelden. Die Website speichert die Daten in einer MongoDB-Datenbank und ist vollständig responsiv auf allen Geräten.",
+    "linguPingu": {
+      "title": "Was ist LinguPingu?",
+      "text": "LinguPingu ist eine Sprachenlern-App, die das Vokabellernen zu einem unterhaltsamen und effektiven Erlebnis macht. Durch die Kombination von Vokabeltraining, interaktiven Lektionen und der Möglichkeit, individuelle Vokabelkollektionen zu erstellen, hebt sich LinguPingu deutlich von anderen Sprachenlern-Apps ab. Inspiriert von erfolgreichen Anwendungen wie Duolingo und Busuu legt LinguPingu besonderen Wert auf die Integration von benutzergenerierten Vokabelsammlungen. Dies ermöglicht es den Lernenden, ihr Lernerlebnis zu personalisieren und ihre Ziele effizienter zu erreichen."
+    },
+    "image1": {
+      "alt": "Vokabeln",
+      "caption": "Vokabeln lernen mit LinguPingu"
+    },
+    "image2": {
+      "alt": "Grammatik",
+      "caption": "Grammatik"
+    },
+    "image3": {
+      "alt": "Konto",
+      "caption": "Kontoeinstellungen"
+    },
+    "grammar": {
+      "title": "Grammatikübungen",
+      "text": "Die Grammatik ist in zwei Kategorien unterteilt:",
+      "categories": [
+        {
+          "title": "Zeitformen",
+          "description": "Hier lernt der Benutzer verschiedene Zeitformen kennen und vertieft sein Verständnis für die korrekte Anwendung."
+        },
+        {
+          "title": "Tägliches Leben",
+          "description": "In dieser Kategorie geht es um Situationen und Ausdrücke aus dem Alltag. Der Fokus liegt darauf, grammatikalisch korrekte Sätze für den täglichen Umgang zu erlernen."
+        }
+      ],
+      "interaction": "Beim Klick auf eine Lektion erscheint ein erklärender Grammatiktext. Anschließend startet der Benutzer eine Übung, bei der er einen Satz in die Zielsprache übersetzen muss, indem er aus vorgeschlagenen Wörtern wählt – einige davon sind absichtlich falsch, um die Herausforderung zu erhöhen."
+    },
+    "features": {
+      "title": "Interaktive Funktionen",
+      "items": [
+        "Der Benutzer kann auf ein Wort klicken, um es zu ändern oder Tippfehler zu korrigieren.",
+        {
+          "title": "Nach der Bestätigung wird die Antwort überprüft:",
+          "cases": [
+            {
+              "type": "Falsch",
+              "effect": "Die Karte wackelt, und ein trauriger Pinguin erscheint. Der Benutzer muss den Satz erneut bilden."
+            },
+            {
+              "type": "Richtig",
+              "effect": "Die Karte wird grün umrandet, und ein fröhlicher Pinguin erscheint. Die nächste Aufgabe wird angezeigt."
+            }
+          ]
+        }
+      ],
+      "text": "Dieser Prozess wiederholt sich, bis alle Aufgaben der Lektion abgeschlossen sind. Danach erscheint ein Bestätigungsfeld, und der Benutzer kehrt zur Grammatik-Seite zurück. Abgeschlossene Lektionen werden mit einer grünen Hintergrundfarbe hervorgehoben und individuell in der Datenbank gespeichert."
+    },
+    "video": {
+      "title": "Video"
+    }
+  }
+  

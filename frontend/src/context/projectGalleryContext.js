@@ -18,6 +18,14 @@ export const ProjectGalleryProvider = ({ children }) => {
    
     refProjectGallery.current?.scrollIntoView({ behavior: "smooth" });
   }
+  function calculateScrollPosition() {
+    const header = document.querySelector(".header__content-box");
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    const elementPosition = refProject.current.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - headerHeight;
+    return offsetPosition;
+  }
+
   function handleSelectedProject(index, shouldScroll) {
     if(!projects) return;
     if (!refProject.current) return;
@@ -34,11 +42,8 @@ export const ProjectGalleryProvider = ({ children }) => {
         return;
       }
 
-      const header = document.querySelector(".header-content-box");
-      const headerHeight = header ? header.getBoundingClientRect().height : 0;
-      const elementPosition = refProject.current.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - headerHeight;
-      
+      const offsetPosition = calculateScrollPosition();
+
       setTimeout(() => {
         window.scrollTo({
           top: offsetPosition,

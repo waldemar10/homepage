@@ -1,0 +1,34 @@
+{
+    "intro": "Wajuu is a personal blog project dedicated to the fascinating culture, history, and traditions of Japan. The website offers exciting insights into landmarks, festivals, cuisine, and many other aspects of the Land of the Rising Sun. The goal of the project was to create an informative and inspiring platform that is both visually appealing and user-friendly.",
+    "approach": {
+      "title": "Implementation",
+      "text": "The website was built using WordPress in combination with the BeTheme and Elementor. These tools enabled a flexible layout and a modern design without requiring deep programming knowledge. The focus was on a clear layout, good readability, and visual variety to bring the topics to life."
+    },
+    "content": {
+      "title": "Content",
+      "text": "Wajuu regularly features new articles on various aspects of Japan, including historical sites, cultural customs, festivals, Japanese food, and travel experiences. The blog is aimed at anyone with a deep interest in Japan or who wants to learn more about the country."
+    },
+    "hero": {
+      "title": "Hero Section",
+      "text": "The website opens with an atmospheric hero section featuring typical Japanese design elements. It is intended to give visitors an immediate feel for the theme and direction of the site.",
+      "alt": "Wajuu Hero Section",
+      "caption": "Hero Section"
+    },
+    "blog": {
+      "title": "Blog Posts",
+      "text": "Each blog entry is thoroughly researched and visually supported. One example is the article about Kyoto, which provides highlights, sights, and insider tips about Japan’s former capital.",
+      "alt": "Blog example",
+      "caption": "Blog about Kyoto"
+    },
+    "notice": {
+      "headline": "📝 Note: ",
+      "text": "Wajuu is a continuously evolving solo project. The website is maintained with personal dedication and regularly enriched with new content.",
+      "features": {
+        "wordpress": "Created with WordPress, BeTheme, and Elementor.",
+        "updates": "Regularly updated with new articles.",
+        "usability": "Focus on readability, design, and user navigation."
+      },
+      "date": "As of 2025"
+    }
+  }
+  

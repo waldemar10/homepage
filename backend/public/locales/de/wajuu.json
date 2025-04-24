@@ -1,0 +1,34 @@
+{
+    "intro": "Wajuu ist ein persönliches Blog-Projekt, das sich der faszinierenden Kultur, Geschichte und den Traditionen Japans widmet. Die Website bietet spannende Einblicke in Sehenswürdigkeiten, Feste, Kulinarik und viele weitere Aspekte des Landes der aufgehenden Sonne. Ziel des Projekts war es, eine informative und inspirierende Plattform zu schaffen, die sowohl optisch ansprechend als auch benutzerfreundlich ist.",
+    "approach": {
+      "title": "Umsetzung",
+      "text": "Die Website wurde mit WordPress in Kombination mit dem BeTheme und Elementor realisiert. Diese Tools ermöglichten eine flexible Gestaltung und ein modernes Design ohne tiefgreifende Programmierkenntnisse. Der Fokus lag auf einem klaren Layout, guter Lesbarkeit und visueller Vielfalt, um die Themen lebendig darzustellen."
+    },
+    "content": {
+      "title": "Inhalte",
+      "text": "Wajuu bietet regelmäßig neue Artikel über verschiedene Aspekte Japans, darunter historische Orte, kulturelle Bräuche, Feste, japanisches Essen und Reiseerfahrungen. Das Blog richtet sich an alle, die ein tiefes Interesse an Japan hegen oder das Land besser kennenlernen möchten."
+    },
+    "hero": {
+      "title": "Hero-Bereich",
+      "text": "Der Einstieg in die Website erfolgt über eine atmosphärische Hero Section mit typischen japanischen Designelementen. Sie dient dazu, direkt beim ersten Besuch ein Gefühl für das Thema und die Ausrichtung der Seite zu vermitteln.",
+      "alt": "Wajuu Hero Section",
+      "caption": "Hero Section"
+    },
+    "blog": {
+      "title": "Blogbeiträge",
+      "text": "Jeder Beitrag im Blog ist sorgfältig recherchiert und bebildert. Ein Beispiel ist der Artikel über Kyoto, der Highlights, Sehenswürdigkeiten und Geheimtipps zur ehemaligen Hauptstadt Japans liefert.",
+      "alt": "Blog Beispiel",
+      "caption": "Blog über Kyoto"
+    },
+    "notice": {
+      "headline": "📝 Hinweis: ",
+      "text": "Wajuu wird als fortlaufendes Einzelprojekt gepflegt und erweitert. Die Website lebt vom persönlichen Engagement und wird regelmäßig um neue Inhalte ergänzt.",
+      "features": {
+        "wordpress": "Erstellt mit WordPress, BeTheme und Elementor.",
+        "updates": "Regelmäßige Erweiterung mit neuen Blogbeiträgen.",
+        "usability": "Fokus auf Lesbarkeit, Design und Nutzerführung."
+      },
+      "date": "Stand 2025"
+    }
+  }
+  

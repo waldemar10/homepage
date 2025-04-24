@@ -1,57 +1,41 @@
 import React from "react";
 
+import { useTranslation } from "react-i18next";
+
 import moodboard from "../../images/YogaWebsite/Moodboard.jpg";
 import persona from "../../images/YogaWebsite/Persona.jpg";
 import database from "../../images/YogaWebsite/Datenbank.png";
 function Yoga() {
+  const { t } = useTranslation("yoga");
   return (
     <div className="project">
-      <p className="project__text">
-        Das Ziel des Projekts war es, eine informative und ansprechende Website
-        zum Thema Gesundheit zu entwickeln. Nach sorgfältiger Überlegung
-        entschieden wir uns, den Schwerpunkt auf Yoga zu legen. Yoga ist nicht
-        nur eine körperliche Aktivität, die durch Bewegung und Dehnung die
-        körperliche Gesundheit fördert, sondern auch eine spirituelle Praxis,
-        die das geistige Wohlbefinden stärkt und Stress abbaut. Unser Ziel war
-        es, eine Website zu schaffen, die sowohl Anfänger als auch
-        Fortgeschrittene anspricht.
-      </p>
+      <p className="project__text">{t("intro")}</p>
 
-      <h3 className="project__title">Vorgehensweise</h3>
-      <p className="project__text">
-        Zu Beginn des Projekts erstellten wir mithilfe von Mindmapping ein
-        umfassendes Leitbild, um die Kernaussagen und Ziele unserer Website klar
-        zu definieren. Dies half uns, unsere Ideen zu strukturieren und die
-        Richtung des Projekts festzulegen. Aus diesem Leitbild leiteten wir vier
-        zentrale Entwurfskriterien ab:
-      </p>
+      <h3 className="project__title">{t("approach.title")}</h3>
+      <p className="project__text">{t("approach.text")}</p>
 
       <ul className="project__list">
         <li>
-          <strong>Freundlich</strong>
+          <strong>{t("criteria.friendly")}</strong>
         </li>
         <li>
-          <strong>Akkurat</strong>
+          <strong>{t("criteria.accurate")}</strong>
         </li>
         <li>
-          <strong>Effektiv</strong>
+          <strong>{t("criteria.effective")}</strong>
         </li>
         <li>
-          <strong>Sicher</strong>
+          <strong>{t("criteria.safe")}</strong>
         </li>
       </ul>
 
-      <h3 className="project__title">Moodboard</h3>
-      <p className="project__text">
-        Ein Moodboard wurde erstellt, um visuelle Ideen und Stimmungen für die
-        Gestaltung der Website zu sammeln. Dies half dabei, eine klare Vision
-        für das Aussehen und die Atmosphäre der Website zu entwickeln.
-      </p>
+      <h3 className="project__title">{t("moodboard.title")}</h3>
+      <p className="project__text">{t("moodboard.text")}</p>
 
       <figure className="project__figure">
-        <img src={moodboard} alt="Moodboard der Website" loading="lazy" />
+        <img src={moodboard} alt={t("moodboard.alt")} loading="lazy" />
         <figcaption>
-          Mehr Informationen im{" "}
+          {t("moodboard.caption")}{" "}
           <a
             href="https://miro.com/app/board/uXjVL05-EA0=/?share_link_id=668733502537"
             target="_blank"
@@ -61,13 +45,8 @@ function Yoga() {
         </figcaption>
       </figure>
 
-      <h3 className="project__title">Logo</h3>
-      <p className="project__text">
-        Um das Branding abzurunden, wurde ein passendes Logo gestaltet, das aus
-        Kreiselementen bestand. Das Logo sollte sowohl sportlich als auch
-        spirituell wirken, um die Verbindung zwischen körperlicher Bewegung und
-        geistigem Wohlbefinden zu unterstreichen, was ideal zu Yoga passt.
-      </p>
+      <h3 className="project__title">{t("logo.title")}</h3>
+      <p className="project__text">{t("logo.text")}</p>
 
       <svg
         className="project__logo project__logo--yoga"
@@ -79,69 +58,39 @@ function Yoga() {
         <circle cx="107.63" cy="90.34" r="20.63" />
       </svg>
 
-      <h3 className="project__title">Persona</h3>
-      <p className="project__text">
-        Als nächster Schritt wurde eine Persona entwickelt, um die Zielgruppe
-        besser zu verstehen und gezielt anzusprechen. Die Persona repräsentierte
-        junge Erwachsene Frauen, die ein aktives Interesse daran haben, ihr
-        Wohlbefinden zu verbessern und dabei eine gesunde Balance zwischen
-        Körper und Geist zu finden.
-      </p>
+      <h3 className="project__title">{t("persona.title")}</h3>
+      <p className="project__text">{t("persona.text")}</p>
 
       <figure className="project__figure">
-        <img
-          src={persona}
-          alt="Beispielhafte Persona für die Zielgruppe"
-          loading="lazy"
-        />
-        <figcaption>Persona</figcaption>
+        <img src={persona} alt={t("persona.alt")} loading="lazy" />
+        <figcaption>{t("persona.caption")}</figcaption>
       </figure>
 
-      <h3 className="project__title">Mock-up</h3>
-      <p className="project__text">
-        Auf Basis dieser Vorarbeiten wurde ein detailliertes Mock-up der Website
-        in Figma erstellt. Dieses Mock-up diente als visuelle Blaupause für das
-        endgültige Design und half dabei, das Layout sowie die bereits im
-        Moodboard definierten Elemente wie Farben und Typografie konkret
-        umzusetzen. Nach Fertigstellung des Mock-ups begann die Programmierung
-        der Website.
-      </p>
+      <h3 className="project__title">{t("mockup.title")}</h3>
+      <p className="project__text">{t("mockup.text")}</p>
 
-      <h3 className="project__title">Programmierung</h3>
-      <p className="project__text">
-        Die Website wurde mit HTML, SCSS, JavaScript und PHP erstellt. Es folgt
-        den MVC (Model-View-Controller) Ansatz. Um die Website für verschiedene
-        Bildschirmgrößen und Geräte zu optimieren, wurde das Design responsiv
-        gestaltet.
-      </p>
+      <h3 className="project__title">{t("development.title")}</h3>
+      <p className="project__text">{t("development.text")}</p>
 
-      <h3 className="project__title">Datenbank</h3>
-      <p className="project__text">
-        Zur Speicherung von Benutzerdaten wurde eine MySQL-Datenbank verwendet.
-        Die Datenbank enthält Informationen zu den Benutzern sowie zu den
-        Kursen, die auf der Website angeboten werden.
-      </p>
+      <h3 className="project__title">{t("database.title")}</h3>
+      <p className="project__text">{t("database.text")}</p>
 
       <figure className="project__figure">
-        <img
-          src={database}
-          alt="Datenbankstruktur der Website"
-          loading="lazy"
-        />
-        <figcaption>Vollständige Datenbankstruktur</figcaption>
+        <img src={database} alt={t("database.alt")} loading="lazy" />
+        <figcaption>{t("database.caption")}</figcaption>
       </figure>
 
       <div className="notice">
         <p>
-          <b>📢 Hinweis:</b> Diese Website wurde seit der Studienabgabe umfassend
-          überarbeitet und optimiert. Neue Features:
+          <b>{t("notice.headline")}</b>
+          {t("notice.text")}
         </p>
         <ul>
-          <li>Implementierung eines Backends mit PHP nach dem MVC-Pattern.</li>
-          <li>Datenbankstruktur mit MySQL.</li>
-          <li>Komplett neues Design.</li>
+          <li>{t("notice.features.backend")}</li>
+          <li>{t("notice.features.mysql")}</li>
+          <li>{t("notice.features.design")}</li>
         </ul>
-        <p className="notice__date">Stand 2025</p>
+        <p className="notice__date">{t("notice.date")}</p>
       </div>
     </div>
   );

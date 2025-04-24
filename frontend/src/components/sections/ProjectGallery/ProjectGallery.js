@@ -4,7 +4,7 @@ import { ProjectGalleryContext } from "../../../context/projectGalleryContext";
 import { useResizeObserverContainer } from "../../../hooks/useResizeObserverContainer";
 import { fetchProjects } from "../../../api/projectsApi";
 import ProjectGalleryArrows from "./ProjectGalleryArrows";
-
+import { useTranslation } from "react-i18next";
 const getProjectImage = (title) => {
   try {
     return require(`../../../images/${title}`);
@@ -40,6 +40,7 @@ const ProjectGallery = () => {
   const { projects, setProjects, setSelectedProject } =
     useContext(ProjectsContext);
   const [isLoading, setIsLoading] = useState(true);
+  const {t} = useTranslation("common");
 
   useEffect(() => {
     async function loadProjects() {
@@ -61,15 +62,18 @@ const ProjectGallery = () => {
     <section ref={refProjectGallery} className="project-gallery">
       <div className="placeholder__content"></div>
       <h2 className="project-gallery__heading" id="project">
-        Meine <span className="project-gallery__heading--highlight">Projekte.</span>
+        {t("gallery.headline1")}{" "}
+        <span className="project-gallery__heading--highlight">
+          {t("gallery.headline2")}
+        </span>
       </h2>
 
       <div className="project-gallery__grid" id="projectSelection-box-showcase">
         {isLoading ? (
-          <div>Projekte werden geladen... </div>
+          <div>{t("gallery.loading")} </div>
         ) : !projects || projects.length === 0 ? (
           <div className="errors__container">
-            <p className="errors__message">Keine Projekte gefunden</p>
+            <p className="errors__message">{t("gallery.error")}</p>
           </div>
         ) : (
           projects.map((project, index) => (
@@ -85,7 +89,9 @@ const ProjectGallery = () => {
         )}
       </div>
 
-      {!isLoading && projects && <ProjectGalleryArrows dimensions={dimensions} />}
+      {!isLoading && projects && (
+        <ProjectGalleryArrows dimensions={dimensions} />
+      )}
     </section>
   );
 };
