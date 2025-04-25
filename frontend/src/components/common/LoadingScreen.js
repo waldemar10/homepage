@@ -1,4 +1,3 @@
-// src/components/common/LoadingScreen.jsx
 import React from 'react';
 
 const LoadingScreen = ({headline,msg}) => {
