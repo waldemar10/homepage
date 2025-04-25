@@ -22,7 +22,8 @@
 .env.production.local
 
 .htaccess
-
+.htaccess.development
+.htaccess.production
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
