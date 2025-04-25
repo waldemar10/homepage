@@ -29,18 +29,4 @@ i18n
     },
   });
 
-  i18n.on('failedLoading', async (lng, ns, msg) => {
-    try {
-      const response = await fetch(`frontend/locales/${lng}/${ns}.json`);
-      if (!response.ok) throw new Error('Fallback not found');
-  
-      const fallbackTranslations = await response.json();
-  
-      i18n.addResourceBundle(lng, ns, fallbackTranslations, true, true);
-      console.log(`Fallback ${lng}/${ns} success.`);
-    } catch (err) {
-      console.error(`Fallback error ${lng}/${ns}:`, err);
-    }
-  });
-
 export default i18n;
