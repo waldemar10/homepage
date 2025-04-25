@@ -1,0 +1,35 @@
+{
+    "title": "Schere-Stein-Papier Ultimate",
+    "intro": "Schere-Stein-Papier Ultimate war ein Softwareprojekt im dritten Semester im Rahmen des Moduls Visual Computing. Ziel des Projekts war die Entwicklung einer Java-Anwendung, die eine Bildverarbeitungsaufgabe umsetzt und die daraus gewonnenen Ergebnisse in einer selbst erstellten 3D-Umgebung visuell darstellt. Als Team entschieden wir uns dafür, das klassische Spiel „Schere, Stein, Papier“ zu implementieren. Mithilfe von Bildverarbeitungsmethoden war die Software in der Lage, die Handgesten für Schere, Stein und Papier zu erkennen und entsprechend zu verarbeiten. Meine Hauptaufgabe im Team bestand in der Programmierung der Bildverarbeitungskomponente. Hierbei setzte ich OpenCV ein und nutzte die in der Vorlesung vermittelten Konzepte, um die Erkennung der Handgesten für „Schere“, „Stein“ und „Papier“ zu realisieren.",
+    "video": {
+      "title": "Video",
+      "src": "../../videos/SchereSteinPapier.mp4",
+      "poster": "../../images/VC/SSP.JPG"
+    },
+    "approach": {
+      "title": "Vorgehensweise",
+      "intro": "Wie die Gestenerkennenung funktioniert:",
+      "steps": [
+        "Die Webcam wird mithilfe von OpenCVs VideoCapture erkannt und gestartet.",
+        "Das erste Frame des Webcam-Streams wird als OpenCV-Matrix gespeichert, um es später als Referenz zu nutzen.",
+        "Alle nachfolgenden Frames werden in Graustufenbilder umgewandelt, und der Filter GaussianBlur wird angewendet, um das Bild zu glätten und Rauschen zu reduzieren.",
+        "Anschließend wird ein Schwellenwert (Threshold) auf die Graustufenbilder angewendet, der bestimmt, ab welchem Grauwert die Pixel schwarz oder weiß dargestellt werden.",
+        "Nach dieser Vorverarbeitung wird der Canny-Algorithmus zur Kantenerkennung eingesetzt, der aufgrund der vorherigen Bildbearbeitung schnell die Konturen der Hand identifiziert.",
+        "Um sicherzustellen, dass die Erkennung der Handformen korrekt funktioniert, werden die Kantenbilder erweitert (Dilatation), um eventuelle Lücken in den Konturen zu schließen.",
+        "Mithilfe der Hough-Transformation werden gerade Linien im Kantenbild erkannt, was die Erkennung der Geste „Papier“ erleichtert.",
+        "Als nächstes wird eine konvexe Hülle um die Finger (rote Linien um die Hand) gezeichnet, um die sogenannten Konvexitätsdefekte zu ermitteln.",
+        "Mit der OpenCV-Funktion convexityDefects() werden die Stellen der Konvexitätsdefekte identifiziert, was die Erkennung der Fingerspitzen ermöglicht.",
+        "Im nächsten Schritt wird der Mittelpunkt der Handkontur mit der Funktion Moments berechnet. Diese Methode nutzt den Massenschwerpunkt der Hand, um genaue Koordinaten für die Mitte der Kontur zu erhalten.",
+        "Die ermittelten Punkte der Konvexitätsdefekte werden mit dem Mittelpunkt verbunden, wodurch die Anzahl der sichtbaren Finger bestimmt werden kann. Dies hilft bei der Erkennung der Gesten „Papier“ und „Schere“.",
+        "Um die Geste „Stein“ zu erkennen, wird die Kreisförmigkeit (Circularity) der Handkontur berechnet. Diese wird mithilfe der Formel (4 * π * ContourArea) / arcLength² berechnet und ermöglicht eine klare Unterscheidung zwischen den Gesten „Papier“ und „Stein“.",
+        "Schließlich wird das zuvor verarbeitete Kantenbild aus der OpenCV-Matrix in ein sichtbares Bild umgewandelt.",
+        "Zum Abschluss wird das Ergebnis auf dem aktuellen Webcam-Frame dargestellt, sodass die erkannte Handkontur und die entsprechende Geste in Echtzeit angezeigt werden."
+      ]
+    },
+    "image": {
+      "src": "../../images/VC/Schere.JPG",
+      "alt": "Scissors gesture",
+      "caption": "Die Bildverarbeitung erkennt die Geste „Schere“"
+    }
+  }
+  

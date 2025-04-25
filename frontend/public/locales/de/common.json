@@ -1,0 +1,71 @@
+{
+  "header": {
+    "aboutme": "Über mich",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "footer":{
+    "imprint": "Impressum",
+    "privacyPolicy": "Datenschutz",
+    "contact": "Kontakt",
+    "code": "Website quellcode"
+  },
+    "hero": {
+    "greeting": "Willkommen",
+    "introduction": {
+      "part1": "Ich bin",
+      "part2": "Waldemar",
+      "part3": "Justus",
+      "part4": "👋"
+    },
+    "description": "Meinen Bachelor habe ich seit Oktober 2024 erfolgreich in Computervisualistik und Design an der Hochschule Hamm-Lippstadt absolviert. Ausgewählte Projekte, die ich während des Studiums oder privat gemacht habe, werden hier vorgestellt.",
+    "buttonText": "Meine Projekte",
+    "alt": "Waldemar Justus Foto"
+  },
+    "aboutme":{
+    "headline1": "Mein Weg in die Welt der ",
+    "headline2": "Informatik.",
+    "intro1": "Im Jahr 2019 entdeckte ich meine Begeisterung für die Informatik. Mein Einstieg in die Programmierung begann mit Handelsalgorithmen in MQL4, mit dem Ziel, verschiedene Handelsstrategien auf dem Devisenmarkt zu entwickeln, um damit positive Renditen zu erzielen. Dabei faszinierte mich nicht nur die technische Umsetzung, sondern auch die Herausforderung, Algorithmen effizient und präzise zu gestalten.",
+    "intro2": "Diese Faszination für das Programmieren motivierte mich dazu, ein Informatikstudium zu beginnen. Während meines Studiums erweiterte ich mein Wissen in verschiedenen Programmiersprachen und vertiefte mich in die Softwareentwicklung, von der objektorientierten Programmierung bis hin zur Entwicklung komplexer Webanwendungen. Neben der technischen Expertise lernte ich, wie wichtig Teamarbeit, agile Methoden und strukturiertes Projektmanagement für die erfolgreiche Umsetzung von Softwareprojekten sind.",
+    "intro3": "Mein Ziel ist es, mich kontinuierlich weiterzuentwickeln und innovative Softwarelösungen zu gestalten, die einen echten Mehrwert bieten. Ich lege besonderen Wert auf sauberen, gut strukturierten Code und nutze moderne Technologien, um skalierbare und effiziente Anwendungen zu entwickeln. Dabei begeistert mich nicht nur die Technik selbst, sondern auch die Möglichkeit, mit meiner Arbeit Menschen und Unternehmen in ihrer digitalen Transformation zu unterstützen und nachhaltige Lösungen zu schaffen.",
+    "skillsHeadline1": "Meine ",
+    "skillsHeadline2": "Fähigkeiten.",
+    "skills": {
+      "programming": {
+        "label": "Programmiersprachen",
+        "items": ["Java", "JavaScript", "Kotlin", "PHP", "Python"]
+      },
+      "frontend": {
+        "label": "Frontend",
+        "items": ["Angular", "Bootstrap", "CSS (SCSS)", "HTML", "React", "WordPress (Elementor & Betheme)"]
+      },
+      "backend": {
+        "label": "Backend",
+        "items": ["Express", "Node.js"]
+      },
+      "databases": {
+        "label": "Datenbanken",
+        "items": ["MongoDB", "MySQL"]
+      },
+      "tools": {
+        "label": "Tools",
+        "items": ["Git", "IntelliJ", "Unity", "Visual Studio", "Visual Studio Code"]
+      },
+      "design": {
+        "label": "Design",
+        "items": ["Adobe XD", "Adobe Illustrator", "Figma"]
+      },
+      "projectManagement": {
+        "label": "Projektmanagement",
+        "items": ["Jira", "Kanban", "MS Teams", "Trello"]
+      }
+    }
+  }
+ ,
+ "gallery":{
+    "headline1": "Meine ",
+    "headline2": "Projekte.",
+    "loading": "Projekte werden geladen...",
+    "error": "Fehler beim Laden der Projekte."
+ } 
+}

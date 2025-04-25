@@ -1,0 +1,55 @@
+{
+  "intro": "Das Ziel des Projekts war es, eine informative und ansprechende Website zum Thema Gesundheit zu entwickeln. Nach sorgfältiger Überlegung entschieden wir uns, den Schwerpunkt auf Yoga zu legen. Yoga ist nicht nur eine körperliche Aktivität, die durch Bewegung und Dehnung die körperliche Gesundheit fördert, sondern auch eine spirituelle Praxis, die das geistige Wohlbefinden stärkt und Stress abbaut. Unser Ziel war es, eine Website zu schaffen, die sowohl Anfänger als auch Fortgeschrittene anspricht.",
+  "approach": {
+    "title": "Vorgehensweise",
+    "text": "Zu Beginn des Projekts erstellten wir mithilfe von Mindmapping ein umfassendes Leitbild, um die Kernaussagen und Ziele unserer Website klar zu definieren. Dies half uns, unsere Ideen zu strukturieren und die Richtung des Projekts festzulegen. Aus diesem Leitbild leiteten wir vier zentrale Entwurfskriterien ab:"
+  },
+  "criteria": {
+    "friendly": "Freundlich",
+    "accurate": "Akkurat",
+    "effective": "Effektiv",
+    "safe": "Sicher"
+  },
+  "moodboard": {
+    "title": "Moodboard",
+    "text": "Ein Moodboard wurde erstellt, um visuelle Ideen und Stimmungen für die Gestaltung der Website zu sammeln. Dies half dabei, eine klare Vision für das Aussehen und die Atmosphäre der Website zu entwickeln.",
+    "caption": "Mehr Informationen im",
+    "alt": "Moodboard für das Website-Design"
+  },
+  "logo": {
+    "title": "Logo",
+    "text": "Um das Branding abzurunden, wurde ein passendes Logo gestaltet, das aus Kreiselementen bestand. Das Logo sollte sowohl sportlich als auch spirituell wirken, um die Verbindung zwischen körperlicher Bewegung und geistigem Wohlbefinden zu unterstreichen, was ideal zu Yoga passt.",
+    "alt": "Logo-Design für die Website"
+  },
+  "persona": {
+    "title": "Persona",
+    "text": "Als nächster Schritt wurde eine Persona entwickelt, um die Zielgruppe besser zu verstehen und gezielt anzusprechen. Die Persona repräsentierte junge Erwachsene Frauen, die ein aktives Interesse daran haben, ihr Wohlbefinden zu verbessern und dabei eine gesunde Balance zwischen Körper und Geist zu finden.",
+    "caption": "Persona",
+    "alt": "Beispielhafte Persona für die Zielgruppe"
+  },
+  "mockup": {
+    "title": "Mock-up",
+    "text": "Auf Basis dieser Vorarbeiten wurde ein detailliertes Mock-up der Website in Figma erstellt. Dieses Mock-up diente als visuelle Blaupause für das endgültige Design und half dabei, das Layout sowie die bereits im Moodboard definierten Elemente wie Farben und Typografie konkret umzusetzen. Nach Fertigstellung des Mock-ups begann die Programmierung der Website.",
+    "alt": "Mock-up der Website in Figma"
+  },
+  "development": {
+    "title": "Programmierung",
+    "text": "Die Website wurde mit HTML, SCSS, JavaScript und PHP erstellt. Es folgt den MVC (Model-View-Controller) Ansatz. Um die Website für verschiedene Bildschirmgrößen und Geräte zu optimieren, wurde das Design responsiv gestaltet."
+  },
+  "database": {
+    "title": "Datenbank",
+    "text": "Zur Speicherung von Benutzerdaten wurde eine MySQL-Datenbank verwendet. Die Datenbank enthält Informationen zu den Benutzern sowie zu den Kursen, die auf der Website angeboten werden.",
+    "caption": "Vollständige Datenbankstruktur",
+    "alt": "Datenbankstruktur für die Website"
+  },
+  "notice": {
+    "headline": "📢 Hinweis: ",
+    "text": "Diese Website wurde seit der Studienabgabe umfassend überarbeitet und optimiert. Neue Features:",
+    "features": {
+      "backend": "Implementierung eines Backends mit PHP nach dem MVC-Pattern.",
+      "mysql": "Datenbankstruktur mit MySQL.",
+      "design": "Komplett neues Design."
+    },
+    "date": "Stand 2025"
+  }
+}
