@@ -1,0 +1,47 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  width: 100%;
+  z-index: 100001;
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--bg-color-project-showcase);
+  border-radius: var(--border-radius-box-outer);
+  border: 1px solid var(--border-color);
+  }
+  &--show{
+    display: flex;
+}
+  &__backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100000;
+    &--show{
+        display: flex;
+    }
+  }
+  &__title {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  &__content {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+}

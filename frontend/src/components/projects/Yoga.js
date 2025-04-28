@@ -9,33 +9,33 @@ function Yoga() {
   const { t } = useTranslation("yoga");
   return (
     <div className="project">
-      <p className="project__text">{t("intro")}</p>
+      <p className="project__text">{t("intro","")}</p>
 
-      <h3 className="project__title">{t("approach.title")}</h3>
-      <p className="project__text">{t("approach.text")}</p>
+      <h3 className="project__title">{t("approach.title","")}</h3>
+      <p className="project__text">{t("approach.text","")}</p>
 
       <ul className="project__list">
         <li>
-          <strong>{t("criteria.friendly")}</strong>
+          <strong>{t("criteria.friendly","")}</strong>
         </li>
         <li>
-          <strong>{t("criteria.accurate")}</strong>
+          <strong>{t("criteria.accurate","")}</strong>
         </li>
         <li>
-          <strong>{t("criteria.effective")}</strong>
+          <strong>{t("criteria.effective","")}</strong>
         </li>
         <li>
-          <strong>{t("criteria.safe")}</strong>
+          <strong>{t("criteria.safe","")}</strong>
         </li>
       </ul>
 
-      <h3 className="project__title">{t("moodboard.title")}</h3>
-      <p className="project__text">{t("moodboard.text")}</p>
+      <h3 className="project__title">{t("moodboard.title","")}</h3>
+      <p className="project__text">{t("moodboard.text","")}</p>
 
       <figure className="project__figure">
-        <img src={moodboard} alt={t("moodboard.alt")} loading="lazy" />
+        <img src={moodboard} alt={t("moodboard.alt","")} loading="lazy" />
         <figcaption>
-          {t("moodboard.caption")}{" "}
+          {t("moodboard.caption","")}{" "}
           <a
             href="https://miro.com/app/board/uXjVL05-EA0=/?share_link_id=668733502537"
             target="_blank"
@@ -45,8 +45,8 @@ function Yoga() {
         </figcaption>
       </figure>
 
-      <h3 className="project__title">{t("logo.title")}</h3>
-      <p className="project__text">{t("logo.text")}</p>
+      <h3 className="project__title">{t("logo.title","")}</h3>
+      <p className="project__text">{t("logo.text","")}</p>
 
       <svg
         className="project__logo project__logo--yoga"
@@ -58,39 +58,39 @@ function Yoga() {
         <circle cx="107.63" cy="90.34" r="20.63" />
       </svg>
 
-      <h3 className="project__title">{t("persona.title")}</h3>
-      <p className="project__text">{t("persona.text")}</p>
+      <h3 className="project__title">{t("persona.title","")}</h3>
+      <p className="project__text">{t("persona.text","")}</p>
 
       <figure className="project__figure">
-        <img src={persona} alt={t("persona.alt")} loading="lazy" />
-        <figcaption>{t("persona.caption")}</figcaption>
+        <img src={persona} alt={t("persona.alt","")} loading="lazy" />
+        <figcaption>{t("persona.caption","")}</figcaption>
       </figure>
 
-      <h3 className="project__title">{t("mockup.title")}</h3>
-      <p className="project__text">{t("mockup.text")}</p>
+      <h3 className="project__title">{t("mockup.title","")}</h3>
+      <p className="project__text">{t("mockup.text","")}</p>
 
-      <h3 className="project__title">{t("development.title")}</h3>
-      <p className="project__text">{t("development.text")}</p>
+      <h3 className="project__title">{t("development.title","")}</h3>
+      <p className="project__text">{t("development.text","")}</p>
 
-      <h3 className="project__title">{t("database.title")}</h3>
-      <p className="project__text">{t("database.text")}</p>
+      <h3 className="project__title">{t("database.title","")}</h3>
+      <p className="project__text">{t("database.text","")}</p>
 
       <figure className="project__figure">
-        <img src={database} alt={t("database.alt")} loading="lazy" />
-        <figcaption>{t("database.caption")}</figcaption>
+        <img src={database} alt={t("database.alt","")} loading="lazy" />
+        <figcaption>{t("database.caption","")}</figcaption>
       </figure>
 
       <div className="notice">
         <p>
-          <b>{t("notice.headline")}</b>
-          {t("notice.text")}
+          <b>{t("notice.headline","")}</b>
+          {t("notice.text","")}
         </p>
         <ul>
-          <li>{t("notice.features.backend")}</li>
-          <li>{t("notice.features.mysql")}</li>
-          <li>{t("notice.features.design")}</li>
+          <li>{t("notice.features.backend","")}</li>
+          <li>{t("notice.features.mysql","")}</li>
+          <li>{t("notice.features.design","")}</li>
         </ul>
-        <p className="notice__date">{t("notice.date")}</p>
+        <p className="notice__date">{t("notice.date","")}</p>
       </div>
     </div>
   );

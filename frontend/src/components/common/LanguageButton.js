@@ -18,13 +18,13 @@ const LanguageButton = () => {
         <button
           className="language-button__button"
           onClick={() => handleChangeLanguage("en")}>
-          <img src={en_flag} alt="English" />
+          <img src={en_flag} alt="EN" />
         </button>
       ) : (
         <button
           className="language-button__button"
           onClick={() => handleChangeLanguage("de")}>
-          <img src={de_flag} alt="German" />
+          <img src={de_flag} alt="DE" />
         </button>
       )}
     </div>

@@ -10,6 +10,24 @@
     "contact": "Kontakt",
     "code": "Website quellcode"
   },
+  "contact": {
+    "text1":"Du hast ein Anliegen oder Fragen? Dann zögere nicht, mich zu kontaktieren. Ich freue mich darauf, von dir zu hören! Du kannst mich über die folgende E-Mail jederzeit erreichen: waljuscontact@gmail.com.",
+    "text2":"Sonst kannst du mir auch über das Kontaktformular schreiben. Ich werde mich so schnell wie möglich bei dir melden.",
+    "form": {
+      "title": "Kontaktformular",
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Fehler beim Senden der Nachricht. Bitte versuche es erneut.",
+      "emptyFields": "Bitte fülle alle Felder aus.",
+      "modal": {
+        "title": "Nachricht gesendet!",
+        "text": "Vielen Dank für deine Nachricht! Ich werde mich so schnell wie möglich bei dir melden."
+      }
+    }
+  },
     "hero": {
     "greeting": "Willkommen",
     "introduction": {

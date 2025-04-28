@@ -17,11 +17,9 @@ function App() {
           <Route path="privacyPolicy" element={<PrivacyPolicy />} />
           <Route path="imprint" element={<Impressum />} />
           <Route path="contact" element={<Contact />} />
-
         </Routes>
         <Footer />
       </div>
-      
     </Router>
   );
 }

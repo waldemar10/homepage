@@ -17,7 +17,7 @@ function Footer() {
   };
   useEffect(() => {
     const url = location.pathname;
-    if (url.includes("/imprint") || url.includes("/privacyPolicy")) {
+    if (url !== "/") {
       setShowNav(false);
     } else {
       setShowNav(true);
@@ -36,14 +36,14 @@ function Footer() {
           Copyright © 2023 - {year} Waldemar Justus
         </div>
         <div className="footer__links">
-          <a href="#/privacyPolicy">{t("footer.privacyPolicy")}</a>
-          <a href="#/imprint">{t("footer.imprint")}</a>
+          <a href="#/privacyPolicy">{t("footer.privacyPolicy","")}</a>
+          <a href="#/imprint">{t("footer.imprint","")}</a>
 
           <a
             href="https://github.com/waldemar10/homepage"
             target="_blank"
             rel="noreferrer">
-            {t("footer.code")}
+            {t("footer.code","")}
           </a>
         </div>
       </div>

@@ -4,8 +4,8 @@ import { ProjectGalleryContext } from "../../context/projectGalleryContext";
 import { AboutMeContext } from "../../context/aboutMeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
-import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useNavigate, useLocation } from "react-router-dom";
 import Switch from "../common/Switch";
 import LanguageButton from "../common/LanguageButton";
 import Socials from "../common/Socials";
@@ -18,6 +18,7 @@ function Header() {
   const isMobile = useIsMobile();
   const navBoxRef = useRef(null);
   const location = useLocation();
+  const navigate = useNavigate();
   const { t } = useTranslation("common");
   // Set placeholder height to header height
   useEffect(() => {
@@ -91,14 +92,32 @@ function Header() {
     });
     closeMobileMenu();
   };
-  useEffect(() => {
+
+  function handleHeroNav(e, ref) {
     const url = location.pathname;
-    if (url.includes("/imprint") || url.includes("/privacyPolicy")) {
-      setShowNav(false);
-    } else {
-      setShowNav(true);
+    e.preventDefault();
+    if (url !== "/") {
+      navigate("/");
+      if (!ref) return;
+      setTimeout(() => {
+        navToAnchor(e, ref);
+      }, 50);
+      return;
     }
-  }, [location]);
+    navToAnchor(e, ref);
+  }
+  function navToContact(e) {
+    e.preventDefault();
+    navigate("/contact");
+    closeMobileMenu();
+    scrollToTop();
+  }
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
 
   useEffect(() => {
     const content = document.querySelector(".header__content");
@@ -127,13 +146,16 @@ function Header() {
                 <nav className="header__nav-box">
                   <a
                     className="header__nav-box-item"
-                    onClick={(e) => navToAnchor(e, refAboutMe)}>
-                    {t("header.aboutme")}
+                    onClick={(e) => handleHeroNav(e, refAboutMe)}>
+                    {t("header.aboutme","")}
                   </a>
                   <a
                     className="header__nav-box-item"
-                    onClick={(e) => navToAnchor(e, refProjectGallery)}>
-                    {t("header.projects")}
+                    onClick={(e) => handleHeroNav(e, refProjectGallery)}>
+                    {t("header.projects","")}
+                  </a>
+                  <a className="header__nav-box-item" href="#/contact">
+                    {t("header.contact","")}
                   </a>
                   <div className="header__nav-box-switch">
                     <Switch />
@@ -168,13 +190,16 @@ function Header() {
             <nav ref={navBoxRef} className="header__nav-box-mobile">
               <a
                 className="header__nav"
-                onClick={(e) => navToAnchor(e, refAboutMe)}>
-                {t("header.aboutme")}
+                onClick={(e) => handleHeroNav(e, refAboutMe)}>
+                {t("header.aboutme","")}
               </a>
               <a
                 className="header__nav"
-                onClick={(e) => navToAnchor(e, refProjectGallery)}>
-                {t("header.projects")}
+                onClick={(e) => handleHeroNav(e, refProjectGallery)}>
+                {t("header.projects","")}
+              </a>
+              <a className="header__nav" /* href="#/contact" */ onClick={(e) => navToContact(e)}>
+                {t("header.contact","")}
               </a>
               <div className="header__nav">
                 <Socials

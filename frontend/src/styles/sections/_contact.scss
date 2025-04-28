@@ -1,8 +1,24 @@
-.contact-wrapper{
-   flex: 1 1 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
- /*    width: 100%; */
+.contact {
+  flex: 1 1 0px;
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(25px, 4vw, 50px);
+  &__title {
+    color: var(--font-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &__content {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    @media (max-width: 768px) {
+      padding:10px;
+    }
+  }
+  &__text {
+    padding: 0px 20px;
+  }
 }

@@ -1,17 +1,20 @@
 import ContactForm from "../components/common/ContactForm";
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
-
+import { useTranslation } from "react-i18next";
 const Contact = () => {
+  const { t } = useTranslation("common");
   return (
-    <>
-      <Header></Header>
-      <div className="contact-wrapper">
-        <h1>Kontakt</h1>
+    <div className="contact">
+      <div className="contact__content">
+        <h2 className="contact__title">{t("header.contact","")}</h2>
+        <p className="contact__text">
+        {t("contact.text1","")}
+          <br />
+          <br />
+          {t("contact.text2","")}
+        </p>
         <ContactForm />
       </div>
-      <Footer />
-    </>
+    </div>
   );
 };
 

@@ -6,18 +6,18 @@ import imgScissor from "../../images/VC/Schere.JPG";
 import { useTranslation } from "react-i18next";
 function SchereSteinPapier() {
   const { t } = useTranslation("ssp");
-  const steps = t("approach.steps", { returnObjects: true });
+  const steps = t("approach.steps","", { returnObjects: true });
   return (
     <div className="project">
-      <p className="project__text">{t("intro")}</p>
+      <p className="project__text">{t("intro","")}</p>
 
-      <h3 className="project__title">{t("video.title")}</h3>
+      <h3 className="project__title">{t("video.title","")}</h3>
       <div className="project__video">
         <video controls src={video} poster={thumbnail}></video>
       </div>
 
-      <h3 className="project__title">{t("approach.title")}</h3>
-      <p className="project__text">{t("approach.intro")}</p>
+      <h3 className="project__title">{t("approach.title","")}</h3>
+      <p className="project__text">{t("approach.intro","")}</p>
 
       <ol className="project__list">
         {steps.map((step, index) => (
@@ -26,9 +26,9 @@ function SchereSteinPapier() {
       </ol>
 
       <figure className="project__figure">
-        <img src={imgScissor} alt={t("image.alt")} />
+        <img src={imgScissor} alt={t("image.alt","")} />
         <figcaption className="project__figcaption">
-          {t("image.caption")}
+          {t("image.caption","")}
         </figcaption>
       </figure>
     </div>

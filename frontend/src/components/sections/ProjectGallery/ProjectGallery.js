@@ -62,18 +62,18 @@ const ProjectGallery = () => {
     <section ref={refProjectGallery} className="project-gallery">
       <div className="placeholder__content"></div>
       <h2 className="project-gallery__heading" id="project">
-        {t("gallery.headline1")}{" "}
+        {t("gallery.headline1","")}{" "}
         <span className="project-gallery__heading--highlight">
-          {t("gallery.headline2")}
+          {t("gallery.headline2","")}
         </span>
       </h2>
 
       <div className="project-gallery__grid" id="projectSelection-box-showcase">
         {isLoading ? (
-          <div>{t("gallery.loading")} </div>
+          <div>{t("gallery.loading","")} </div>
         ) : !projects || projects.length === 0 ? (
           <div className="errors__container">
-            <p className="errors__message">{t("gallery.error")}</p>
+            <p className="errors__message">{t("gallery.error","")}</p>
           </div>
         ) : (
           projects.map((project, index) => (

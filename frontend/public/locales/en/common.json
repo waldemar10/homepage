@@ -1,4 +1,29 @@
 {
+  "header": {
+    "aboutme": "About Me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "footer": {
+    "imprint": "Imprint",
+    "privacyPolicy": "Privacy Policy",
+    "contact": "Contact",
+    "code": "Website code"
+  },
+  "contact": {
+    "text1": "Do you have a concern or questions? Then don't hesitate to contact me. I look forward to hearing from you! You can reach me anytime via the following email: waljuscontact@gmail.com.",
+    "text2": "Otherwise, you can also write to me via the contact form. I will get back to you as soon as possible.",
+    "form": {
+      "title": "Contact form",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again.",
+      "emptyFields": "Please fill in all fields."
+    }
+  },
   "hero": {
     "greeting": "Welcome",
     "introduction": {

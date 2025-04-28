@@ -45,7 +45,7 @@ function HeroSection() {
           onClick={!isMobile ? scrollToAboutMe : null}
           target="_blank"
           rel="noreferrer">
-          <img src={foto} alt={t("hero.alt")}></img>
+          <img src={foto} alt={t("hero.alt","")}></img>
         </a>
       </div>
     );
@@ -53,7 +53,7 @@ function HeroSection() {
   const HeroButton = () => {
     return (
       <button className="hero__button" onClick={scrollToProjectGallery}>
-        <span>{t("hero.buttonText")}</span>
+        <span>{t("hero.buttonText","")}</span>
       </button>
     );
   };
@@ -70,10 +70,10 @@ function HeroSection() {
 
         <div className="hero__content">
           <div className="hero__box">
-            <span className="hero__greeting">{t("hero.greeting")}</span>
+            <span className="hero__greeting">{t("hero.greeting","")}</span>
             <div className="hero__name">
-            {t("hero.introduction.part1")} <span className="hero__name--highlight">{t("hero.introduction.part2")}</span>{" "}
-            {t("hero.introduction.part3")} <span className="hero__icon">{t("hero.introduction.part4")}</span>
+            {t("hero.introduction.part1","")} <span className="hero__name--highlight">{t("hero.introduction.part2","")}</span>{" "}
+            {t("hero.introduction.part3","")} <span className="hero__icon">{t("hero.introduction.part4","")}</span>
             </div>
             {isMobile && (
               <>
@@ -82,7 +82,7 @@ function HeroSection() {
               </>
             )}
             <p className="hero__description">
-            {t("hero.description")}
+            {t("hero.description","")}
             </p>
 
             {!isMobile && <HeroButton />}

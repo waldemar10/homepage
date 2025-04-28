@@ -22,65 +22,65 @@ const AboutMe = () => {
     <>
       <section ref={refAboutMe} className="aboutme">
         <h2 className="aboutme__headline">
-          {t("aboutme.headline1")}
-          <span className="aboutme__headline--highlight"> {t("aboutme.headline2")}</span>
+          {t("aboutme.headline1","")}
+          <span className="aboutme__headline--highlight"> {t("aboutme.headline2","")}</span>
         </h2>
 
         <div className="aboutme__container">
           <div className="aboutme__introduction">
             <div className="aboutme__text">
               <p>
-              {t("aboutme.intro1")}
+              {t("aboutme.intro1","")}
               </p>
               <img className="aboutme__image" src={mql4}></img>
             </div>
             <p>
-            {t("aboutme.intro2")}
+            {t("aboutme.intro2","")}
             </p>
             <div className="aboutme__text">
               <img className="aboutme__image" src={laptop}></img>
               <p>
-              {t("aboutme.intro3")}
+              {t("aboutme.intro3","")}
               </p>
             </div>
           </div>
 
           <section className="aboutme__skills">
             <h2 className="aboutme__headline">
-            {t("aboutme.skillsHeadline1")} <span className="aboutme__headline--highlight">{t("aboutme.skillsHeadline2")}</span>
+            {t("aboutme.skillsHeadline1","")} <span className="aboutme__headline--highlight">{t("aboutme.skillsHeadline2","")}</span>
             </h2>
             <ul className="aboutme__skills-list">
               <li className="aboutme__skills-item">
-                <strong>{t("aboutme.skills.programming.label")}</strong>
-                <span>{t("aboutme.skills.programming.items", { returnObjects: true }).join(", ")}</span>
+                <strong>{t("aboutme.skills.programming.label","")}</strong>
+                <span>{t("aboutme.skills.programming.items","", { returnObjects: true }).join(", ")}</span>
               </li>
               <li className="aboutme__skills-item">
-                <strong>{t("aboutme.skills.frontend.label")}</strong>
+                <strong>{t("aboutme.skills.frontend.label","")}</strong>
                 <span>
-                {t("aboutme.skills.frontend.items", { returnObjects: true }).join(", ")}
+                {t("aboutme.skills.frontend.items","", { returnObjects: true }).join(", ")}
                 </span>
               </li>
               <li className="aboutme__skills-item">
-                <strong>{t("aboutme.skills.backend.label")}</strong>
-                <span>{t("aboutme.skills.backend.items", { returnObjects: true }).join(", ")}</span>
+                <strong>{t("aboutme.skills.backend.label","")}</strong>
+                <span>{t("aboutme.skills.backend.items","", { returnObjects: true }).join(", ")}</span>
               </li>
               <li className="aboutme__skills-item">
-                <strong>{t("aboutme.skills.databases.label")}</strong>
-                <span>{t("aboutme.skills.databases.items", { returnObjects: true }).join(", ")}</span>
+                <strong>{t("aboutme.skills.databases.label","")}</strong>
+                <span>{t("aboutme.skills.databases.items","", { returnObjects: true }).join(", ")}</span>
               </li>
               <li className="aboutme__skills-item">
-                <strong>{t("aboutme.skills.tools.label")}</strong>
+                <strong>{t("aboutme.skills.tools.label","")}</strong>
                 <span>
-                {t("aboutme.skills.tools.items", { returnObjects: true }).join(", ")}
+                {t("aboutme.skills.tools.items","", { returnObjects: true }).join(", ")}
                 </span>
               </li>
               <li className="aboutme__skills-item">
-                <strong>{t("aboutme.skills.design.label")}</strong>
-                <span>{t("aboutme.skills.design.items", { returnObjects: true }).join(", ")}</span>
+                <strong>{t("aboutme.skills.design.label","")}</strong>
+                <span>{t("aboutme.skills.design.items","", { returnObjects: true }).join(", ")}</span>
               </li>
               <li className="aboutme__skills-item">
-                <strong>{t("aboutme.skills.projectManagement.label")}</strong>
-                <span>{t("aboutme.skills.projectManagement.items", { returnObjects: true }).join(", ")}</span>
+                <strong>{t("aboutme.skills.projectManagement.label","")}</strong>
+                <span>{t("aboutme.skills.projectManagement.items","", { returnObjects: true }).join(", ")}</span>
               </li>
             </ul>
           </section>
