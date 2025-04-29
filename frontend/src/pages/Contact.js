@@ -1,7 +1,9 @@
+import React, { useEffect } from "react"
 import ContactForm from "../components/common/ContactForm";
 import { useTranslation } from "react-i18next";
 const Contact = () => {
   const { t } = useTranslation("common");
+
   return (
     <div className="contact">
       <div className="contact__content">

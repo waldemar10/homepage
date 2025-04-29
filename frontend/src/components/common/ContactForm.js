@@ -47,8 +47,9 @@ const ContactForm = () => {
         captcha: formData.captcha,
       }),
     })
-      .then((response) => {
-        const data = response.json();
+      .then(async(response) => {
+        const data = await response.json();
+      
         if (!response.ok) {
           throw new Error(data.errors);
         }
@@ -56,19 +57,15 @@ const ContactForm = () => {
       })
       .then((data) => {
         if (data.success) {
-          console.log("Success:", data.message);
           showModal();
           resetData();
         } else {
           captchaRef.current?.resetCaptcha();
           setErrors(data.errors);
-          console.error("Errors:", data.errors);
         }
       })
       .catch((error) => {
-        setLoading(false);
         setErrors([error.message]);
-        console.error("Error:", error.message);
       })
       .finally(() => {
         setLoading(false);

@@ -20,27 +20,31 @@ function Header() {
   const location = useLocation();
   const navigate = useNavigate();
   const { t } = useTranslation("common");
-  // Set placeholder height to header height
+  const headerRef = useRef(null);
+  const [headerHeight, setHeaderHeight] = useState(0);
   useEffect(() => {
-    function updateNavBoxHeight() {
-      let placeholder = document.querySelector(".placeholder__header");
-      let header = document.querySelector(".header");
-      let headerHeight = header.getBoundingClientRect().height;
+    const headerEl = headerRef.current;
+    if (!headerEl) return;
 
-      if (!placeholder) {
-        console.error("Placeholder not found");
-        return;
+    const observer = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        setHeaderHeight(entry.contentRect.height);
       }
+    });
 
-      placeholder.style.height = `${headerHeight}px`;
-    }
+    observer.observe(headerEl);
 
-    updateNavBoxHeight();
-    window.addEventListener("resize", updateNavBoxHeight);
     return () => {
-      window.removeEventListener("resize", updateNavBoxHeight);
+      observer.disconnect();
     };
   }, []);
+
+  useEffect(() => {
+    const headerEl = headerRef.current;
+    if (headerEl) {
+      setHeaderHeight(headerEl.getBoundingClientRect().height);
+    }
+  }, [location.pathname]);
 
   const openMobileMenu = () => {
     const faClose = document.querySelector(".fa-close");
@@ -108,15 +112,8 @@ function Header() {
   }
   function navToContact(e) {
     e.preventDefault();
-    navigate("/contact");
     closeMobileMenu();
-    scrollToTop();
-  }
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    navigate("/contact");
   }
 
   useEffect(() => {
@@ -128,9 +125,12 @@ function Header() {
 
   return (
     <>
-      <div className="placeholder__header" />
+      <div
+        className="placeholder__header"
+        style={{ height: `${headerHeight}px` }}
+      />
 
-      <header className="header">
+      <header ref={headerRef} className="header">
         <div className="header__background"> </div>
         <div className="header__content">
           <div className="header__content-box">
@@ -147,15 +147,15 @@ function Header() {
                   <a
                     className="header__nav-box-item"
                     onClick={(e) => handleHeroNav(e, refAboutMe)}>
-                    {t("header.aboutme","")}
+                    {t("header.aboutme", "")}
                   </a>
                   <a
                     className="header__nav-box-item"
                     onClick={(e) => handleHeroNav(e, refProjectGallery)}>
-                    {t("header.projects","")}
+                    {t("header.projects", "")}
                   </a>
                   <a className="header__nav-box-item" href="#/contact">
-                    {t("header.contact","")}
+                    {t("header.contact", "")}
                   </a>
                   <div className="header__nav-box-switch">
                     <Switch />
@@ -191,15 +191,15 @@ function Header() {
               <a
                 className="header__nav"
                 onClick={(e) => handleHeroNav(e, refAboutMe)}>
-                {t("header.aboutme","")}
+                {t("header.aboutme", "")}
               </a>
               <a
                 className="header__nav"
                 onClick={(e) => handleHeroNav(e, refProjectGallery)}>
-                {t("header.projects","")}
+                {t("header.projects", "")}
               </a>
-              <a className="header__nav" /* href="#/contact" */ onClick={(e) => navToContact(e)}>
-                {t("header.contact","")}
+              <a className="header__nav" onClick={(e) => navToContact(e)}>
+                {t("header.contact", "")}
               </a>
               <div className="header__nav">
                 <Socials
