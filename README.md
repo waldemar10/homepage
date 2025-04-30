@@ -10,6 +10,7 @@ Die Seite dient als Portfolio, um meine Fähigkeiten und Projekte vorzustellen, 
 - HTML 
 - CSS
 - JavaScript (React)
+- PHP
 
 ---
 
