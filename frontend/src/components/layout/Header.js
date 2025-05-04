@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useScroll } from "../../hooks/useScroll";
 import Switch from "../common/Switch";
 import LanguageButton from "../common/LanguageButton";
 import Socials from "../common/Socials";
@@ -21,30 +22,29 @@ function Header() {
   const navigate = useNavigate();
   const { t } = useTranslation("common");
   const headerRef = useRef(null);
+  const { scrollTo } = useScroll();
   const [headerHeight, setHeaderHeight] = useState(0);
+
   useEffect(() => {
-    const headerEl = headerRef.current;
-    if (!headerEl) return;
+    if (!headerRef.current) return;
 
-    const observer = new ResizeObserver((entries) => {
-      for (let entry of entries) {
-        setHeaderHeight(entry.contentRect.height);
-      }
-    });
+    const updateHeight = () => {
+      const height = headerRef.current.getBoundingClientRect().height;
+      if (height) setHeaderHeight(height);
+    };
 
-    observer.observe(headerEl);
+    updateHeight();
+
+    const resizeObserver = new ResizeObserver(updateHeight);
+    resizeObserver.observe(headerRef.current);
+
+    window.addEventListener("resize", updateHeight);
 
     return () => {
-      observer.disconnect();
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", updateHeight);
     };
   }, []);
-
-  useEffect(() => {
-    const headerEl = headerRef.current;
-    if (headerEl) {
-      setHeaderHeight(headerEl.getBoundingClientRect().height);
-    }
-  }, [location.pathname]);
 
   const openMobileMenu = () => {
     const faClose = document.querySelector(".fa-close");
@@ -57,26 +57,31 @@ function Header() {
   };
 
   const closeMobileMenu = () => {
-    const faClose = document.querySelector(".fa-close");
-    const faBars = document.querySelector(".fa-bars");
-    const navBox = document.querySelector(".header__nav-box-mobile");
+    return new Promise((resolve) => {
+      const faClose = document.querySelector(".fa-close");
+      const faBars = document.querySelector(".fa-bars");
+      const navBox = document.querySelector(".header__nav-box-mobile");
 
-    if (!navBox || !faClose || !faBars) return;
+      if (!navBox || !faClose || !faBars) {
+        resolve(false);
+        return;
+      }
 
-    navBox.classList.add("header__nav-box-mobile-hidden");
-    faClose.classList.remove("fa-close--active");
-    faBars.classList.remove("fa-bars--hidden");
-    function handleAnimationEnd() {
-      setIsMobileMenuOpen(false);
-      document.body.classList.remove("body-no-scroll");
+      navBox.classList.add("header__nav-box-mobile-hidden");
+      faClose.classList.remove("fa-close--active");
+      faBars.classList.remove("fa-bars--hidden");
+      function handleAnimationEnd() {
+        setIsMobileMenuOpen(false);
+        document.body.classList.remove("body-no-scroll");
+        navBox.removeEventListener("animationend", handleAnimationEnd);
+        resolve(true);
+      }
 
-      navBox.removeEventListener("animationend", handleAnimationEnd);
-    }
-
-    navBox.addEventListener("animationend", handleAnimationEnd);
+      navBox.addEventListener("animationend", handleAnimationEnd);
+    });
   };
 
-  const navToAnchor = (e, ref) => {
+  const navToAnchor = async (e, ref) => {
     if (!ref.current) return;
     e.preventDefault();
 
@@ -84,17 +89,13 @@ function Header() {
       ref.current.scrollIntoView({ behavior: "smooth" });
       return;
     }
+    const isClosed = await closeMobileMenu();
+    if (!isClosed) return;
+    ref.current.scrollIntoView({ behavior: "smooth" });
 
-    const headerHeight =
-      document.querySelector(".header__content-box")?.getBoundingClientRect()
-        .height || 0;
     const offsetPosition =
       ref.current.getBoundingClientRect().top + window.scrollY - headerHeight;
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
-    closeMobileMenu();
+    scrollTo(offsetPosition);
   };
 
   function handleHeroNav(e, ref) {
@@ -110,11 +111,15 @@ function Header() {
     }
     navToAnchor(e, ref);
   }
-  function navToContact(e) {
+
+  const navToContact = async (e) => {
     e.preventDefault();
     closeMobileMenu();
+    const isClosed = await closeMobileMenu();
+    if (!isClosed) return;
+    scrollTo(0);
     navigate("/contact");
-  }
+  };
 
   useEffect(() => {
     const content = document.querySelector(".header__content");

@@ -1,14 +1,14 @@
 import React, { createContext, useContext, useRef } from "react";
 import { ProjectsContext } from "./projectsContext";
 import { useIsMobile } from "../hooks/useIsMobile";
-
+import { useScroll } from "../hooks/useScroll";
 export const ProjectGalleryContext = createContext();
 
 export const ProjectGalleryProvider = ({ children }) => {
   const { refProject, projects, setSelectedProject } = useContext(ProjectsContext);
   const isMobile = useIsMobile();
   const refProjectGallery = useRef(null);
-
+  const { scrollTo } = useScroll();
   function resetAllClicked() {
     projects.forEach((project) => {
       project.isClicked = false;
@@ -45,10 +45,7 @@ export const ProjectGalleryProvider = ({ children }) => {
       const offsetPosition = calculateScrollPosition();
 
       setTimeout(() => {
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
+       scrollTo(offsetPosition);
       }, 50);
     }
   }
